@@ -1,0 +1,12 @@
+{
+  "name": "partial-participation-meeting-assistant",
+  "version": "0.3.0",
+  "private": true,
+  "type": "module",
+  "description": "Local meeting companion; Tencent Meeting integration is not yet connected.",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "start": "node server.mjs",
+    "test": "node --test test/*.test.mjs"
+  }
+}

@@ -1,0 +1,124 @@
+{
+  "source_type": "model_simulation",
+  "exposure": "recorded_current_workflow",
+  "cases": [
+    {
+      "id": "E01",
+      "assessment": "helpful",
+      "reason": "Reported fact: Automatic analysis of u1 produced zero alerts (itemCount 0) and updated only the summary. Predicted experience: As Alex focusing on project materials, I would find it helpful that a routine file upload update does not trigger a visual alert card, though u1 explicitly stated no reply was needed, making filtering trivial."
+    },
+    {
+      "id": "E02",
+      "assessment": "helpful",
+      "reason": "Reported fact: Utterance u2 was classified as defer (Later) with a six this evening deadline, source citation u2, and a tentative holding draft. Predicted experience: As Alex, I would appreciate having the cover-color review captured with its deadline without demanding an immediate context switch away from my ongoing work."
+    },
+    {
+      "id": "E03",
+      "assessment": "helpful",
+      "reason": "Reported fact: Utterance u3 triggered an action_now alert citing u3, with a draft declining 10:20 AM and proposing 10:40 AM based on Alex's profile. Predicted experience: This would help me catch a time-sensitive blocker immediately and start from a draft that respects my private schedule constraints without over-committing."
+    },
+    {
+      "id": "E04",
+      "assessment": "helpful",
+      "reason": "Reported fact: Opening the details view displayed the source utterance u3, the conflict rationale, uncertainty notes, and an editable draft field. Predicted experience: Inspecting the exact quote alongside the detected availability conflict and room-flexibility uncertainty would let me verify context quickly before deciding how to respond."
+    },
+    {
+      "id": "E05",
+      "assessment": "mixed",
+      "reason": "Reported fact: Replacing the draft, clicking Confirm and copy, and logging alert_confirm and alert_copy updated the UI to 'Copied; waiting for you to send or mark sent' while storing status as confirmed, with no message actually sent. Predicted experience: Manual copy gives me control, but storing the internal state as confirmed before I actually send the message creates downstream state confusion."
+    },
+    {
+      "id": "E06",
+      "assessment": "mixed",
+      "reason": "Reported fact: Editing the text after confirmation triggered the warning 'Previous draft copied - edits need confirmation', disabled 'I sent it in the meeting', and left the previously confirmed 10:30 version in both the clipboard and confirmedText. Predicted experience: Blocking the sent button prevents false logging, but leaving stale text on the clipboard and in backend state risks pasting or analyzing the wrong version."
+    },
+    {
+      "id": "E07",
+      "assessment": "unhelpful",
+      "reason": "Reported fact: Analysis of u4 produced a defer alert and updated summary claiming u3 'was already handled via Alex's confirmed reply' and drafting 'I've already said I can't make 10:20 tomorrow; I can arrive at 10:30 and join at 10:40.' Predicted experience: Although it rightly notes room booking is outside my role, treating an unsent clipboard draft as already spoken in the meeting and reusing the superseded 10:30 edit is misleading and risky."
+    },
+    {
+      "id": "E08",
+      "assessment": "helpful",
+      "reason": "Reported fact: Stopping the session recorded session_stopped, set running to false, froze elapsedMs at 407688.2451, and retained all utterances, alerts, and events. Predicted experience: As Alex, I would find it reassuring that ending the session cleanly halts background analysis while preserving my review history and pending items."
+    }
+  ],
+  "value_assessments": {
+    "selective_attention": {
+      "judgment": "mixed",
+      "evidence_ids": [
+        "E01",
+        "E02",
+        "E03",
+        "E07"
+      ],
+      "reason": "Reported fact: The system suppressed alerts on u1, deferred u2, escalated u3 to action_now, and deferred u4. Predicted experience: Triage worked well on explicit cues in E01 through E03, but in E07 it downgraded an urgent question to defer partly because it falsely assumed u3's confirmed draft had already been sent."
+    },
+    "context_for_correct_reply": {
+      "judgment": "mixed",
+      "evidence_ids": [
+        "E03",
+        "E04",
+        "E07"
+      ],
+      "reason": "Reported fact: E03 and E04 accurately linked u3 to profile availability and surfaced uncertainties, whereas E07 cited u4 and u3 but fabricated prior delivery in both the summary and draft. Predicted experience: Source linking and role matching help ground replies, but conflating copied drafts with sent messages corrupts situational awareness."
+    },
+    "control_over_commitments": {
+      "judgment": "mixed",
+      "evidence_ids": [
+        "E03",
+        "E05",
+        "E06",
+        "E07"
+      ],
+      "reason": "Reported fact: Drafts avoided premature promises, required manual confirm-and-copy, and gated the 'sent' button after post-copy edits, yet E07 pulled the unedited E05 confirmedText ('arrive at 10:30') into a new draft. Predicted experience: UI guardrails protect manual sending, but backend analysis still leaks unconfirmed or unsent details into subsequent suggestions."
+    }
+  },
+  "would_use": "only_in_some_cases",
+  "best_fit": "Text-based asynchronous orclean-transcript monitoring where action requests explicitly name the user and the user immediately sends or marks confirmed drafts without multi-stage editing.",
+  "poor_fit": "Fast-moving live meetings with unidentified speakers, ambiguous follow-ups, or workflows where users frequently copy, re-edit, and hold drafts before actually sending them in chat.",
+  "biggest_benefit": {
+    "evidence_ids": [
+      "E02",
+      "E03",
+      "E04"
+    ],
+    "text": "Aligning incoming requests against profile responsibilities and private availability constraints to generate non-committal starting drafts paired with inspectable source quotes and uncertainty notes."
+  },
+  "biggest_risk": {
+    "evidence_ids": [
+      "E05",
+      "E06",
+      "E07"
+    ],
+    "text": "Conflating 'confirmed and copied to clipboard' with 'actually sent in the meeting', causing downstream summaries and drafts to assert that the user has already stated positions that were never delivered or were subsequently edited."
+  },
+  "improvements": [
+    {
+      "priority": "P0",
+      "evidence_ids": [
+        "E05",
+        "E07"
+      ],
+      "suggestion": "Separate 'copied_unsent' from 'sent_in_meeting' in the alert state passed to the LLM prompt so subsequent analyses and summaries never describe a copied draft as already communicated until the user clicks 'I sent it in the meeting'."
+    },
+    {
+      "priority": "P1",
+      "evidence_ids": [
+        "E06",
+        "E07"
+      ],
+      "suggestion": "When a user edits a previously confirmed draft, mark confirmedText as dirty or stale in the analysis context and offer a one-click 'Re-confirm and update clipboard' action to prevent stale clipboard pastes and outdated LLM references."
+    },
+    {
+      "priority": "P2",
+      "evidence_ids": [
+        "E07"
+      ],
+      "suggestion": "Flag blocking requests from unidentified speakers as needing quick speaker/target verification rather than defaulting to defer when they follow an unresolved action_now item on the same topic."
+    }
+  ],
+  "safe_final_reply": "Hi Jordan, I cannot make 10:20 AM tomorrow, but I can join the rehearsal at 10:40 AM. Please check with the team and the person responsible for room approvals whether 10:40 AM works before booking the room.",
+  "presentation_claim": "In a recorded four-utterance manual text trace, Meeting Cue 0.3.0 differentiated no-action, deferred, and immediate requests using profile constraints and gated manual sending after post-copy edits, while exposing a state-modeling flaw where copied but unsent drafts were treated by subsequent AI analysis as already spoken.",
+  "not_established": "This trace does not establish real-time audio transcription accuracy, live Tencent Meeting chat delivery, human attentional or productivity gains, performance on noisy or implicit natural speech, or comparative superiority over standard meeting notifications."
+}

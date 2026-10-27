@@ -1,0 +1,22 @@
+{
+  "run_id": "codex-gpt-5.6-sol__r1__attempt2",
+  "platform": "Codex CLI",
+  "requested_model": "gpt-5.6-sol",
+  "reported_model": null,
+  "reasoning_effort": "high",
+  "repeat": 1,
+  "attempt": 2,
+  "session_id": "01a159ec-33eb-7d80-baf5-d079c4b842d9",
+  "source_type": "model_simulation",
+  "exposure": "description_only",
+  "prompt_sha256": "7486863387d749425546f9bd81d5480b40f8972eed1ce2169d17a6d8a18ece75",
+  "started_at": "2026-10-20T15:26:49.947505+00:00",
+  "ended_at": "2026-10-20T15:27:29.913835+00:00",
+  "duration_seconds": 39.97,
+  "exit_code": 0,
+  "timed_out": false,
+  "tool_event_count": 0,
+  "accepted": true,
+  "validation_errors": [],
+  "raw_directory": "raw\\codex-gpt-5.6-sol__r1__attempt2"
+}

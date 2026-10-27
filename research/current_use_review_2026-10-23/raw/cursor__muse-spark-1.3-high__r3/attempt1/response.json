@@ -1,0 +1,120 @@
+{
+  "source_type": "model_simulation",
+  "exposure": "recorded_current_workflow",
+  "cases": [
+    {
+      "id": "E01",
+      "assessment": "helpful",
+      "reason": "Fact: u1 explicit no-reply progress update produced automatic analysis with zero cards, summary only. Predicted as Alex working on materials: helpful because it suppresses interruption for ordinary updates and preserves focus, with no reply obligation created or missed commitment."
+    },
+    {
+      "id": "E02",
+      "assessment": "helpful",
+      "reason": "Fact: u2 nonblocking cover-color request produced Later card with evening deadline and cautious non-final draft. Predicted as Alex: helpful triage because it correctly defers materials work that can continue without immediate decision, though the draft hedges and would need personal review before sending."
+    },
+    {
+      "id": "E03",
+      "assessment": "helpful",
+      "reason": "Fact: u3 time-pressured rehearsal request produced Respond now card, declining 10:20 and proposing 10:40 using profile availability and citing u3. Predicted as Alex: helpful urgency flag and contextual grounding that prevents agreeing to an impossible time, while still leaving booking authority with others."
+    },
+    {
+      "id": "E04",
+      "assessment": "helpful",
+      "reason": "Fact: details view exposed original u3 text, rationale, uncertainties and editable draft. Predicted as Alex: helpful transparency for checking why Respond now was assigned and which availability facts were used, supporting verification rather than blind acceptance, at cost of one extra review step."
+    },
+    {
+      "id": "E05",
+      "assessment": "helpful",
+      "reason": "Fact: operator rewrite to cannot make 10:20, can arrive 10:30 and join at 10:40 with check-before-booking was confirmed and copied; UI showed Copied; waiting for you to send or mark sent, with no message sent. Predicted as Alex: helpful control because confirmation stays explicit and sending remains human action."
+    },
+    {
+      "id": "E06",
+      "assessment": "mixed",
+      "reason": "Fact: further edit to join at 10:40 subject to team confirming room triggered Previous draft copied - edits need confirmation and disabled I sent it until reconfirmation; clipboard still holds prior confirmed version. Predicted as Alex: helpful block against marking unconfirmed wording as sent, but problematic stale-clipboard risk if old text is pasted elsewhere."
+    },
+    {
+      "id": "E07",
+      "assessment": "mixed",
+      "reason": "Fact: u4 unattributed approve booking now request produced defer card noting booking is outside Alex responsibilities, speaker unidentified, restating 10:20 impossible and 10:40 possible with redirect to booking owner. Predicted as Alex: helpful boundary protection and avoidance of duplicate commitment, but defer sits uneasily with need answer before I continue blocking language and repeats already-confirmed timing."
+    },
+    {
+      "id": "E08",
+      "assessment": "helpful",
+      "reason": "Fact: Stop disabled input and analysis, froze elapsed time and preserved utterances, alerts, summary and events in export. Predicted as Alex: helpful clean closure that prevents further automatic outputs after stopping while retaining an auditable record; no evidence of data loss in this trace."
+    }
+  ],
+  "value_assessments": {
+    "selective_attention": {
+      "judgment": "supported",
+      "evidence_ids": [
+        "E01",
+        "E02",
+        "E03",
+        "E07"
+      ],
+      "reason": "System distinguished no-action u1 with no card, nonblocking u2 as Later, urgent u3 as Respond now, and ambiguous u4 as defer. Predicted as Alex, this filtering would help remain available without constant interruption, though u4 blocking wording makes defer debatable."
+    },
+    "context_for_correct_reply": {
+      "judgment": "supported",
+      "evidence_ids": [
+        "E03",
+        "E04",
+        "E07"
+      ],
+      "reason": "u3 draft correctly applied private facts of cannot arrive before 10:30, can join 10:40, cannot do 10:20, with rationale and uncertainties shown. u4 draft correctly reused confirmed 10:40 position and responsibility boundary. No invented room approval was proposed."
+    },
+    "control_over_commitments": {
+      "judgment": "supported",
+      "evidence_ids": [
+        "E05",
+        "E06",
+        "E07"
+      ],
+      "reason": "Confirmed copy required explicit action and did not auto-send, post-confirmation edits blocked sent-marking until reconfirmed, and booking approval was refused with redirect. Residual risk is stale clipboard from E06 if prior confirmed text is reused without noticing."
+    }
+  },
+  "would_use": "only_in_some_cases",
+  "best_fit": "Staying focused on materials work while triaging explicit no-reply updates, deferrable reviews, and time-sensitive availability requests where profile constraints must be stated precisely.",
+  "poor_fit": "Ambiguous unattributed approval demands, live meeting delivery, or any case where automatic sending or clipboard reuse could create a booking or timing commitment without fresh confirmation.",
+  "biggest_benefit": {
+    "evidence_ids": [
+      "E03",
+      "E05"
+    ],
+    "text": "Urgent rehearsal conflict was surfaced immediately with a profile-grounded decline of 10:20 and conditional 10:40 alternative, then human-edited to require team confirmation before booking, preserving accuracy without auto-committing Alex."
+  },
+  "biggest_risk": {
+    "evidence_ids": [
+      "E06",
+      "E07"
+    ],
+    "text": "After reconfirmable editing, the clipboard retains the older confirmed version while the visible draft differs, so Alex could paste outdated timing; combined with deferring an explicitly blocking booking request, this could cause confusion or delay."
+  },
+  "improvements": [
+    {
+      "priority": "P0",
+      "evidence_ids": [
+        "E06"
+      ],
+      "suggestion": "On post-confirmation edits, clearly mark clipboard as stale and require renewed copy before sent-marking is allowed, for example invalidate prior copied state or show side-by-side diff of copied versus edited text."
+    },
+    {
+      "priority": "P1",
+      "evidence_ids": [
+        "E07"
+      ],
+      "suggestion": "Improve unattributed blocking requests by flagging speaker unknown and blocking language explicitly, offering a short clarification reply rather than repeating the full timing proposal already confirmed for u3."
+    },
+    {
+      "priority": "P2",
+      "evidence_ids": [
+        "E02",
+        "E04"
+      ],
+      "suggestion": "Make deferred materials drafts less committal by default and keep uncertainty visible in the card list, so Later items are not mistaken for promised decisions before Alex reviews them."
+    }
+  ],
+  "safe_final_reply": "Thanks Jordan — I cannot make 10:20 AM tomorrow as I cannot arrive before 10:30. I can join the rehearsal at 10:40 AM if that works for everyone. Please check whether 10:40 works before booking; I cannot approve the room booking myself.",
+  "presentation_claim": "In this isolated manual-text run with DeepSeek outputs, the tool distinguished no-action, deferrable, urgent and ambiguous requests, grounded the rehearsal reply in Alex availability facts, and prevented auto-sending by requiring explicit confirmation.",
+  "not_established": "The trace does not establish live audio accuracy, Tencent chat sending, actual productivity or time savings, human task performance, or superiority to any alternative, as there was no comparison group, timing benchmark, or real message delivery."
+}

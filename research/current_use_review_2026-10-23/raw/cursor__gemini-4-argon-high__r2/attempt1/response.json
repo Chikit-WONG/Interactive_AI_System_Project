@@ -1,0 +1,125 @@
+{
+  "source_type": "model_simulation",
+  "exposure": "recorded_current_workflow",
+  "cases": [
+    {
+      "id": "E01",
+      "assessment": "helpful",
+      "reason": "Reported fact: u1 was analyzed in about 1.2 seconds with zero alerts generated and was recorded only in the running summary. Predicted experience as Alex: While focusing on project materials, I would appreciate that a routine file upload explicitly stating no reply is needed does not trigger a visual alert card or break my concentration."
+    },
+    {
+      "id": "E02",
+      "assessment": "helpful",
+      "reason": "Reported fact: u2 triggered a defer alert with the six this evening deadline, linked to u2, and provided a non-committal holding draft. Predicted experience as Alex: Because Sam explicitly noted the team can proceed without an immediate cover-color decision, classifying this as Later lets me stay focused on current work while logging the evening deadline."
+    },
+    {
+      "id": "E03",
+      "assessment": "helpful",
+      "reason": "Reported fact: u3 triggered an action_now alert citing u3, and the draft declined 10:20 AM and proposed 10:40 AM based on profile constraints without exposing private arrival details. Predicted experience as Alex: This immediately flags a blocking request and saves me from having to compose a careful counter-proposal from scratch under time pressure."
+    },
+    {
+      "id": "E04",
+      "assessment": "helpful",
+      "reason": "Reported fact: Opening details displayed the verbatim u3 text, the rationale tying the request to room booking, explicit uncertainty about schedule flexibility, and an editable draft field. Predicted experience as Alex: Seeing the exact utterance alongside the system's reasoning and uncertainty helps me verify why my response is needed before I commit to a schedule."
+    },
+    {
+      "id": "E05",
+      "assessment": "mixed",
+      "reason": "Reported fact: Replacing the draft, clicking Confirm & copy, and copying to the clipboard succeeded with the UI state 'Copied; waiting for you to send or mark sent', while the exported alert status became 'confirmed' without a sent event. Predicted experience as Alex: Manual copy-and-send prevents accidental auto-sending, but recording the alert status as confirmed before I actually send it in chat creates premature state assumptions later."
+    },
+    {
+      "id": "E06",
+      "assessment": "mixed",
+      "reason": "Reported fact: Editing the text again triggered 'Previous draft copied - edits need confirmation' and disabled 'I sent it in the meeting', while the clipboard and exported confirmedText still held the earlier E05 version mentioning the 10:30 arrival. Predicted experience as Alex: Blocking the sent button protects me from logging an unconfirmed edit, but I could accidentally paste the stale clipboard text containing the 10:30 detail I just removed."
+    },
+    {
+      "id": "E07",
+      "assessment": "unhelpful",
+      "reason": "Reported fact: For u4, the system generated a defer alert and updated the summary, stating Jordan's request 'was already handled via Alex's confirmed reply' and drafting 'I've already said I can't make 10:20 tomorrow; I can arrive at 10:30 and join at 10:40.' Predicted experience as Alex: Although it correctly notes I do not approve room bookings and the speaker is unidentified, it falsely assumes my unsent E05 draft was already sent to the meeting, reuses the 10:30 detail I edited out in E06, and demotes an urgent blocking question based on that false assumption."
+    },
+    {
+      "id": "E08",
+      "assessment": "mixed",
+      "reason": "Reported fact: Stopping the session disabled input and analysis, froze elapsedMs at 407688.2451, and preserved the transcript, alerts, and events, though the unconfirmed E06 edit text does not appear in the exported alert record. Predicted experience as Alex: Having a clear stop control that halts background calls is reassuring, though I would expect my latest unconfirmed draft edit to be preserved in exported records."
+    }
+  ],
+  "value_assessments": {
+    "selective_attention": {
+      "judgment": "mixed",
+      "evidence_ids": [
+        "E01",
+        "E02",
+        "E03",
+        "E07"
+      ],
+      "reason": "The system appropriately suppressed an alert for u1, deferred non-blocking u2, and escalated urgent u3. However, in E07 it classified u4 as defer partly because it mistakenly treated the unsent u3 draft as already communicated, showing that prioritization can degrade when delivery state is misread."
+    },
+    "context_for_correct_reply": {
+      "judgment": "mixed",
+      "evidence_ids": [
+        "E03",
+        "E04",
+        "E07"
+      ],
+      "reason": "In E03 and E04, the tool accurately combined u3 with profile availability and surfaced clear rationale and uncertainties. In E07, while it respected the room-booking role boundary, it injected false conversational context by claiming Alex had already replied with the E05 text."
+    },
+    "control_over_commitments": {
+      "judgment": "mixed",
+      "evidence_ids": [
+        "E05",
+        "E06",
+        "E07"
+      ],
+      "reason": "The UI never sends messages automatically and E06 blocks marking an edited draft as sent until re-confirmed. Nevertheless, E05 marks the internal status as confirmed upon copy, causing E07 to treat an unsent and subsequently revised draft as an active commitment."
+    }
+  },
+  "would_use": "only_in_some_cases",
+  "best_fit": "Text-based or cleanly transcribed meetings where a multitasking participant needs initial triage of explicit mentions and profile-grounded first drafts, provided they carefully verify clipboard contents and sent status.",
+  "poor_fit": "Fast-paced back-and-forth negotiations where a user edits drafts multiple times before sending, or situations with unidentified speakers where assuming a copied reply was already sent can mislead follow-up triage.",
+  "biggest_benefit": {
+    "evidence_ids": [
+      "E01",
+      "E02",
+      "E03",
+      "E04"
+    ],
+    "text": "Separating no-reply updates, deferrable requests, and urgent blocking questions while generating a profile-aligned initial counter-proposal with visible source text and uncertainty notes."
+  },
+  "biggest_risk": {
+    "evidence_ids": [
+      "E05",
+      "E06",
+      "E07"
+    ],
+    "text": "Conflating 'copied to clipboard' with 'sent in the meeting', which leaves stale text on the clipboard after post-copy edits and causes subsequent AI analysis and summaries to falsely state that an unsent draft was already delivered."
+  },
+  "improvements": [
+    {
+      "priority": "P0",
+      "evidence_ids": [
+        "E05",
+        "E06",
+        "E07"
+      ],
+      "suggestion": "Separate 'copied' from 'sent' in the data model and prompt context so downstream analysis and summaries only treat a reply as communicated after the user clicks 'I sent it in the meeting'."
+    },
+    {
+      "priority": "P1",
+      "evidence_ids": [
+        "E06",
+        "E07"
+      ],
+      "suggestion": "When a user edits a previously confirmed draft, immediately mark the prior confirmedText as stale or pending re-confirmation, persist the in-progress draft text in state, and warn that the system clipboard still holds the older version."
+    },
+    {
+      "priority": "P2",
+      "evidence_ids": [
+        "E07"
+      ],
+      "suggestion": "When a blocking follow-up utterance arrives while a related alert is copied but not yet marked sent, highlight that the earlier draft has not been marked sent rather than deferring the follow-up as already resolved."
+    }
+  ],
+  "safe_final_reply": "Hi Jordan, I cannot make 10:20 AM tomorrow, but I can join the rehearsal at 10:40 AM. Since I do not handle room bookings, please check whether 10:40 AM works for the team and the room administrator before confirming the room.",
+  "presentation_claim": "In a recorded four-utterance manual-text walkthrough, Meeting Cue 0.3.0 distinguished no-action, deferrable, and immediate requests using profile rules and enforced re-confirmation when a copied draft was edited, but its downstream analysis and summary treated a copied, unsent draft as if it had already been sent in the meeting.",
+  "not_established": "This trace does not establish live audio transcription quality, real meeting chat delivery, multi-user generalizability, human task-switching speed or productivity gains, or performance against any baseline benchmark."
+}

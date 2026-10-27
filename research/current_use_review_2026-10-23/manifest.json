@@ -1,0 +1,948 @@
+{
+  "planned": 33,
+  "prompt_sha256": "685f987369fbdc5cc55602a2f73ca985628fa9b2e4ecd0a6f7ff33bc0e419259",
+  "attempts": [
+    {
+      "run_id": "cursor__claude-opus-5-5-high__r1",
+      "provider": "cursor",
+      "requested_model": "claude-opus-5-5-high",
+      "reported_models": [
+        "Claude Opus 5.5 300K High"
+      ],
+      "repeat": 1,
+      "attempt": 1,
+      "sessions": [
+        "a627ecae-e1ef-4e84-ad6a-b6cf6284181b"
+      ],
+      "prompt_sha256": "685f987369fbdc5cc55602a2f73ca985628fa9b2e4ecd0a6f7ff33bc0e419259",
+      "started": "2026-10-23T06:08:27.981290+00:00",
+      "seconds": 67.0,
+      "exit_code": 0,
+      "timed_out": false,
+      "tool_event_count": 0,
+      "valid": true,
+      "errors": [],
+      "path": "raw\\cursor__claude-opus-5-5-high__r1\\attempt1"
+    },
+    {
+      "run_id": "cursor__claude-sonnet-5-5-high__r1",
+      "provider": "cursor",
+      "requested_model": "claude-sonnet-5-5-high",
+      "reported_models": [
+        "Claude Sonnet 5.5 300K High"
+      ],
+      "repeat": 1,
+      "attempt": 1,
+      "sessions": [
+        "9dafbc4d-5010-42b7-bf23-48f5b4fec391"
+      ],
+      "prompt_sha256": "685f987369fbdc5cc55602a2f73ca985628fa9b2e4ecd0a6f7ff33bc0e419259",
+      "started": "2026-10-23T06:08:27.981290+00:00",
+      "seconds": 71.1,
+      "exit_code": 0,
+      "timed_out": false,
+      "tool_event_count": 0,
+      "valid": true,
+      "errors": [],
+      "path": "raw\\cursor__claude-sonnet-5-5-high__r1\\attempt1"
+    },
+    {
+      "run_id": "cursor__gemini-3.1-pro__r1",
+      "provider": "cursor",
+      "requested_model": "gemini-3.1-pro",
+      "reported_models": [
+        "Gemini 3.1 Pro"
+      ],
+      "repeat": 1,
+      "attempt": 1,
+      "sessions": [
+        "99c3c3ef-7b2a-4231-b804-08839947c17a"
+      ],
+      "prompt_sha256": "685f987369fbdc5cc55602a2f73ca985628fa9b2e4ecd0a6f7ff33bc0e419259",
+      "started": "2026-10-23T06:08:27.981290+00:00",
+      "seconds": 79.2,
+      "exit_code": 0,
+      "timed_out": false,
+      "tool_event_count": 0,
+      "valid": true,
+      "errors": [],
+      "path": "raw\\cursor__gemini-3.1-pro__r1\\attempt1"
+    },
+    {
+      "run_id": "cursor__kimi-k3-high__r1",
+      "provider": "cursor",
+      "requested_model": "kimi-k3-high",
+      "reported_models": [
+        "Kimi K3 High"
+      ],
+      "repeat": 1,
+      "attempt": 1,
+      "sessions": [
+        "f08a7cb1-d4d0-4e05-87fc-b4d8d837b8e1"
+      ],
+      "prompt_sha256": "685f987369fbdc5cc55602a2f73ca985628fa9b2e4ecd0a6f7ff33bc0e419259",
+      "started": "2026-10-23T06:09:47.221202+00:00",
+      "seconds": 23.2,
+      "exit_code": 0,
+      "timed_out": false,
+      "tool_event_count": 0,
+      "valid": true,
+      "errors": [],
+      "path": "raw\\cursor__kimi-k3-high__r1\\attempt1"
+    },
+    {
+      "run_id": "cursor__composer-2.5__r1",
+      "provider": "cursor",
+      "requested_model": "composer-2.5",
+      "reported_models": [
+        "Composer 2.5"
+      ],
+      "repeat": 1,
+      "attempt": 1,
+      "sessions": [
+        "8f5cabe9-c3e3-44cb-8ff3-b0a3c872c915"
+      ],
+      "prompt_sha256": "685f987369fbdc5cc55602a2f73ca985628fa9b2e4ecd0a6f7ff33bc0e419259",
+      "started": "2026-10-23T06:09:39.085828+00:00",
+      "seconds": 37.7,
+      "exit_code": 0,
+      "timed_out": false,
+      "tool_event_count": 0,
+      "valid": true,
+      "errors": [],
+      "path": "raw\\cursor__composer-2.5__r1\\attempt1"
+    },
+    {
+      "run_id": "cursor__gemini-4-argon-high__r1",
+      "provider": "cursor",
+      "requested_model": "gemini-4-argon-high",
+      "reported_models": [
+        "Gemini 4 Argon High"
+      ],
+      "repeat": 1,
+      "attempt": 1,
+      "sessions": [
+        "1172f5ea-46a2-47f5-9b6d-ce5dc5ccc63c"
+      ],
+      "prompt_sha256": "685f987369fbdc5cc55602a2f73ca985628fa9b2e4ecd0a6f7ff33bc0e419259",
+      "started": "2026-10-23T06:08:27.981290+00:00",
+      "seconds": 109.4,
+      "exit_code": 0,
+      "timed_out": false,
+      "tool_event_count": 0,
+      "valid": true,
+      "errors": [],
+      "path": "raw\\cursor__gemini-4-argon-high__r1\\attempt1"
+    },
+    {
+      "run_id": "codex__gpt-6.1-sol__r1",
+      "provider": "codex",
+      "requested_model": "gpt-6.1-sol",
+      "reported_models": [],
+      "repeat": 1,
+      "attempt": 1,
+      "sessions": [
+        "01a16761-c179-7fd3-a22b-081c1a1c8d89"
+      ],
+      "prompt_sha256": "685f987369fbdc5cc55602a2f73ca985628fa9b2e4ecd0a6f7ff33bc0e419259",
+      "started": "2026-10-23T06:10:17.424905+00:00",
+      "seconds": 14.3,
+      "exit_code": 1,
+      "timed_out": false,
+      "tool_event_count": 0,
+      "valid": false,
+      "errors": [
+        "parse:Expecting value: line 1 column 1 (char 0)",
+        "execution"
+      ],
+      "path": "raw\\codex__gpt-6.1-sol__r1\\attempt1"
+    },
+    {
+      "run_id": "codex__gpt-6.1-sol__r1",
+      "provider": "codex",
+      "requested_model": "gpt-6.1-sol",
+      "reported_models": [],
+      "repeat": 1,
+      "attempt": 2,
+      "sessions": [
+        "01a16761-e92a-78e3-8811-f8e52d2fd5af"
+      ],
+      "prompt_sha256": "685f987369fbdc5cc55602a2f73ca985628fa9b2e4ecd0a6f7ff33bc0e419259",
+      "started": "2026-10-23T06:10:31.771226+00:00",
+      "seconds": 11.0,
+      "exit_code": 1,
+      "timed_out": false,
+      "tool_event_count": 0,
+      "valid": false,
+      "errors": [
+        "parse:Expecting value: line 1 column 1 (char 0)",
+        "execution"
+      ],
+      "path": "raw\\codex__gpt-6.1-sol__r1\\attempt2"
+    },
+    {
+      "run_id": "cursor__glm-5.2-high__r1",
+      "provider": "cursor",
+      "requested_model": "glm-5.2-high",
+      "reported_models": [
+        "GLM 5.2"
+      ],
+      "repeat": 1,
+      "attempt": 1,
+      "sessions": [
+        "2fe320d4-372c-40b7-b992-0cb4ae45ca27"
+      ],
+      "prompt_sha256": "685f987369fbdc5cc55602a2f73ca985628fa9b2e4ecd0a6f7ff33bc0e419259",
+      "started": "2026-10-23T06:10:10.430841+00:00",
+      "seconds": 34.4,
+      "exit_code": 0,
+      "timed_out": false,
+      "tool_event_count": 0,
+      "valid": true,
+      "errors": [],
+      "path": "raw\\cursor__glm-5.2-high__r1\\attempt1"
+    },
+    {
+      "run_id": "cursor__muse-spark-1.3-high__r1",
+      "provider": "cursor",
+      "requested_model": "muse-spark-1.3-high",
+      "reported_models": [
+        "Muse Spark 1.3 300K High"
+      ],
+      "repeat": 1,
+      "attempt": 1,
+      "sessions": [
+        "ddc2de07-21b7-41a4-95dd-6ec2d8e26565"
+      ],
+      "prompt_sha256": "685f987369fbdc5cc55602a2f73ca985628fa9b2e4ecd0a6f7ff33bc0e419259",
+      "started": "2026-10-23T06:10:16.794421+00:00",
+      "seconds": 37.1,
+      "exit_code": 0,
+      "timed_out": false,
+      "tool_event_count": 0,
+      "valid": true,
+      "errors": [],
+      "path": "raw\\cursor__muse-spark-1.3-high__r1\\attempt1"
+    },
+    {
+      "run_id": "codex__gpt-6-astra__r1",
+      "provider": "codex",
+      "requested_model": "gpt-6-astra",
+      "reported_models": [],
+      "repeat": 1,
+      "attempt": 1,
+      "sessions": [
+        "01a16762-14c9-7b91-8b69-38856a257bcb"
+      ],
+      "prompt_sha256": "685f987369fbdc5cc55602a2f73ca985628fa9b2e4ecd0a6f7ff33bc0e419259",
+      "started": "2026-10-23T06:10:42.813533+00:00",
+      "seconds": 13.8,
+      "exit_code": 1,
+      "timed_out": false,
+      "tool_event_count": 0,
+      "valid": false,
+      "errors": [
+        "parse:Expecting value: line 1 column 1 (char 0)",
+        "execution"
+      ],
+      "path": "raw\\codex__gpt-6-astra__r1\\attempt1"
+    },
+    {
+      "run_id": "codex__gpt-6-astra__r1",
+      "provider": "codex",
+      "requested_model": "gpt-6-astra",
+      "reported_models": [],
+      "repeat": 1,
+      "attempt": 2,
+      "sessions": [
+        "01a16762-4a5e-7100-b6f5-bc82a65e7e48"
+      ],
+      "prompt_sha256": "685f987369fbdc5cc55602a2f73ca985628fa9b2e4ecd0a6f7ff33bc0e419259",
+      "started": "2026-10-23T06:10:56.577967+00:00",
+      "seconds": 13.4,
+      "exit_code": 1,
+      "timed_out": false,
+      "tool_event_count": 0,
+      "valid": false,
+      "errors": [
+        "parse:Expecting value: line 1 column 1 (char 0)",
+        "execution"
+      ],
+      "path": "raw\\codex__gpt-6-astra__r1\\attempt2"
+    },
+    {
+      "run_id": "cursor__claude-sonnet-5-5-high__r2",
+      "provider": "cursor",
+      "requested_model": "claude-sonnet-5-5-high",
+      "reported_models": [
+        "Claude Sonnet 5.5  High"
+      ],
+      "repeat": 2,
+      "attempt": 1,
+      "sessions": [
+        "e9d65448-9a98-4788-9d7d-894b2be3d8b3"
+      ],
+      "prompt_sha256": "685f987369fbdc5cc55602a2f73ca985628fa9b2e4ecd0a6f7ff33bc0e419259",
+      "started": "2026-10-23T06:10:53.929839+00:00",
+      "seconds": 38.8,
+      "exit_code": 0,
+      "timed_out": false,
+      "tool_event_count": 0,
+      "valid": true,
+      "errors": [],
+      "path": "raw\\cursor__claude-sonnet-5-5-high__r2\\attempt1"
+    },
+    {
+      "run_id": "cursor__claude-opus-5-5-high__r2",
+      "provider": "cursor",
+      "requested_model": "claude-opus-5-5-high",
+      "reported_models": [
+        "Claude Opus 5.5 1M High"
+      ],
+      "repeat": 2,
+      "attempt": 1,
+      "sessions": [
+        "febd4314-de91-4033-8712-34381243e502"
+      ],
+      "prompt_sha256": "685f987369fbdc5cc55602a2f73ca985628fa9b2e4ecd0a6f7ff33bc0e419259",
+      "started": "2026-10-23T06:10:44.854442+00:00",
+      "seconds": 57.7,
+      "exit_code": 0,
+      "timed_out": false,
+      "tool_event_count": 0,
+      "valid": true,
+      "errors": [],
+      "path": "raw\\cursor__claude-opus-5-5-high__r2\\attempt1"
+    },
+    {
+      "run_id": "cursor__gemini-4-argon-high__r2",
+      "provider": "cursor",
+      "requested_model": "gemini-4-argon-high",
+      "reported_models": [
+        "Gemini 4 Argon High"
+      ],
+      "repeat": 2,
+      "attempt": 1,
+      "sessions": [
+        "bfb578f2-e5a0-41d3-add9-366779389ee2"
+      ],
+      "prompt_sha256": "685f987369fbdc5cc55602a2f73ca985628fa9b2e4ecd0a6f7ff33bc0e419259",
+      "started": "2026-10-23T06:11:09.980975+00:00",
+      "seconds": 85.3,
+      "exit_code": 0,
+      "timed_out": false,
+      "tool_event_count": 0,
+      "valid": true,
+      "errors": [],
+      "path": "raw\\cursor__gemini-4-argon-high__r2\\attempt1"
+    },
+    {
+      "run_id": "cursor__gemini-3.1-pro__r2",
+      "provider": "cursor",
+      "requested_model": "gemini-3.1-pro",
+      "reported_models": [
+        "Gemini 3.1 Pro"
+      ],
+      "repeat": 2,
+      "attempt": 1,
+      "sessions": [
+        "7421f265-1023-4a81-8172-d79c72062deb"
+      ],
+      "prompt_sha256": "685f987369fbdc5cc55602a2f73ca985628fa9b2e4ecd0a6f7ff33bc0e419259",
+      "started": "2026-10-23T06:11:32.770293+00:00",
+      "seconds": 65.5,
+      "exit_code": 0,
+      "timed_out": false,
+      "tool_event_count": 0,
+      "valid": true,
+      "errors": [],
+      "path": "raw\\cursor__gemini-3.1-pro__r2\\attempt1"
+    },
+    {
+      "run_id": "cursor__kimi-k3-high__r2",
+      "provider": "cursor",
+      "requested_model": "kimi-k3-high",
+      "reported_models": [
+        "Kimi K3 High"
+      ],
+      "repeat": 2,
+      "attempt": 1,
+      "sessions": [
+        "17dfc883-faef-4569-acc2-74d8f804509b"
+      ],
+      "prompt_sha256": "685f987369fbdc5cc55602a2f73ca985628fa9b2e4ecd0a6f7ff33bc0e419259",
+      "started": "2026-10-23T06:12:38.230465+00:00",
+      "seconds": 24.6,
+      "exit_code": 0,
+      "timed_out": false,
+      "tool_event_count": 0,
+      "valid": true,
+      "errors": [],
+      "path": "raw\\cursor__kimi-k3-high__r2\\attempt1"
+    },
+    {
+      "run_id": "cursor__composer-2.5__r2",
+      "provider": "cursor",
+      "requested_model": "composer-2.5",
+      "reported_models": [
+        "Composer 2.5"
+      ],
+      "repeat": 2,
+      "attempt": 1,
+      "sessions": [
+        "4225a7ca-b69b-48f6-8454-b2d35b4fd0d1"
+      ],
+      "prompt_sha256": "685f987369fbdc5cc55602a2f73ca985628fa9b2e4ecd0a6f7ff33bc0e419259",
+      "started": "2026-10-23T06:12:35.320492+00:00",
+      "seconds": 32.8,
+      "exit_code": 0,
+      "timed_out": false,
+      "tool_event_count": 0,
+      "valid": true,
+      "errors": [],
+      "path": "raw\\cursor__composer-2.5__r2\\attempt1"
+    },
+    {
+      "run_id": "cursor__glm-5.2-high__r2",
+      "provider": "cursor",
+      "requested_model": "glm-5.2-high",
+      "reported_models": [],
+      "repeat": 2,
+      "attempt": 1,
+      "sessions": [],
+      "prompt_sha256": "685f987369fbdc5cc55602a2f73ca985628fa9b2e4ecd0a6f7ff33bc0e419259",
+      "started": "2026-10-23T06:13:02.812577+00:00",
+      "seconds": 6.5,
+      "exit_code": 1,
+      "timed_out": false,
+      "tool_event_count": 0,
+      "valid": false,
+      "errors": [
+        "parse:Expecting value: line 1 column 1 (char 0)",
+        "execution",
+        "session_missing"
+      ],
+      "path": "raw\\cursor__glm-5.2-high__r2\\attempt1"
+    },
+    {
+      "run_id": "cursor__grok-4.7-high__r1",
+      "provider": "cursor",
+      "requested_model": "grok-4.7-high",
+      "reported_models": [
+        "Grok 4.7 256K High"
+      ],
+      "repeat": 1,
+      "attempt": 1,
+      "sessions": [
+        "c45200d6-c556-4730-a00e-7c697e4a922e"
+      ],
+      "prompt_sha256": "685f987369fbdc5cc55602a2f73ca985628fa9b2e4ecd0a6f7ff33bc0e419259",
+      "started": "2026-10-23T06:09:34.950029+00:00",
+      "seconds": 218.0,
+      "exit_code": 0,
+      "timed_out": false,
+      "tool_event_count": 0,
+      "valid": true,
+      "errors": [],
+      "path": "raw\\cursor__grok-4.7-high__r1\\attempt1"
+    },
+    {
+      "run_id": "codex__gpt-6.1-sol__r2",
+      "provider": "codex",
+      "requested_model": "gpt-6.1-sol",
+      "reported_models": [],
+      "repeat": 2,
+      "attempt": 1,
+      "sessions": [
+        "01a16764-5fc2-7e20-a43b-871c1aaabe40"
+      ],
+      "prompt_sha256": "685f987369fbdc5cc55602a2f73ca985628fa9b2e4ecd0a6f7ff33bc0e419259",
+      "started": "2026-10-23T06:13:13.001810+00:00",
+      "seconds": 17.5,
+      "exit_code": 1,
+      "timed_out": false,
+      "tool_event_count": 0,
+      "valid": false,
+      "errors": [
+        "parse:Expecting value: line 1 column 1 (char 0)",
+        "execution"
+      ],
+      "path": "raw\\codex__gpt-6.1-sol__r2\\attempt1"
+    },
+    {
+      "run_id": "cursor__muse-spark-1.3-high__r2",
+      "provider": "cursor",
+      "requested_model": "muse-spark-1.3-high",
+      "reported_models": [
+        "Muse Spark 1.3 300K High"
+      ],
+      "repeat": 2,
+      "attempt": 1,
+      "sessions": [
+        "6e95e48b-674a-4757-b864-4ab20f1b891b"
+      ],
+      "prompt_sha256": "685f987369fbdc5cc55602a2f73ca985628fa9b2e4ecd0a6f7ff33bc0e419259",
+      "started": "2026-10-23T06:13:08.164414+00:00",
+      "seconds": 31.6,
+      "exit_code": 0,
+      "timed_out": false,
+      "tool_event_count": 0,
+      "valid": true,
+      "errors": [],
+      "path": "raw\\cursor__muse-spark-1.3-high__r2\\attempt1"
+    },
+    {
+      "run_id": "codex__gpt-6.1-sol__r2",
+      "provider": "codex",
+      "requested_model": "gpt-6.1-sol",
+      "reported_models": [],
+      "repeat": 2,
+      "attempt": 2,
+      "sessions": [
+        "01a16764-a38f-7992-9e31-1abdff0dcbd2"
+      ],
+      "prompt_sha256": "685f987369fbdc5cc55602a2f73ca985628fa9b2e4ecd0a6f7ff33bc0e419259",
+      "started": "2026-10-23T06:13:30.487842+00:00",
+      "seconds": 16.0,
+      "exit_code": 1,
+      "timed_out": false,
+      "tool_event_count": 0,
+      "valid": false,
+      "errors": [
+        "parse:Expecting value: line 1 column 1 (char 0)",
+        "execution"
+      ],
+      "path": "raw\\codex__gpt-6.1-sol__r2\\attempt2"
+    },
+    {
+      "run_id": "codex__gpt-6-astra__r2",
+      "provider": "codex",
+      "requested_model": "gpt-6-astra",
+      "reported_models": [],
+      "repeat": 2,
+      "attempt": 1,
+      "sessions": [
+        "01a16764-c7ea-7480-904d-c78a99929841"
+      ],
+      "prompt_sha256": "685f987369fbdc5cc55602a2f73ca985628fa9b2e4ecd0a6f7ff33bc0e419259",
+      "started": "2026-10-23T06:13:39.735302+00:00",
+      "seconds": 13.5,
+      "exit_code": 1,
+      "timed_out": false,
+      "tool_event_count": 0,
+      "valid": false,
+      "errors": [
+        "parse:Expecting value: line 1 column 1 (char 0)",
+        "execution"
+      ],
+      "path": "raw\\codex__gpt-6-astra__r2\\attempt1"
+    },
+    {
+      "run_id": "cursor__glm-5.2-high__r2",
+      "provider": "cursor",
+      "requested_model": "glm-5.2-high",
+      "reported_models": [
+        "GLM 5.2 High"
+      ],
+      "repeat": 2,
+      "attempt": 2,
+      "sessions": [
+        "23eef848-7194-447f-959f-2dabfba96e0f"
+      ],
+      "prompt_sha256": "685f987369fbdc5cc55602a2f73ca985628fa9b2e4ecd0a6f7ff33bc0e419259",
+      "started": "2026-10-23T06:13:09.321942+00:00",
+      "seconds": 55.1,
+      "exit_code": 0,
+      "timed_out": false,
+      "tool_event_count": 0,
+      "valid": true,
+      "errors": [],
+      "path": "raw\\cursor__glm-5.2-high__r2\\attempt2"
+    },
+    {
+      "run_id": "codex__gpt-6-astra__r2",
+      "provider": "codex",
+      "requested_model": "gpt-6-astra",
+      "reported_models": [],
+      "repeat": 2,
+      "attempt": 2,
+      "sessions": [
+        "01a16765-05ce-7be3-a1e1-a3023214a59e"
+      ],
+      "prompt_sha256": "685f987369fbdc5cc55602a2f73ca985628fa9b2e4ecd0a6f7ff33bc0e419259",
+      "started": "2026-10-23T06:13:53.264512+00:00",
+      "seconds": 14.1,
+      "exit_code": 1,
+      "timed_out": false,
+      "tool_event_count": 0,
+      "valid": false,
+      "errors": [
+        "parse:Expecting value: line 1 column 1 (char 0)",
+        "execution"
+      ],
+      "path": "raw\\codex__gpt-6-astra__r2\\attempt2"
+    },
+    {
+      "run_id": "cursor__claude-opus-5-5-high__r3",
+      "provider": "cursor",
+      "requested_model": "claude-opus-5-5-high",
+      "reported_models": [
+        "Claude Opus 5.5 1M High"
+      ],
+      "repeat": 3,
+      "attempt": 1,
+      "sessions": [
+        "4ae74399-0d8c-400c-98b7-058293f87a46"
+      ],
+      "prompt_sha256": "685f987369fbdc5cc55602a2f73ca985628fa9b2e4ecd0a6f7ff33bc0e419259",
+      "started": "2026-10-23T06:13:46.523376+00:00",
+      "seconds": 67.4,
+      "exit_code": 0,
+      "timed_out": false,
+      "tool_event_count": 0,
+      "valid": true,
+      "errors": [],
+      "path": "raw\\cursor__claude-opus-5-5-high__r3\\attempt1"
+    },
+    {
+      "run_id": "cursor__claude-sonnet-5-5-high__r3",
+      "provider": "cursor",
+      "requested_model": "claude-sonnet-5-5-high",
+      "reported_models": [
+        "Claude Sonnet 5.5  High"
+      ],
+      "repeat": 3,
+      "attempt": 1,
+      "sessions": [
+        "70a6be3a-1931-4ae7-b8d4-8abe4d98c9a8"
+      ],
+      "prompt_sha256": "685f987369fbdc5cc55602a2f73ca985628fa9b2e4ecd0a6f7ff33bc0e419259",
+      "started": "2026-10-23T06:14:04.433587+00:00",
+      "seconds": 56.2,
+      "exit_code": 0,
+      "timed_out": false,
+      "tool_event_count": 0,
+      "valid": true,
+      "errors": [],
+      "path": "raw\\cursor__claude-sonnet-5-5-high__r3\\attempt1"
+    },
+    {
+      "run_id": "cursor__gemini-4-argon-high__r3",
+      "provider": "cursor",
+      "requested_model": "gemini-4-argon-high",
+      "reported_models": [
+        "Gemini 4 Argon High"
+      ],
+      "repeat": 3,
+      "attempt": 1,
+      "sessions": [
+        "06ce5da5-5d80-4808-a08f-061208095e65"
+      ],
+      "prompt_sha256": "685f987369fbdc5cc55602a2f73ca985628fa9b2e4ecd0a6f7ff33bc0e419259",
+      "started": "2026-10-23T06:14:07.411386+00:00",
+      "seconds": 83.4,
+      "exit_code": 0,
+      "timed_out": false,
+      "tool_event_count": 0,
+      "valid": true,
+      "errors": [],
+      "path": "raw\\cursor__gemini-4-argon-high__r3\\attempt1"
+    },
+    {
+      "run_id": "cursor__grok-4.7-high__r2",
+      "provider": "cursor",
+      "requested_model": "grok-4.7-high",
+      "reported_models": [
+        "Grok 4.7 256K High"
+      ],
+      "repeat": 2,
+      "attempt": 1,
+      "sessions": [
+        "3b62986b-5b80-4694-b0c9-89dd2ff19eb0"
+      ],
+      "prompt_sha256": "685f987369fbdc5cc55602a2f73ca985628fa9b2e4ecd0a6f7ff33bc0e419259",
+      "started": "2026-10-23T06:11:42.559609+00:00",
+      "seconds": 241.5,
+      "exit_code": 1,
+      "timed_out": true,
+      "tool_event_count": 0,
+      "valid": false,
+      "errors": [
+        "parse:Expecting value: line 1 column 1 (char 0)",
+        "execution"
+      ],
+      "path": "raw\\cursor__grok-4.7-high__r2\\attempt1"
+    },
+    {
+      "run_id": "cursor__composer-2.5__r3",
+      "provider": "cursor",
+      "requested_model": "composer-2.5",
+      "reported_models": [
+        "Composer 2.5"
+      ],
+      "repeat": 3,
+      "attempt": 1,
+      "sessions": [
+        "7c7a390e-01fe-4bc7-a159-b1bfb58d8158"
+      ],
+      "prompt_sha256": "685f987369fbdc5cc55602a2f73ca985628fa9b2e4ecd0a6f7ff33bc0e419259",
+      "started": "2026-10-23T06:15:30.783353+00:00",
+      "seconds": 28.9,
+      "exit_code": 0,
+      "timed_out": false,
+      "tool_event_count": 0,
+      "valid": true,
+      "errors": [],
+      "path": "raw\\cursor__composer-2.5__r3\\attempt1"
+    },
+    {
+      "run_id": "cursor__gemini-3.1-pro__r3",
+      "provider": "cursor",
+      "requested_model": "gemini-3.1-pro",
+      "reported_models": [
+        "Gemini 3.1 Pro"
+      ],
+      "repeat": 3,
+      "attempt": 1,
+      "sessions": [
+        "1fac46f8-095d-48ad-b75d-5f4dbc53eae8"
+      ],
+      "prompt_sha256": "685f987369fbdc5cc55602a2f73ca985628fa9b2e4ecd0a6f7ff33bc0e419259",
+      "started": "2026-10-23T06:14:53.950651+00:00",
+      "seconds": 69.2,
+      "exit_code": 0,
+      "timed_out": false,
+      "tool_event_count": 0,
+      "valid": true,
+      "errors": [],
+      "path": "raw\\cursor__gemini-3.1-pro__r3\\attempt1"
+    },
+    {
+      "run_id": "cursor__glm-5.2-high__r3",
+      "provider": "cursor",
+      "requested_model": "glm-5.2-high",
+      "reported_models": [
+        "GLM 5.2 High"
+      ],
+      "repeat": 3,
+      "attempt": 1,
+      "sessions": [
+        "6c52e42e-6fda-451a-9e6a-0f2d170df0a1"
+      ],
+      "prompt_sha256": "685f987369fbdc5cc55602a2f73ca985628fa9b2e4ecd0a6f7ff33bc0e419259",
+      "started": "2026-10-23T06:16:03.193608+00:00",
+      "seconds": 39.1,
+      "exit_code": 0,
+      "timed_out": false,
+      "tool_event_count": 0,
+      "valid": true,
+      "errors": [],
+      "path": "raw\\cursor__glm-5.2-high__r3\\attempt1"
+    },
+    {
+      "run_id": "cursor__kimi-k3-high__r3",
+      "provider": "cursor",
+      "requested_model": "kimi-k3-high",
+      "reported_models": [
+        "Kimi K3 High"
+      ],
+      "repeat": 3,
+      "attempt": 1,
+      "sessions": [
+        "5a42689e-4294-4df3-a373-3b7cd17ebbab"
+      ],
+      "prompt_sha256": "685f987369fbdc5cc55602a2f73ca985628fa9b2e4ecd0a6f7ff33bc0e419259",
+      "started": "2026-10-23T06:15:59.706547+00:00",
+      "seconds": 61.8,
+      "exit_code": 0,
+      "timed_out": false,
+      "tool_event_count": 0,
+      "valid": true,
+      "errors": [],
+      "path": "raw\\cursor__kimi-k3-high__r3\\attempt1"
+    },
+    {
+      "run_id": "codex__gpt-6.1-sol__r3",
+      "provider": "codex",
+      "requested_model": "gpt-6.1-sol",
+      "reported_models": [],
+      "repeat": 3,
+      "attempt": 1,
+      "sessions": [
+        "01a16767-e810-7731-929a-702287970020"
+      ],
+      "prompt_sha256": "685f987369fbdc5cc55602a2f73ca985628fa9b2e4ecd0a6f7ff33bc0e419259",
+      "started": "2026-10-23T06:17:01.521304+00:00",
+      "seconds": 18.2,
+      "exit_code": 1,
+      "timed_out": false,
+      "tool_event_count": 0,
+      "valid": false,
+      "errors": [
+        "parse:Expecting value: line 1 column 1 (char 0)",
+        "execution"
+      ],
+      "path": "raw\\codex__gpt-6.1-sol__r3\\attempt1"
+    },
+    {
+      "run_id": "codex__gpt-6.1-sol__r3",
+      "provider": "codex",
+      "requested_model": "gpt-6.1-sol",
+      "reported_models": [],
+      "repeat": 3,
+      "attempt": 2,
+      "sessions": [
+        "01a16768-2393-7341-b6e1-f10e8b3e3870"
+      ],
+      "prompt_sha256": "685f987369fbdc5cc55602a2f73ca985628fa9b2e4ecd0a6f7ff33bc0e419259",
+      "started": "2026-10-23T06:17:19.784028+00:00",
+      "seconds": 12.1,
+      "exit_code": 1,
+      "timed_out": false,
+      "tool_event_count": 0,
+      "valid": false,
+      "errors": [
+        "parse:Expecting value: line 1 column 1 (char 0)",
+        "execution"
+      ],
+      "path": "raw\\codex__gpt-6.1-sol__r3\\attempt2"
+    },
+    {
+      "run_id": "cursor__muse-spark-1.3-high__r3",
+      "provider": "cursor",
+      "requested_model": "muse-spark-1.3-high",
+      "reported_models": [
+        "Muse Spark 1.3 1M"
+      ],
+      "repeat": 3,
+      "attempt": 1,
+      "sessions": [
+        "09fdeb5d-f175-42a3-b176-c2b970dce43f"
+      ],
+      "prompt_sha256": "685f987369fbdc5cc55602a2f73ca985628fa9b2e4ecd0a6f7ff33bc0e419259",
+      "started": "2026-10-23T06:16:42.291267+00:00",
+      "seconds": 52.9,
+      "exit_code": 0,
+      "timed_out": false,
+      "tool_event_count": 0,
+      "valid": true,
+      "errors": [],
+      "path": "raw\\cursor__muse-spark-1.3-high__r3\\attempt1"
+    },
+    {
+      "run_id": "codex__gpt-6-astra__r3",
+      "provider": "codex",
+      "requested_model": "gpt-6-astra",
+      "reported_models": [],
+      "repeat": 3,
+      "attempt": 1,
+      "sessions": [
+        "01a16768-5232-72c3-bb31-72706e9c9734"
+      ],
+      "prompt_sha256": "685f987369fbdc5cc55602a2f73ca985628fa9b2e4ecd0a6f7ff33bc0e419259",
+      "started": "2026-10-23T06:17:31.856383+00:00",
+      "seconds": 32.8,
+      "exit_code": 1,
+      "timed_out": false,
+      "tool_event_count": 0,
+      "valid": false,
+      "errors": [
+        "parse:Expecting value: line 1 column 1 (char 0)",
+        "execution"
+      ],
+      "path": "raw\\codex__gpt-6-astra__r3\\attempt1"
+    },
+    {
+      "run_id": "cursor__grok-4.7-high__r2",
+      "provider": "cursor",
+      "requested_model": "grok-4.7-high",
+      "reported_models": [
+        "Grok 4.7  High"
+      ],
+      "repeat": 2,
+      "attempt": 2,
+      "sessions": [
+        "0c81e494-ae6a-450b-bd68-51ef5848bbe6"
+      ],
+      "prompt_sha256": "685f987369fbdc5cc55602a2f73ca985628fa9b2e4ecd0a6f7ff33bc0e419259",
+      "started": "2026-10-23T06:15:44.014463+00:00",
+      "seconds": 144.5,
+      "exit_code": 0,
+      "timed_out": false,
+      "tool_event_count": 0,
+      "valid": true,
+      "errors": [],
+      "path": "raw\\cursor__grok-4.7-high__r2\\attempt2"
+    },
+    {
+      "run_id": "codex__gpt-6-astra__r3",
+      "provider": "codex",
+      "requested_model": "gpt-6-astra",
+      "reported_models": [],
+      "repeat": 3,
+      "attempt": 2,
+      "sessions": [
+        "01a16768-d25f-7dd3-b97e-a9414b35ced4"
+      ],
+      "prompt_sha256": "685f987369fbdc5cc55602a2f73ca985628fa9b2e4ecd0a6f7ff33bc0e419259",
+      "started": "2026-10-23T06:18:04.662106+00:00",
+      "seconds": 18.2,
+      "exit_code": 1,
+      "timed_out": false,
+      "tool_event_count": 0,
+      "valid": false,
+      "errors": [
+        "parse:Expecting value: line 1 column 1 (char 0)",
+        "execution"
+      ],
+      "path": "raw\\codex__gpt-6-astra__r3\\attempt2"
+    },
+    {
+      "run_id": "cursor__grok-4.7-high__r3",
+      "provider": "cursor",
+      "requested_model": "grok-4.7-high",
+      "reported_models": [
+        "Grok 4.7 256K High"
+      ],
+      "repeat": 3,
+      "attempt": 1,
+      "sessions": [
+        "2117c8a6-f3a4-4d82-9a0f-c7db01945207"
+      ],
+      "prompt_sha256": "685f987369fbdc5cc55602a2f73ca985628fa9b2e4ecd0a6f7ff33bc0e419259",
+      "started": "2026-10-23T06:15:00.657291+00:00",
+      "seconds": 241.2,
+      "exit_code": 1,
+      "timed_out": true,
+      "tool_event_count": 0,
+      "valid": false,
+      "errors": [
+        "parse:Expecting value: line 1 column 1 (char 0)",
+        "execution"
+      ],
+      "path": "raw\\cursor__grok-4.7-high__r3\\attempt1"
+    },
+    {
+      "run_id": "cursor__grok-4.7-high__r3",
+      "provider": "cursor",
+      "requested_model": "grok-4.7-high",
+      "reported_models": [],
+      "repeat": 3,
+      "attempt": 2,
+      "sessions": [],
+      "prompt_sha256": "685f987369fbdc5cc55602a2f73ca985628fa9b2e4ecd0a6f7ff33bc0e419259",
+      "started": "2026-10-23T06:19:01.867493+00:00",
+      "seconds": 6.3,
+      "exit_code": 1,
+      "timed_out": false,
+      "tool_event_count": 0,
+      "valid": false,
+      "errors": [
+        "parse:Expecting value: line 1 column 1 (char 0)",
+        "execution",
+        "session_missing"
+      ],
+      "path": "raw\\cursor__grok-4.7-high__r3\\attempt2"
+    }
+  ]
+}

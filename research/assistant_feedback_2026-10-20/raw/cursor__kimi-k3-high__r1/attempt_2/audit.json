@@ -1,0 +1,31 @@
+{
+  "attempt": 2,
+  "started_at": "2026-10-20T15:28:39.399795+00:00",
+  "timeout_seconds": 180,
+  "timed_out": false,
+  "exit_code": 0,
+  "process_id": 77132,
+  "ended_at": "2026-10-20T15:29:08.785765+00:00",
+  "provider": "cursor",
+  "requested_model": "kimi-k3-high",
+  "requested_reasoning_effort": "model_id",
+  "returned_models": [
+    "Kimi K3 High"
+  ],
+  "model_identity_status": "verified",
+  "session_ids": [
+    "c614607e-c1b7-459a-9713-592942ecccd8"
+  ],
+  "input_sha256": "7486863387d749425546f9bd81d5480b40f8972eed1ce2169d17a6d8a18ece75",
+  "prompt_echo_matches": true,
+  "prompt_transport_note": "Exact text equality checked against user stream event.",
+  "tool_event_count": 0,
+  "tool_events": [],
+  "malformed_stream_line_numbers": [],
+  "extracted_markdown_fence": false,
+  "structure_errors": [],
+  "quota_or_rate_limit": false,
+  "valid": true,
+  "errors": [],
+  "raw_directory": "raw\\cursor__kimi-k3-high__r1\\attempt_2"
+}

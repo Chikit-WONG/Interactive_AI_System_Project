@@ -1,0 +1,40 @@
+MEETING CUE / GROUP 3
+Use Meeting_Cue_Midterm_EN_LegacyDemo.pptx and Demo_EarlyPrototype_EN_Captions.mp4.
+Read only [SPOKEN] blocks. The video has English explanatory captions and no audio.
+Play it continuously at normal speed; no presenter speaks during playback.
+The original Chinese interface remains visible as a record of the early prototype.
+
+A: slides 1-2 and opening of slide 3, 0:00-1:55.
+B: rest of slide 3, slide 4 and video intro, 1:55-3:55.
+Video: 3:55-4:59.36, 64.36 seconds.
+C: video debrief and slides 6-8, 4:59-7:09.
+Target end about 7:10, leaving about 50 seconds within the 8-minute allowance.
+Keep Q&A separate for 2 minutes. Do not fill spare time with unsupported claims.
+
+WORDS / whitespace count: A 162, B 164, C 157. A includes two slash pause markers.
+At the measured pace of 210 words / 136 seconds, expected speech: A 104.9s, B 106.2s, C 101.7s. Rehearse with slide changes.
+
+READING COPY: Chi Kit WONG
+
+SLIDE 1 / MEETING CUE
+
+A / Chi Kit WONG / 0:00-0:25
+[SPOKEN]
+Hello everyone. We are Group Three, and our project is Meeting Cue. It helps people stay available to a remote meeting / while working on another task, without letting AI make commitments for them.
+[/SPOKEN]
+
+SLIDE 2 / WHAT THE 43 RECORDS REVEALED
+
+A / Chi Kit WONG / 0:25-1:30
+[SPOKEN]
+The paper / Enabling Partial Participation in Remote Meetings introduced ProxyMe, a system for meeting updates and replies. We build on its partial participation problem. Our forty-three records add concrete needs: repeated requests when attention shifts, summaries missing personally relevant details, and a case where missing an important detail leads to a wrong answer. Some records also suggest that existing notes or chat already meet the need, without another tool. These examples motivate selective support. Our question is when to bring someone back, and what context helps them make a correct contribution.
+[/SPOKEN]
+
+SLIDE 3 / HOW EVIDENCE SHAPED THE PROTOTYPE
+
+A / Chi Kit WONG / 1:30-1:55
+[SPOKEN]
+We grouped the records by requests, missing context, and reply risks, then linked these patterns to three design needs: timely alerts, original context, and human control. The table shows these links. Haodong will explain the features.
+[/SPOKEN]
+[Keep slide 3 displayed. B takes over.]
+

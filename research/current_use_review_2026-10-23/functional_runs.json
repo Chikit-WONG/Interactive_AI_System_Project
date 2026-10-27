@@ -1,0 +1,314 @@
+[
+  {
+    "repeat": 1,
+    "case": 1,
+    "elapsedMs": 1479,
+    "items": [
+      {
+        "classification": "awareness",
+        "question": "Latest project files have been uploaded (progress update only).",
+        "reason": "This relates to Alex's responsibility to check presentation materials, but Sam explicitly stated that no reply is needed, so no response is required.",
+        "source_ids": [
+          "u1"
+        ],
+        "draft": "",
+        "deadline": null,
+        "uncertainty": "The content or location of the uploaded files was not specified, so it is unclear whether the presentation materials Alex checks are among them.",
+        "id": "f6b3363d-bf1f-47ab-b326-a540fd6d50e9",
+        "fingerprint": "33ca525494e9486648e138538cbfb3d0d34ccdb1fd805075cd4f4b58315a1e82",
+        "createdAt": "2026-10-23T06:10:59.034Z",
+        "status": "pending",
+        "confirmedText": "",
+        "notNeededReason": "",
+        "outdated": false
+      }
+    ],
+    "summary": "Sam posted a progress update saying the latest project files have been uploaded. Sam explicitly said Alex does not need to reply."
+  },
+  {
+    "repeat": 1,
+    "case": 2,
+    "elapsedMs": 2079,
+    "items": [
+      {
+        "classification": "defer",
+        "question": "是否能在今晚六点前审阅封面颜色并给出反馈？",
+        "reason": "Sam 直接点名 Alex 负责审阅封面颜色，这与 Alex 核对演示材料的职责相关；不过 Sam 表示可以继续推进、无需现在回答，因此可以稍后处理。",
+        "source_ids": [
+          "u2"
+        ],
+        "draft": "Sam，收到。我会看一��封面颜色，并尽量在今晚六点前反馈我的意见；如果发现需要进一步确认的地方，我会一并告诉你。",
+        "deadline": "six this evening",
+        "uncertainty": "不清楚 Alex 是否具备封面配色方面的决定权；今晚六点这一时点是 Sam 明确说的，未说明时区。",
+        "id": "d4ce033e-620f-4d8d-a84d-9efdf92cb2bc",
+        "fingerprint": "e5d356e6f43236a77778bfc3f731531db95dbbc7aa0fd7426e17a0e053c6e09d",
+        "createdAt": "2026-10-23T06:11:01.125Z",
+        "status": "pending",
+        "confirmedText": "",
+        "notNeededReason": "",
+        "outdated": false
+      }
+    ],
+    "summary": "Sam 报告最新项目文件已上传，并请 Alex 在今晚六点前审阅封面颜色；Sam 明确表示这件事不阻塞后续讨论，因此不必现在回复。"
+  },
+  {
+    "repeat": 1,
+    "case": 3,
+    "elapsedMs": 2333,
+    "items": [
+      {
+        "classification": "action_now",
+        "question": "Can you join the rehearsal at ten twenty tomorrow morning? Jordan says your answer is needed now before the room can be booked.",
+        "reason": "Jordan explicitly asks for confirmation now and states the room administrator is waiting, so this cannot be left unresolved. However, Alex's private constraint is arriving no earlier than 10:30 AM, so 10:20 AM cannot be committed to; Alex can offer 10:40 AM instead. Room booking is not Alex's responsibility.",
+        "source_ids": [
+          "u3"
+        ],
+        "draft": "Hi Jordan, thanks for checking. I can't make ten twenty tomorrow morning — I'm not able to arrive before 10:30 AM. I can join at 10:40 AM instead. Please let me know whether 10:40 works for the room administrator; I'm not handling the room booking myself.",
+        "deadline": "ten twenty tomorrow morning",
+        "uncertainty": "It is unclear whether starting at 10:40 AM is acceptable to the room administrator or to the other rehearsal participants; this still needs confirmation.",
+        "id": "0b9c0940-c088-42fa-942d-cca611c4e5b1",
+        "fingerprint": "67e5e81dd3e9f3a6d97d694d29cc3c95d820c9a980d54c9fa017bdc01ab4248f",
+        "createdAt": "2026-10-23T06:11:03.472Z",
+        "status": "pending",
+        "confirmedText": "",
+        "notNeededReason": "",
+        "outdated": false
+      }
+    ],
+    "summary": "Sam reported that the latest project files have been uploaded and asked Alex to review the cover color by six this evening, with no immediate reply needed. Jordan now asks Alex to confirm whether he can join the rehearsal at ten twenty tomorrow morning, saying the room administrator is waiting for this answer before the room can be booked."
+  },
+  {
+    "repeat": 1,
+    "case": 4,
+    "elapsedMs": 2930,
+    "items": [
+      {
+        "classification": "defer",
+        "question": "An unidentified speaker asked for approval of the room booking before they can continue. Does anything need to come from Alex, or should the room administrator be directed to the booking decision instead?",
+        "reason": "Alex is not responsible for booking rooms, but the request is addressed as 'you' and the speaker is unidentified, so it is unclear whether Alex is the intended approver. This does not need to interrupt Alex's other work, but it needs clarification so the booking is not left stalled.",
+        "source_ids": [
+          "u4"
+        ],
+        "draft": "I can't approve the room booking — that's handled by the room administrator, not me. On my side: I can't make 10:20 AM tomorrow, but I can join the rehearsal at 10:40 if the team confirms the room. Please let me know once the booking is settled.",
+        "deadline": null,
+        "uncertainty": "The speaker is labeled 'Speaker not identified', so it is unknown whether the request is directed at Alex. It is also unclear who has authority to approve the room booking.",
+        "id": "3a3910db-7240-4f88-9967-bf51eba62305",
+        "fingerprint": "36cdf3a93e7feadba01e09d0a4e773b0d24b54ed410bd28519e7baef4c37ebfd",
+        "createdAt": "2026-10-23T06:11:06.450Z",
+        "status": "pending",
+        "confirmedText": "",
+        "notNeededReason": "",
+        "outdated": false
+      }
+    ],
+    "summary": "Sam posted a progress update and asked for an optional cover-color review by this evening. Jordan asked Alex to confirm a 10:20 AM rehearsal tomorrow, and Alex already replied that 10:20 AM does not work but 10:40 AM does if the room is confirmed. The latest line is an unidentified speaker asking for immediate approval of the room booking. The discussion is waiting on that booking approval, which is outside Alex's stated responsibilities."
+  },
+  {
+    "repeat": 2,
+    "case": 1,
+    "elapsedMs": 1456,
+    "items": [
+      {
+        "classification": "awareness",
+        "question": "Sam 已上传最新项目文件，仅作进度同步。",
+        "reason": "该发言与 Alex 的材料检查职责相关，但 Sam 明确表示 Alex 不需要回复，因此只需知悉。",
+        "source_ids": [
+          "u1"
+        ],
+        "draft": "",
+        "deadline": null,
+        "uncertainty": "未说明文件的具体内容、位置或是否需要任何后续材料检查，Alex 可根据需要自行查看。",
+        "id": "4322f76b-278f-47c2-b87f-b5b72c79dba3",
+        "fingerprint": "6d9a30465b68d81e9aff7966a6ef830ce249bc4c19d6a95da6aedda242472e7e",
+        "createdAt": "2026-10-23T06:11:07.926Z",
+        "status": "pending",
+        "confirmedText": "",
+        "notNeededReason": "",
+        "outdated": false
+      }
+    ],
+    "summary": "Sam 已上传最新项目文件，并说明这只是一次进度更新，Alex 不需要回复。本次发言未涉及需要 Alex 回应的请求或决定。"
+  },
+  {
+    "repeat": 2,
+    "case": 2,
+    "elapsedMs": 2491,
+    "items": [
+      {
+        "classification": "defer",
+        "question": "Can you review the cover color by six this evening?",
+        "reason": "Sam directly asked Alex, the project materials coordinator, to review the cover color, which falls within the responsibility to check presentation materials. Sam explicitly said no answer is needed now and work can continue without this decision, so it can be deferred rather than handled immediately.",
+        "source_ids": [
+          "u2"
+        ],
+        "draft": "Hi Sam, thanks for the note on the cover color. I'll review it by six this evening. I don't have a confirmed view yet, so I'll follow up once I've looked at it.",
+        "deadline": "six this evening",
+        "uncertainty": "The exact date/time implied by \"six this evening\" is stated in the source; the specific cover materials Sam wants reviewed are not identified beyond \"cover color.\"",
+        "id": "b5c2b2ff-b7b0-4ac5-b3f3-99150ecb36bb",
+        "fingerprint": "501552472fefa04bd957b0a2cc88b7891eb5f6a0e7e1ff5897d654fe048aaeeb",
+        "createdAt": "2026-10-23T06:11:10.421Z",
+        "status": "pending",
+        "confirmedText": "",
+        "notNeededReason": "",
+        "outdated": false
+      }
+    ],
+    "summary": "Sam uploaded the latest project files as a progress update and said Alex does not need to reply. Sam also asked Alex to review the cover color by six this evening, adding that the discussion can continue without that decision and there is no need to answer now."
+  },
+  {
+    "repeat": 2,
+    "case": 3,
+    "elapsedMs": 2207,
+    "items": [
+      {
+        "classification": "action_now",
+        "question": "Can you join the rehearsal at 10:20 AM tomorrow morning, as Jordan asks you to confirm now?",
+        "reason": "Jordan needs your answer before the room can be booked, so this discussion cannot proceed without it. This is your responsibility to confirm rehearsal availability.",
+        "source_ids": [
+          "u3"
+        ],
+        "draft": "Hi Jordan, thanks for checking. Tomorrow I cannot arrive before 10:30 AM. I could join a rehearsal at 10:40 AM, but I cannot commit to 10:20 AM. Could we adjust the rehearsal time, or should we proceed with the 10:20 AM booking and I join as soon as I arrive?",
+        "deadline": null,
+        "uncertainty": "It is unclear whether the room booking requires you to be present from 10:20 AM, or whether a start at 10:40 AM is possible. No explicit deadline was stated.",
+        "id": "7af8241a-81bc-4d2e-99c2-e89968a51067",
+        "fingerprint": "1b2f2cf6268a08c649f003a1961149e33d65e5c72cd24e4ff56ad9e4aaaf93ef",
+        "createdAt": "2026-10-23T06:11:12.635Z",
+        "status": "pending",
+        "confirmedText": "",
+        "notNeededReason": "",
+        "outdated": false
+      }
+    ],
+    "summary": "Sam uploaded the latest project files as a progress update, and also asked Alex to review the cover color by six this evening (no immediate reply needed). Jordan now asks Alex to confirm whether he can join tomorrow's 10:20 AM rehearsal immediately, because the room administrator is waiting to book the room."
+  },
+  {
+    "repeat": 2,
+    "case": 4,
+    "elapsedMs": 2726,
+    "items": [
+      {
+        "classification": "action_now",
+        "question": "The latest unidentified speaker asks someone to approve the room booking now before continuing. Do you have any room-booking approval role, or does this concern your rehearsal confirmation only?",
+        "reason": "Room booking is outside Alex's stated responsibilities, and the rehearsal confirmation at 10:20 AM was already handled in existing alerts. The speaker is unknown, so it is unclear whether Alex is the intended recipient.",
+        "source_ids": [
+          "u4"
+        ],
+        "draft": "On the room booking itself, that's not something I handle, so please confirm with whoever owns room bookings. Separately, on the rehearsal, I can't make 10:20 AM; I can join at 10:40 if the team confirms the room.",
+        "deadline": null,
+        "uncertainty": "The speaker is unidentified and did not name Alex, so it is unclear whether this request is directed at Alex. It is also unclear whether this repeats Jordan's rehearsal-confirmation issue or is a separate booking-approval request.",
+        "id": "36d5cc26-56ec-417d-a665-650b4d387ca9",
+        "fingerprint": "d0884a41ebb91336baa8a4d1a09bb7afa05283bfb6e2c903b9d588863a976f3e",
+        "createdAt": "2026-10-23T06:11:15.371Z",
+        "status": "pending",
+        "confirmedText": "",
+        "notNeededReason": "",
+        "outdated": false
+      }
+    ],
+    "summary": "Sam uploaded the latest project files as a progress update and asked Alex to review the cover color by six this evening, but said there is no need to answer now. Jordan asked Alex to confirm attending a rehearsal at 10:20 tomorrow morning, with a room administrator waiting and an answer needed before the room can be booked; that was already handled in existing alerts. The newest utterance asks for approval of the room booking, but the speaker is unidentified and no one's name is stated."
+  },
+  {
+    "repeat": 3,
+    "case": 1,
+    "elapsedMs": 1397,
+    "items": [
+      {
+        "classification": "awareness",
+        "question": "Latest project files were uploaded by Sam; no reply was requested.",
+        "reason": "This is an informational progress update. Sam explicitly said Alex does not need to reply, so no action is needed beyond being aware of the new files.",
+        "source_ids": [
+          "u1"
+        ],
+        "draft": "",
+        "deadline": null,
+        "uncertainty": "It is unclear which files were uploaded or whether they relate to Alex's presentation materials check; no deadline was stated.",
+        "id": "d6cd114f-2f8f-4497-9441-1f94ab90a816",
+        "fingerprint": "3158eb3f55efa6090d417b17a2960dc472c1ff82a9e2a0c54c208ec1dd0c5b16",
+        "createdAt": "2026-10-23T06:11:16.780Z",
+        "status": "pending",
+        "confirmedText": "",
+        "notNeededReason": "",
+        "outdated": false
+      }
+    ],
+    "summary": "Sam uploaded the latest project files and described this as a progress update, stating Alex does not need to reply. No decisions or requests for Alex were made in this segment."
+  },
+  {
+    "repeat": 3,
+    "case": 2,
+    "elapsedMs": 2132,
+    "items": [
+      {
+        "classification": "defer",
+        "question": "Sam asks Alex to review the cover color by six this evening, while saying the discussion can proceed without that decision and no immediate answer is needed.",
+        "reason": "This concerns Alex's materials-checking responsibility and can be handled later, since Sam explicitly said the team can continue without it for now.",
+        "source_ids": [
+          "u2"
+        ],
+        "draft": "Thanks, Sam — I've noted the cover color review. I'll look at it and get back to you, but I can't confirm a decision right now.",
+        "deadline": "six this evening",
+        "uncertainty": "Unclear whether the review is expected before six this evening or whether that is only a preferred timing; Sam said no immediate answer is needed, and Alex's availability for this is not stated.",
+        "id": "c75230b6-10bb-4f66-a95f-10c2486fecd9",
+        "fingerprint": "5f469306418a6d76294bf8caf1a0101b491626d9d1d7e0f1cadbab22c075742e",
+        "createdAt": "2026-10-23T06:11:18.915Z",
+        "status": "pending",
+        "confirmedText": "",
+        "notNeededReason": "",
+        "outdated": false
+      }
+    ],
+    "summary": "Sam gave a progress update on the uploaded project files and explicitly said Alex does not need to reply (u1). Sam then asked Alex to review the cover color by six this evening, adding that the team can continue without that decision, so there is no need to answer now (u2). No decisions or deadlines were set for Alex beyond that."
+  },
+  {
+    "repeat": 3,
+    "case": 3,
+    "elapsedMs": 2209,
+    "items": [
+      {
+        "classification": "action_now",
+        "question": "Can Alex join the rehearsal at ten twenty tomorrow morning, and what should be told to the room administrator waiting to book the room?",
+        "reason": "Jordan explicitly asks Alex to confirm now and says the room booking depends on Alex's answer. This concerns Alex's rehearsal availability, which is within Alex's responsibilities.",
+        "source_ids": [
+          "u3"
+        ],
+        "draft": "Thanks Jordan. I need to flag that I can't commit to 10:20 AM tomorrow. I'm not able to arrive before 10:30 AM and could join a rehearsal at 10:40 AM instead. I'm not responsible for booking the room, so please confirm with the room administrator whether 10:40 AM works for booking.",
+        "deadline": null,
+        "uncertainty": "Alex's private availability indicates 10:20 AM is not possible, but Alex has not yet confirmed this on the call. Whether the room can be booked for 10:40 AM instead is unknown and depends on the room administrator.",
+        "id": "1fec00d7-9f02-4e2f-baeb-6dd0a8cb15e5",
+        "fingerprint": "858689c56d64a3ca0718dc7279fc161e5b51007c6448b637c15cb96dcfd4797e",
+        "createdAt": "2026-10-23T06:11:21.129Z",
+        "status": "pending",
+        "confirmedText": "",
+        "notNeededReason": "",
+        "outdated": false
+      }
+    ],
+    "summary": "Sam uploaded the latest project files as a progress update and did not request a reply. Sam also asked Alex to review the cover color by six this evening, while noting the discussion can continue without that decision. Jordan now asks Alex to confirm joining the rehearsal at ten twenty tomorrow morning, saying the room administrator is waiting and an answer is needed before the room can be booked."
+  },
+  {
+    "repeat": 3,
+    "case": 4,
+    "elapsedMs": 2544,
+    "items": [
+      {
+        "classification": "action_now",
+        "question": "Who is being asked to approve the room booking, and does it require Alex's approval, given Alex is not responsible for booking rooms?",
+        "reason": "The speaker is not identified, so it is unclear whether this request is directed at Alex or at someone else. It is marked as needing an answer before the discussion can continue, so the target of the request must be clarified.",
+        "source_ids": [
+          "u4"
+        ],
+        "draft": "I'm not sure this request is for me. I'm not responsible for room bookings; could you confirm who needs to approve the booking? My rehearsal availability was already shared in response to Jordan's earlier question.",
+        "deadline": null,
+        "uncertainty": "The speaker is labeled 'Speaker not identified', so the intended recipient of the approval request is unknown. It is also unclear whether the booking is the same rehearsal room mentioned by Jordan or a different booking. No explicit deadline was stated for this request.",
+        "id": "7c3edd08-10aa-401d-b705-af25fed5ef60",
+        "fingerprint": "92d76801e277e5995b29d6d4a77db777e6b5a0e10026487a843ea58f0e1d8319",
+        "createdAt": "2026-10-23T06:11:23.686Z",
+        "status": "pending",
+        "confirmedText": "",
+        "notNeededReason": "",
+        "outdated": false
+      }
+    ],
+    "summary": "Sam posted an upload as a progress update and separately asked Alex to review a cover color by six this evening, while saying no reply is needed now. Jordan asked Alex to confirm joining a rehearsal at ten twenty tomorrow morning, since the room administrator is waiting. A speaker whose identity is not identified then asked for approval of the room booking and said an answer is needed before continuing. The rehearsal request was already handled in an existing alert and is not repeated."
+  }
+]

@@ -1,0 +1,45 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><title>Edge 正式转写代码实测</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>body{max-width:850px;margin:30px auto;padding:0 24px;font:16px/1.8 system-ui;color:#163b32;background:#f5f7f2}section{padding:20px;background:white;border:1px solid #cedbd2;border-radius:10px;margin:16px 0}h1{font-size:25px}button{font:inherit;padding:9px 14px;margin-right:8px}.audio-feedback{padding:12px;background:#e6f1e9}.audio-feedback[data-state=error]{background:#fbe5e1;color:#9b3026}pre{white-space:pre-wrap;overflow-wrap:anywhere}li{margin:8px 0}</style>
+<h1>Edge 正式转写代码实测</h1>
+<p>使用正式 system-audio.js 和实际浏览器识别服务；屏幕输入由中文合成语音替代，麦克风由静音音轨替代。权限策略禁止真实麦克风及屏幕采集。测试记录保存在隔离服务，不进入项目会议记录。</p>
+<section><button id="prepare">准备合成音轨</button><button id="system-audio-start" disabled>开始会议声音转写</button><button id="system-audio-stop" disabled>停止会议声音转写</button><button id="repeat" disabled>再次输入合成语音</button>
+<p id="setup">尚未准备</p><p id="system-audio-status" class="audio-feedback">尚未启动</p><p id="monitor-audio-feedback" hidden></p></section>
+<section><h2>预期句子</h2><p>这是一段语音测试。小林，请确认明天上午十点四十分参加排练。</p><h2>实际保存的识别文字</h2><ol id="utterances"></ol><p id="result">尚无文字</p></section>
+<section><h2>测试信息</h2><pre id="info"></pre></section>
+<script src="/system-audio.js" defer></script>
+<script>
+const $=id=>document.getElementById(id);let audioContext,source,displayStream,microphoneStream,started=false,fixtureBuffer,displayDestination;
+const info={userAgent:navigator.userAgent,input:'synthetic_speech_and_silent_microphone',productionScript:'/public/system-audio.js',requestedAsrSampleRate:16000};
+$('info').textContent=JSON.stringify(info,null,2);
+$('prepare').onclick=async()=>{
+ $('prepare').disabled=true;
+ try{
+  audioContext=new AudioContext({sampleRate:48000});await audioContext.resume();
+  const response=await fetch('/zh-CN.wav');const buffer=await audioContext.decodeAudioData(await response.arrayBuffer());
+  const display=audioContext.createMediaStreamDestination(),microphone=audioContext.createMediaStreamDestination();fixtureBuffer=buffer;displayDestination=display;
+  source=audioContext.createBufferSource();source.buffer=buffer;source.connect(display);
+  displayStream=display.stream;microphoneStream=microphone.stream;
+  navigator.mediaDevices.getDisplayMedia=async()=>displayStream;
+  navigator.mediaDevices.getUserMedia=async()=>microphoneStream;
+  window.dispatchEvent(new CustomEvent('meeting-session-state',{detail:{running:true,meetingId:'speech-diagnostic-integration',generation:1}}));
+  info.fixtureSampleRate=48000;info.fixtureDurationSeconds=buffer.duration;$('info').textContent=JSON.stringify(info,null,2);
+  $('setup').textContent='已准备：48kHz 合成输入 → 正式代码混音为16kHz → 实际Edge识别服务。可以点击开始。';
+ }catch(error){$('setup').textContent=error.message;$('prepare').disabled=false}
+};
+addEventListener('meeting-audio-mode',event=>{
+ if(event.detail.active){
+  info.recognitionStarts=(info.recognitionStarts||0)+1;info.lastStartAt=new Date().toISOString();$('info').textContent=JSON.stringify(info,null,2);$('repeat').disabled=false;
+  if(!started){started=true;source.start(audioContext.currentTime+0.3);$('setup').textContent='实际识别已启动，正在输入中文合成语音。'}
+ }else{$('repeat').disabled=true}
+});
+$('repeat').onclick=()=>{const repeat=audioContext.createBufferSource();repeat.buffer=fixtureBuffer;repeat.connect(displayDestination);repeat.start(audioContext.currentTime+0.3)};
+let lastCount=0;
+const poll=setInterval(async()=>{
+ try{const state=await(await fetch('/api/state')).json();if(state.utterances.length===lastCount)return;lastCount=state.utterances.length;
+ $('utterances').replaceChildren(...state.utterances.map(u=>{const li=document.createElement('li');li.textContent=u.text;return li}));
+ $('result').textContent='已保存 '+lastCount+' 段实际识别文字（不是预设回答）。';
+ }catch{}
+},500);
+addEventListener('beforeunload',()=>{clearInterval(poll);displayStream?.getTracks().forEach(t=>t.stop());microphoneStream?.getTracks().forEach(t=>t.stop());void audioContext?.close()});
+</script></html>

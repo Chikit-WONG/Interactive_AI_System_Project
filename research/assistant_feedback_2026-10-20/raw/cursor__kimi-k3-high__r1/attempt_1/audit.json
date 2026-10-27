@@ -1,0 +1,35 @@
+{
+  "attempt": 1,
+  "started_at": "2026-10-20T15:28:09.468433+00:00",
+  "timeout_seconds": 180,
+  "timed_out": false,
+  "exit_code": 0,
+  "process_id": 80712,
+  "ended_at": "2026-10-20T15:28:39.382401+00:00",
+  "provider": "cursor",
+  "requested_model": "kimi-k3-high",
+  "requested_reasoning_effort": "model_id",
+  "returned_models": [
+    "Kimi K3 High"
+  ],
+  "model_identity_status": "verified",
+  "session_ids": [
+    "45600fe5-b5ab-4173-b5c7-b5909a243f6f"
+  ],
+  "input_sha256": "7486863387d749425546f9bd81d5480b40f8972eed1ce2169d17a6d8a18ece75",
+  "prompt_echo_matches": true,
+  "prompt_transport_note": "Exact text equality checked against user stream event.",
+  "tool_event_count": 0,
+  "tool_events": [],
+  "malformed_stream_line_numbers": [],
+  "extracted_markdown_fence": false,
+  "structure_errors": [
+    "JSON parse failed: Expecting ',' delimiter: line 9 column 42 (char 378)"
+  ],
+  "quota_or_rate_limit": false,
+  "valid": false,
+  "errors": [
+    "JSON parse failed: Expecting ',' delimiter: line 9 column 42 (char 378)"
+  ],
+  "raw_directory": "raw\\cursor__kimi-k3-high__r1\\attempt_1"
+}

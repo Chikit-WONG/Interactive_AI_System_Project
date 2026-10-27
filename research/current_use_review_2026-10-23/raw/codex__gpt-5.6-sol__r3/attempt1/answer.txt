@@ -1,0 +1,122 @@
+{
+  "source_type": "model_simulation",
+  "exposure": "recorded_current_workflow",
+  "cases": [
+    {
+      "id": "E01",
+      "assessment": "helpful",
+      "reason": "The system correctly treated the upload notice as informational and created no reply suggestion because the text explicitly said Alex did not need to respond. Including it only in the summary would help me retain context without creating an unnecessary interruption."
+    },
+    {
+      "id": "E02",
+      "assessment": "helpful",
+      "reason": "Marking the cover-color request as Later fits both the stated deadline and Sam's statement that work could continue without an immediate decision. The draft appropriately avoided inventing a completed review, although it was more verbose than necessary."
+    },
+    {
+      "id": "E03",
+      "assessment": "helpful",
+      "reason": "The Respond now classification recognized an explicit request blocking room arrangements. The generated draft correctly rejected 10:20, offered the profile-supported 10:40 alternative, and did not claim authority to book the room. Its request for another possible time slightly broadened the exchange but did not create a commitment."
+    },
+    {
+      "id": "E04",
+      "assessment": "helpful",
+      "reason": "Showing the source utterance, rationale, uncertainty, and editable draft would let me verify why I was interrupted and check the proposed response against my availability and responsibilities. This is important because the model cannot know whether the room or team can accommodate 10:40."
+    },
+    {
+      "id": "E05",
+      "assessment": "mixed",
+      "reason": "Editing before confirmation gave me useful control, and the confirmed text accurately separated arrival at 10:30 from joining at 10:40. The status clearly said that copying was not sending. However, confirmation plus copying could still feel deceptively close to completion even though no recipient received the answer."
+    },
+    {
+      "id": "E06",
+      "assessment": "helpful",
+      "reason": "The interface detected that post-copy edits were unconfirmed and disabled the sent control, preventing the revised wording from being recorded as sent without renewed confirmation. The remaining risk is that the clipboard still contained the older version, making accidental use of stale wording possible."
+    },
+    {
+      "id": "E07",
+      "assessment": "unhelpful",
+      "reason": "Deferring an unidentified request outside Alex's booking responsibility is defensible, but the generated draft and summary incorrectly imply that Alex had already communicated the 10:20/10:40 position. The evidence shows only confirmation and copying, not sending. The response also repeats the older confirmed wording, including arrival at 10:30, rather than respecting the later unconfirmed edit. This conflates internal workflow state with external meeting state."
+    },
+    {
+      "id": "E08",
+      "assessment": "helpful",
+      "reason": "Stopping disabled further input and analysis, froze elapsed time, and preserved the records. That behavior provides a clear session boundary without falsely implying that pending or copied drafts were delivered."
+    }
+  ],
+  "value_assessments": {
+    "selective_attention": {
+      "judgment": "supported",
+      "evidence_ids": [
+        "E01",
+        "E02",
+        "E03"
+      ],
+      "reason": "The system distinguished a no-reply update, a deferrable request, and an explicitly blocking request in this clean scripted sequence."
+    },
+    "context_for_correct_reply": {
+      "judgment": "mixed",
+      "evidence_ids": [
+        "E03",
+        "E04",
+        "E07"
+      ],
+      "reason": "Profile facts produced a suitable response to u3, but later analysis confused copied text with externally communicated context and failed to reflect the newest edit state."
+    },
+    "control_over_commitments": {
+      "judgment": "supported",
+      "evidence_ids": [
+        "E05",
+        "E06",
+        "E08"
+      ],
+      "reason": "The operator could edit, confirm, and copy without automatic sending, while later edits required renewed confirmation. Clipboard staleness remains a meaningful weakness."
+    }
+  },
+  "would_use": "only_in_some_cases",
+  "best_fit": "Clean text meetings where direct requests are explicit and I want selective prompts plus editable, profile-aware draft replies.",
+  "poor_fit": "Ambiguous multi-speaker discussions where copied, confirmed, edited, and actually sent states must remain strictly distinct.",
+  "biggest_benefit": {
+    "evidence_ids": [
+      "E01",
+      "E02",
+      "E03"
+    ],
+    "text": "It filtered different levels of response urgency and surfaced the genuinely blocking availability conflict."
+  },
+  "biggest_risk": {
+    "evidence_ids": [
+      "E05",
+      "E06",
+      "E07"
+    ],
+    "text": "The model may treat an internally confirmed or copied draft as something already communicated, then propagate stale wording into later guidance."
+  },
+  "improvements": [
+    {
+      "priority": "P0",
+      "evidence_ids": [
+        "E05",
+        "E07"
+      ],
+      "suggestion": "Never describe a position as already said or handled unless the user explicitly marks the exact version as sent."
+    },
+    {
+      "priority": "P0",
+      "evidence_ids": [
+        "E06",
+        "E07"
+      ],
+      "suggestion": "Track generated, edited, confirmed, copied, and sent text as separate versions, and make subsequent analysis use the newest state without presenting unconfirmed edits as commitments."
+    },
+    {
+      "priority": "P1",
+      "evidence_ids": [
+        "E06"
+      ],
+      "suggestion": "Warn prominently that the clipboard contains an older confirmed version after further edits, and offer renewed confirmation followed by recopying."
+    }
+  ],
+  "safe_final_reply": "I cannot join at 10:20 tomorrow. I can join at 10:40, subject to the team confirming the room. Please check whether 10:40 works before the person responsible for room booking proceeds.",
+  "presentation_claim": "In this scripted text-only trace, Meeting Cue distinguished informational, deferrable, and urgent requests and kept message delivery under operator control.",
+  "not_established": "The trace does not establish usefulness in real meetings, live-audio accuracy, successful Tencent delivery, human productivity gains, timing benefits, or performance relative to another workflow."
+}

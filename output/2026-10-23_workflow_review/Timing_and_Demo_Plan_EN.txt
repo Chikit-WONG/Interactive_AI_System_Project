@@ -1,0 +1,97 @@
+MEETING CUE / GROUP 3
+8 minutes including demo + 2 minutes Q&A
+Use with Meeting_Cue_Midterm_EN_WorkflowReview.pptx.
+
+BALANCED THREE-PERSON SPEAKING PLAN
+A / Chi Kit WONG: slides 1-2 and the first part of slide 3, 0:00-1:55.
+  115 seconds; 162 words.
+B / Haodong XU: the rest of slide 3, slide 4 and the video introduction,
+  1:55-3:50. 115 seconds; 160 words. B starts playback.
+C / Sida ZHANG: video debrief and slides 6-8, 5:50-7:50.
+  120 seconds; 154 words.
+Video 3:50-5:50: 120 seconds, no presenter speaks.
+Slide 3 handoff: A introduces the design needs; B connects records to features.
+Keep slide 3 displayed at the handoff. After the video, C starts the debrief
+without an additional spoken handoff. Slide 8 has only one sentence:
+"Here is our contribution." Keep the table visible during Q&A.
+These are speaking assignments, not claims about who completed the project work.
+Completed work follows the team report. Remaining demo and review tasks are marked planned.
+
+MAIN CLOCK
+Slide 1  00:00-00:25  A: Project introduction                         25 seconds
+Slide 2  00:25-01:30  A: 43-record findings and research problem    65 seconds
+Slide 3  01:30-01:55  A: Three design needs                           25 seconds
+         01:55-02:50  B: Concrete records connected to features        55 seconds
+Slide 4  02:50-03:40  B: AI workflow                                  50 seconds
+Slide 5  03:40-03:50  B: Introduce video                              10 seconds
+         03:50-05:50  Video; no live speech                          120 seconds
+         05:50-06:15  C: Explain how the demo realizes those needs     25 seconds
+Slide 6  06:15-06:50  C: Current workflow review findings       35 seconds
+Slide 7  06:50-07:45  C: Feedback, revision and impact evaluation                 55 seconds
+Slide 8  07:45-07:50  C: Introduce contribution table                   5 seconds
+Buffer   07:50-08:00  Transitions or playback delay                   10 seconds
+Q&A      08:00-10:00  Teacher and TA questions                        120 seconds
+
+350 seconds live speech + 120 seconds video + 10 buffer = 480 seconds.
+The script contains 476 live tokens (including two pause markers). Video dialogue is already inside its slot.
+Appendices are for Q&A and do not add to the eight-minute talk.
+
+PACE ESTIMATE
+Your rehearsal of 210 words in 136 seconds implies approximately 92.65
+words per minute. Applying that same pace gives A 104.9 seconds,
+B 103.6 seconds and C 99.7 seconds of speech. Their allocated
+slots are 115, 115 and 120 seconds, allowing approximately 10.1, 11.4 and
+20.3 seconds for pauses and transitions. This is an estimate, not a
+guarantee: the new wording, each speaker and slide changes can alter the time.
+Time a full rehearsal before using the deck. Do not fill pauses with extra speech.
+
+DEMO ESTIMATE AND RECORDING
+Target recording: 2:00; a raw take may take 1:45-2:30. This is an estimate,
+not a measured duration. The complete group recording remains pending.
+A plays Alex and operates the companion; B plays Jordan and chairs; C plays
+Sam and gives both updates. These fictional roles remain unchanged.
+
+Target video sequence:
+00:00-00:30  Sam gives a progress update and deferred request; incoming text appears.
+00:30-00:50  Jordan asks Alex to confirm 10:20; finish the spoken request.
+00:50-01:15  Automatic analysis appears; Alex opens the source excerpt.
+01:15-01:40  Check availability, edit the reply to 10:40 and confirm/copy.
+01:40-02:00  Send in Tencent chat; Jordan sees and acknowledges the message.
+
+Complete permissions, source selection, profile and a brief audio test before
+the take. Keep the continuous original through recipient acknowledgement.
+If waits are shortened in a presentation cut, label the edits. Do not replace
+live model output or imply a message arrived before it did. The feedback form
+can appear if time remains; it is not required in the core two-minute sequence.
+Until footage exists, use the reserved time only for private timing practice.
+
+IF THE ACTUAL VIDEO IS 2:30
+Omit about 10 seconds per presenter. Keep the full 2-minute Q&A.
+A, slide 2: omit this sentence (16 words):
+"Some records also suggest that existing notes or chat already meet the need, without another tool."
+B, slide 3: omit this sentence (14 words):
+"A scenario illustrated how a missed condition could make an otherwise plausible reply unsuitable."
+C, slide 7: omit this sentence (14 words):
+"Next, each person will try both alert rules with matched cases and balanced order."
+The visible slides retain these points; do not read them again.
+
+Revised speaking budgets: A 105 seconds / 146 words;
+B 105 seconds / 146 words; C 110 seconds / 140 words.
+Total 432 words, 320 seconds speech + 150 video + 10 buffer = 480 seconds.
+At the rehearsal pace, predicted speech is 94.6, 94.6, 90.7 seconds respectively.
+
+Revised clock:
+Slide 1: A 0:00-0:25.
+Slide 2: A 0:25-1:20.
+Slide 3: A 1:20-1:45, then B 1:45-2:30.
+Slide 4: B 2:30-3:20.
+Slide 5: B intro 3:20-3:30; video 3:30-6:00; C debrief 6:00-6:25.
+Slide 6: C 6:25-7:00.
+Slide 7: C 7:00-7:45.
+Slide 8: C 7:45-7:50.
+Buffer 7:50-8:00; Q&A 8:00-10:00.
+
+If the video is 1:45, keep the main script and retain the extra 15 seconds as
+buffer. If it exceeds 2:30, revise the content and rehearse again rather than
+borrowing Q&A time or speaking faster. Preserve the continuous original;
+label any shortened waiting periods in the presentation cut.

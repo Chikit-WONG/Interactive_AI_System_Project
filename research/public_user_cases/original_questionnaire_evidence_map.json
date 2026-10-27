@@ -1,0 +1,964 @@
+{
+  "compiledOn": "2026-10-16",
+  "source_type": "public_source_questionnaire_evidence_crosswalk",
+  "new_recruited_participants": 0,
+  "questionnaire_responses_created": 0,
+  "purpose": "把公开经历对照两份原问卷定位可用线索，未把网友文字伪装成回答本问卷。",
+  "basis": "只引用cases.json已核查片段；题目内容来自冻结的new_original.json/old_original.json。",
+  "historical_window_rule": "公开帖子不是2026-10-16向作者实施的问卷；原题过去四周/六个月不得补值或当作满足。",
+  "missingness_rule": "没有报道就是not_reported，不作为没有需求或没有经历。",
+  "items": [
+    {
+      "question_id": "NEW_Q1",
+      "question_title": "Q1. 过去四周，你实际参加过或原本需要参加的远程会议大约有多少次？",
+      "status": "not_reported",
+      "completed_answer": false,
+      "selected_option": null,
+      "numeric_score": null,
+      "current_time_window_satisfied": false,
+      "related_cases": [],
+      "mapping_note": "原文没有回答这一具体问题；尤其不补频率、量表分数、AI设想偏好或停止使用条件。"
+    },
+    {
+      "question_id": "NEW_Q2",
+      "question_title": "Q2. 这些会议通常围绕什么事情展开？你通常承担什么角色或任务？",
+      "status": "partial_historical_evidence",
+      "completed_answer": false,
+      "selected_option": null,
+      "numeric_score": null,
+      "current_time_window_satisfied": false,
+      "related_cases": [
+        {
+          "case_id": "PU03",
+          "source_id": "PS02",
+          "source_url": "https://www.reddit.com/r/remotework/comments/1l4mzk7/remote_working_is_awesome_but_the_meetings_kind/",
+          "remote_context": "remote_explicit"
+        },
+        {
+          "case_id": "PU08",
+          "source_id": "PS05",
+          "source_url": "https://news.ycombinator.com/item?id=43773813",
+          "remote_context": "remote_call_context"
+        },
+        {
+          "case_id": "PU10",
+          "source_id": "PS06",
+          "source_url": "https://workplace.stackexchange.com/questions/198413/team-member-working-from-home-is-distracted-with-kids-while-on-video-calls-sho",
+          "remote_context": "remote_explicit"
+        },
+        {
+          "case_id": "PU11",
+          "source_id": "PS07",
+          "source_url": "https://workplace.stackexchange.com/questions/36126/meeting-etiquette",
+          "remote_context": "remote_explicit"
+        }
+      ],
+      "mapping_note": "有历史会议背景或角色信息；不补单位、年龄或过去四周角色。"
+    },
+    {
+      "question_id": "NEW_Q3",
+      "question_title": "Q3. 请回想最近一次你参加过或原本需要参加的远程会议，简要说明下面三件事。",
+      "status": "partial_historical_evidence",
+      "completed_answer": false,
+      "selected_option": null,
+      "numeric_score": null,
+      "current_time_window_satisfied": false,
+      "related_cases": [
+        {
+          "case_id": "PU05",
+          "source_id": "PS03",
+          "source_url": "https://www.reddit.com/r/remotework/comments/1r0fhn8/i_was_called_out/",
+          "remote_context": "remote_community_only"
+        },
+        {
+          "case_id": "PU08",
+          "source_id": "PS05",
+          "source_url": "https://news.ycombinator.com/item?id=43773813",
+          "remote_context": "remote_call_context"
+        },
+        {
+          "case_id": "PU11",
+          "source_id": "PS07",
+          "source_url": "https://workplace.stackexchange.com/questions/36126/meeting-etiquette",
+          "remote_context": "remote_explicit"
+        },
+        {
+          "case_id": "PU12",
+          "source_id": "PS08",
+          "source_url": "https://stackoverflow.blog/2020/04/30/have-better-meetings-in-person-or-remote/",
+          "remote_context": "remote_explicit"
+        }
+      ],
+      "mapping_note": "有参与方式、目的缺失或会后了解的情境；并非都描述同一次最近会议，不能代填个人目标。"
+    },
+    {
+      "question_id": "NEW_Q4",
+      "question_title": "Q4. 从会议准备、会议进行到会后，你觉得有哪些值得提及的经历？",
+      "status": "partial_historical_evidence",
+      "completed_answer": false,
+      "selected_option": null,
+      "numeric_score": null,
+      "current_time_window_satisfied": false,
+      "related_cases": [
+        {
+          "case_id": "PU01",
+          "source_id": "PS01",
+          "source_url": "https://www.reddit.com/r/ADHD_Programmers/comments/164jtrf/sometimes_taking_notes_in_a_meeting_helps_and/",
+          "remote_context": "remote_explicit"
+        },
+        {
+          "case_id": "PU05",
+          "source_id": "PS03",
+          "source_url": "https://www.reddit.com/r/remotework/comments/1r0fhn8/i_was_called_out/",
+          "remote_context": "remote_community_only"
+        },
+        {
+          "case_id": "PU08",
+          "source_id": "PS05",
+          "source_url": "https://news.ycombinator.com/item?id=43773813",
+          "remote_context": "remote_call_context"
+        },
+        {
+          "case_id": "PU12",
+          "source_id": "PS08",
+          "source_url": "https://stackoverflow.blog/2020/04/30/have-better-meetings-in-person-or-remote/",
+          "remote_context": "remote_explicit"
+        }
+      ],
+      "mapping_note": "只映射原文中明确的会中/会后片段，不补完整时间线。"
+    },
+    {
+      "question_id": "NEW_Q5",
+      "question_title": "Q5. 在刚才的经历或过去四周的其他会议中，有没有一件你希望做法或结果有所不同的事情？",
+      "status": "partial_historical_evidence",
+      "completed_answer": false,
+      "selected_option": null,
+      "numeric_score": null,
+      "current_time_window_satisfied": false,
+      "related_cases": [
+        {
+          "case_id": "PU03",
+          "source_id": "PS02",
+          "source_url": "https://www.reddit.com/r/remotework/comments/1l4mzk7/remote_working_is_awesome_but_the_meetings_kind/",
+          "remote_context": "remote_explicit"
+        },
+        {
+          "case_id": "PU12",
+          "source_id": "PS08",
+          "source_url": "https://stackoverflow.blog/2020/04/30/have-better-meetings-in-person-or-remote/",
+          "remote_context": "remote_explicit"
+        }
+      ],
+      "mapping_note": "与参与效果或期望落差相关的历史叙述；不替作者选择本问卷的有/没有。"
+    },
+    {
+      "question_id": "NEW_Q6",
+      "question_title": "Q6. 包括刚才描述的这一次，过去四周类似情况大约发生了多少次？",
+      "status": "not_reported",
+      "completed_answer": false,
+      "selected_option": null,
+      "numeric_score": null,
+      "current_time_window_satisfied": false,
+      "related_cases": [],
+      "mapping_note": "原文没有回答这一具体问题；尤其不补频率、量表分数、AI设想偏好或停止使用条件。"
+    },
+    {
+      "question_id": "NEW_Q7",
+      "question_title": "Q7. 这件事对你完成当时目标的不利影响有多大？",
+      "status": "not_reported",
+      "completed_answer": false,
+      "selected_option": null,
+      "numeric_score": null,
+      "current_time_window_satisfied": false,
+      "related_cases": [],
+      "mapping_note": "原文没有回答这一具体问题；尤其不补频率、量表分数、AI设想偏好或停止使用条件。"
+    },
+    {
+      "question_id": "NEW_Q8",
+      "question_title": "Q8. 当时或之后，你是如何处理这件事的？",
+      "status": "partial_historical_evidence",
+      "completed_answer": false,
+      "selected_option": null,
+      "numeric_score": null,
+      "current_time_window_satisfied": false,
+      "related_cases": [
+        {
+          "case_id": "PU01",
+          "source_id": "PS01",
+          "source_url": "https://www.reddit.com/r/ADHD_Programmers/comments/164jtrf/sometimes_taking_notes_in_a_meeting_helps_and/",
+          "remote_context": "remote_explicit"
+        },
+        {
+          "case_id": "PU04",
+          "source_id": "PS02",
+          "source_url": "https://www.reddit.com/r/remotework/comments/1l4mzk7/remote_working_is_awesome_but_the_meetings_kind/",
+          "remote_context": "remote_thread_context"
+        },
+        {
+          "case_id": "PU07",
+          "source_id": "PS04",
+          "source_url": "https://www.reddit.com/r/remotework/comments/1hxmirw/zoom_meetings_take_up_all_my_deep_work_time_any/",
+          "remote_context": "remote_thread_context"
+        },
+        {
+          "case_id": "PU08",
+          "source_id": "PS05",
+          "source_url": "https://news.ycombinator.com/item?id=43773813",
+          "remote_context": "remote_call_context"
+        },
+        {
+          "case_id": "PU09",
+          "source_id": "PS05",
+          "source_url": "https://news.ycombinator.com/item?id=43773813",
+          "remote_context": "remote_tool_explicit"
+        },
+        {
+          "case_id": "PU11",
+          "source_id": "PS07",
+          "source_url": "https://workplace.stackexchange.com/questions/36126/meeting-etiquette",
+          "remote_context": "remote_explicit"
+        },
+        {
+          "case_id": "PU14",
+          "source_id": "PS01",
+          "source_url": "https://www.reddit.com/r/ADHD_Programmers/comments/164jtrf/sometimes_taking_notes_in_a_meeting_helps_and/",
+          "remote_context": "meeting_mode_not_reported"
+        }
+      ],
+      "mapping_note": "有实际采取的方法；部分为团队做法或一般实践，原因未说时保留缺失。"
+    },
+    {
+      "question_id": "NEW_Q9",
+      "question_title": "Q9. 请分别评价事情目前的处理结果，以及你为处理它投入的额外精力。",
+      "status": "not_reported",
+      "completed_answer": false,
+      "selected_option": null,
+      "numeric_score": null,
+      "current_time_window_satisfied": false,
+      "related_cases": [],
+      "mapping_note": "原文没有回答这一具体问题；尤其不补频率、量表分数、AI设想偏好或停止使用条件。"
+    },
+    {
+      "question_id": "NEW_Q10",
+      "question_title": "Q10. 目前还有哪些地方没有满足你的需要？",
+      "status": "partial_historical_evidence",
+      "completed_answer": false,
+      "selected_option": null,
+      "numeric_score": null,
+      "current_time_window_satisfied": false,
+      "related_cases": [
+        {
+          "case_id": "PU03",
+          "source_id": "PS02",
+          "source_url": "https://www.reddit.com/r/remotework/comments/1l4mzk7/remote_working_is_awesome_but_the_meetings_kind/",
+          "remote_context": "remote_explicit"
+        },
+        {
+          "case_id": "PU09",
+          "source_id": "PS05",
+          "source_url": "https://news.ycombinator.com/item?id=43773813",
+          "remote_context": "remote_tool_explicit"
+        }
+      ],
+      "mapping_note": "转写/摘要帮助有限或不够具体的主观经历；没有统一量表与同一次事件的完整条件。"
+    },
+    {
+      "question_id": "NEW_Q11",
+      "question_title": "Q11. 过去四周，是否出现过以下情况：你需要了解某次会议或贡献意见，但实际上只参加了部分时段、间断关注，或者没有加入会议通话？",
+      "status": "not_reported",
+      "completed_answer": false,
+      "selected_option": null,
+      "numeric_score": null,
+      "current_time_window_satisfied": false,
+      "related_cases": [],
+      "mapping_note": "原文没有回答这一具体问题；尤其不补频率、量表分数、AI设想偏好或停止使用条件。"
+    },
+    {
+      "question_id": "NEW_Q12",
+      "question_title": "Q12. 请描述最近一次这样的情况。",
+      "status": "partial_historical_evidence",
+      "completed_answer": false,
+      "selected_option": null,
+      "numeric_score": null,
+      "current_time_window_satisfied": false,
+      "related_cases": [
+        {
+          "case_id": "PU08",
+          "source_id": "PS05",
+          "source_url": "https://news.ycombinator.com/item?id=43773813",
+          "remote_context": "remote_call_context"
+        },
+        {
+          "case_id": "PU11",
+          "source_id": "PS07",
+          "source_url": "https://workplace.stackexchange.com/questions/36126/meeting-etiquette",
+          "remote_context": "remote_explicit"
+        }
+      ],
+      "mapping_note": "历史安排涉及会后了解或旁听并行工作；并非过去四周的单次冲突答卷。"
+    },
+    {
+      "question_id": "NEW_Q13",
+      "question_title": "Q13. 按照你自己的判断，这种参与安排对你完成当时相关事情的总体影响如何？",
+      "status": "not_reported",
+      "completed_answer": false,
+      "selected_option": null,
+      "numeric_score": null,
+      "current_time_window_satisfied": false,
+      "related_cases": [],
+      "mapping_note": "原文没有回答这一具体问题；尤其不补频率、量表分数、AI设想偏好或停止使用条件。"
+    },
+    {
+      "question_id": "NEW_Q14",
+      "question_title": "Q14. 对于今后的远程会议，你希望哪些事情有所变化？",
+      "status": "not_reported",
+      "completed_answer": false,
+      "selected_option": null,
+      "numeric_score": null,
+      "current_time_window_satisfied": false,
+      "related_cases": [],
+      "mapping_note": "原文没有回答这一具体问题；尤其不补频率、量表分数、AI设想偏好或停止使用条件。"
+    },
+    {
+      "question_id": "NEW_Q15",
+      "question_title": "Q15. 在现有会议方式中，哪些方面已经符合你的需要，你希望继续保留？",
+      "status": "partial_historical_evidence",
+      "completed_answer": false,
+      "selected_option": null,
+      "numeric_score": null,
+      "current_time_window_satisfied": false,
+      "related_cases": [
+        {
+          "case_id": "PU01",
+          "source_id": "PS01",
+          "source_url": "https://www.reddit.com/r/ADHD_Programmers/comments/164jtrf/sometimes_taking_notes_in_a_meeting_helps_and/",
+          "remote_context": "remote_explicit"
+        },
+        {
+          "case_id": "PU04",
+          "source_id": "PS02",
+          "source_url": "https://www.reddit.com/r/remotework/comments/1l4mzk7/remote_working_is_awesome_but_the_meetings_kind/",
+          "remote_context": "remote_thread_context"
+        },
+        {
+          "case_id": "PU07",
+          "source_id": "PS04",
+          "source_url": "https://www.reddit.com/r/remotework/comments/1hxmirw/zoom_meetings_take_up_all_my_deep_work_time_any/",
+          "remote_context": "remote_thread_context"
+        },
+        {
+          "case_id": "PU08",
+          "source_id": "PS05",
+          "source_url": "https://news.ycombinator.com/item?id=43773813",
+          "remote_context": "remote_call_context"
+        },
+        {
+          "case_id": "PU11",
+          "source_id": "PS07",
+          "source_url": "https://workplace.stackexchange.com/questions/36126/meeting-etiquette",
+          "remote_context": "remote_explicit"
+        },
+        {
+          "case_id": "PU14",
+          "source_id": "PS01",
+          "source_url": "https://www.reddit.com/r/ADHD_Programmers/comments/164jtrf/sometimes_taking_notes_in_a_meeting_helps_and/",
+          "remote_context": "meeting_mode_not_reported"
+        }
+      ],
+      "mapping_note": "已使用且被描述为可用的方法，可用于追问；未明确说希望保留的部分不能代填未来偏好。"
+    },
+    {
+      "question_id": "NEW_Q16",
+      "question_title": "Q16. 过去四周，你本人是否实际使用过 AI 来处理远程会议相关事务？",
+      "status": "partial_historical_evidence",
+      "completed_answer": false,
+      "selected_option": null,
+      "numeric_score": null,
+      "current_time_window_satisfied": false,
+      "related_cases": [
+        {
+          "case_id": "PU08",
+          "source_id": "PS05",
+          "source_url": "https://news.ycombinator.com/item?id=43773813",
+          "remote_context": "remote_call_context"
+        },
+        {
+          "case_id": "PU04",
+          "source_id": "PS02",
+          "source_url": "https://www.reddit.com/r/remotework/comments/1l4mzk7/remote_working_is_awesome_but_the_meetings_kind/",
+          "remote_context": "remote_thread_context"
+        },
+        {
+          "case_id": "PU09",
+          "source_id": "PS05",
+          "source_url": "https://news.ycombinator.com/item?id=43773813",
+          "remote_context": "remote_tool_explicit"
+        }
+      ],
+      "mapping_note": "PU08明确描述AI总结的历史使用情境；PU04是团队工具与流程，PU09是具体摘要工具体验。时间窗均不符合本轮过去四周，且团队使用不能自动等同个人使用。"
+    },
+    {
+      "question_id": "NEW_Q17",
+      "question_title": "Q17. 对于你前面提到的事情，或者其他实际会议经历，有没有你愿意考虑让 AI 提供支持的任务？有没有你认为不适合交给 AI 的任务？",
+      "status": "not_reported",
+      "completed_answer": false,
+      "selected_option": null,
+      "numeric_score": null,
+      "current_time_window_satisfied": false,
+      "related_cases": [],
+      "mapping_note": "原文没有回答这一具体问题；尤其不补频率、量表分数、AI设想偏好或停止使用条件。"
+    },
+    {
+      "question_id": "NEW_Q18",
+      "question_title": "Q18. 请从你愿意考虑的任务中选择一项，描述你希望它怎样完成。",
+      "status": "not_reported",
+      "completed_answer": false,
+      "selected_option": null,
+      "numeric_score": null,
+      "current_time_window_satisfied": false,
+      "related_cases": [],
+      "mapping_note": "原文没有回答这一具体问题；尤其不补频率、量表分数、AI设想偏好或停止使用条件。"
+    },
+    {
+      "question_id": "NEW_Q19",
+      "question_title": "Q19. 就 Q18 这项具体任务而言，与继续采用现有方式相比，你目前是否愿意考虑使用 AI 支持？",
+      "status": "not_reported",
+      "completed_answer": false,
+      "selected_option": null,
+      "numeric_score": null,
+      "current_time_window_satisfied": false,
+      "related_cases": [],
+      "mapping_note": "原文没有回答这一具体问题；尤其不补频率、量表分数、AI设想偏好或停止使用条件。"
+    },
+    {
+      "question_id": "NEW_Q20",
+      "question_title": "Q20. 在这项任务中，你希望自己和 AI 分别负责哪些部分？",
+      "status": "not_reported",
+      "completed_answer": false,
+      "selected_option": null,
+      "numeric_score": null,
+      "current_time_window_satisfied": false,
+      "related_cases": [],
+      "mapping_note": "原文没有回答这一具体问题；尤其不补频率、量表分数、AI设想偏好或停止使用条件。"
+    },
+    {
+      "question_id": "NEW_Q21",
+      "question_title": "Q21. 任务进行过程中，你希望怎样获知进展，或者向它提供意见？",
+      "status": "not_reported",
+      "completed_answer": false,
+      "selected_option": null,
+      "numeric_score": null,
+      "current_time_window_satisfied": false,
+      "related_cases": [],
+      "mapping_note": "原文没有回答这一具体问题；尤其不补频率、量表分数、AI设想偏好或停止使用条件。"
+    },
+    {
+      "question_id": "NEW_Q22",
+      "question_title": "Q22. 你需要什么依据，才能判断它处理的结果是否可以使用？",
+      "status": "not_reported",
+      "completed_answer": false,
+      "selected_option": null,
+      "numeric_score": null,
+      "current_time_window_satisfied": false,
+      "related_cases": [],
+      "mapping_note": "原文没有回答这一具体问题；尤其不补频率、量表分数、AI设想偏好或停止使用条件。"
+    },
+    {
+      "question_id": "NEW_Q23",
+      "question_title": "Q23. 如果 AI 涉及会议信息或与你有关的信息，你希望它遵守哪些使用规则？",
+      "status": "not_reported",
+      "completed_answer": false,
+      "selected_option": null,
+      "numeric_score": null,
+      "current_time_window_satisfied": false,
+      "related_cases": [],
+      "mapping_note": "原文没有回答这一具体问题；尤其不补频率、量表分数、AI设想偏好或停止使用条件。"
+    },
+    {
+      "question_id": "NEW_Q24",
+      "question_title": "Q24. 当其他参会者使用会议相关 AI 助手时，你在什么情况下会接受、不接受，或者没有特别意见？",
+      "status": "not_reported",
+      "completed_answer": false,
+      "selected_option": null,
+      "numeric_score": null,
+      "current_time_window_satisfied": false,
+      "related_cases": [],
+      "mapping_note": "原文没有回答这一具体问题；尤其不补频率、量表分数、AI设想偏好或停止使用条件。"
+    },
+    {
+      "question_id": "NEW_Q25",
+      "question_title": "Q25. 在哪些情况下，你会选择不使用或停止使用这类助手？",
+      "status": "not_reported",
+      "completed_answer": false,
+      "selected_option": null,
+      "numeric_score": null,
+      "current_time_window_satisfied": false,
+      "related_cases": [],
+      "mapping_note": "原文没有回答这一具体问题；尤其不补频率、量表分数、AI设想偏好或停止使用条件。"
+    },
+    {
+      "question_id": "NEW_Q26",
+      "question_title": "Q26. 回看你自己提出的改进事项，假如目前只能优先处理一项，你会选择哪一项？为什么？",
+      "status": "not_reported",
+      "completed_answer": false,
+      "selected_option": null,
+      "numeric_score": null,
+      "current_time_window_satisfied": false,
+      "related_cases": [],
+      "mapping_note": "原文没有回答这一具体问题；尤其不补频率、量表分数、AI设想偏好或停止使用条件。"
+    },
+    {
+      "question_id": "NEW_Q27",
+      "question_title": "Q27. 还有哪些与远程会议相关的经历、需要或顾虑，是前面的问题没有给你表达机会的？",
+      "status": "partial_historical_evidence",
+      "completed_answer": false,
+      "selected_option": null,
+      "numeric_score": null,
+      "current_time_window_satisfied": false,
+      "related_cases": [
+        {
+          "case_id": "PU01",
+          "source_id": "PS01",
+          "source_url": "https://www.reddit.com/r/ADHD_Programmers/comments/164jtrf/sometimes_taking_notes_in_a_meeting_helps_and/",
+          "remote_context": "remote_explicit"
+        },
+        {
+          "case_id": "PU02",
+          "source_id": "PS01",
+          "source_url": "https://www.reddit.com/r/ADHD_Programmers/comments/164jtrf/sometimes_taking_notes_in_a_meeting_helps_and/",
+          "remote_context": "remote_context_not_explicit_in_this_comment"
+        },
+        {
+          "case_id": "PU03",
+          "source_id": "PS02",
+          "source_url": "https://www.reddit.com/r/remotework/comments/1l4mzk7/remote_working_is_awesome_but_the_meetings_kind/",
+          "remote_context": "remote_explicit"
+        },
+        {
+          "case_id": "PU04",
+          "source_id": "PS02",
+          "source_url": "https://www.reddit.com/r/remotework/comments/1l4mzk7/remote_working_is_awesome_but_the_meetings_kind/",
+          "remote_context": "remote_thread_context"
+        },
+        {
+          "case_id": "PU05",
+          "source_id": "PS03",
+          "source_url": "https://www.reddit.com/r/remotework/comments/1r0fhn8/i_was_called_out/",
+          "remote_context": "remote_community_only"
+        },
+        {
+          "case_id": "PU06",
+          "source_id": "PS04",
+          "source_url": "https://www.reddit.com/r/remotework/comments/1hxmirw/zoom_meetings_take_up_all_my_deep_work_time_any/",
+          "remote_context": "remote_explicit"
+        },
+        {
+          "case_id": "PU07",
+          "source_id": "PS04",
+          "source_url": "https://www.reddit.com/r/remotework/comments/1hxmirw/zoom_meetings_take_up_all_my_deep_work_time_any/",
+          "remote_context": "remote_thread_context"
+        },
+        {
+          "case_id": "PU08",
+          "source_id": "PS05",
+          "source_url": "https://news.ycombinator.com/item?id=43773813",
+          "remote_context": "remote_call_context"
+        },
+        {
+          "case_id": "PU09",
+          "source_id": "PS05",
+          "source_url": "https://news.ycombinator.com/item?id=43773813",
+          "remote_context": "remote_tool_explicit"
+        },
+        {
+          "case_id": "PU10",
+          "source_id": "PS06",
+          "source_url": "https://workplace.stackexchange.com/questions/198413/team-member-working-from-home-is-distracted-with-kids-while-on-video-calls-sho",
+          "remote_context": "remote_explicit"
+        },
+        {
+          "case_id": "PU11",
+          "source_id": "PS07",
+          "source_url": "https://workplace.stackexchange.com/questions/36126/meeting-etiquette",
+          "remote_context": "remote_explicit"
+        },
+        {
+          "case_id": "PU12",
+          "source_id": "PS08",
+          "source_url": "https://stackoverflow.blog/2020/04/30/have-better-meetings-in-person-or-remote/",
+          "remote_context": "remote_explicit"
+        },
+        {
+          "case_id": "PU13",
+          "source_id": "PS08",
+          "source_url": "https://stackoverflow.blog/2020/04/30/have-better-meetings-in-person-or-remote/",
+          "remote_context": "remote_chat_adjacent"
+        },
+        {
+          "case_id": "PU14",
+          "source_id": "PS01",
+          "source_url": "https://www.reddit.com/r/ADHD_Programmers/comments/164jtrf/sometimes_taking_notes_in_a_meeting_helps_and/",
+          "remote_context": "meeting_mode_not_reported"
+        }
+      ],
+      "mapping_note": "这些是可供研究者查看的补充经历，未由原作者面对本问卷主动提交，也不能据此声称答完全部题。"
+    },
+    {
+      "question_id": "NEW_M1",
+      "question_title": "当你需要了解一场会议时，通常依靠哪些信息来判断自己已经理解？这些信息是否足够？请结合一次经历说明。",
+      "status": "partial_historical_evidence",
+      "completed_answer": false,
+      "selected_option": null,
+      "numeric_score": null,
+      "current_time_window_satisfied": false,
+      "related_cases": [
+        {
+          "case_id": "PU01",
+          "source_id": "PS01",
+          "source_url": "https://www.reddit.com/r/ADHD_Programmers/comments/164jtrf/sometimes_taking_notes_in_a_meeting_helps_and/",
+          "remote_context": "remote_explicit"
+        },
+        {
+          "case_id": "PU08",
+          "source_id": "PS05",
+          "source_url": "https://news.ycombinator.com/item?id=43773813",
+          "remote_context": "remote_call_context"
+        },
+        {
+          "case_id": "PU09",
+          "source_id": "PS05",
+          "source_url": "https://news.ycombinator.com/item?id=43773813",
+          "remote_context": "remote_tool_explicit"
+        },
+        {
+          "case_id": "PU12",
+          "source_id": "PS08",
+          "source_url": "https://stackoverflow.blog/2020/04/30/have-better-meetings-in-person-or-remote/",
+          "remote_context": "remote_explicit"
+        },
+        {
+          "case_id": "PU14",
+          "source_id": "PS01",
+          "source_url": "https://www.reddit.com/r/ADHD_Programmers/comments/164jtrf/sometimes_taking_notes_in_a_meeting_helps_and/",
+          "remote_context": "meeting_mode_not_reported"
+        }
+      ],
+      "mapping_note": "来源核查、补看与理解目的的实际材料；不替作者判断理解是否充分。"
+    },
+    {
+      "question_id": "NEW_M2",
+      "question_title": "当你希望表达意见时，通常怎样让其他人了解？你如何得知这条意见后来被怎样处理？这种方式是否符合你的需要？",
+      "status": "partial_historical_evidence",
+      "completed_answer": false,
+      "selected_option": null,
+      "numeric_score": null,
+      "current_time_window_satisfied": false,
+      "related_cases": [
+        {
+          "case_id": "PU05",
+          "source_id": "PS03",
+          "source_url": "https://www.reddit.com/r/remotework/comments/1r0fhn8/i_was_called_out/",
+          "remote_context": "remote_community_only"
+        },
+        {
+          "case_id": "PU13",
+          "source_id": "PS08",
+          "source_url": "https://stackoverflow.blog/2020/04/30/have-better-meetings-in-person-or-remote/",
+          "remote_context": "remote_chat_adjacent"
+        }
+      ],
+      "mapping_note": "PU05说明知识边界并分享更新；PU13仅远程聊天。意见后续如何被采纳未报告。"
+    },
+    {
+      "question_id": "NEW_M3",
+      "question_title": "你使用的语言、设备、所处环境或个人使用需要，是否影响过参会体验？没有影响也可以；有影响时，请描述具体发生了什么，不需要提供健康或身份信息。",
+      "status": "partial_historical_evidence",
+      "completed_answer": false,
+      "selected_option": null,
+      "numeric_score": null,
+      "current_time_window_satisfied": false,
+      "related_cases": [
+        {
+          "case_id": "PU02",
+          "source_id": "PS01",
+          "source_url": "https://www.reddit.com/r/ADHD_Programmers/comments/164jtrf/sometimes_taking_notes_in_a_meeting_helps_and/",
+          "remote_context": "remote_context_not_explicit_in_this_comment"
+        },
+        {
+          "case_id": "PU10",
+          "source_id": "PS06",
+          "source_url": "https://workplace.stackexchange.com/questions/198413/team-member-working-from-home-is-distracted-with-kids-while-on-video-calls-sho",
+          "remote_context": "remote_explicit"
+        },
+        {
+          "case_id": "PU11",
+          "source_id": "PS07",
+          "source_url": "https://workplace.stackexchange.com/questions/36126/meeting-etiquette",
+          "remote_context": "remote_explicit"
+        }
+      ],
+      "mapping_note": "PU02转写不准的邻近情境，PU10为管理者观察环境干扰，PU11为耳机旁听做法；不能据此推断个人诊断、语言能力或统一效果。"
+    },
+    {
+      "question_id": "NEW_M4",
+      "question_title": "针对你在 Q18 提出的任务，你分别希望在什么时候看到信息、每次看到多少内容？这些安排应由谁决定？在什么情况下需要改变？没有固定偏好也可以。",
+      "status": "not_reported",
+      "completed_answer": false,
+      "selected_option": null,
+      "numeric_score": null,
+      "current_time_window_satisfied": false,
+      "related_cases": [],
+      "mapping_note": "原文没有回答这一具体问题；尤其不补频率、量表分数、AI设想偏好或停止使用条件。"
+    },
+    {
+      "question_id": "NEW_M5",
+      "question_title": "在实际会议中，通常由谁决定你是否参加、何时参加，以及是否需要立即回应？假如引入 AI，你认为这些安排可能发生什么变化，也可能保持不变？请区分实际情况和你的设想。",
+      "status": "partial_historical_evidence",
+      "completed_answer": false,
+      "selected_option": null,
+      "numeric_score": null,
+      "current_time_window_satisfied": false,
+      "related_cases": [
+        {
+          "case_id": "PU05",
+          "source_id": "PS03",
+          "source_url": "https://www.reddit.com/r/remotework/comments/1r0fhn8/i_was_called_out/",
+          "remote_context": "remote_community_only"
+        },
+        {
+          "case_id": "PU10",
+          "source_id": "PS06",
+          "source_url": "https://workplace.stackexchange.com/questions/198413/team-member-working-from-home-is-distracted-with-kids-while-on-video-calls-sho",
+          "remote_context": "remote_explicit"
+        }
+      ],
+      "mapping_note": "只有被要求发言/反馈的实际片段；远程状态和第一/第三方区别保留，不补引入AI后的设想。"
+    },
+    {
+      "question_id": "NEW_M6",
+      "question_title": "假设 AI 的输出会被其他人使用，或引起后续行动，你希望相关人员知道哪些信息？发生意见分歧或错误时，你认为应怎样处理？",
+      "status": "not_reported",
+      "completed_answer": false,
+      "selected_option": null,
+      "numeric_score": null,
+      "current_time_window_satisfied": false,
+      "related_cases": [],
+      "mapping_note": "原文没有回答这一具体问题；尤其不补频率、量表分数、AI设想偏好或停止使用条件。"
+    },
+    {
+      "question_id": "NEW_M7",
+      "question_title": "对于你提出的任务，新工具需要怎样与现有的人、工具或流程配合？在决定尝试之前，你还需要了解什么，或满足哪些条件？",
+      "status": "not_reported",
+      "completed_answer": false,
+      "selected_option": null,
+      "numeric_score": null,
+      "current_time_window_satisfied": false,
+      "related_cases": [],
+      "mapping_note": "原文没有回答这一具体问题；尤其不补频率、量表分数、AI设想偏好或停止使用条件。"
+    },
+    {
+      "question_id": "OLD_Q1",
+      "question_title": "Q1. 你平均多久参加一次线上会议、线上组会或远程讨论？",
+      "status": "not_reported",
+      "completed_answer": false,
+      "selected_option": null,
+      "numeric_score": null,
+      "current_time_window_satisfied": false,
+      "related_cases": [],
+      "mapping_note": "原文没有回答这一具体问题；尤其不补频率、量表分数、AI设想偏好或停止使用条件。"
+    },
+    {
+      "question_id": "OLD_Q2",
+      "question_title": "Q2. 过去 6 个月，你是否遇到过“两个会议/课程/任务时间冲突，只能把注意力主要放在其中一个”的情况？",
+      "status": "not_reported",
+      "completed_answer": false,
+      "selected_option": null,
+      "numeric_score": null,
+      "current_time_window_satisfied": false,
+      "related_cases": [],
+      "mapping_note": "原文没有回答这一具体问题；尤其不补频率、量表分数、AI设想偏好或停止使用条件。"
+    },
+    {
+      "question_id": "OLD_Q3",
+      "question_title": "Q3. 遇到冲突时，你通常怎么处理？（可多选）",
+      "status": "partial_historical_evidence",
+      "completed_answer": false,
+      "selected_option": null,
+      "numeric_score": null,
+      "current_time_window_satisfied": false,
+      "related_cases": [
+        {
+          "case_id": "PU01",
+          "source_id": "PS01",
+          "source_url": "https://www.reddit.com/r/ADHD_Programmers/comments/164jtrf/sometimes_taking_notes_in_a_meeting_helps_and/",
+          "remote_context": "remote_explicit"
+        },
+        {
+          "case_id": "PU07",
+          "source_id": "PS04",
+          "source_url": "https://www.reddit.com/r/remotework/comments/1hxmirw/zoom_meetings_take_up_all_my_deep_work_time_any/",
+          "remote_context": "remote_thread_context"
+        },
+        {
+          "case_id": "PU08",
+          "source_id": "PS05",
+          "source_url": "https://news.ycombinator.com/item?id=43773813",
+          "remote_context": "remote_call_context"
+        },
+        {
+          "case_id": "PU11",
+          "source_id": "PS07",
+          "source_url": "https://workplace.stackexchange.com/questions/36126/meeting-etiquette",
+          "remote_context": "remote_explicit"
+        },
+        {
+          "case_id": "PU14",
+          "source_id": "PS01",
+          "source_url": "https://www.reddit.com/r/ADHD_Programmers/comments/164jtrf/sometimes_taking_notes_in_a_meeting_helps_and/",
+          "remote_context": "meeting_mode_not_reported"
+        }
+      ],
+      "mapping_note": "与实际参与/补看方法相关；原题的安排冲突条件不一定成立，不强行勾选其选项。"
+    },
+    {
+      "question_id": "OLD_Q4",
+      "question_title": "Q4. 当你无法完整参加次要会议时，最让你焦虑或麻烦的是什么？（最多选 3 项）",
+      "status": "partial_historical_evidence",
+      "completed_answer": false,
+      "selected_option": null,
+      "numeric_score": null,
+      "current_time_window_satisfied": false,
+      "related_cases": [
+        {
+          "case_id": "PU03",
+          "source_id": "PS02",
+          "source_url": "https://www.reddit.com/r/remotework/comments/1l4mzk7/remote_working_is_awesome_but_the_meetings_kind/",
+          "remote_context": "remote_explicit"
+        },
+        {
+          "case_id": "PU06",
+          "source_id": "PS04",
+          "source_url": "https://www.reddit.com/r/remotework/comments/1hxmirw/zoom_meetings_take_up_all_my_deep_work_time_any/",
+          "remote_context": "remote_explicit"
+        },
+        {
+          "case_id": "PU12",
+          "source_id": "PS08",
+          "source_url": "https://stackoverflow.blog/2020/04/30/have-better-meetings-in-person-or-remote/",
+          "remote_context": "remote_explicit"
+        }
+      ],
+      "mapping_note": "有历史困难叙述，不能把研究者标签变为原作者在该多选题中的选择。"
+    },
+    {
+      "question_id": "OLD_Q5",
+      "question_title": "Q5. 假设你正在专注于一个主要任务，同时有 AI 帮你监控另一个远程会议。对于下列事件，你希望系统什么时候提醒你？",
+      "status": "not_reported",
+      "completed_answer": false,
+      "selected_option": null,
+      "numeric_score": null,
+      "current_time_window_satisfied": false,
+      "related_cases": [],
+      "mapping_note": "原文没有回答这一具体问题；尤其不补频率、量表分数、AI设想偏好或停止使用条件。"
+    },
+    {
+      "question_id": "OLD_Q6",
+      "question_title": "Q6. 你希望 AI 判断“是否值得立即打断你”时，主要考虑哪些因素？（最多选 4 项）",
+      "status": "not_reported",
+      "completed_answer": false,
+      "selected_option": null,
+      "numeric_score": null,
+      "current_time_window_satisfied": false,
+      "related_cases": [],
+      "mapping_note": "原文没有回答这一具体问题；尤其不补频率、量表分数、AI设想偏好或停止使用条件。"
+    },
+    {
+      "question_id": "OLD_Q7",
+      "question_title": "Q7. 如果只能二选一，你更偏好哪种更新方式？",
+      "status": "not_reported",
+      "completed_answer": false,
+      "selected_option": null,
+      "numeric_score": null,
+      "current_time_window_satisfied": false,
+      "related_cases": [],
+      "mapping_note": "原文没有回答这一具体问题；尤其不补频率、量表分数、AI设想偏好或停止使用条件。"
+    },
+    {
+      "question_id": "OLD_Q8",
+      "question_title": "Q8. 请评价以下说法（1=非常不同意，5=非常同意）。",
+      "status": "not_reported",
+      "completed_answer": false,
+      "selected_option": null,
+      "numeric_score": null,
+      "current_time_window_satisfied": false,
+      "related_cases": [],
+      "mapping_note": "原文没有回答这一具体问题；尤其不补频率、量表分数、AI设想偏好或停止使用条件。"
+    },
+    {
+      "question_id": "OLD_Q9",
+      "question_title": "Q9. 当会议确实需要你参与时，你更希望采用哪种方式？每行选一个最合适的选项。",
+      "status": "not_reported",
+      "completed_answer": false,
+      "selected_option": null,
+      "numeric_score": null,
+      "current_time_window_satisfied": false,
+      "related_cases": [],
+      "mapping_note": "原文没有回答这一具体问题；尤其不补频率、量表分数、AI设想偏好或停止使用条件。"
+    },
+    {
+      "question_id": "OLD_Q10",
+      "question_title": "Q10. 如果 AI 为你生成 2–3 个候选回复供快速选择，你的态度是？",
+      "status": "not_reported",
+      "completed_answer": false,
+      "selected_option": null,
+      "numeric_score": null,
+      "current_time_window_satisfied": false,
+      "related_cases": [],
+      "mapping_note": "原文没有回答这一具体问题；尤其不补频率、量表分数、AI设想偏好或停止使用条件。"
+    },
+    {
+      "question_id": "OLD_Q11",
+      "question_title": "Q11. 哪种情况下你更愿意“临时加入会议”，而不是只通过 AI 快速回复？（可多选）",
+      "status": "not_reported",
+      "completed_answer": false,
+      "selected_option": null,
+      "numeric_score": null,
+      "current_time_window_satisfied": false,
+      "related_cases": [],
+      "mapping_note": "原文没有回答这一具体问题；尤其不补频率、量表分数、AI设想偏好或停止使用条件。"
+    },
+    {
+      "question_id": "OLD_Q12",
+      "question_title": "Q12. 请评价以下说法（1=非常不同意，5=非常同意）。",
+      "status": "not_reported",
+      "completed_answer": false,
+      "selected_option": null,
+      "numeric_score": null,
+      "current_time_window_satisfied": false,
+      "related_cases": [],
+      "mapping_note": "原文没有回答这一具体问题；尤其不补频率、量表分数、AI设想偏好或停止使用条件。"
+    },
+    {
+      "question_id": "OLD_Q13",
+      "question_title": "Q13. 你最希望拥有哪些控制功能？（可多选）",
+      "status": "not_reported",
+      "completed_answer": false,
+      "selected_option": null,
+      "numeric_score": null,
+      "current_time_window_satisfied": false,
+      "related_cases": [],
+      "mapping_note": "原文没有回答这一具体问题；尤其不补频率、量表分数、AI设想偏好或停止使用条件。"
+    },
+    {
+      "question_id": "OLD_Q14",
+      "question_title": "Q14. 如果你可以提出一个改进建议：怎样的“部分参与”工具最能帮到你？",
+      "status": "not_reported",
+      "completed_answer": false,
+      "selected_option": null,
+      "numeric_score": null,
+      "current_time_window_satisfied": false,
+      "related_cases": [],
+      "mapping_note": "原文没有回答这一具体问题；尤其不补频率、量表分数、AI设想偏好或停止使用条件。"
+    }
+  ]
+}

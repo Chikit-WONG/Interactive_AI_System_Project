@@ -1,0 +1,136 @@
+{
+  "reference_file": "unified_v0_2_reference.md",
+  "reference_sha256": "1d174beef8e5e5ad601a304681314c62e1cf0ab5931636b806d97c50f8fb3311",
+  "use": "比较索引，不要求模型另答10题，不用统一问卷替换任何原题，不据映射填补缺失",
+  "mapping": [
+    {
+      "unified_question_id": "Q1",
+      "new_question_ids": [
+        "NEW_Q1"
+      ],
+      "old_question_ids": [
+        "OLD_Q1"
+      ],
+      "limitation": "时间窗及频次选项不同，不直接合并比例"
+    },
+    {
+      "unified_question_id": "Q2",
+      "new_question_ids": [
+        "NEW_Q2"
+      ],
+      "old_question_ids": [
+        "OLD_Q1"
+      ],
+      "limitation": "角色仅NEW明确询问；OLD_Q1仅频率背景"
+    },
+    {
+      "unified_question_id": "Q3",
+      "new_question_ids": [
+        "NEW_Q11"
+      ],
+      "old_question_ids": [
+        "OLD_Q2"
+      ],
+      "limitation": "部分参与与安排冲突不同，不能视为同一变量"
+    },
+    {
+      "unified_question_id": "Q4",
+      "new_question_ids": [
+        "NEW_Q3",
+        "NEW_Q12"
+      ],
+      "old_question_ids": [
+        "OLD_Q3",
+        "OLD_Q4"
+      ],
+      "limitation": "统一v0.2补记会议目标、参与方式及另一任务"
+    },
+    {
+      "unified_question_id": "Q5",
+      "new_question_ids": [
+        "NEW_Q12",
+        "NEW_Q18",
+        "NEW_Q21"
+      ],
+      "old_question_ids": [
+        "OLD_Q5",
+        "OLD_Q6"
+      ],
+      "limitation": "实际线索与假设提醒偏好分开"
+    },
+    {
+      "unified_question_id": "Q6",
+      "new_question_ids": [
+        "NEW_Q7",
+        "NEW_Q13"
+      ],
+      "old_question_ids": [
+        "OLD_Q4",
+        "OLD_Q8"
+      ],
+      "limitation": "v0.2分会议侧/另一任务；原题不能补出未问到的分项结果"
+    },
+    {
+      "unified_question_id": "Q7",
+      "new_question_ids": [
+        "NEW_Q8",
+        "NEW_Q9",
+        "NEW_Q10",
+        "NEW_Q16"
+      ],
+      "old_question_ids": [
+        "OLD_Q3"
+      ],
+      "limitation": "应对、解决程度、投入独立"
+    },
+    {
+      "unified_question_id": "Q8",
+      "new_question_ids": [
+        "NEW_Q10",
+        "NEW_Q14",
+        "NEW_Q15",
+        "NEW_Q26",
+        "NEW_Q27"
+      ],
+      "old_question_ids": [
+        "OLD_Q14"
+      ],
+      "limitation": "开放需求及优先级，不强制功能标签"
+    },
+    {
+      "unified_question_id": "Q9",
+      "new_question_ids": [
+        "NEW_Q18",
+        "NEW_Q21",
+        "NEW_M4"
+      ],
+      "old_question_ids": [
+        "OLD_Q5",
+        "OLD_Q7",
+        "OLD_Q8",
+        "OLD_Q9",
+        "OLD_Q11",
+        "OLD_Q13"
+      ],
+      "limitation": "统一版分开频率和详细度，原旧Q7不可逆拆成两变量"
+    },
+    {
+      "unified_question_id": "Q10",
+      "new_question_ids": [
+        "NEW_Q17",
+        "NEW_Q19",
+        "NEW_Q20",
+        "NEW_Q22",
+        "NEW_Q23",
+        "NEW_Q24",
+        "NEW_Q25"
+      ],
+      "old_question_ids": [
+        "OLD_Q10",
+        "OLD_Q12",
+        "OLD_Q13"
+      ],
+      "limitation": "合成设想与真实采用分开"
+    }
+  ]
+}

@@ -1,0 +1,636 @@
+{
+  "schema_version": "1.0",
+  "source_type": "model_simulation",
+  "scenario_id": "S1",
+  "fictional_persona": true,
+  "experience_status": "all_experiences_are_hypothetical",
+  "scenario_induced": true,
+  "assumption_registry": {
+    "A1": "设定过去四周有1-4次会议，过去半年偶尔遇到冲突。",
+    "A2": "设定具体事件为错过了组员索要数据的提问，事后补发，轻微延误了进度。",
+    "A3": "设定额外处理时间约为5分钟。",
+    "A4": "设定此前未使用过会议AI。",
+    "A5": "设定偏好基于关键词的精准提醒，以便在写作业时能及时切回会议。"
+  },
+  "questions": {
+    "NEW_Q1": {
+      "status": "answered",
+      "answer": {
+        "selection": "1–4 次"
+      },
+      "basis": [
+        "model_assumption"
+      ],
+      "assumptions": [
+        "A1"
+      ]
+    },
+    "NEW_Q2": {
+      "status": "answered",
+      "answer": {
+        "meeting_topics": "课程项目方案讨论与数据核对",
+        "role": "负责特定方案的数据核对与提供"
+      },
+      "basis": [
+        "scenario_fact"
+      ],
+      "assumptions": []
+    },
+    "NEW_Q3": {
+      "status": "answered",
+      "answer": {
+        "meeting_purpose": "讨论不同方案并做出判断",
+        "personal_goal": "及时提供我负责的数据信息，不耽误小组进度",
+        "actual_participation": "边写有提交期限的阅读作业，边间断关注会议"
+      },
+      "basis": [
+        "scenario_fact"
+      ],
+      "assumptions": []
+    },
+    "NEW_Q4": {
+      "status": "answered",
+      "answer": {
+        "before": "提前准备好了负责部分的数据",
+        "during": "主要精力在写独立阅读作业，间断听会议",
+        "after": "查看聊天记录确认是否遗漏了需要我提供的信息"
+      },
+      "basis": [
+        "scenario_fact",
+        "scenario_inference"
+      ],
+      "assumptions": []
+    },
+    "NEW_Q5": {
+      "status": "answered",
+      "answer": {
+        "selection": "有",
+        "episode": "期待在需要数据时立刻回应，但实际错过了提问，事后才在聊天记录看到并回复。"
+      },
+      "basis": [
+        "model_assumption"
+      ],
+      "assumptions": [
+        "A2"
+      ]
+    },
+    "NEW_Q6": {
+      "status": "answered",
+      "answer": {
+        "selection": "1 次"
+      },
+      "basis": [
+        "model_assumption"
+      ],
+      "assumptions": [
+        "A2"
+      ]
+    },
+    "NEW_Q7": {
+      "status": "answered",
+      "answer": {
+        "selection": "2",
+        "impact_detail": "让小组做决定的时间稍微延后了几分钟"
+      },
+      "basis": [
+        "model_assumption"
+      ],
+      "assumptions": [
+        "A2"
+      ]
+    },
+    "NEW_Q8": {
+      "status": "answered",
+      "answer": {
+        "actual_method": "会后翻看会议软件的聊天记录，然后在群里补发了数据结果。",
+        "reason": "因为当时在赶作业没听到，只能事后补救。"
+      },
+      "basis": [
+        "scenario_fact",
+        "model_assumption"
+      ],
+      "assumptions": [
+        "A2"
+      ]
+    },
+    "NEW_Q9": {
+      "status": "answered",
+      "answer": {
+        "Q9a": "4",
+        "Q9b": "1",
+        "extra_time": "5分钟"
+      },
+      "basis": [
+        "model_assumption"
+      ],
+      "assumptions": [
+        "A2",
+        "A3"
+      ]
+    },
+    "NEW_Q10": {
+      "status": "answered",
+      "answer": {
+        "unmet_need": "希望在关键时刻能被有效提醒，而不是事后自己去翻记录。",
+        "possible_cause": "作业太赶导致注意力完全转移，且会议软件没有针对特定话题的强提醒。"
+      },
+      "basis": [
+        "hypothetical_preference"
+      ],
+      "assumptions": [
+        "A5"
+      ]
+    },
+    "NEW_Q11": {
+      "status": "answered",
+      "answer": {
+        "selection": "1 次"
+      },
+      "basis": [
+        "scenario_fact"
+      ],
+      "assumptions": []
+    },
+    "NEW_Q12": {
+      "status": "answered",
+      "answer": {
+        "desired_participation": "只在讨论到我负责的数据时参与",
+        "actual_participation": "全程挂机，间断听，主要写作业",
+        "reason": "阅读作业有严格的提交时间要求，必须优先完成"
+      },
+      "basis": [
+        "scenario_fact"
+      ],
+      "assumptions": []
+    },
+    "NEW_Q13": {
+      "status": "answered",
+      "answer": {
+        "selection": "有些妨碍",
+        "evidence": "错过回应时机，稍微拖慢了小组进度，自己也因为要两头顾而有些焦虑"
+      },
+      "basis": [
+        "scenario_inference",
+        "model_assumption"
+      ],
+      "assumptions": [
+        "A2"
+      ]
+    },
+    "NEW_Q14": {
+      "status": "answered",
+      "answer": {
+        "items": [
+          "当讨论涉及我负责的数据时，我希望能够收到强提醒，这样我就能立刻切回会议提供信息。"
+        ],
+        "none_status": ""
+      },
+      "basis": [
+        "hypothetical_preference"
+      ],
+      "assumptions": [
+        "A5"
+      ]
+    },
+    "NEW_Q15": {
+      "status": "answered",
+      "answer": {
+        "text": "会议有聊天记录保留，方便事后追溯。"
+      },
+      "basis": [
+        "scenario_fact"
+      ],
+      "assumptions": []
+    },
+    "NEW_Q16": {
+      "status": "answered",
+      "answer": {
+        "selection": "没有使用过",
+        "task_example": "",
+        "result_example": ""
+      },
+      "basis": [
+        "model_assumption"
+      ],
+      "assumptions": [
+        "A4"
+      ]
+    },
+    "NEW_Q17": {
+      "status": "answered",
+      "answer": {
+        "willing_status": "has_task",
+        "willing_tasks": [
+          "监控会议并在提到特定关键词（如数据核对）时提醒我"
+        ],
+        "unsuitable_tasks": [
+          "代替我做方案选择的决定"
+        ]
+      },
+      "basis": [
+        "hypothetical_preference"
+      ],
+      "assumptions": [
+        "A5"
+      ]
+    },
+    "NEW_Q18": {
+      "status": "answered",
+      "answer": {
+        "trigger": "当其他组员提到我的名字或‘数据’、‘核对’等词时",
+        "ai_action": "通过弹窗向我发出提醒，并附带他们刚才说的一两句话",
+        "result_and_recipient": "将提醒和上下文发到我的屏幕上",
+        "success_criterion": "我能立刻知道他们需要什么数据并切回会议回应"
+      },
+      "basis": [
+        "hypothetical_preference"
+      ],
+      "assumptions": [
+        "A5"
+      ]
+    },
+    "NEW_Q19": {
+      "status": "answered",
+      "answer": {
+        "selection": "4",
+        "reason": "能帮我平衡并行任务，减少错过关键信息的焦虑"
+      },
+      "basis": [
+        "hypothetical_preference"
+      ],
+      "assumptions": [
+        "A5"
+      ]
+    },
+    "NEW_Q20": {
+      "status": "answered",
+      "answer": {
+        "autonomous": "监听会议并识别关键词",
+        "requires_confirmation": "",
+        "human_only": "提供核对后的数据结果和最终意见"
+      },
+      "basis": [
+        "hypothetical_preference"
+      ],
+      "assumptions": [
+        "A5"
+      ]
+    },
+    "NEW_Q21": {
+      "status": "answered",
+      "answer": {
+        "text": "希望在需要我时立即通过电脑系统弹窗提醒，如果不涉及我则完全不要打扰。"
+      },
+      "basis": [
+        "hypothetical_preference"
+      ],
+      "assumptions": [
+        "A5"
+      ]
+    },
+    "NEW_Q22": {
+      "status": "answered",
+      "answer": {
+        "evidence_needed": "看到AI提供的刚才一两句对话的文字转录",
+        "failure_response": "如果AI提醒错了，我就看一眼然后关掉弹窗继续写作业"
+      },
+      "basis": [
+        "hypothetical_preference"
+      ],
+      "assumptions": [
+        "A5"
+      ]
+    },
+    "NEW_Q23": {
+      "status": "answered",
+      "answer": {
+        "text": "只能使用本次会议的语音转文字内容，会议结束后立即删除，不用于其他训练。"
+      },
+      "basis": [
+        "hypothetical_preference"
+      ],
+      "assumptions": []
+    },
+    "NEW_Q24": {
+      "status": "answered",
+      "answer": {
+        "text": "只要不影响会议正常进行，不泄露我们未公开的课程方案，我没有意见。"
+      },
+      "basis": [
+        "hypothetical_preference"
+      ],
+      "assumptions": []
+    },
+    "NEW_Q25": {
+      "status": "answered",
+      "answer": {
+        "stop_conditions": "如果AI频繁误报打断我写作业，我会停止使用。",
+        "alternative": "恢复到现在的状态，会后自己看记录。"
+      },
+      "basis": [
+        "hypothetical_preference"
+      ],
+      "assumptions": []
+    },
+    "NEW_Q26": {
+      "status": "answered",
+      "answer": {
+        "priority_and_reason": "优先解决‘关键时刻的精准提醒’。因为这是并行任务中最痛的点，能大幅降低焦虑。"
+      },
+      "basis": [
+        "hypothetical_preference"
+      ],
+      "assumptions": [
+        "A5"
+      ]
+    },
+    "NEW_Q27": {
+      "status": "answered",
+      "answer": {
+        "text": "暂时没有了。"
+      },
+      "basis": [
+        "hypothetical_preference"
+      ],
+      "assumptions": []
+    },
+    "NEW_M1": {
+      "status": "answered",
+      "answer": {
+        "text": "通常靠听到自己负责的部分被确认无误来判断。目前信息基本足够，比如看到群里大家说‘数据没问题’。"
+      },
+      "basis": [
+        "hypothetical_preference"
+      ],
+      "assumptions": []
+    },
+    "NEW_M2": {
+      "status": "answered",
+      "answer": {
+        "text": "通常直接在会议里开麦说，或者在聊天框打字。通过大家的口头回应或群消息确认意见被采纳。"
+      },
+      "basis": [
+        "hypothetical_preference"
+      ],
+      "assumptions": []
+    },
+    "NEW_M3": {
+      "status": "answered",
+      "answer": {
+        "text": "没有影响。"
+      },
+      "basis": [
+        "hypothetical_preference"
+      ],
+      "assumptions": []
+    },
+    "NEW_M4": {
+      "status": "answered",
+      "answer": {
+        "text": "希望在触发关键词时立即看到，每次只看包含关键词的前后两三句话。由我自己提前设置好。"
+      },
+      "basis": [
+        "hypothetical_preference"
+      ],
+      "assumptions": [
+        "A5"
+      ]
+    },
+    "NEW_M5": {
+      "status": "answered",
+      "answer": {
+        "text": "实际中由我自己决定。引入AI后，决定权仍在我，但AI能帮我更准确地把握‘何时参加’的时机。"
+      },
+      "basis": [
+        "hypothetical_preference"
+      ],
+      "assumptions": []
+    },
+    "NEW_M6": {
+      "status": "answered",
+      "answer": {
+        "text": "希望大家知道这是我本人的意见，而不是AI生成的。如果有分歧，我会亲自开麦解释。"
+      },
+      "basis": [
+        "hypothetical_preference"
+      ],
+      "assumptions": []
+    },
+    "NEW_M7": {
+      "status": "answered",
+      "answer": {
+        "text": "需要能和我们常用的会议软件无缝集成。尝试前需要确认它不会在后台偷偷录音上传。"
+      },
+      "basis": [
+        "hypothetical_preference"
+      ],
+      "assumptions": []
+    },
+    "OLD_Q1": {
+      "status": "answered",
+      "answer": {
+        "selection": "每周数次"
+      },
+      "basis": [
+        "model_assumption"
+      ],
+      "assumptions": [
+        "A1"
+      ]
+    },
+    "OLD_Q2": {
+      "status": "answered",
+      "answer": {
+        "selection": "偶尔"
+      },
+      "basis": [
+        "model_assumption"
+      ],
+      "assumptions": [
+        "A1"
+      ]
+    },
+    "OLD_Q3": {
+      "status": "answered",
+      "answer": {
+        "selected": [
+          "同时开着两个会议，来回切换注意力",
+          "查看录屏或会议纪要"
+        ],
+        "other_text": ""
+      },
+      "basis": [
+        "scenario_fact",
+        "model_assumption"
+      ],
+      "assumptions": [
+        "A2"
+      ]
+    },
+    "OLD_Q4": {
+      "status": "answered",
+      "answer": {
+        "selected": [
+          "担心错过与自己有关的信息",
+          "频繁切换注意力，影响主要任务",
+          "不知道什么时候值得重新加入"
+        ],
+        "other_text": ""
+      },
+      "basis": [
+        "scenario_inference",
+        "hypothetical_preference"
+      ],
+      "assumptions": [
+        "A5"
+      ]
+    },
+    "OLD_Q5": {
+      "status": "answered",
+      "answer": {
+        "r1": "立即提醒",
+        "r2": "立即提醒",
+        "r3": "会后汇总",
+        "r4": "立即提醒",
+        "r5": "稍后批量",
+        "r6": "稍后批量",
+        "r7": "会后汇总",
+        "r8": "无需提醒"
+      },
+      "basis": [
+        "hypothetical_preference"
+      ],
+      "assumptions": [
+        "A5"
+      ]
+    },
+    "OLD_Q6": {
+      "status": "answered",
+      "answer": {
+        "selected": [
+          "是否直接提到我",
+          "是否需要我的决定",
+          "是否影响我的任务或责任",
+          "我当前主要任务有多忙"
+        ],
+        "other_text": ""
+      },
+      "basis": [
+        "hypothetical_preference"
+      ],
+      "assumptions": [
+        "A5"
+      ]
+    },
+    "OLD_Q7": {
+      "status": "answered",
+      "answer": {
+        "selection": "取决于会议类型或当前任务"
+      },
+      "basis": [
+        "hypothetical_preference"
+      ],
+      "assumptions": []
+    },
+    "OLD_Q8": {
+      "status": "answered",
+      "answer": {
+        "r1": 3,
+        "r2": 4,
+        "r3": 4,
+        "r4": 3,
+        "r5": 5
+      },
+      "basis": [
+        "hypothetical_preference"
+      ],
+      "assumptions": [
+        "A5"
+      ]
+    },
+    "OLD_Q9": {
+      "status": "answered",
+      "answer": {
+        "r1": "自己输入",
+        "r2": "临时加入会议",
+        "r3": "临时加入会议",
+        "r4": "临时加入会议"
+      },
+      "basis": [
+        "hypothetical_preference"
+      ],
+      "assumptions": []
+    },
+    "OLD_Q10": {
+      "status": "answered",
+      "answer": {
+        "selection": "看场景"
+      },
+      "basis": [
+        "hypothetical_preference"
+      ],
+      "assumptions": []
+    },
+    "OLD_Q11": {
+      "status": "answered",
+      "answer": {
+        "selected": [
+          "需要解释复杂背景",
+          "讨论涉及情绪或关系",
+          "对方需要进一步追问"
+        ],
+        "other_text": ""
+      },
+      "basis": [
+        "hypothetical_preference"
+      ],
+      "assumptions": []
+    },
+    "OLD_Q12": {
+      "status": "answered",
+      "answer": {
+        "r1": 4,
+        "r2": 4,
+        "r3": 5,
+        "r4": 3,
+        "r5": 5
+      },
+      "basis": [
+        "hypothetical_preference"
+      ],
+      "assumptions": [
+        "A5"
+      ]
+    },
+    "OLD_Q13": {
+      "status": "answered",
+      "answer": {
+        "selected": [
+          "设置优先级/关键词",
+          "只在被点名时提醒",
+          "查看最近 1–3 分钟发生了什么",
+          "一键临时加入会议"
+        ],
+        "other_text": ""
+      },
+      "basis": [
+        "hypothetical_preference"
+      ],
+      "assumptions": [
+        "A5"
+      ]
+    },
+    "OLD_Q14": {
+      "status": "answered",
+      "answer": {
+        "text": "能够精准识别与我负责内容相关的讨论，并在需要我发言前给我一个上下文弹窗提醒。"
+      },
+      "basis": [
+        "hypothetical_preference"
+      ],
+      "assumptions": [
+        "A5"
+      ]
+    }
+  }
+}

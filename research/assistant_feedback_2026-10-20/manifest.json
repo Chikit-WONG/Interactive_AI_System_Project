@@ -1,0 +1,1298 @@
+{
+  "study": "2026-10-20 frozen-description assistant concept walkthrough",
+  "source_type": "model_simulation",
+  "new_human_participants": 0,
+  "exposure": "description_only",
+  "input_sha256": "7486863387d749425546f9bd81d5480b40f8972eed1ce2169d17a6d8a18ece75",
+  "started_at": "2026-10-20T15:24:58.622623+00:00",
+  "updated_at": "2026-10-20T15:38:16.608623+00:00",
+  "finished": true,
+  "planned_runs": 27,
+  "completed_logical_runs": 27,
+  "valid_runs": 26,
+  "failed_or_excluded_runs": 1,
+  "pending_runs": 0,
+  "total_attempts": 29,
+  "tool_policy_excluded_attempts": 0,
+  "valid_runtime_identity_not_reported": 0,
+  "unique_session_ids": 29,
+  "session_ids_unique_across_attempts": true,
+  "max_concurrency": 2,
+  "timeout_seconds": 180,
+  "maximum_retries": 1,
+  "scope": "27 Cursor runs; parent agent separately runs and audits three native Codex sessions",
+  "limitations": [
+    "Models reviewed a frozen textual description, not the live product, audio, screenshots or actual model responses.",
+    "Three replicates per version do not establish population prevalence, real-user usability, reliability or independent model-family votes.",
+    "No ratings or simulated feedback are written to the product feedback store.",
+    "Native Codex runtime model identity remains unverified if its event stream does not echo a model; requested ID is recorded separately.",
+    "Timeouts and tool/model policy exclusions are retained without retry; other failures permit one retry."
+  ],
+  "models": [
+    {
+      "provider": "cursor",
+      "requested_model": "claude-opus-5-5-high",
+      "replicates": 3
+    },
+    {
+      "provider": "cursor",
+      "requested_model": "gemini-4-argon-high",
+      "replicates": 3
+    },
+    {
+      "provider": "cursor",
+      "requested_model": "grok-4.7-high",
+      "replicates": 3
+    },
+    {
+      "provider": "cursor",
+      "requested_model": "claude-sonnet-5-5-high",
+      "replicates": 3
+    },
+    {
+      "provider": "cursor",
+      "requested_model": "gemini-3.1-pro",
+      "replicates": 3
+    },
+    {
+      "provider": "cursor",
+      "requested_model": "composer-2.5",
+      "replicates": 3
+    },
+    {
+      "provider": "cursor",
+      "requested_model": "kimi-k3-high",
+      "replicates": 3
+    },
+    {
+      "provider": "cursor",
+      "requested_model": "glm-5.2-high",
+      "replicates": 3
+    },
+    {
+      "provider": "cursor",
+      "requested_model": "muse-spark-1.3-high",
+      "replicates": 3
+    }
+  ],
+  "runs": [
+    {
+      "run_id": "cursor__claude-opus-5-5-high__r1",
+      "provider": "cursor",
+      "requested_model": "claude-opus-5-5-high",
+      "replicate": 1,
+      "valid": true,
+      "status": "valid",
+      "accepted_attempt": 1,
+      "attempts": [
+        {
+          "attempt": 1,
+          "started_at": "2026-10-20T15:24:58.633085+00:00",
+          "timeout_seconds": 180,
+          "timed_out": false,
+          "exit_code": 0,
+          "process_id": 69100,
+          "ended_at": "2026-10-20T15:25:59.193205+00:00",
+          "provider": "cursor",
+          "requested_model": "claude-opus-5-5-high",
+          "requested_reasoning_effort": "model_id",
+          "returned_models": [
+            "Claude Opus 5.5 1M High"
+          ],
+          "model_identity_status": "verified",
+          "session_ids": [
+            "d3eaf76e-343d-46d3-84b3-d70276f92d01"
+          ],
+          "input_sha256": "7486863387d749425546f9bd81d5480b40f8972eed1ce2169d17a6d8a18ece75",
+          "prompt_echo_matches": true,
+          "prompt_transport_note": "Exact text equality checked against user stream event.",
+          "tool_event_count": 0,
+          "tool_events": [],
+          "malformed_stream_line_numbers": [],
+          "extracted_markdown_fence": false,
+          "structure_errors": [],
+          "quota_or_rate_limit": false,
+          "valid": true,
+          "errors": [],
+          "raw_directory": "raw\\cursor__claude-opus-5-5-high__r1\\attempt_1"
+        }
+      ]
+    },
+    {
+      "run_id": "cursor__gemini-4-argon-high__r1",
+      "provider": "cursor",
+      "requested_model": "gemini-4-argon-high",
+      "replicate": 1,
+      "valid": true,
+      "status": "valid",
+      "accepted_attempt": 1,
+      "attempts": [
+        {
+          "attempt": 1,
+          "started_at": "2026-10-20T15:24:58.633085+00:00",
+          "timeout_seconds": 180,
+          "timed_out": false,
+          "exit_code": 0,
+          "process_id": 56448,
+          "ended_at": "2026-10-20T15:26:03.919705+00:00",
+          "provider": "cursor",
+          "requested_model": "gemini-4-argon-high",
+          "requested_reasoning_effort": "model_id",
+          "returned_models": [
+            "Gemini 4 Argon High"
+          ],
+          "model_identity_status": "verified",
+          "session_ids": [
+            "2680cfd5-67c1-45b6-ab34-8ceb3aeaefd1"
+          ],
+          "input_sha256": "7486863387d749425546f9bd81d5480b40f8972eed1ce2169d17a6d8a18ece75",
+          "prompt_echo_matches": true,
+          "prompt_transport_note": "Exact text equality checked against user stream event.",
+          "tool_event_count": 0,
+          "tool_events": [],
+          "malformed_stream_line_numbers": [],
+          "extracted_markdown_fence": false,
+          "structure_errors": [],
+          "quota_or_rate_limit": false,
+          "valid": true,
+          "errors": [],
+          "raw_directory": "raw\\cursor__gemini-4-argon-high__r1\\attempt_1"
+        }
+      ]
+    },
+    {
+      "run_id": "cursor__grok-4.7-high__r1",
+      "provider": "cursor",
+      "requested_model": "grok-4.7-high",
+      "replicate": 1,
+      "valid": true,
+      "status": "valid",
+      "accepted_attempt": 1,
+      "attempts": [
+        {
+          "attempt": 1,
+          "started_at": "2026-10-20T15:25:59.210224+00:00",
+          "timeout_seconds": 180,
+          "timed_out": false,
+          "exit_code": 0,
+          "process_id": 40168,
+          "ended_at": "2026-10-20T15:28:09.439320+00:00",
+          "provider": "cursor",
+          "requested_model": "grok-4.7-high",
+          "requested_reasoning_effort": "model_id",
+          "returned_models": [
+            "Grok 4.7  High"
+          ],
+          "model_identity_status": "verified",
+          "session_ids": [
+            "55b07eb6-0d4a-4503-99ca-e9f6d96cf0c9"
+          ],
+          "input_sha256": "7486863387d749425546f9bd81d5480b40f8972eed1ce2169d17a6d8a18ece75",
+          "prompt_echo_matches": true,
+          "prompt_transport_note": "Exact text equality checked against user stream event.",
+          "tool_event_count": 0,
+          "tool_events": [],
+          "malformed_stream_line_numbers": [],
+          "extracted_markdown_fence": false,
+          "structure_errors": [],
+          "quota_or_rate_limit": false,
+          "valid": true,
+          "errors": [],
+          "raw_directory": "raw\\cursor__grok-4.7-high__r1\\attempt_1"
+        }
+      ]
+    },
+    {
+      "run_id": "cursor__claude-sonnet-5-5-high__r1",
+      "provider": "cursor",
+      "requested_model": "claude-sonnet-5-5-high",
+      "replicate": 1,
+      "valid": false,
+      "status": "failed_or_excluded",
+      "accepted_attempt": null,
+      "attempts": [
+        {
+          "attempt": 1,
+          "started_at": "2026-10-20T15:26:03.942843+00:00",
+          "timeout_seconds": 180,
+          "timed_out": false,
+          "exit_code": 0,
+          "process_id": 19604,
+          "ended_at": "2026-10-20T15:26:38.373258+00:00",
+          "provider": "cursor",
+          "requested_model": "claude-sonnet-5-5-high",
+          "requested_reasoning_effort": "model_id",
+          "returned_models": [
+            "Claude Sonnet 5.5  High"
+          ],
+          "model_identity_status": "verified",
+          "session_ids": [
+            "97d36164-5832-451c-9831-b746faf9b075"
+          ],
+          "input_sha256": "7486863387d749425546f9bd81d5480b40f8972eed1ce2169d17a6d8a18ece75",
+          "prompt_echo_matches": true,
+          "prompt_transport_note": "Exact text equality checked against user stream event.",
+          "tool_event_count": 0,
+          "tool_events": [],
+          "malformed_stream_line_numbers": [],
+          "extracted_markdown_fence": false,
+          "structure_errors": [
+            "answers must contain exactly Q1-Q8",
+            "usageStage must be concept_only",
+            "rating must be null",
+            "feedback topic invalid",
+            "feedback message missing",
+            "feedback expected missing"
+          ],
+          "quota_or_rate_limit": false,
+          "valid": false,
+          "errors": [
+            "answers must contain exactly Q1-Q8",
+            "usageStage must be concept_only",
+            "rating must be null",
+            "feedback topic invalid",
+            "feedback message missing",
+            "feedback expected missing"
+          ],
+          "raw_directory": "raw\\cursor__claude-sonnet-5-5-high__r1\\attempt_1"
+        },
+        {
+          "attempt": 2,
+          "started_at": "2026-10-20T15:26:38.382549+00:00",
+          "timeout_seconds": 180,
+          "timed_out": false,
+          "exit_code": 0,
+          "process_id": 74628,
+          "ended_at": "2026-10-20T15:27:13.918237+00:00",
+          "provider": "cursor",
+          "requested_model": "claude-sonnet-5-5-high",
+          "requested_reasoning_effort": "model_id",
+          "returned_models": [
+            "Claude Sonnet 5.5  High"
+          ],
+          "model_identity_status": "verified",
+          "session_ids": [
+            "0a52ca24-c601-46e5-b129-f2d598f2cd3d"
+          ],
+          "input_sha256": "7486863387d749425546f9bd81d5480b40f8972eed1ce2169d17a6d8a18ece75",
+          "prompt_echo_matches": true,
+          "prompt_transport_note": "Exact text equality checked against user stream event.",
+          "tool_event_count": 0,
+          "tool_events": [],
+          "malformed_stream_line_numbers": [],
+          "extracted_markdown_fence": false,
+          "structure_errors": [
+            "JSON parse failed: Expecting ',' delimiter: line 1 column 1903 (char 1902)"
+          ],
+          "quota_or_rate_limit": false,
+          "valid": false,
+          "errors": [
+            "JSON parse failed: Expecting ',' delimiter: line 1 column 1903 (char 1902)"
+          ],
+          "raw_directory": "raw\\cursor__claude-sonnet-5-5-high__r1\\attempt_2"
+        }
+      ]
+    },
+    {
+      "run_id": "cursor__gemini-3.1-pro__r1",
+      "provider": "cursor",
+      "requested_model": "gemini-3.1-pro",
+      "replicate": 1,
+      "valid": true,
+      "status": "valid",
+      "accepted_attempt": 1,
+      "attempts": [
+        {
+          "attempt": 1,
+          "started_at": "2026-10-20T15:27:13.927611+00:00",
+          "timeout_seconds": 180,
+          "timed_out": false,
+          "exit_code": 0,
+          "process_id": 16980,
+          "ended_at": "2026-10-20T15:28:09.225790+00:00",
+          "provider": "cursor",
+          "requested_model": "gemini-3.1-pro",
+          "requested_reasoning_effort": "model_id",
+          "returned_models": [
+            "Gemini 3.1 Pro"
+          ],
+          "model_identity_status": "verified",
+          "session_ids": [
+            "6362b541-f644-40bf-b1e1-b30bf87d25be"
+          ],
+          "input_sha256": "7486863387d749425546f9bd81d5480b40f8972eed1ce2169d17a6d8a18ece75",
+          "prompt_echo_matches": true,
+          "prompt_transport_note": "Exact text equality checked against user stream event.",
+          "tool_event_count": 0,
+          "tool_events": [],
+          "malformed_stream_line_numbers": [],
+          "extracted_markdown_fence": false,
+          "structure_errors": [],
+          "quota_or_rate_limit": false,
+          "valid": true,
+          "errors": [],
+          "raw_directory": "raw\\cursor__gemini-3.1-pro__r1\\attempt_1"
+        }
+      ]
+    },
+    {
+      "run_id": "cursor__composer-2.5__r1",
+      "provider": "cursor",
+      "requested_model": "composer-2.5",
+      "replicate": 1,
+      "valid": true,
+      "status": "valid",
+      "accepted_attempt": 1,
+      "attempts": [
+        {
+          "attempt": 1,
+          "started_at": "2026-10-20T15:28:09.244481+00:00",
+          "timeout_seconds": 180,
+          "timed_out": false,
+          "exit_code": 0,
+          "process_id": 77144,
+          "ended_at": "2026-10-20T15:28:37.789672+00:00",
+          "provider": "cursor",
+          "requested_model": "composer-2.5",
+          "requested_reasoning_effort": "model_id",
+          "returned_models": [
+            "Composer 2.5"
+          ],
+          "model_identity_status": "verified",
+          "session_ids": [
+            "00a03d05-e767-4811-8ac6-b34989d73d75"
+          ],
+          "input_sha256": "7486863387d749425546f9bd81d5480b40f8972eed1ce2169d17a6d8a18ece75",
+          "prompt_echo_matches": true,
+          "prompt_transport_note": "Exact text equality checked against user stream event.",
+          "tool_event_count": 0,
+          "tool_events": [],
+          "malformed_stream_line_numbers": [],
+          "extracted_markdown_fence": false,
+          "structure_errors": [],
+          "quota_or_rate_limit": false,
+          "valid": true,
+          "errors": [],
+          "raw_directory": "raw\\cursor__composer-2.5__r1\\attempt_1"
+        }
+      ]
+    },
+    {
+      "run_id": "cursor__kimi-k3-high__r1",
+      "provider": "cursor",
+      "requested_model": "kimi-k3-high",
+      "replicate": 1,
+      "valid": true,
+      "status": "valid",
+      "accepted_attempt": 2,
+      "attempts": [
+        {
+          "attempt": 1,
+          "started_at": "2026-10-20T15:28:09.468433+00:00",
+          "timeout_seconds": 180,
+          "timed_out": false,
+          "exit_code": 0,
+          "process_id": 80712,
+          "ended_at": "2026-10-20T15:28:39.382401+00:00",
+          "provider": "cursor",
+          "requested_model": "kimi-k3-high",
+          "requested_reasoning_effort": "model_id",
+          "returned_models": [
+            "Kimi K3 High"
+          ],
+          "model_identity_status": "verified",
+          "session_ids": [
+            "45600fe5-b5ab-4173-b5c7-b5909a243f6f"
+          ],
+          "input_sha256": "7486863387d749425546f9bd81d5480b40f8972eed1ce2169d17a6d8a18ece75",
+          "prompt_echo_matches": true,
+          "prompt_transport_note": "Exact text equality checked against user stream event.",
+          "tool_event_count": 0,
+          "tool_events": [],
+          "malformed_stream_line_numbers": [],
+          "extracted_markdown_fence": false,
+          "structure_errors": [
+            "JSON parse failed: Expecting ',' delimiter: line 9 column 42 (char 378)"
+          ],
+          "quota_or_rate_limit": false,
+          "valid": false,
+          "errors": [
+            "JSON parse failed: Expecting ',' delimiter: line 9 column 42 (char 378)"
+          ],
+          "raw_directory": "raw\\cursor__kimi-k3-high__r1\\attempt_1"
+        },
+        {
+          "attempt": 2,
+          "started_at": "2026-10-20T15:28:39.399795+00:00",
+          "timeout_seconds": 180,
+          "timed_out": false,
+          "exit_code": 0,
+          "process_id": 77132,
+          "ended_at": "2026-10-20T15:29:08.785765+00:00",
+          "provider": "cursor",
+          "requested_model": "kimi-k3-high",
+          "requested_reasoning_effort": "model_id",
+          "returned_models": [
+            "Kimi K3 High"
+          ],
+          "model_identity_status": "verified",
+          "session_ids": [
+            "c614607e-c1b7-459a-9713-592942ecccd8"
+          ],
+          "input_sha256": "7486863387d749425546f9bd81d5480b40f8972eed1ce2169d17a6d8a18ece75",
+          "prompt_echo_matches": true,
+          "prompt_transport_note": "Exact text equality checked against user stream event.",
+          "tool_event_count": 0,
+          "tool_events": [],
+          "malformed_stream_line_numbers": [],
+          "extracted_markdown_fence": false,
+          "structure_errors": [],
+          "quota_or_rate_limit": false,
+          "valid": true,
+          "errors": [],
+          "raw_directory": "raw\\cursor__kimi-k3-high__r1\\attempt_2"
+        }
+      ]
+    },
+    {
+      "run_id": "cursor__glm-5.2-high__r1",
+      "provider": "cursor",
+      "requested_model": "glm-5.2-high",
+      "replicate": 1,
+      "valid": true,
+      "status": "valid",
+      "accepted_attempt": 1,
+      "attempts": [
+        {
+          "attempt": 1,
+          "started_at": "2026-10-20T15:28:37.807254+00:00",
+          "timeout_seconds": 180,
+          "timed_out": false,
+          "exit_code": 0,
+          "process_id": 80268,
+          "ended_at": "2026-10-20T15:29:10.234201+00:00",
+          "provider": "cursor",
+          "requested_model": "glm-5.2-high",
+          "requested_reasoning_effort": "model_id",
+          "returned_models": [
+            "GLM 5.2"
+          ],
+          "model_identity_status": "verified",
+          "session_ids": [
+            "73dc3d8c-6c28-4f93-9237-b8e3bca2f44a"
+          ],
+          "input_sha256": "7486863387d749425546f9bd81d5480b40f8972eed1ce2169d17a6d8a18ece75",
+          "prompt_echo_matches": true,
+          "prompt_transport_note": "Exact text equality checked against user stream event.",
+          "tool_event_count": 0,
+          "tool_events": [],
+          "malformed_stream_line_numbers": [],
+          "extracted_markdown_fence": false,
+          "structure_errors": [],
+          "quota_or_rate_limit": false,
+          "valid": true,
+          "errors": [],
+          "raw_directory": "raw\\cursor__glm-5.2-high__r1\\attempt_1"
+        }
+      ]
+    },
+    {
+      "run_id": "cursor__muse-spark-1.3-high__r1",
+      "provider": "cursor",
+      "requested_model": "muse-spark-1.3-high",
+      "replicate": 1,
+      "valid": true,
+      "status": "valid",
+      "accepted_attempt": 1,
+      "attempts": [
+        {
+          "attempt": 1,
+          "started_at": "2026-10-20T15:29:08.810679+00:00",
+          "timeout_seconds": 180,
+          "timed_out": false,
+          "exit_code": 0,
+          "process_id": 58416,
+          "ended_at": "2026-10-20T15:29:42.332296+00:00",
+          "provider": "cursor",
+          "requested_model": "muse-spark-1.3-high",
+          "requested_reasoning_effort": "model_id",
+          "returned_models": [
+            "Muse Spark 1.3 1M"
+          ],
+          "model_identity_status": "verified",
+          "session_ids": [
+            "f1d31309-d02e-4831-a9b5-debee8ee678b"
+          ],
+          "input_sha256": "7486863387d749425546f9bd81d5480b40f8972eed1ce2169d17a6d8a18ece75",
+          "prompt_echo_matches": true,
+          "prompt_transport_note": "Exact text equality checked against user stream event.",
+          "tool_event_count": 0,
+          "tool_events": [],
+          "malformed_stream_line_numbers": [],
+          "extracted_markdown_fence": false,
+          "structure_errors": [],
+          "quota_or_rate_limit": false,
+          "valid": true,
+          "errors": [],
+          "raw_directory": "raw\\cursor__muse-spark-1.3-high__r1\\attempt_1"
+        }
+      ]
+    },
+    {
+      "run_id": "cursor__claude-opus-5-5-high__r2",
+      "provider": "cursor",
+      "requested_model": "claude-opus-5-5-high",
+      "replicate": 2,
+      "valid": true,
+      "status": "valid",
+      "accepted_attempt": 1,
+      "attempts": [
+        {
+          "attempt": 1,
+          "started_at": "2026-10-20T15:29:10.248199+00:00",
+          "timeout_seconds": 180,
+          "timed_out": false,
+          "exit_code": 0,
+          "process_id": 60340,
+          "ended_at": "2026-10-20T15:30:15.972939+00:00",
+          "provider": "cursor",
+          "requested_model": "claude-opus-5-5-high",
+          "requested_reasoning_effort": "model_id",
+          "returned_models": [
+            "Claude Opus 5.5 1M High"
+          ],
+          "model_identity_status": "verified",
+          "session_ids": [
+            "15f76b15-0588-467e-bcb0-3567bffa2ba9"
+          ],
+          "input_sha256": "7486863387d749425546f9bd81d5480b40f8972eed1ce2169d17a6d8a18ece75",
+          "prompt_echo_matches": true,
+          "prompt_transport_note": "Exact text equality checked against user stream event.",
+          "tool_event_count": 0,
+          "tool_events": [],
+          "malformed_stream_line_numbers": [],
+          "extracted_markdown_fence": false,
+          "structure_errors": [],
+          "quota_or_rate_limit": false,
+          "valid": true,
+          "errors": [],
+          "raw_directory": "raw\\cursor__claude-opus-5-5-high__r2\\attempt_1"
+        }
+      ]
+    },
+    {
+      "run_id": "cursor__gemini-4-argon-high__r2",
+      "provider": "cursor",
+      "requested_model": "gemini-4-argon-high",
+      "replicate": 2,
+      "valid": true,
+      "status": "valid",
+      "accepted_attempt": 1,
+      "attempts": [
+        {
+          "attempt": 1,
+          "started_at": "2026-10-20T15:29:42.347839+00:00",
+          "timeout_seconds": 180,
+          "timed_out": false,
+          "exit_code": 0,
+          "process_id": 19852,
+          "ended_at": "2026-10-20T15:30:49.293260+00:00",
+          "provider": "cursor",
+          "requested_model": "gemini-4-argon-high",
+          "requested_reasoning_effort": "model_id",
+          "returned_models": [
+            "Gemini 4 Argon High"
+          ],
+          "model_identity_status": "verified",
+          "session_ids": [
+            "461535dc-f541-41d3-ac9b-6bd6401eed9a"
+          ],
+          "input_sha256": "7486863387d749425546f9bd81d5480b40f8972eed1ce2169d17a6d8a18ece75",
+          "prompt_echo_matches": true,
+          "prompt_transport_note": "Exact text equality checked against user stream event.",
+          "tool_event_count": 0,
+          "tool_events": [],
+          "malformed_stream_line_numbers": [],
+          "extracted_markdown_fence": false,
+          "structure_errors": [],
+          "quota_or_rate_limit": false,
+          "valid": true,
+          "errors": [],
+          "raw_directory": "raw\\cursor__gemini-4-argon-high__r2\\attempt_1"
+        }
+      ]
+    },
+    {
+      "run_id": "cursor__grok-4.7-high__r2",
+      "provider": "cursor",
+      "requested_model": "grok-4.7-high",
+      "replicate": 2,
+      "valid": true,
+      "status": "valid",
+      "accepted_attempt": 1,
+      "attempts": [
+        {
+          "attempt": 1,
+          "started_at": "2026-10-20T15:30:15.986996+00:00",
+          "timeout_seconds": 180,
+          "timed_out": false,
+          "exit_code": 0,
+          "process_id": 10664,
+          "ended_at": "2026-10-20T15:32:50.899321+00:00",
+          "provider": "cursor",
+          "requested_model": "grok-4.7-high",
+          "requested_reasoning_effort": "model_id",
+          "returned_models": [
+            "Grok 4.7  High"
+          ],
+          "model_identity_status": "verified",
+          "session_ids": [
+            "66b32349-f585-4e73-a7b1-da2a1c4d9533"
+          ],
+          "input_sha256": "7486863387d749425546f9bd81d5480b40f8972eed1ce2169d17a6d8a18ece75",
+          "prompt_echo_matches": true,
+          "prompt_transport_note": "Exact text equality checked against user stream event.",
+          "tool_event_count": 0,
+          "tool_events": [],
+          "malformed_stream_line_numbers": [],
+          "extracted_markdown_fence": false,
+          "structure_errors": [],
+          "quota_or_rate_limit": false,
+          "valid": true,
+          "errors": [],
+          "raw_directory": "raw\\cursor__grok-4.7-high__r2\\attempt_1"
+        }
+      ]
+    },
+    {
+      "run_id": "cursor__claude-sonnet-5-5-high__r2",
+      "provider": "cursor",
+      "requested_model": "claude-sonnet-5-5-high",
+      "replicate": 2,
+      "valid": true,
+      "status": "valid",
+      "accepted_attempt": 1,
+      "attempts": [
+        {
+          "attempt": 1,
+          "started_at": "2026-10-20T15:30:49.306774+00:00",
+          "timeout_seconds": 180,
+          "timed_out": false,
+          "exit_code": 0,
+          "process_id": 59076,
+          "ended_at": "2026-10-20T15:31:23.882304+00:00",
+          "provider": "cursor",
+          "requested_model": "claude-sonnet-5-5-high",
+          "requested_reasoning_effort": "model_id",
+          "returned_models": [
+            "Claude Sonnet 5.5  High"
+          ],
+          "model_identity_status": "verified",
+          "session_ids": [
+            "f041c74d-1364-4360-95dc-d49414242b7b"
+          ],
+          "input_sha256": "7486863387d749425546f9bd81d5480b40f8972eed1ce2169d17a6d8a18ece75",
+          "prompt_echo_matches": true,
+          "prompt_transport_note": "Exact text equality checked against user stream event.",
+          "tool_event_count": 0,
+          "tool_events": [],
+          "malformed_stream_line_numbers": [],
+          "extracted_markdown_fence": false,
+          "structure_errors": [],
+          "quota_or_rate_limit": false,
+          "valid": true,
+          "errors": [],
+          "raw_directory": "raw\\cursor__claude-sonnet-5-5-high__r2\\attempt_1"
+        }
+      ]
+    },
+    {
+      "run_id": "cursor__gemini-3.1-pro__r2",
+      "provider": "cursor",
+      "requested_model": "gemini-3.1-pro",
+      "replicate": 2,
+      "valid": true,
+      "status": "valid",
+      "accepted_attempt": 1,
+      "attempts": [
+        {
+          "attempt": 1,
+          "started_at": "2026-10-20T15:31:23.890045+00:00",
+          "timeout_seconds": 180,
+          "timed_out": false,
+          "exit_code": 0,
+          "process_id": 37224,
+          "ended_at": "2026-10-20T15:32:22.521748+00:00",
+          "provider": "cursor",
+          "requested_model": "gemini-3.1-pro",
+          "requested_reasoning_effort": "model_id",
+          "returned_models": [
+            "Gemini 3.1 Pro"
+          ],
+          "model_identity_status": "verified",
+          "session_ids": [
+            "af0a52e6-6bdb-4427-96cc-9d09fe158731"
+          ],
+          "input_sha256": "7486863387d749425546f9bd81d5480b40f8972eed1ce2169d17a6d8a18ece75",
+          "prompt_echo_matches": true,
+          "prompt_transport_note": "Exact text equality checked against user stream event.",
+          "tool_event_count": 0,
+          "tool_events": [],
+          "malformed_stream_line_numbers": [],
+          "extracted_markdown_fence": false,
+          "structure_errors": [],
+          "quota_or_rate_limit": false,
+          "valid": true,
+          "errors": [],
+          "raw_directory": "raw\\cursor__gemini-3.1-pro__r2\\attempt_1"
+        }
+      ]
+    },
+    {
+      "run_id": "cursor__composer-2.5__r2",
+      "provider": "cursor",
+      "requested_model": "composer-2.5",
+      "replicate": 2,
+      "valid": true,
+      "status": "valid",
+      "accepted_attempt": 1,
+      "attempts": [
+        {
+          "attempt": 1,
+          "started_at": "2026-10-20T15:32:22.532008+00:00",
+          "timeout_seconds": 180,
+          "timed_out": false,
+          "exit_code": 0,
+          "process_id": 54440,
+          "ended_at": "2026-10-20T15:32:51.087374+00:00",
+          "provider": "cursor",
+          "requested_model": "composer-2.5",
+          "requested_reasoning_effort": "model_id",
+          "returned_models": [
+            "Composer 2.5"
+          ],
+          "model_identity_status": "verified",
+          "session_ids": [
+            "ca257481-3a25-4afd-ae64-ed10952514a5"
+          ],
+          "input_sha256": "7486863387d749425546f9bd81d5480b40f8972eed1ce2169d17a6d8a18ece75",
+          "prompt_echo_matches": true,
+          "prompt_transport_note": "Exact text equality checked against user stream event.",
+          "tool_event_count": 0,
+          "tool_events": [],
+          "malformed_stream_line_numbers": [],
+          "extracted_markdown_fence": false,
+          "structure_errors": [],
+          "quota_or_rate_limit": false,
+          "valid": true,
+          "errors": [],
+          "raw_directory": "raw\\cursor__composer-2.5__r2\\attempt_1"
+        }
+      ]
+    },
+    {
+      "run_id": "cursor__kimi-k3-high__r2",
+      "provider": "cursor",
+      "requested_model": "kimi-k3-high",
+      "replicate": 2,
+      "valid": true,
+      "status": "valid",
+      "accepted_attempt": 1,
+      "attempts": [
+        {
+          "attempt": 1,
+          "started_at": "2026-10-20T15:32:50.912563+00:00",
+          "timeout_seconds": 180,
+          "timed_out": false,
+          "exit_code": 0,
+          "process_id": 29624,
+          "ended_at": "2026-10-20T15:33:13.243509+00:00",
+          "provider": "cursor",
+          "requested_model": "kimi-k3-high",
+          "requested_reasoning_effort": "model_id",
+          "returned_models": [
+            "Kimi K3 High"
+          ],
+          "model_identity_status": "verified",
+          "session_ids": [
+            "37d07348-d7a5-4b83-8846-63e633a2c13e"
+          ],
+          "input_sha256": "7486863387d749425546f9bd81d5480b40f8972eed1ce2169d17a6d8a18ece75",
+          "prompt_echo_matches": true,
+          "prompt_transport_note": "Exact text equality checked against user stream event.",
+          "tool_event_count": 0,
+          "tool_events": [],
+          "malformed_stream_line_numbers": [],
+          "extracted_markdown_fence": false,
+          "structure_errors": [],
+          "quota_or_rate_limit": false,
+          "valid": true,
+          "errors": [],
+          "raw_directory": "raw\\cursor__kimi-k3-high__r2\\attempt_1"
+        }
+      ]
+    },
+    {
+      "run_id": "cursor__glm-5.2-high__r2",
+      "provider": "cursor",
+      "requested_model": "glm-5.2-high",
+      "replicate": 2,
+      "valid": true,
+      "status": "valid",
+      "accepted_attempt": 1,
+      "attempts": [
+        {
+          "attempt": 1,
+          "started_at": "2026-10-20T15:32:51.099332+00:00",
+          "timeout_seconds": 180,
+          "timed_out": false,
+          "exit_code": 0,
+          "process_id": 63576,
+          "ended_at": "2026-10-20T15:33:24.244999+00:00",
+          "provider": "cursor",
+          "requested_model": "glm-5.2-high",
+          "requested_reasoning_effort": "model_id",
+          "returned_models": [
+            "GLM 5.2"
+          ],
+          "model_identity_status": "verified",
+          "session_ids": [
+            "dc69974e-b2ce-48ca-bf92-4e29046b5e29"
+          ],
+          "input_sha256": "7486863387d749425546f9bd81d5480b40f8972eed1ce2169d17a6d8a18ece75",
+          "prompt_echo_matches": true,
+          "prompt_transport_note": "Exact text equality checked against user stream event.",
+          "tool_event_count": 0,
+          "tool_events": [],
+          "malformed_stream_line_numbers": [],
+          "extracted_markdown_fence": false,
+          "structure_errors": [],
+          "quota_or_rate_limit": false,
+          "valid": true,
+          "errors": [],
+          "raw_directory": "raw\\cursor__glm-5.2-high__r2\\attempt_1"
+        }
+      ]
+    },
+    {
+      "run_id": "cursor__muse-spark-1.3-high__r2",
+      "provider": "cursor",
+      "requested_model": "muse-spark-1.3-high",
+      "replicate": 2,
+      "valid": true,
+      "status": "valid",
+      "accepted_attempt": 1,
+      "attempts": [
+        {
+          "attempt": 1,
+          "started_at": "2026-10-20T15:33:13.270619+00:00",
+          "timeout_seconds": 180,
+          "timed_out": false,
+          "exit_code": 0,
+          "process_id": 71252,
+          "ended_at": "2026-10-20T15:33:50.863685+00:00",
+          "provider": "cursor",
+          "requested_model": "muse-spark-1.3-high",
+          "requested_reasoning_effort": "model_id",
+          "returned_models": [
+            "Muse Spark 1.3 1M"
+          ],
+          "model_identity_status": "verified",
+          "session_ids": [
+            "9db9d3bf-2154-46d1-b7ec-235fa966f794"
+          ],
+          "input_sha256": "7486863387d749425546f9bd81d5480b40f8972eed1ce2169d17a6d8a18ece75",
+          "prompt_echo_matches": true,
+          "prompt_transport_note": "Exact text equality checked against user stream event.",
+          "tool_event_count": 0,
+          "tool_events": [],
+          "malformed_stream_line_numbers": [],
+          "extracted_markdown_fence": false,
+          "structure_errors": [],
+          "quota_or_rate_limit": false,
+          "valid": true,
+          "errors": [],
+          "raw_directory": "raw\\cursor__muse-spark-1.3-high__r2\\attempt_1"
+        }
+      ]
+    },
+    {
+      "run_id": "cursor__claude-opus-5-5-high__r3",
+      "provider": "cursor",
+      "requested_model": "claude-opus-5-5-high",
+      "replicate": 3,
+      "valid": true,
+      "status": "valid",
+      "accepted_attempt": 1,
+      "attempts": [
+        {
+          "attempt": 1,
+          "started_at": "2026-10-20T15:33:24.254937+00:00",
+          "timeout_seconds": 180,
+          "timed_out": false,
+          "exit_code": 0,
+          "process_id": 79220,
+          "ended_at": "2026-10-20T15:34:25.225136+00:00",
+          "provider": "cursor",
+          "requested_model": "claude-opus-5-5-high",
+          "requested_reasoning_effort": "model_id",
+          "returned_models": [
+            "Claude Opus 5.5 1M High"
+          ],
+          "model_identity_status": "verified",
+          "session_ids": [
+            "126180b4-1861-4fd0-aae3-e46dfbff0bf7"
+          ],
+          "input_sha256": "7486863387d749425546f9bd81d5480b40f8972eed1ce2169d17a6d8a18ece75",
+          "prompt_echo_matches": true,
+          "prompt_transport_note": "Exact text equality checked against user stream event.",
+          "tool_event_count": 0,
+          "tool_events": [],
+          "malformed_stream_line_numbers": [],
+          "extracted_markdown_fence": false,
+          "structure_errors": [],
+          "quota_or_rate_limit": false,
+          "valid": true,
+          "errors": [],
+          "raw_directory": "raw\\cursor__claude-opus-5-5-high__r3\\attempt_1"
+        }
+      ]
+    },
+    {
+      "run_id": "cursor__gemini-4-argon-high__r3",
+      "provider": "cursor",
+      "requested_model": "gemini-4-argon-high",
+      "replicate": 3,
+      "valid": true,
+      "status": "valid",
+      "accepted_attempt": 1,
+      "attempts": [
+        {
+          "attempt": 1,
+          "started_at": "2026-10-20T15:33:50.883693+00:00",
+          "timeout_seconds": 180,
+          "timed_out": false,
+          "exit_code": 0,
+          "process_id": 47748,
+          "ended_at": "2026-10-20T15:35:05.283061+00:00",
+          "provider": "cursor",
+          "requested_model": "gemini-4-argon-high",
+          "requested_reasoning_effort": "model_id",
+          "returned_models": [
+            "Gemini 4 Argon High"
+          ],
+          "model_identity_status": "verified",
+          "session_ids": [
+            "7e55cdf0-ea94-4179-adb2-80e37da4c42d"
+          ],
+          "input_sha256": "7486863387d749425546f9bd81d5480b40f8972eed1ce2169d17a6d8a18ece75",
+          "prompt_echo_matches": true,
+          "prompt_transport_note": "Exact text equality checked against user stream event.",
+          "tool_event_count": 0,
+          "tool_events": [],
+          "malformed_stream_line_numbers": [],
+          "extracted_markdown_fence": false,
+          "structure_errors": [],
+          "quota_or_rate_limit": false,
+          "valid": true,
+          "errors": [],
+          "raw_directory": "raw\\cursor__gemini-4-argon-high__r3\\attempt_1"
+        }
+      ]
+    },
+    {
+      "run_id": "cursor__grok-4.7-high__r3",
+      "provider": "cursor",
+      "requested_model": "grok-4.7-high",
+      "replicate": 3,
+      "valid": true,
+      "status": "valid",
+      "accepted_attempt": 1,
+      "attempts": [
+        {
+          "attempt": 1,
+          "started_at": "2026-10-20T15:34:25.237179+00:00",
+          "timeout_seconds": 180,
+          "timed_out": false,
+          "exit_code": 0,
+          "process_id": 77572,
+          "ended_at": "2026-10-20T15:37:12.797716+00:00",
+          "provider": "cursor",
+          "requested_model": "grok-4.7-high",
+          "requested_reasoning_effort": "model_id",
+          "returned_models": [
+            "Grok 4.7  High"
+          ],
+          "model_identity_status": "verified",
+          "session_ids": [
+            "c30163d8-334d-475a-bbb2-8f16f16f78bf"
+          ],
+          "input_sha256": "7486863387d749425546f9bd81d5480b40f8972eed1ce2169d17a6d8a18ece75",
+          "prompt_echo_matches": true,
+          "prompt_transport_note": "Exact text equality checked against user stream event.",
+          "tool_event_count": 0,
+          "tool_events": [],
+          "malformed_stream_line_numbers": [],
+          "extracted_markdown_fence": false,
+          "structure_errors": [],
+          "quota_or_rate_limit": false,
+          "valid": true,
+          "errors": [],
+          "raw_directory": "raw\\cursor__grok-4.7-high__r3\\attempt_1"
+        }
+      ]
+    },
+    {
+      "run_id": "cursor__claude-sonnet-5-5-high__r3",
+      "provider": "cursor",
+      "requested_model": "claude-sonnet-5-5-high",
+      "replicate": 3,
+      "valid": true,
+      "status": "valid",
+      "accepted_attempt": 1,
+      "attempts": [
+        {
+          "attempt": 1,
+          "started_at": "2026-10-20T15:35:05.298676+00:00",
+          "timeout_seconds": 180,
+          "timed_out": false,
+          "exit_code": 0,
+          "process_id": 80028,
+          "ended_at": "2026-10-20T15:35:48.562131+00:00",
+          "provider": "cursor",
+          "requested_model": "claude-sonnet-5-5-high",
+          "requested_reasoning_effort": "model_id",
+          "returned_models": [
+            "Claude Sonnet 5.5  High"
+          ],
+          "model_identity_status": "verified",
+          "session_ids": [
+            "064ec186-8ad3-4573-b2c2-84ee6ac17d27"
+          ],
+          "input_sha256": "7486863387d749425546f9bd81d5480b40f8972eed1ce2169d17a6d8a18ece75",
+          "prompt_echo_matches": true,
+          "prompt_transport_note": "Exact text equality checked against user stream event.",
+          "tool_event_count": 0,
+          "tool_events": [],
+          "malformed_stream_line_numbers": [],
+          "extracted_markdown_fence": false,
+          "structure_errors": [],
+          "quota_or_rate_limit": false,
+          "valid": true,
+          "errors": [],
+          "raw_directory": "raw\\cursor__claude-sonnet-5-5-high__r3\\attempt_1"
+        }
+      ]
+    },
+    {
+      "run_id": "cursor__gemini-3.1-pro__r3",
+      "provider": "cursor",
+      "requested_model": "gemini-3.1-pro",
+      "replicate": 3,
+      "valid": true,
+      "status": "valid",
+      "accepted_attempt": 1,
+      "attempts": [
+        {
+          "attempt": 1,
+          "started_at": "2026-10-20T15:35:48.574180+00:00",
+          "timeout_seconds": 180,
+          "timed_out": false,
+          "exit_code": 0,
+          "process_id": 67144,
+          "ended_at": "2026-10-20T15:36:52.417200+00:00",
+          "provider": "cursor",
+          "requested_model": "gemini-3.1-pro",
+          "requested_reasoning_effort": "model_id",
+          "returned_models": [
+            "Gemini 3.1 Pro"
+          ],
+          "model_identity_status": "verified",
+          "session_ids": [
+            "7fe066aa-d25a-456a-8cea-2c56708ba9fc"
+          ],
+          "input_sha256": "7486863387d749425546f9bd81d5480b40f8972eed1ce2169d17a6d8a18ece75",
+          "prompt_echo_matches": true,
+          "prompt_transport_note": "Exact text equality checked against user stream event.",
+          "tool_event_count": 0,
+          "tool_events": [],
+          "malformed_stream_line_numbers": [],
+          "extracted_markdown_fence": false,
+          "structure_errors": [],
+          "quota_or_rate_limit": false,
+          "valid": true,
+          "errors": [],
+          "raw_directory": "raw\\cursor__gemini-3.1-pro__r3\\attempt_1"
+        }
+      ]
+    },
+    {
+      "run_id": "cursor__composer-2.5__r3",
+      "provider": "cursor",
+      "requested_model": "composer-2.5",
+      "replicate": 3,
+      "valid": true,
+      "status": "valid",
+      "accepted_attempt": 1,
+      "attempts": [
+        {
+          "attempt": 1,
+          "started_at": "2026-10-20T15:36:52.429309+00:00",
+          "timeout_seconds": 180,
+          "timed_out": false,
+          "exit_code": 0,
+          "process_id": 80424,
+          "ended_at": "2026-10-20T15:37:23.899760+00:00",
+          "provider": "cursor",
+          "requested_model": "composer-2.5",
+          "requested_reasoning_effort": "model_id",
+          "returned_models": [
+            "Composer 2.5"
+          ],
+          "model_identity_status": "verified",
+          "session_ids": [
+            "c2564d82-b31a-438f-9914-475c81d65650"
+          ],
+          "input_sha256": "7486863387d749425546f9bd81d5480b40f8972eed1ce2169d17a6d8a18ece75",
+          "prompt_echo_matches": true,
+          "prompt_transport_note": "Exact text equality checked against user stream event.",
+          "tool_event_count": 0,
+          "tool_events": [],
+          "malformed_stream_line_numbers": [],
+          "extracted_markdown_fence": false,
+          "structure_errors": [],
+          "quota_or_rate_limit": false,
+          "valid": true,
+          "errors": [],
+          "raw_directory": "raw\\cursor__composer-2.5__r3\\attempt_1"
+        }
+      ]
+    },
+    {
+      "run_id": "cursor__kimi-k3-high__r3",
+      "provider": "cursor",
+      "requested_model": "kimi-k3-high",
+      "replicate": 3,
+      "valid": true,
+      "status": "valid",
+      "accepted_attempt": 1,
+      "attempts": [
+        {
+          "attempt": 1,
+          "started_at": "2026-10-20T15:37:12.811385+00:00",
+          "timeout_seconds": 180,
+          "timed_out": false,
+          "exit_code": 0,
+          "process_id": 80568,
+          "ended_at": "2026-10-20T15:37:42.234351+00:00",
+          "provider": "cursor",
+          "requested_model": "kimi-k3-high",
+          "requested_reasoning_effort": "model_id",
+          "returned_models": [
+            "Kimi K3 High"
+          ],
+          "model_identity_status": "verified",
+          "session_ids": [
+            "5492f391-6557-4ce5-bf0b-6263678f760a"
+          ],
+          "input_sha256": "7486863387d749425546f9bd81d5480b40f8972eed1ce2169d17a6d8a18ece75",
+          "prompt_echo_matches": true,
+          "prompt_transport_note": "Exact text equality checked against user stream event.",
+          "tool_event_count": 0,
+          "tool_events": [],
+          "malformed_stream_line_numbers": [],
+          "extracted_markdown_fence": false,
+          "structure_errors": [],
+          "quota_or_rate_limit": false,
+          "valid": true,
+          "errors": [],
+          "raw_directory": "raw\\cursor__kimi-k3-high__r3\\attempt_1"
+        }
+      ]
+    },
+    {
+      "run_id": "cursor__glm-5.2-high__r3",
+      "provider": "cursor",
+      "requested_model": "glm-5.2-high",
+      "replicate": 3,
+      "valid": true,
+      "status": "valid",
+      "accepted_attempt": 1,
+      "attempts": [
+        {
+          "attempt": 1,
+          "started_at": "2026-10-20T15:37:23.914102+00:00",
+          "timeout_seconds": 180,
+          "timed_out": false,
+          "exit_code": 0,
+          "process_id": 74488,
+          "ended_at": "2026-10-20T15:37:55.487324+00:00",
+          "provider": "cursor",
+          "requested_model": "glm-5.2-high",
+          "requested_reasoning_effort": "model_id",
+          "returned_models": [
+            "GLM 5.2"
+          ],
+          "model_identity_status": "verified",
+          "session_ids": [
+            "abfcf19c-0287-4bb9-bf53-700c1d44fb34"
+          ],
+          "input_sha256": "7486863387d749425546f9bd81d5480b40f8972eed1ce2169d17a6d8a18ece75",
+          "prompt_echo_matches": true,
+          "prompt_transport_note": "Exact text equality checked against user stream event.",
+          "tool_event_count": 0,
+          "tool_events": [],
+          "malformed_stream_line_numbers": [],
+          "extracted_markdown_fence": false,
+          "structure_errors": [],
+          "quota_or_rate_limit": false,
+          "valid": true,
+          "errors": [],
+          "raw_directory": "raw\\cursor__glm-5.2-high__r3\\attempt_1"
+        }
+      ]
+    },
+    {
+      "run_id": "cursor__muse-spark-1.3-high__r3",
+      "provider": "cursor",
+      "requested_model": "muse-spark-1.3-high",
+      "replicate": 3,
+      "valid": true,
+      "status": "valid",
+      "accepted_attempt": 1,
+      "attempts": [
+        {
+          "attempt": 1,
+          "started_at": "2026-10-20T15:37:42.246870+00:00",
+          "timeout_seconds": 180,
+          "timed_out": false,
+          "exit_code": 0,
+          "process_id": 46204,
+          "ended_at": "2026-10-20T15:38:16.569447+00:00",
+          "provider": "cursor",
+          "requested_model": "muse-spark-1.3-high",
+          "requested_reasoning_effort": "model_id",
+          "returned_models": [
+            "Muse Spark 1.3 1M"
+          ],
+          "model_identity_status": "verified",
+          "session_ids": [
+            "0df7c5fc-6b77-4d9a-95e3-6ef91b99c0a5"
+          ],
+          "input_sha256": "7486863387d749425546f9bd81d5480b40f8972eed1ce2169d17a6d8a18ece75",
+          "prompt_echo_matches": true,
+          "prompt_transport_note": "Exact text equality checked against user stream event.",
+          "tool_event_count": 0,
+          "tool_events": [],
+          "malformed_stream_line_numbers": [],
+          "extracted_markdown_fence": false,
+          "structure_errors": [],
+          "quota_or_rate_limit": false,
+          "valid": true,
+          "errors": [],
+          "raw_directory": "raw\\cursor__muse-spark-1.3-high__r3\\attempt_1"
+        }
+      ]
+    }
+  ]
+}

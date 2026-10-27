@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <script src="/i18n-dictionary.js" defer></script>
+  <script src="/i18n.js" defer></script>
+  <title>Meeting Cue · Meeting companion</title>
+  <link rel="stylesheet" href="/style.css">
+  <script src="/app.js" defer></script>
+  <script src="/system-audio.js" defer></script>
+  <script src="/feedback.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/" aria-label="Meeting Cue"><span class="brand-mark" aria-hidden="true">MC</span><span>Meeting Cue<small>本地会议助手</small></span></a>
+    <div class="session-indicators"><span id="input-mode" class="status-pill">人工输入</span><span id="connection-state" class="connection">正在检查服务</span></div>
+    <button id="language-toggle" type="button" class="language-toggle" aria-label="Switch interface language">中文</button>
+    <button id="feedback-open" class="feedback-entry" type="button">使用反馈</button>
+    <a class="link-button" href="/recorder.html" target="_blank" rel="noopener">录制演示</a>
+    <button id="export-log" class="quiet">导出日志</button>
+  </header>
+
+  <main>
+    <section class="intro">
+      <div><p class="eyebrow">PARTIAL PARTICIPATION</p><h1>需要你时，再回到讨论。</h1><p class="muted">查看原话，判断职责，决定是否回应。可与腾讯会议并排使用，尚未嵌入腾讯会议。</p></div>
+    </section>
+
+    <section class="session-control card" aria-label="会话开关">
+      <div class="session-overview"><div class="session-readout"><span id="session-state" role="status">正在读取会话</span><strong id="meeting-clock" aria-label="累计运行时间">00:00</strong></div><p id="session-hint" class="small muted">点击开始后才计时。停止会保留记录，并停止采集、回放与自动分析。</p></div>
+      <div class="session-actions"><button id="start-session" class="primary" disabled>开始会话</button><button id="stop-session" disabled>停止会话</button><button id="reset-meeting" class="quiet" disabled>新会话</button></div>
+    </section>
+
+    <section class="setup card" aria-labelledby="setup-title">
+      <div class="section-heading"><h2 id="setup-title"><span class="step">01</span>告诉助手你的职责</h2><span id="role-save-state" class="muted small">修改后用于下一次分析</span></div>
+      <div class="setup-grid">
+        <label>你的称呼<input id="user-name" type="text" maxlength="80" placeholder="例如：小林" autocomplete="off"></label>
+        <label>会议中的角色<input id="user-role" type="text" maxlength="160" placeholder="例如：课程项目的用户研究负责人" autocomplete="off"></label>
+        <label class="responsibility-field">你负责什么<textarea id="user-responsibilities" rows="2" maxlength="3000" placeholder="例如：核对问卷样本数、说明研究局限；不负责前端部署。"></textarea></label>
+      </div>
+      <details class="context-settings"><summary>补充背景与回应偏好</summary><div class="settings-detail"><label>你掌握的事实与限制<textarea id="user-context" rows="3" maxlength="4000" placeholder="例如：目前仅收回 7 份问卷；不确定的问题先澄清，不替我作承诺。只填写愿意用于分析的信息。"></textarea></label></div></details>
+    </section>
+
+    <div class="workspace">
+      <section class="transcript-panel card" aria-labelledby="transcript-title">
+        <div class="section-heading"><h2 id="transcript-title"><span class="step">02</span>接收会议内容</h2><span id="transcript-count" class="count-pill">0 条</span></div>
+        <div class="source-tabs" role="tablist" aria-label="内容输入方式">
+          <button id="manual-tab" class="active" role="tab" aria-selected="true" aria-controls="manual-source">粘贴文字</button>
+          <button id="microphone-tab" role="tab" aria-selected="false" aria-controls="microphone-source">麦克风</button>
+          <button id="replay-tab" role="tab" aria-selected="false" aria-controls="replay-source">演练回放</button>
+        </div>
+        <div id="monitor-status" class="summary-box" aria-label="当前接收与分析状态">
+          <p class="eyebrow">当前接收状态</p>
+          <p id="monitor-input">输入：人工输入 · 未采集声音</p>
+          <p id="monitor-audio-feedback" class="audio-feedback" role="status" aria-live="polite" hidden></p>
+          <p id="monitor-recent">最近文字：尚未收到</p>
+          <p id="monitor-analysis">自动分析：正在确认服务配置</p>
+          <p class="small muted">提醒显示在本页；工作时请保持助手窗口可见。</p>
+        </div>
+        <div id="manual-source" role="tabpanel" aria-labelledby="manual-tab" class="input-source">
+          <label class="speaker-label">发言人<input id="speaker-name" type="text" maxlength="80" placeholder="未注明" autocomplete="off"></label>
+          <label for="transcript-input" class="visually-hidden">新发言内容</label>
+          <textarea id="transcript-input" rows="3" maxlength="12000" placeholder="粘贴新的发言。每行可用“发言人：内容”，加入后会分配来源 ID。"></textarea>
+          <p id="manual-input-help" class="small muted">输入后请点“加入记录”。只有发言记录中的内容才会交给 DeepSeek 分析。</p>
+          <div class="input-footer"><span class="small muted">Ctrl / ⌘ + Enter 加入记录</span><button id="add-transcript" class="primary">加入记录</button></div>
+        </div>
+        <div id="microphone-source" role="tabpanel" aria-labelledby="microphone-tab" class="input-source" hidden>
+          <p class="small">使用浏览器语音识别采集本机麦克风。它不会自动获取腾讯会议的系统音频。</p>
+          <p id="speech-support" class="small muted"></p>
+          <p class="small muted">转写语言跟随界面语言。开始前用顶部按钮选择 English 或中文；切换语言不会清除已有记录。</p>
+          <p id="speech-live" class="speech-live" aria-live="polite">尚未开始转写</p>
+          <div class="button-row"><button id="start-speech" class="primary">开始麦克风转写</button><button id="stop-speech" disabled>停止转写</button></div>
+          <p class="small muted">浏览器可能使用在线语音服务；开始前请确认参会者知悉录音与转写。</p>
+          <details class="system-audio-controls">
+            <summary>接收腾讯会议中组员的声音（实验）</summary>
+            <label class="audio-source-setting">声音来源<select id="meeting-audio-source"><option value="system" selected>全电脑声音（兼容模式）</option><option value="window">指定应用窗口（需浏览器支持）</option></select></label>
+            <label class="audio-mic-setting"><input id="meeting-audio-microphone" type="checkbox" checked>同时收录我的麦克风</label>
+            <p id="audio-source-help" class="small">兼容模式会收录电脑上的其他应用声音。指定窗口模式需要在浏览器共享框中选择“此应用音频”，仅选窗口画面不能证明声音已隔离。</p>
+            <ol id="system-audio-steps" class="audio-setup-steps">
+              <li>点击下方开始按钮，浏览器会弹出共享选择框。</li>
+              <li>选择「整个屏幕」并选中屏幕，打开「同时共享系统音频」开关，然后点「共享」。只共享腾讯会议窗口可能没有声音。</li>
+              <li>允许本机麦克风，等状态显示「语音识别已启动」，再让组员说一句完整的话。</li>
+            </ol>
+            <p class="small muted">这是浏览器向助手提供声音的选择框，不是在腾讯会议里向组员共享屏幕。助手不读取或上传画面。麦克风也可能听到扬声器及周围的声音，建议戴耳机。</p>
+            <div class="button-row"><button id="system-audio-start">开始会议声音转写</button><button id="system-audio-stop" disabled>停止会议声音转写</button></div>
+            <div id="window-audio-confirmation" class="audio-scope-confirmation" hidden>
+              <p>请确认刚才共享框中选的是“此应用的音频”或同义选项。仅选择窗口画面，或选择“系统音频”，都不能保证只接收腾讯会议声音。若没有应用音频选项，请取消。</p>
+              <div class="button-row"><button id="confirm-window-audio" class="primary">已选此应用音频，继续</button><button id="cancel-window-audio">不确定，取消接入</button></div>
+            </div>
+            <p id="audio-capture-range" class="small muted">当前未接入会议声音。</p>
+            <p id="system-audio-status" class="audio-feedback" role="status">实验入口尚未启动。</p>
+          </details>
+        </div>
+        <div id="replay-source" role="tabpanel" aria-labelledby="replay-tab" class="input-source" hidden>
+          <p class="small">加载预先编写的课程项目讨论，按时间逐段加入记录，再交给 AI 分析。</p>
+          <p id="replay-progress" class="small muted">尚未载入演练</p>
+          <label class="replay-role">演练中你的角色<select id="replay-role" disabled><option>载入演练后选择</option></select></label>
+          <div class="button-row"><button id="load-replay">载入演练</button><button id="start-replay" class="primary" disabled>开始回放</button><button id="stop-replay" disabled>暂停</button><label class="replay-speed">速度<select id="replay-speed"><option value="1">1×</option><option value="2">2×</option><option value="4">4×</option></select></label></div>
+          <p class="small muted">演练内容是虚构的；分析结果由当前服务返回，不代表真实会议结果。</p>
+        </div>
+        <div class="transcript-heading"><h3>发言记录</h3><button id="catchup-button" class="text-button">回看最近 60 秒</button></div>
+        <div id="transcript-list" class="transcript-list" role="log" aria-label="本次会议发言记录"><div class="empty-state"><span aria-hidden="true" class="empty-icon">“</span><h3>从一段发言开始</h3><p>新的内容会带上时间与 ID，便于核对提醒依据。</p></div></div>
+      </section>
+
+      <section class="assistant-panel card" aria-labelledby="assistant-title">
+        <div class="section-heading"><h2 id="assistant-title"><span class="step">03</span>决定怎样参与</h2><span id="analysis-badge" class="count-pill">等待内容</span></div>
+        <div class="analysis-mode">
+          <label class="auto-mode-control"><input id="auto-analyze" type="checkbox" disabled aria-describedby="auto-analysis-help"><span><strong>自动分析新发言</strong><small>演示时开启一次，后续无需反复点击分析</small></span></label>
+          <span id="analysis-mode-state" class="count-pill">未开启</span>
+        </div>
+        <p id="auto-analysis-help" class="small muted">新文字停顿 4 秒后分析；持续有新文字时，累计等待 12 秒即提交一批。前一次完成后再处理下一批。</p>
+        <div class="analysis-readiness"><p id="analysis-ready-reason" role="status">正在确认会话和输入状态…</p><button id="analysis-next-step" class="primary" hidden>开始会话</button></div>
+        <div class="analysis-toolbar"><button id="analyze-button" disabled aria-describedby="analysis-ready-reason manual-analysis-help">立即分析一次</button><span id="manual-analysis-help" class="small muted">按需立即处理或重试，也可随时关闭自动分析。</span></div>
+        <p id="analysis-status" class="analysis-status" role="status">加入内容后分析；自动分析默认关闭。</p>
+        <details class="data-note"><summary>分析会发送什么？</summary><p>点击分析或开启自动分析后，本次发言、角色与背景会经本机服务发送给配置的 DeepSeek API。API 密钥只由本机服务保存，页面不读取密钥。</p></details>
+        <div id="analysis-error" class="error-box" role="alert" hidden></div>
+        <div id="summary-box" class="summary-box" hidden><p class="eyebrow">讨论摘要</p><p id="meeting-summary"></p><span id="summary-time" class="small muted"></span></div>
+        <div class="filter-bar" aria-label="提醒筛选">
+          <button data-filter="all" class="active">全部 <span id="all-count">0</span></button>
+          <button data-filter="action_now">需回应 <span id="now-count">0</span></button>
+          <button data-filter="defer">稍后 <span id="later-count">0</span></button>
+          <button data-filter="awareness">了解即可 <span id="awareness-count">0</span></button>
+        </div>
+        <div id="alert-list" class="alert-list" aria-live="polite"><div class="empty-state"><span aria-hidden="true" class="empty-icon">↗</span><h3>保留你的判断</h3><p>AI 建议会附上原话。你可以编辑回复、稍后处理，或说明无需回应。</p></div></div>
+        <p class="assistant-foot small muted">AI 建议可能有误。复制不会发送到腾讯会议；由你核对后在会议中发送。</p>
+      </section>
+    </div>
+    <footer class="page-footer"><span id="model-label">模型信息待连接</span><span>记录保存在本机服务内存 · 重启服务前请导出</span></footer>
+  </main>
+
+  <dialog id="alert-dialog" aria-labelledby="alert-dialog-title">
+    <div class="dialog-top"><span id="dialog-category" class="status-pill">需回应</span><button id="close-alert-dialog" class="icon-button" aria-label="关闭提醒详情">×</button></div>
+    <h2 id="alert-dialog-title"></h2>
+    <p id="dialog-state" class="small muted"></p>
+    <div class="reason-box"><h3>判断依据</h3><p id="dialog-reason"></p><p id="dialog-timing" class="small muted"></p><h3>相关上下文</h3><p id="dialog-context"></p></div>
+    <section class="source-evidence"><h3>核对来源原话</h3><div id="dialog-sources"></div></section>
+    <section id="reply-section">
+      <label class="reply-label" for="reply-draft">核对并编辑回复草稿</label>
+      <textarea id="reply-draft" rows="4" maxlength="4000" placeholder="结合你掌握的事实编辑；未知的信息先澄清。"></textarea>
+      <p id="draft-origin" class="small muted">草稿由 AI 建议，尚未发送。</p>
+      <div class="button-row reply-actions"><button id="copy-reply" class="primary">确认并复制回复</button><button id="mark-sent">我已在会议发送</button><button id="snooze-alert">稍后处理</button></div>
+      <p id="copy-status" class="small" role="status"></p>
+    </section>
+    <section class="relevance-section">
+      <label for="not-needed-reason">不需要你回应？</label>
+      <div class="button-row"><select id="not-needed-reason"><option value="">请选择原因</option><option value="not_my_role">不属于我的职责</option><option value="already_handled">已经有人处理</option><option value="no_action_needed">只需了解，不必回应</option><option value="other">其他原因</option></select><button id="mark-not-needed">标记无需回应</button><button id="restore-alert" hidden>恢复为待处理</button></div>
+      <p class="small muted">该标记不会被计作成功回复，也不会自动向会议发送说明。</p>
+    </section>
+  </dialog>
+
+  <dialog id="catchup-dialog" aria-labelledby="catchup-title"><div class="dialog-top"><p class="eyebrow">按需补看</p><button id="close-catchup" class="icon-button" aria-label="关闭回看">×</button></div><h2 id="catchup-title">最近 60 秒的原话</h2><p id="catchup-range" class="small muted"></p><div id="catchup-list"></div><div class="dialog-footer"><button id="refresh-catchup">刷新快照</button><button id="done-catchup" class="primary">继续手头的事</button></div></dialog>
+  <dialog id="feedback-dialog" aria-labelledby="feedback-title" aria-describedby="feedback-intro">
+    <div class="dialog-top"><p class="eyebrow">帮助我们改进</p><button id="feedback-close" class="icon-button" type="button" aria-label="关闭使用反馈">×</button></div>
+    <h2 id="feedback-title">这次使用，有什么想告诉我们？</h2>
+    <p id="feedback-intro" class="small muted">有效的地方、没帮上忙的地方，都可以说。请描述一个具体时刻，以及你希望发生什么。</p>
+    <form id="feedback-form">
+      <fieldset id="feedback-fields">
+        <legend class="visually-hidden">使用反馈内容</legend>
+        <div class="feedback-grid">
+          <label for="feedback-stage">你目前体验到哪一步？ <span class="required-label">必选</span><select id="feedback-stage" name="usageStage" required><option value="">请选择</option><option value="hands_on">实际操作过</option><option value="watched_demo">看过演示</option><option value="concept_only">只看说明</option></select></label>
+          <label for="feedback-topic">主要想反馈什么？ <span class="required-label">必选</span><select id="feedback-topic" name="topic" required><option value="">请选择</option><option value="timing">提醒时机或频率</option><option value="missed_request">该提醒时没有提醒</option><option value="context">上下文与原话</option><option value="draft">回复草稿与确认</option><option value="input">输入或转写</option><option value="other">其他</option></select></label>
+        </div>
+        <label for="feedback-message">请描述发生了什么 <span class="required-label">必填</span><textarea id="feedback-message" name="message" rows="4" maxlength="4000" required placeholder="例如：我打开提醒时，仍不知道对方具体需要我确认哪个时间。"></textarea></label>
+        <label for="feedback-expected">你希望它怎样做？ <span class="optional-label">可选</span><textarea id="feedback-expected" name="expected" rows="2" maxlength="2000" placeholder="也可以写“目前这样就够了”，或说明你更习惯的做法。"></textarea></label>
+        <div class="feedback-grid">
+          <label for="feedback-rating">对这次任务的帮助 <span class="optional-label">可选</span><select id="feedback-rating" name="rating"><option value="">未评分 / 无法判断</option><option value="1">1 · 完全没帮助</option><option value="2">2 · 帮助较小</option><option value="3">3 · 一般</option><option value="4">4 · 比较有帮助</option><option value="5">5 · 很有帮助</option></select></label>
+          <label for="feedback-code">参与编号 <span class="optional-label">可选</span><input id="feedback-code" name="participantCode" type="text" maxlength="80" autocomplete="off" placeholder="如 P03；没有编号可留空"></label>
+        </div>
+        <div class="feedback-context"><label for="feedback-context"><input id="feedback-context" name="includeContext" type="checkbox"><span>附上本次使用情况</span></label><p class="small muted">仅附输入方式、发言和提醒数量；不含会议原话或个人背景。默认不附上。</p></div>
+      </fieldset>
+      <p id="feedback-result" class="feedback-result" role="status" aria-live="polite"></p>
+      <div class="feedback-actions"><button id="feedback-export" type="button">导出反馈</button><button id="feedback-submit" class="primary" type="submit">保存反馈</button></div>
+    </form>
+    <div class="feedback-storage-note"><p>反馈保存在这台电脑；重启不丢，不会自动发给项目组。异地试用请导出反馈文件交给我们。</p><p id="feedback-count">正在读取本机反馈数量…</p></div>
+  </dialog>
+  <div id="toast" class="toast" role="status" hidden></div>
+</body>
+</html>

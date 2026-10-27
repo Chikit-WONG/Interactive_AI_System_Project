@@ -1,0 +1,31 @@
+{
+  "attempt": 1,
+  "started_at": "2026-10-20T15:32:51.099332+00:00",
+  "timeout_seconds": 180,
+  "timed_out": false,
+  "exit_code": 0,
+  "process_id": 63576,
+  "ended_at": "2026-10-20T15:33:24.244999+00:00",
+  "provider": "cursor",
+  "requested_model": "glm-5.2-high",
+  "requested_reasoning_effort": "model_id",
+  "returned_models": [
+    "GLM 5.2"
+  ],
+  "model_identity_status": "verified",
+  "session_ids": [
+    "dc69974e-b2ce-48ca-bf92-4e29046b5e29"
+  ],
+  "input_sha256": "7486863387d749425546f9bd81d5480b40f8972eed1ce2169d17a6d8a18ece75",
+  "prompt_echo_matches": true,
+  "prompt_transport_note": "Exact text equality checked against user stream event.",
+  "tool_event_count": 0,
+  "tool_events": [],
+  "malformed_stream_line_numbers": [],
+  "extracted_markdown_fence": false,
+  "structure_errors": [],
+  "quota_or_rate_limit": false,
+  "valid": true,
+  "errors": [],
+  "raw_directory": "raw\\cursor__glm-5.2-high__r2\\attempt_1"
+}

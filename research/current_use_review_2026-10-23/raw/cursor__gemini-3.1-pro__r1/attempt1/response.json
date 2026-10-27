@@ -1,0 +1,115 @@
+{
+  "source_type": "model_simulation",
+  "exposure": "recorded_current_workflow",
+  "cases": [
+    {
+      "id": "E01",
+      "assessment": "helpful",
+      "reason": "As Alex, I need to stay focused on project materials. The system correctly filtered out Sam's non-actionable progress update. By only summarizing this and not generating a distracting suggestion card, it respected my attention and allowed me to continue my primary work uninterrupted."
+    },
+    {
+      "id": "E02",
+      "assessment": "helpful",
+      "reason": "Sam's request regarding the cover color falls directly under my responsibilities, but it was explicitly marked as non-urgent. The system accurately classified this as a defer action. This is highly helpful because it logs the task for my later review without demanding an immediate break in my current workflow."
+    },
+    {
+      "id": "E03",
+      "assessment": "helpful",
+      "reason": "Jordan's request was urgent and required immediate confirmation for a room booking. The system perfectly caught this urgency. More importantly, it accurately applied my private availability constraints—knowing I cannot do 10:20 AM but can do 10:40 AM—to draft a highly realistic and polite counter-proposal without me having to type it out."
+    },
+    {
+      "id": "E04",
+      "assessment": "helpful",
+      "reason": "Opening the details view provided crucial transparency. Seeing the original message, the system's rationale, and its documented uncertainties allowed me to quickly verify that the AI understood the context before I took ownership of the drafted response."
+    },
+    {
+      "id": "E05",
+      "assessment": "helpful",
+      "reason": "The ability to manually replace the AI's draft with my own specific phrasing is essential for maintaining my personal voice. The confirm and copy mechanism worked technically, though the disconnected state of waiting for manual sending requires careful attention."
+    },
+    {
+      "id": "E06",
+      "assessment": "mixed",
+      "reason": "This step introduced a critical usability flaw. When I edited the text again, the UI correctly flagged that the new edits needed confirmation. However, leaving the previous version in my system clipboard creates a severe risk that I might accidentally paste and send the outdated, incorrect commitment into the live chat."
+    },
+    {
+      "id": "E07",
+      "assessment": "mixed",
+      "reason": "The system correctly recognized that room booking is outside my designated responsibilities. However, it eagerly drafted a defensive reply to an unidentified speaker who was likely talking to Jordan, not me. Sending this drafted response would make me look out of touch with the conversation's flow."
+    },
+    {
+      "id": "E08",
+      "assessment": "helpful",
+      "reason": "The session stop function behaved exactly as expected, freezing the elapsed time and preserving all existing records and states safely. This gives me confidence that I won't lose my drafted responses or summaries if I need to abruptly close the tool."
+    }
+  ],
+  "value_assessments": {
+    "selective_attention": {
+      "judgment": "supported",
+      "evidence_ids": [
+        "E01",
+        "E02",
+        "E03"
+      ],
+      "reason": "The system successfully distinguished between background noise, low-priority tasks, and urgent, directed requests. It appropriately modulated its interruptions based on the urgency and relevance of the incoming messages."
+    },
+    "context_for_correct_reply": {
+      "judgment": "supported",
+      "evidence_ids": [
+        "E03",
+        "E04"
+      ],
+      "reason": "It seamlessly integrated my private availability facts into the draft for the urgent rehearsal request, saving me time in formulating a counter-proposal. It also correctly referenced my role responsibilities to determine that room booking was not my job."
+    },
+    "control_over_commitments": {
+      "judgment": "mixed",
+      "evidence_ids": [
+        "E05",
+        "E06",
+        "E07"
+      ],
+      "reason": "While the tool allows manual editing of drafts, the clipboard desynchronization issue poses a tangible risk of committing to the wrong thing. Furthermore, its eagerness to reply to ambiguous, undirected questions could lead to unnecessary involvement in tasks outside my scope."
+    }
+  },
+  "would_use": "only_in_some_cases",
+  "best_fit": "Monitoring busy, fast-paced channels for direct, urgent requests while I am deeply focused on compiling project materials, acting as a smart filter that only interrupts me when my specific input is strictly required.",
+  "poor_fit": "Highly ambiguous conversations with multiple unidentified speakers discussing overlapping logistics, where the system's eager drafting might cause confusion or prompt me to reply to questions not aimed at me.",
+  "biggest_benefit": {
+    "evidence_ids": [
+      "E03"
+    ],
+    "text": "Automatically cross-referencing urgent, directed requests with my private constraints to instantly draft accurate, ready-to-send counter-proposals."
+  },
+  "biggest_risk": {
+    "evidence_ids": [
+      "E06"
+    ],
+    "text": "The clipboard desynchronization when editing a previously copied draft, which creates a high probability of accidentally pasting and sending outdated information into the live chat."
+  },
+  "improvements": [
+    {
+      "priority": "P0",
+      "evidence_ids": [
+        "E06"
+      ],
+      "suggestion": "Automatically clear the system clipboard or forcefully update it when a previously confirmed draft is edited, preventing the user from pasting stale text."
+    },
+    {
+      "priority": "P1",
+      "evidence_ids": [
+        "E07"
+      ],
+      "suggestion": "Add a 'Not directed at me' classification for ambiguous requests from unidentified speakers, rather than defaulting to drafting a defensive reply."
+    },
+    {
+      "priority": "P2",
+      "evidence_ids": [
+        "E05"
+      ],
+      "suggestion": "Provide a clearer visual distinction and workflow bridge between 'copied to clipboard' and 'actually sent in chat' to reduce operator confusion regarding message state."
+    }
+  ],
+  "safe_final_reply": "I cannot make 10:20 AM. I can join at 10:40 AM, subject to the team confirming the room.",
+  "presentation_claim": "The system successfully identifies urgent, directed requests and drafts accurate counter-proposals based on private user constraints.",
+  "not_established": "Whether the tool reduces overall cognitive load or saves time in a live, multi-channel environment, as this was a controlled, isolated test without actual message transmission."
+}

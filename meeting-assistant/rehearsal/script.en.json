@@ -1,0 +1,64 @@
+{
+  "title": "Presentation rehearsal: timing, equipment and materials",
+  "language": "en",
+  "roles": [
+    {
+      "name": "Jordan",
+      "role": "Meeting host",
+      "responsibilities": "Explain the meeting goal and which decisions are needed now. Leave time for Alex to read, verify and send a reply. After receiving an actual chat message, restate it and confirm the next step.",
+      "privateFacts": "The room, time slots and equipment in this rehearsal are fictional. A room booking is not confirmed. Do not make a commitment on another person's behalf."
+    },
+    {
+      "name": "Alex",
+      "role": "Partial participant responsible for demo materials",
+      "responsibilities": "Review a materials checklist while following the meeting intermittently. Confirm your own arrival time and equipment. Review and edit any draft, copy it, and send it manually in the meeting chat. Ask for clarification or decline when appropriate.",
+      "privateFacts": "Another commitment ends at 10:25 a.m. and the walk takes five minutes, so I cannot arrive at 10:20. I can attend the 10:40 slot. My laptop has a video-capable USB-C port but no HDMI port. I have a working USB-C to HDMI adapter, but no spare long HDMI cable. I have opened the offline demo on my own laptop, but have not tested it on the borrowed laptop. Either cover colour is acceptable."
+    },
+    {
+      "name": "Sam",
+      "role": "Design and room signage",
+      "responsibilities": "Report on name cards and cover design. Say explicitly which requests can wait. Handle straightforward tasks within your own responsibility directly.",
+      "privateFacts": "Both light and dark cover versions are ready. A choice by 6 p.m. is sufficient and does not block rehearsal. The name cards are printed and can be placed at the entrance."
+    },
+    {
+      "name": "Taylor",
+      "role": "Demo flow and equipment connections",
+      "responsibilities": "Explain the demo sequence and confirmed connection requirements. Do not promise Alex's equipment or compatibility on Alex's behalf.",
+      "privateFacts": "In this fictional scenario, the projector accepts HDMI and the equipment room can provide an HDMI cable but no USB-C adapter. Reveal this when asked, or at the clarification point. Both time slots work for you, but you do not know Alex's schedule."
+    }
+  ],
+  "utterances": [
+    {"atSeconds": 0, "speaker": "Jordan", "text": "Let's spend five minutes arranging our presentation rehearsal: timing, connections and materials. If something is already clear and within your responsibility, say what you will do."},
+    {"atSeconds": 13, "speaker": "Alex", "text": "I'm checking the demo materials list, so I'll follow the first part intermittently. If you need my arrival time or equipment, please make the specific request clear. I'll check before confirming."},
+    {"atSeconds": 27, "speaker": "Sam", "text": "The name cards are printed. I have light and dark cover versions. Alex, could you check the cover colour when convenient? An answer by six this evening is fine. We can continue without it."},
+    {"atSeconds": 44, "speaker": "Taylor", "text": "I've checked the demo order: show the interface, demonstrate two actions, then take questions. Rehearsal is mainly to check the projector and transitions."},
+    {"atSeconds": 59, "speaker": "Jordan", "text": "I put Alex's file index in the shared folder. That is just an update about where it is. Alex, no reply is needed. Let's clarify the room and time."},
+    {"atSeconds": 73, "speaker": "Taylor", "text": "The rehearsal room has two available slots: ten twenty and ten forty in the morning. Both work for me, but I don't know whether everyone can arrive in time."},
+    {"atSeconds": 88, "speaker": "Jordan", "text": "Alex, please confirm now which slot you can attend. The administrator is waiting for our choice, and I'd like to reply within half a minute. Can you commit to ten twenty or ten forty? If you're unsure, please say so."},
+    {"atSeconds": 105, "speaker": "Sam", "text": "Both times work for me. I'll pack the name cards while Alex checks. I won't choose on Alex's behalf."},
+    {"atSeconds": 130, "speaker": "Jordan", "text": "Let me check the actual reply in the meeting chat. We'll use only what has been explicitly confirmed. If there is no reply yet, the time remains undecided."},
+    {"atSeconds": 145, "speaker": "Taylor", "text": "Once the time is confirmed, I'll update the room and arrival checklist. Next is the connection: the laptop must connect to the projector, so opening the files alone isn't enough."},
+    {"atSeconds": 160, "speaker": "Jordan", "text": "Alex, could you bring the cables and adapter? That's all my note says at the moment. I haven't specified exactly which items are needed."},
+    {"atSeconds": 180, "speaker": "Sam", "text": "I'll keep packing the name cards. Please clarify the connections before adding them to the list, so we don't each assume someone else is bringing an item."},
+    {"atSeconds": 207, "speaker": "Taylor", "text": "Here are the confirmed equipment details: the projector accepts HDMI. The equipment room can provide an HDMI cable, but it has no USB-C adapter. We still need to check the laptop being brought."},
+    {"atSeconds": 224, "speaker": "Jordan", "text": "Please write in the chat exactly what you can bring. Mark anything uncertain as unconfirmed. Hearing a device name doesn't mean every connection issue is resolved."},
+    {"atSeconds": 239, "speaker": "Taylor", "text": "The same applies to the demo files. Opening them on one laptop doesn't prove they run on another. We'll prepare based on what each person has checked, then test the complete setup in the room."},
+    {"atSeconds": 253, "speaker": "Jordan", "text": "The name cards are straightforward. Sam, please put them at the entrance when you arrive. You can handle that directly."},
+    {"atSeconds": 264, "speaker": "Sam", "text": "I'll put the name cards at the entrance and add that to my checklist now. I don't need another reminder. The cover colour can still wait."},
+    {"atSeconds": 278, "speaker": "Alex", "text": "I'm back to reviewing the final checklist with everyone. You can record the items I actually confirmed in chat. Please leave anything else unconfirmed."},
+    {"atSeconds": 290, "speaker": "Jordan", "text": "We'll arrange the time and connections based on the actual chat replies. Sam owns the name cards. Any remaining uncertainty stays on the checklist for us to verify before rehearsal."}
+  ],
+  "facilitatorNotes": [
+    "Allow about five minutes. Times guide pacing; pause for real analysis and interaction instead of rushing the script.",
+    "Names, room availability, times and equipment are fictional rehearsal conditions.",
+    "Each member reads their own role card. Private facts are for that person's verification; only information explicitly entered in the assistant settings is sent to the model.",
+    "The cover request can wait; the file-index mention explicitly needs no reply. These are intended scenario conditions, not evidence that the model classified them correctly.",
+    "After the arrival-time request, leave about forty seconds for reading the alert, editing, copying, manually sending, and receiving the host's response.",
+    "The host must read back the actual chat reply, not a memorised expected answer. If no reply has arrived, leave the decision open.",
+    "The equipment request lacks enough detail. Alex can ask for clarification. Taylor may explain the connections earlier if asked; do not claim the assistant elicited clarification unless that happened.",
+    "The host confirms who will bring each item using the actual reply. A generated draft must be checked and sent by Alex.",
+    "The name-card exchange is an example of ordinary direct coordination that does not need the assistant.",
+    "Only spoken content belongs in a live transcript. The built-in replay remains labelled as scripted rehearsal input.",
+    "Record what actually happened: alert content, edits, manual delivery, the host's understanding and any delay or failure. A successful rehearsal does not establish research effectiveness."
+  ]
+}

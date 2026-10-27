@@ -1,0 +1,22 @@
+{
+  "run_id": "cursor__kimi-k3-high__r2",
+  "provider": "cursor",
+  "requested_model": "kimi-k3-high",
+  "reported_models": [
+    "Kimi K3 High"
+  ],
+  "repeat": 2,
+  "attempt": 1,
+  "sessions": [
+    "17dfc883-faef-4569-acc2-74d8f804509b"
+  ],
+  "prompt_sha256": "685f987369fbdc5cc55602a2f73ca985628fa9b2e4ecd0a6f7ff33bc0e419259",
+  "started": "2026-10-23T06:12:38.230465+00:00",
+  "seconds": 24.6,
+  "exit_code": 0,
+  "timed_out": false,
+  "tool_event_count": 0,
+  "valid": true,
+  "errors": [],
+  "path": "raw\\cursor__kimi-k3-high__r2\\attempt1"
+}

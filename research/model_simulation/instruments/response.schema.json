@@ -1,0 +1,5138 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "remote-meetings-model-simulation-v1",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "source_type",
+    "scenario_id",
+    "fictional_persona",
+    "experience_status",
+    "scenario_induced",
+    "assumption_registry",
+    "questions"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "source_type": {
+      "const": "model_simulation"
+    },
+    "scenario_id": {
+      "enum": [
+        "S1",
+        "S2",
+        "S3"
+      ]
+    },
+    "fictional_persona": {
+      "const": true
+    },
+    "experience_status": {
+      "const": "all_experiences_are_hypothetical"
+    },
+    "scenario_induced": {
+      "const": true
+    },
+    "assumption_registry": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "questions": {
+      "type": "object",
+      "properties": {
+        "NEW_Q1": {
+          "oneOf": [
+            {
+              "type": "object",
+              "required": [
+                "status",
+                "answer",
+                "basis",
+                "assumptions"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "status": {
+                  "const": "answered"
+                },
+                "answer": {
+                  "type": "object",
+                  "required": [
+                    "selection"
+                  ],
+                  "properties": {
+                    "selection": {
+                      "type": "string",
+                      "enum": [
+                        "0 次",
+                        "1–4 次",
+                        "5–10 次",
+                        "11–20 次",
+                        "21–40 次",
+                        "41 次及以上",
+                        "记不清"
+                      ]
+                    }
+                  },
+                  "additionalProperties": false
+                },
+                "basis": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "enum": [
+                      "scenario_fact",
+                      "scenario_inference",
+                      "model_assumption",
+                      "hypothetical_preference",
+                      "instrument_constraint",
+                      "not_applicable"
+                    ]
+                  }
+                },
+                "assumptions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            {
+              "type": "object",
+              "required": [
+                "status",
+                "answer",
+                "basis",
+                "assumptions",
+                "skip_reason"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "status": {
+                  "const": "skipped"
+                },
+                "answer": {
+                  "type": "null"
+                },
+                "basis": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "enum": [
+                      "scenario_fact",
+                      "scenario_inference",
+                      "model_assumption",
+                      "hypothetical_preference",
+                      "instrument_constraint",
+                      "not_applicable"
+                    ]
+                  }
+                },
+                "assumptions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "skip_reason": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            }
+          ]
+        },
+        "NEW_Q2": {
+          "oneOf": [
+            {
+              "type": "object",
+              "required": [
+                "status",
+                "answer",
+                "basis",
+                "assumptions"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "status": {
+                  "const": "answered"
+                },
+                "answer": {
+                  "type": "object",
+                  "required": [
+                    "meeting_topics",
+                    "role"
+                  ],
+                  "properties": {
+                    "meeting_topics": {
+                      "type": "string"
+                    },
+                    "role": {
+                      "type": "string"
+                    }
+                  },
+                  "additionalProperties": false
+                },
+                "basis": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "enum": [
+                      "scenario_fact",
+                      "scenario_inference",
+                      "model_assumption",
+                      "hypothetical_preference",
+                      "instrument_constraint",
+                      "not_applicable"
+                    ]
+                  }
+                },
+                "assumptions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            {
+              "type": "object",
+              "required": [
+                "status",
+                "answer",
+                "basis",
+                "assumptions",
+                "skip_reason"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "status": {
+                  "const": "skipped"
+                },
+                "answer": {
+                  "type": "null"
+                },
+                "basis": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "enum": [
+                      "scenario_fact",
+                      "scenario_inference",
+                      "model_assumption",
+                      "hypothetical_preference",
+                      "instrument_constraint",
+                      "not_applicable"
+                    ]
+                  }
+                },
+                "assumptions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "skip_reason": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            }
+          ]
+        },
+        "NEW_Q3": {
+          "oneOf": [
+            {
+              "type": "object",
+              "required": [
+                "status",
+                "answer",
+                "basis",
+                "assumptions"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "status": {
+                  "const": "answered"
+                },
+                "answer": {
+                  "type": "object",
+                  "required": [
+                    "meeting_purpose",
+                    "personal_goal",
+                    "actual_participation"
+                  ],
+                  "properties": {
+                    "meeting_purpose": {
+                      "type": "string"
+                    },
+                    "personal_goal": {
+                      "type": "string"
+                    },
+                    "actual_participation": {
+                      "type": "string"
+                    }
+                  },
+                  "additionalProperties": false
+                },
+                "basis": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "enum": [
+                      "scenario_fact",
+                      "scenario_inference",
+                      "model_assumption",
+                      "hypothetical_preference",
+                      "instrument_constraint",
+                      "not_applicable"
+                    ]
+                  }
+                },
+                "assumptions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            {
+              "type": "object",
+              "required": [
+                "status",
+                "answer",
+                "basis",
+                "assumptions",
+                "skip_reason"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "status": {
+                  "const": "skipped"
+                },
+                "answer": {
+                  "type": "null"
+                },
+                "basis": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "enum": [
+                      "scenario_fact",
+                      "scenario_inference",
+                      "model_assumption",
+                      "hypothetical_preference",
+                      "instrument_constraint",
+                      "not_applicable"
+                    ]
+                  }
+                },
+                "assumptions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "skip_reason": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            }
+          ]
+        },
+        "NEW_Q4": {
+          "oneOf": [
+            {
+              "type": "object",
+              "required": [
+                "status",
+                "answer",
+                "basis",
+                "assumptions"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "status": {
+                  "const": "answered"
+                },
+                "answer": {
+                  "type": "object",
+                  "required": [
+                    "before",
+                    "during",
+                    "after"
+                  ],
+                  "properties": {
+                    "before": {
+                      "type": "string"
+                    },
+                    "during": {
+                      "type": "string"
+                    },
+                    "after": {
+                      "type": "string"
+                    }
+                  },
+                  "additionalProperties": false
+                },
+                "basis": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "enum": [
+                      "scenario_fact",
+                      "scenario_inference",
+                      "model_assumption",
+                      "hypothetical_preference",
+                      "instrument_constraint",
+                      "not_applicable"
+                    ]
+                  }
+                },
+                "assumptions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            {
+              "type": "object",
+              "required": [
+                "status",
+                "answer",
+                "basis",
+                "assumptions",
+                "skip_reason"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "status": {
+                  "const": "skipped"
+                },
+                "answer": {
+                  "type": "null"
+                },
+                "basis": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "enum": [
+                      "scenario_fact",
+                      "scenario_inference",
+                      "model_assumption",
+                      "hypothetical_preference",
+                      "instrument_constraint",
+                      "not_applicable"
+                    ]
+                  }
+                },
+                "assumptions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "skip_reason": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            }
+          ]
+        },
+        "NEW_Q5": {
+          "oneOf": [
+            {
+              "type": "object",
+              "required": [
+                "status",
+                "answer",
+                "basis",
+                "assumptions"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "status": {
+                  "const": "answered"
+                },
+                "answer": {
+                  "type": "object",
+                  "required": [
+                    "selection",
+                    "episode"
+                  ],
+                  "properties": {
+                    "selection": {
+                      "type": "string",
+                      "enum": [
+                        "有",
+                        "没有",
+                        "暂时想不到"
+                      ]
+                    },
+                    "episode": {
+                      "type": "string"
+                    }
+                  },
+                  "additionalProperties": false
+                },
+                "basis": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "enum": [
+                      "scenario_fact",
+                      "scenario_inference",
+                      "model_assumption",
+                      "hypothetical_preference",
+                      "instrument_constraint",
+                      "not_applicable"
+                    ]
+                  }
+                },
+                "assumptions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            {
+              "type": "object",
+              "required": [
+                "status",
+                "answer",
+                "basis",
+                "assumptions",
+                "skip_reason"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "status": {
+                  "const": "skipped"
+                },
+                "answer": {
+                  "type": "null"
+                },
+                "basis": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "enum": [
+                      "scenario_fact",
+                      "scenario_inference",
+                      "model_assumption",
+                      "hypothetical_preference",
+                      "instrument_constraint",
+                      "not_applicable"
+                    ]
+                  }
+                },
+                "assumptions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "skip_reason": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            }
+          ]
+        },
+        "NEW_Q6": {
+          "oneOf": [
+            {
+              "type": "object",
+              "required": [
+                "status",
+                "answer",
+                "basis",
+                "assumptions"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "status": {
+                  "const": "answered"
+                },
+                "answer": {
+                  "type": "object",
+                  "required": [
+                    "selection"
+                  ],
+                  "properties": {
+                    "selection": {
+                      "type": "string",
+                      "enum": [
+                        "1 次",
+                        "2–3 次",
+                        "4–6 次",
+                        "7 次及以上",
+                        "记不清"
+                      ]
+                    }
+                  },
+                  "additionalProperties": false
+                },
+                "basis": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "enum": [
+                      "scenario_fact",
+                      "scenario_inference",
+                      "model_assumption",
+                      "hypothetical_preference",
+                      "instrument_constraint",
+                      "not_applicable"
+                    ]
+                  }
+                },
+                "assumptions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            {
+              "type": "object",
+              "required": [
+                "status",
+                "answer",
+                "basis",
+                "assumptions",
+                "skip_reason"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "status": {
+                  "const": "skipped"
+                },
+                "answer": {
+                  "type": "null"
+                },
+                "basis": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "enum": [
+                      "scenario_fact",
+                      "scenario_inference",
+                      "model_assumption",
+                      "hypothetical_preference",
+                      "instrument_constraint",
+                      "not_applicable"
+                    ]
+                  }
+                },
+                "assumptions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "skip_reason": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            }
+          ]
+        },
+        "NEW_Q7": {
+          "oneOf": [
+            {
+              "type": "object",
+              "required": [
+                "status",
+                "answer",
+                "basis",
+                "assumptions"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "status": {
+                  "const": "answered"
+                },
+                "answer": {
+                  "type": "object",
+                  "required": [
+                    "selection",
+                    "impact_detail"
+                  ],
+                  "properties": {
+                    "selection": {
+                      "type": "string",
+                      "enum": [
+                        "0",
+                        "1",
+                        "2",
+                        "3",
+                        "4",
+                        "无法判断"
+                      ]
+                    },
+                    "impact_detail": {
+                      "type": "string"
+                    }
+                  },
+                  "additionalProperties": false
+                },
+                "basis": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "enum": [
+                      "scenario_fact",
+                      "scenario_inference",
+                      "model_assumption",
+                      "hypothetical_preference",
+                      "instrument_constraint",
+                      "not_applicable"
+                    ]
+                  }
+                },
+                "assumptions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            {
+              "type": "object",
+              "required": [
+                "status",
+                "answer",
+                "basis",
+                "assumptions",
+                "skip_reason"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "status": {
+                  "const": "skipped"
+                },
+                "answer": {
+                  "type": "null"
+                },
+                "basis": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "enum": [
+                      "scenario_fact",
+                      "scenario_inference",
+                      "model_assumption",
+                      "hypothetical_preference",
+                      "instrument_constraint",
+                      "not_applicable"
+                    ]
+                  }
+                },
+                "assumptions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "skip_reason": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            }
+          ]
+        },
+        "NEW_Q8": {
+          "oneOf": [
+            {
+              "type": "object",
+              "required": [
+                "status",
+                "answer",
+                "basis",
+                "assumptions"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "status": {
+                  "const": "answered"
+                },
+                "answer": {
+                  "type": "object",
+                  "required": [
+                    "actual_method",
+                    "reason"
+                  ],
+                  "properties": {
+                    "actual_method": {
+                      "type": "string"
+                    },
+                    "reason": {
+                      "type": "string"
+                    }
+                  },
+                  "additionalProperties": false
+                },
+                "basis": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "enum": [
+                      "scenario_fact",
+                      "scenario_inference",
+                      "model_assumption",
+                      "hypothetical_preference",
+                      "instrument_constraint",
+                      "not_applicable"
+                    ]
+                  }
+                },
+                "assumptions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            {
+              "type": "object",
+              "required": [
+                "status",
+                "answer",
+                "basis",
+                "assumptions",
+                "skip_reason"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "status": {
+                  "const": "skipped"
+                },
+                "answer": {
+                  "type": "null"
+                },
+                "basis": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "enum": [
+                      "scenario_fact",
+                      "scenario_inference",
+                      "model_assumption",
+                      "hypothetical_preference",
+                      "instrument_constraint",
+                      "not_applicable"
+                    ]
+                  }
+                },
+                "assumptions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "skip_reason": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            }
+          ]
+        },
+        "NEW_Q9": {
+          "oneOf": [
+            {
+              "type": "object",
+              "required": [
+                "status",
+                "answer",
+                "basis",
+                "assumptions"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "status": {
+                  "const": "answered"
+                },
+                "answer": {
+                  "type": "object",
+                  "required": [
+                    "Q9a",
+                    "Q9b",
+                    "extra_time"
+                  ],
+                  "properties": {
+                    "Q9a": {
+                      "type": "string",
+                      "enum": [
+                        "0",
+                        "1",
+                        "2",
+                        "3",
+                        "4",
+                        "仍在处理中，尚不能评价",
+                        "无法判断"
+                      ]
+                    },
+                    "Q9b": {
+                      "type": "string",
+                      "enum": [
+                        "0",
+                        "1",
+                        "2",
+                        "3",
+                        "4",
+                        "无法判断"
+                      ]
+                    },
+                    "extra_time": {
+                      "type": "string"
+                    }
+                  },
+                  "additionalProperties": false
+                },
+                "basis": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "enum": [
+                      "scenario_fact",
+                      "scenario_inference",
+                      "model_assumption",
+                      "hypothetical_preference",
+                      "instrument_constraint",
+                      "not_applicable"
+                    ]
+                  }
+                },
+                "assumptions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            {
+              "type": "object",
+              "required": [
+                "status",
+                "answer",
+                "basis",
+                "assumptions",
+                "skip_reason"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "status": {
+                  "const": "skipped"
+                },
+                "answer": {
+                  "type": "null"
+                },
+                "basis": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "enum": [
+                      "scenario_fact",
+                      "scenario_inference",
+                      "model_assumption",
+                      "hypothetical_preference",
+                      "instrument_constraint",
+                      "not_applicable"
+                    ]
+                  }
+                },
+                "assumptions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "skip_reason": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            }
+          ]
+        },
+        "NEW_Q10": {
+          "oneOf": [
+            {
+              "type": "object",
+              "required": [
+                "status",
+                "answer",
+                "basis",
+                "assumptions"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "status": {
+                  "const": "answered"
+                },
+                "answer": {
+                  "type": "object",
+                  "required": [
+                    "unmet_need",
+                    "possible_cause"
+                  ],
+                  "properties": {
+                    "unmet_need": {
+                      "type": "string"
+                    },
+                    "possible_cause": {
+                      "type": "string"
+                    }
+                  },
+                  "additionalProperties": false
+                },
+                "basis": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "enum": [
+                      "scenario_fact",
+                      "scenario_inference",
+                      "model_assumption",
+                      "hypothetical_preference",
+                      "instrument_constraint",
+                      "not_applicable"
+                    ]
+                  }
+                },
+                "assumptions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            {
+              "type": "object",
+              "required": [
+                "status",
+                "answer",
+                "basis",
+                "assumptions",
+                "skip_reason"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "status": {
+                  "const": "skipped"
+                },
+                "answer": {
+                  "type": "null"
+                },
+                "basis": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "enum": [
+                      "scenario_fact",
+                      "scenario_inference",
+                      "model_assumption",
+                      "hypothetical_preference",
+                      "instrument_constraint",
+                      "not_applicable"
+                    ]
+                  }
+                },
+                "assumptions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "skip_reason": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            }
+          ]
+        },
+        "NEW_Q11": {
+          "oneOf": [
+            {
+              "type": "object",
+              "required": [
+                "status",
+                "answer",
+                "basis",
+                "assumptions"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "status": {
+                  "const": "answered"
+                },
+                "answer": {
+                  "type": "object",
+                  "required": [
+                    "selection"
+                  ],
+                  "properties": {
+                    "selection": {
+                      "type": "string",
+                      "enum": [
+                        "没有",
+                        "1 次",
+                        "2–3 次",
+                        "4–6 次",
+                        "7 次及以上",
+                        "记不清"
+                      ]
+                    }
+                  },
+                  "additionalProperties": false
+                },
+                "basis": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "enum": [
+                      "scenario_fact",
+                      "scenario_inference",
+                      "model_assumption",
+                      "hypothetical_preference",
+                      "instrument_constraint",
+                      "not_applicable"
+                    ]
+                  }
+                },
+                "assumptions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            {
+              "type": "object",
+              "required": [
+                "status",
+                "answer",
+                "basis",
+                "assumptions",
+                "skip_reason"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "status": {
+                  "const": "skipped"
+                },
+                "answer": {
+                  "type": "null"
+                },
+                "basis": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "enum": [
+                      "scenario_fact",
+                      "scenario_inference",
+                      "model_assumption",
+                      "hypothetical_preference",
+                      "instrument_constraint",
+                      "not_applicable"
+                    ]
+                  }
+                },
+                "assumptions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "skip_reason": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            }
+          ]
+        },
+        "NEW_Q12": {
+          "oneOf": [
+            {
+              "type": "object",
+              "required": [
+                "status",
+                "answer",
+                "basis",
+                "assumptions"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "status": {
+                  "const": "answered"
+                },
+                "answer": {
+                  "type": "object",
+                  "required": [
+                    "desired_participation",
+                    "actual_participation",
+                    "reason"
+                  ],
+                  "properties": {
+                    "desired_participation": {
+                      "type": "string"
+                    },
+                    "actual_participation": {
+                      "type": "string"
+                    },
+                    "reason": {
+                      "type": "string"
+                    }
+                  },
+                  "additionalProperties": false
+                },
+                "basis": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "enum": [
+                      "scenario_fact",
+                      "scenario_inference",
+                      "model_assumption",
+                      "hypothetical_preference",
+                      "instrument_constraint",
+                      "not_applicable"
+                    ]
+                  }
+                },
+                "assumptions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            {
+              "type": "object",
+              "required": [
+                "status",
+                "answer",
+                "basis",
+                "assumptions",
+                "skip_reason"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "status": {
+                  "const": "skipped"
+                },
+                "answer": {
+                  "type": "null"
+                },
+                "basis": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "enum": [
+                      "scenario_fact",
+                      "scenario_inference",
+                      "model_assumption",
+                      "hypothetical_preference",
+                      "instrument_constraint",
+                      "not_applicable"
+                    ]
+                  }
+                },
+                "assumptions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "skip_reason": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            }
+          ]
+        },
+        "NEW_Q13": {
+          "oneOf": [
+            {
+              "type": "object",
+              "required": [
+                "status",
+                "answer",
+                "basis",
+                "assumptions"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "status": {
+                  "const": "answered"
+                },
+                "answer": {
+                  "type": "object",
+                  "required": [
+                    "selection",
+                    "evidence"
+                  ],
+                  "properties": {
+                    "selection": {
+                      "type": "string",
+                      "enum": [
+                        "明显妨碍",
+                        "有些妨碍",
+                        "没有明显影响",
+                        "有些帮助",
+                        "明显帮助",
+                        "既有帮助也有妨碍，难以合并评价",
+                        "无法判断"
+                      ]
+                    },
+                    "evidence": {
+                      "type": "string"
+                    }
+                  },
+                  "additionalProperties": false
+                },
+                "basis": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "enum": [
+                      "scenario_fact",
+                      "scenario_inference",
+                      "model_assumption",
+                      "hypothetical_preference",
+                      "instrument_constraint",
+                      "not_applicable"
+                    ]
+                  }
+                },
+                "assumptions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            {
+              "type": "object",
+              "required": [
+                "status",
+                "answer",
+                "basis",
+                "assumptions",
+                "skip_reason"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "status": {
+                  "const": "skipped"
+                },
+                "answer": {
+                  "type": "null"
+                },
+                "basis": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "enum": [
+                      "scenario_fact",
+                      "scenario_inference",
+                      "model_assumption",
+                      "hypothetical_preference",
+                      "instrument_constraint",
+                      "not_applicable"
+                    ]
+                  }
+                },
+                "assumptions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "skip_reason": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            }
+          ]
+        },
+        "NEW_Q14": {
+          "oneOf": [
+            {
+              "type": "object",
+              "required": [
+                "status",
+                "answer",
+                "basis",
+                "assumptions"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "status": {
+                  "const": "answered"
+                },
+                "answer": {
+                  "type": "object",
+                  "required": [
+                    "items",
+                    "none_status"
+                  ],
+                  "properties": {
+                    "items": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      },
+                      "maxItems": 3
+                    },
+                    "none_status": {
+                      "type": "string"
+                    }
+                  },
+                  "additionalProperties": false
+                },
+                "basis": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "enum": [
+                      "scenario_fact",
+                      "scenario_inference",
+                      "model_assumption",
+                      "hypothetical_preference",
+                      "instrument_constraint",
+                      "not_applicable"
+                    ]
+                  }
+                },
+                "assumptions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            {
+              "type": "object",
+              "required": [
+                "status",
+                "answer",
+                "basis",
+                "assumptions",
+                "skip_reason"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "status": {
+                  "const": "skipped"
+                },
+                "answer": {
+                  "type": "null"
+                },
+                "basis": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "enum": [
+                      "scenario_fact",
+                      "scenario_inference",
+                      "model_assumption",
+                      "hypothetical_preference",
+                      "instrument_constraint",
+                      "not_applicable"
+                    ]
+                  }
+                },
+                "assumptions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "skip_reason": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            }
+          ]
+        },
+        "NEW_Q15": {
+          "oneOf": [
+            {
+              "type": "object",
+              "required": [
+                "status",
+                "answer",
+                "basis",
+                "assumptions"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "status": {
+                  "const": "answered"
+                },
+                "answer": {
+                  "type": "object",
+                  "required": [
+                    "text"
+                  ],
+                  "properties": {
+                    "text": {
+                      "type": "string"
+                    }
+                  },
+                  "additionalProperties": false
+                },
+                "basis": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "enum": [
+                      "scenario_fact",
+                      "scenario_inference",
+                      "model_assumption",
+                      "hypothetical_preference",
+                      "instrument_constraint",
+                      "not_applicable"
+                    ]
+                  }
+                },
+                "assumptions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            {
+              "type": "object",
+              "required": [
+                "status",
+                "answer",
+                "basis",
+                "assumptions",
+                "skip_reason"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "status": {
+                  "const": "skipped"
+                },
+                "answer": {
+                  "type": "null"
+                },
+                "basis": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "enum": [
+                      "scenario_fact",
+                      "scenario_inference",
+                      "model_assumption",
+                      "hypothetical_preference",
+                      "instrument_constraint",
+                      "not_applicable"
+                    ]
+                  }
+                },
+                "assumptions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "skip_reason": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            }
+          ]
+        },
+        "NEW_Q16": {
+          "oneOf": [
+            {
+              "type": "object",
+              "required": [
+                "status",
+                "answer",
+                "basis",
+                "assumptions"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "status": {
+                  "const": "answered"
+                },
+                "answer": {
+                  "type": "object",
+                  "required": [
+                    "selection",
+                    "task_example",
+                    "result_example"
+                  ],
+                  "properties": {
+                    "selection": {
+                      "type": "string",
+                      "enum": [
+                        "使用过",
+                        "没有使用过",
+                        "不确定所用工具是否属于 AI"
+                      ]
+                    },
+                    "task_example": {
+                      "type": "string"
+                    },
+                    "result_example": {
+                      "type": "string"
+                    }
+                  },
+                  "additionalProperties": false
+                },
+                "basis": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "enum": [
+                      "scenario_fact",
+                      "scenario_inference",
+                      "model_assumption",
+                      "hypothetical_preference",
+                      "instrument_constraint",
+                      "not_applicable"
+                    ]
+                  }
+                },
+                "assumptions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            {
+              "type": "object",
+              "required": [
+                "status",
+                "answer",
+                "basis",
+                "assumptions",
+                "skip_reason"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "status": {
+                  "const": "skipped"
+                },
+                "answer": {
+                  "type": "null"
+                },
+                "basis": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "enum": [
+                      "scenario_fact",
+                      "scenario_inference",
+                      "model_assumption",
+                      "hypothetical_preference",
+                      "instrument_constraint",
+                      "not_applicable"
+                    ]
+                  }
+                },
+                "assumptions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "skip_reason": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            }
+          ]
+        },
+        "NEW_Q17": {
+          "oneOf": [
+            {
+              "type": "object",
+              "required": [
+                "status",
+                "answer",
+                "basis",
+                "assumptions"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "status": {
+                  "const": "answered"
+                },
+                "answer": {
+                  "type": "object",
+                  "required": [
+                    "willing_status",
+                    "willing_tasks",
+                    "unsuitable_tasks"
+                  ],
+                  "properties": {
+                    "willing_status": {
+                      "type": "string",
+                      "enum": [
+                        "has_task",
+                        "no_task",
+                        "uncertain"
+                      ]
+                    },
+                    "willing_tasks": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "unsuitable_tasks": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "additionalProperties": false
+                },
+                "basis": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "enum": [
+                      "scenario_fact",
+                      "scenario_inference",
+                      "model_assumption",
+                      "hypothetical_preference",
+                      "instrument_constraint",
+                      "not_applicable"
+                    ]
+                  }
+                },
+                "assumptions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            {
+              "type": "object",
+              "required": [
+                "status",
+                "answer",
+                "basis",
+                "assumptions",
+                "skip_reason"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "status": {
+                  "const": "skipped"
+                },
+                "answer": {
+                  "type": "null"
+                },
+                "basis": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "enum": [
+                      "scenario_fact",
+                      "scenario_inference",
+                      "model_assumption",
+                      "hypothetical_preference",
+                      "instrument_constraint",
+                      "not_applicable"
+                    ]
+                  }
+                },
+                "assumptions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "skip_reason": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            }
+          ]
+        },
+        "NEW_Q18": {
+          "oneOf": [
+            {
+              "type": "object",
+              "required": [
+                "status",
+                "answer",
+                "basis",
+                "assumptions"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "status": {
+                  "const": "answered"
+                },
+                "answer": {
+                  "type": "object",
+                  "required": [
+                    "trigger",
+                    "ai_action",
+                    "result_and_recipient",
+                    "success_criterion"
+                  ],
+                  "properties": {
+                    "trigger": {
+                      "type": "string"
+                    },
+                    "ai_action": {
+                      "type": "string"
+                    },
+                    "result_and_recipient": {
+                      "type": "string"
+                    },
+                    "success_criterion": {
+                      "type": "string"
+                    }
+                  },
+                  "additionalProperties": false
+                },
+                "basis": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "enum": [
+                      "scenario_fact",
+                      "scenario_inference",
+                      "model_assumption",
+                      "hypothetical_preference",
+                      "instrument_constraint",
+                      "not_applicable"
+                    ]
+                  }
+                },
+                "assumptions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            {
+              "type": "object",
+              "required": [
+                "status",
+                "answer",
+                "basis",
+                "assumptions",
+                "skip_reason"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "status": {
+                  "const": "skipped"
+                },
+                "answer": {
+                  "type": "null"
+                },
+                "basis": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "enum": [
+                      "scenario_fact",
+                      "scenario_inference",
+                      "model_assumption",
+                      "hypothetical_preference",
+                      "instrument_constraint",
+                      "not_applicable"
+                    ]
+                  }
+                },
+                "assumptions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "skip_reason": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            }
+          ]
+        },
+        "NEW_Q19": {
+          "oneOf": [
+            {
+              "type": "object",
+              "required": [
+                "status",
+                "answer",
+                "basis",
+                "assumptions"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "status": {
+                  "const": "answered"
+                },
+                "answer": {
+                  "type": "object",
+                  "required": [
+                    "selection",
+                    "reason"
+                  ],
+                  "properties": {
+                    "selection": {
+                      "type": "string",
+                      "enum": [
+                        "1",
+                        "2",
+                        "3",
+                        "4",
+                        "5",
+                        "信息不足，无法判断"
+                      ]
+                    },
+                    "reason": {
+                      "type": "string"
+                    }
+                  },
+                  "additionalProperties": false
+                },
+                "basis": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "enum": [
+                      "scenario_fact",
+                      "scenario_inference",
+                      "model_assumption",
+                      "hypothetical_preference",
+                      "instrument_constraint",
+                      "not_applicable"
+                    ]
+                  }
+                },
+                "assumptions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            {
+              "type": "object",
+              "required": [
+                "status",
+                "answer",
+                "basis",
+                "assumptions",
+                "skip_reason"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "status": {
+                  "const": "skipped"
+                },
+                "answer": {
+                  "type": "null"
+                },
+                "basis": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "enum": [
+                      "scenario_fact",
+                      "scenario_inference",
+                      "model_assumption",
+                      "hypothetical_preference",
+                      "instrument_constraint",
+                      "not_applicable"
+                    ]
+                  }
+                },
+                "assumptions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "skip_reason": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            }
+          ]
+        },
+        "NEW_Q20": {
+          "oneOf": [
+            {
+              "type": "object",
+              "required": [
+                "status",
+                "answer",
+                "basis",
+                "assumptions"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "status": {
+                  "const": "answered"
+                },
+                "answer": {
+                  "type": "object",
+                  "required": [
+                    "autonomous",
+                    "requires_confirmation",
+                    "human_only"
+                  ],
+                  "properties": {
+                    "autonomous": {
+                      "type": "string"
+                    },
+                    "requires_confirmation": {
+                      "type": "string"
+                    },
+                    "human_only": {
+                      "type": "string"
+                    }
+                  },
+                  "additionalProperties": false
+                },
+                "basis": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "enum": [
+                      "scenario_fact",
+                      "scenario_inference",
+                      "model_assumption",
+                      "hypothetical_preference",
+                      "instrument_constraint",
+                      "not_applicable"
+                    ]
+                  }
+                },
+                "assumptions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            {
+              "type": "object",
+              "required": [
+                "status",
+                "answer",
+                "basis",
+                "assumptions",
+                "skip_reason"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "status": {
+                  "const": "skipped"
+                },
+                "answer": {
+                  "type": "null"
+                },
+                "basis": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "enum": [
+                      "scenario_fact",
+                      "scenario_inference",
+                      "model_assumption",
+                      "hypothetical_preference",
+                      "instrument_constraint",
+                      "not_applicable"
+                    ]
+                  }
+                },
+                "assumptions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "skip_reason": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            }
+          ]
+        },
+        "NEW_Q21": {
+          "oneOf": [
+            {
+              "type": "object",
+              "required": [
+                "status",
+                "answer",
+                "basis",
+                "assumptions"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "status": {
+                  "const": "answered"
+                },
+                "answer": {
+                  "type": "object",
+                  "required": [
+                    "text"
+                  ],
+                  "properties": {
+                    "text": {
+                      "type": "string"
+                    }
+                  },
+                  "additionalProperties": false
+                },
+                "basis": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "enum": [
+                      "scenario_fact",
+                      "scenario_inference",
+                      "model_assumption",
+                      "hypothetical_preference",
+                      "instrument_constraint",
+                      "not_applicable"
+                    ]
+                  }
+                },
+                "assumptions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            {
+              "type": "object",
+              "required": [
+                "status",
+                "answer",
+                "basis",
+                "assumptions",
+                "skip_reason"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "status": {
+                  "const": "skipped"
+                },
+                "answer": {
+                  "type": "null"
+                },
+                "basis": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "enum": [
+                      "scenario_fact",
+                      "scenario_inference",
+                      "model_assumption",
+                      "hypothetical_preference",
+                      "instrument_constraint",
+                      "not_applicable"
+                    ]
+                  }
+                },
+                "assumptions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "skip_reason": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            }
+          ]
+        },
+        "NEW_Q22": {
+          "oneOf": [
+            {
+              "type": "object",
+              "required": [
+                "status",
+                "answer",
+                "basis",
+                "assumptions"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "status": {
+                  "const": "answered"
+                },
+                "answer": {
+                  "type": "object",
+                  "required": [
+                    "evidence_needed",
+                    "failure_response"
+                  ],
+                  "properties": {
+                    "evidence_needed": {
+                      "type": "string"
+                    },
+                    "failure_response": {
+                      "type": "string"
+                    }
+                  },
+                  "additionalProperties": false
+                },
+                "basis": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "enum": [
+                      "scenario_fact",
+                      "scenario_inference",
+                      "model_assumption",
+                      "hypothetical_preference",
+                      "instrument_constraint",
+                      "not_applicable"
+                    ]
+                  }
+                },
+                "assumptions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            {
+              "type": "object",
+              "required": [
+                "status",
+                "answer",
+                "basis",
+                "assumptions",
+                "skip_reason"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "status": {
+                  "const": "skipped"
+                },
+                "answer": {
+                  "type": "null"
+                },
+                "basis": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "enum": [
+                      "scenario_fact",
+                      "scenario_inference",
+                      "model_assumption",
+                      "hypothetical_preference",
+                      "instrument_constraint",
+                      "not_applicable"
+                    ]
+                  }
+                },
+                "assumptions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "skip_reason": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            }
+          ]
+        },
+        "NEW_Q23": {
+          "oneOf": [
+            {
+              "type": "object",
+              "required": [
+                "status",
+                "answer",
+                "basis",
+                "assumptions"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "status": {
+                  "const": "answered"
+                },
+                "answer": {
+                  "type": "object",
+                  "required": [
+                    "text"
+                  ],
+                  "properties": {
+                    "text": {
+                      "type": "string"
+                    }
+                  },
+                  "additionalProperties": false
+                },
+                "basis": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "enum": [
+                      "scenario_fact",
+                      "scenario_inference",
+                      "model_assumption",
+                      "hypothetical_preference",
+                      "instrument_constraint",
+                      "not_applicable"
+                    ]
+                  }
+                },
+                "assumptions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            {
+              "type": "object",
+              "required": [
+                "status",
+                "answer",
+                "basis",
+                "assumptions",
+                "skip_reason"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "status": {
+                  "const": "skipped"
+                },
+                "answer": {
+                  "type": "null"
+                },
+                "basis": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "enum": [
+                      "scenario_fact",
+                      "scenario_inference",
+                      "model_assumption",
+                      "hypothetical_preference",
+                      "instrument_constraint",
+                      "not_applicable"
+                    ]
+                  }
+                },
+                "assumptions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "skip_reason": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            }
+          ]
+        },
+        "NEW_Q24": {
+          "oneOf": [
+            {
+              "type": "object",
+              "required": [
+                "status",
+                "answer",
+                "basis",
+                "assumptions"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "status": {
+                  "const": "answered"
+                },
+                "answer": {
+                  "type": "object",
+                  "required": [
+                    "text"
+                  ],
+                  "properties": {
+                    "text": {
+                      "type": "string"
+                    }
+                  },
+                  "additionalProperties": false
+                },
+                "basis": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "enum": [
+                      "scenario_fact",
+                      "scenario_inference",
+                      "model_assumption",
+                      "hypothetical_preference",
+                      "instrument_constraint",
+                      "not_applicable"
+                    ]
+                  }
+                },
+                "assumptions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            {
+              "type": "object",
+              "required": [
+                "status",
+                "answer",
+                "basis",
+                "assumptions",
+                "skip_reason"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "status": {
+                  "const": "skipped"
+                },
+                "answer": {
+                  "type": "null"
+                },
+                "basis": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "enum": [
+                      "scenario_fact",
+                      "scenario_inference",
+                      "model_assumption",
+                      "hypothetical_preference",
+                      "instrument_constraint",
+                      "not_applicable"
+                    ]
+                  }
+                },
+                "assumptions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "skip_reason": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            }
+          ]
+        },
+        "NEW_Q25": {
+          "oneOf": [
+            {
+              "type": "object",
+              "required": [
+                "status",
+                "answer",
+                "basis",
+                "assumptions"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "status": {
+                  "const": "answered"
+                },
+                "answer": {
+                  "type": "object",
+                  "required": [
+                    "stop_conditions",
+                    "alternative"
+                  ],
+                  "properties": {
+                    "stop_conditions": {
+                      "type": "string"
+                    },
+                    "alternative": {
+                      "type": "string"
+                    }
+                  },
+                  "additionalProperties": false
+                },
+                "basis": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "enum": [
+                      "scenario_fact",
+                      "scenario_inference",
+                      "model_assumption",
+                      "hypothetical_preference",
+                      "instrument_constraint",
+                      "not_applicable"
+                    ]
+                  }
+                },
+                "assumptions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            {
+              "type": "object",
+              "required": [
+                "status",
+                "answer",
+                "basis",
+                "assumptions",
+                "skip_reason"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "status": {
+                  "const": "skipped"
+                },
+                "answer": {
+                  "type": "null"
+                },
+                "basis": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "enum": [
+                      "scenario_fact",
+                      "scenario_inference",
+                      "model_assumption",
+                      "hypothetical_preference",
+                      "instrument_constraint",
+                      "not_applicable"
+                    ]
+                  }
+                },
+                "assumptions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "skip_reason": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            }
+          ]
+        },
+        "NEW_Q26": {
+          "oneOf": [
+            {
+              "type": "object",
+              "required": [
+                "status",
+                "answer",
+                "basis",
+                "assumptions"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "status": {
+                  "const": "answered"
+                },
+                "answer": {
+                  "type": "object",
+                  "required": [
+                    "priority_and_reason"
+                  ],
+                  "properties": {
+                    "priority_and_reason": {
+                      "type": "string"
+                    }
+                  },
+                  "additionalProperties": false
+                },
+                "basis": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "enum": [
+                      "scenario_fact",
+                      "scenario_inference",
+                      "model_assumption",
+                      "hypothetical_preference",
+                      "instrument_constraint",
+                      "not_applicable"
+                    ]
+                  }
+                },
+                "assumptions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            {
+              "type": "object",
+              "required": [
+                "status",
+                "answer",
+                "basis",
+                "assumptions",
+                "skip_reason"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "status": {
+                  "const": "skipped"
+                },
+                "answer": {
+                  "type": "null"
+                },
+                "basis": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "enum": [
+                      "scenario_fact",
+                      "scenario_inference",
+                      "model_assumption",
+                      "hypothetical_preference",
+                      "instrument_constraint",
+                      "not_applicable"
+                    ]
+                  }
+                },
+                "assumptions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "skip_reason": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            }
+          ]
+        },
+        "NEW_Q27": {
+          "oneOf": [
+            {
+              "type": "object",
+              "required": [
+                "status",
+                "answer",
+                "basis",
+                "assumptions"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "status": {
+                  "const": "answered"
+                },
+                "answer": {
+                  "type": "object",
+                  "required": [
+                    "text"
+                  ],
+                  "properties": {
+                    "text": {
+                      "type": "string"
+                    }
+                  },
+                  "additionalProperties": false
+                },
+                "basis": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "enum": [
+                      "scenario_fact",
+                      "scenario_inference",
+                      "model_assumption",
+                      "hypothetical_preference",
+                      "instrument_constraint",
+                      "not_applicable"
+                    ]
+                  }
+                },
+                "assumptions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            {
+              "type": "object",
+              "required": [
+                "status",
+                "answer",
+                "basis",
+                "assumptions",
+                "skip_reason"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "status": {
+                  "const": "skipped"
+                },
+                "answer": {
+                  "type": "null"
+                },
+                "basis": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "enum": [
+                      "scenario_fact",
+                      "scenario_inference",
+                      "model_assumption",
+                      "hypothetical_preference",
+                      "instrument_constraint",
+                      "not_applicable"
+                    ]
+                  }
+                },
+                "assumptions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "skip_reason": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            }
+          ]
+        },
+        "OLD_Q1": {
+          "oneOf": [
+            {
+              "type": "object",
+              "required": [
+                "status",
+                "answer",
+                "basis",
+                "assumptions"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "status": {
+                  "const": "answered"
+                },
+                "answer": {
+                  "type": "object",
+                  "required": [
+                    "selection"
+                  ],
+                  "properties": {
+                    "selection": {
+                      "type": "string",
+                      "enum": [
+                        "几乎每天",
+                        "每周数次",
+                        "每周约一次",
+                        "每月数次",
+                        "很少或从不"
+                      ]
+                    }
+                  },
+                  "additionalProperties": false
+                },
+                "basis": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "enum": [
+                      "scenario_fact",
+                      "scenario_inference",
+                      "model_assumption",
+                      "hypothetical_preference",
+                      "instrument_constraint",
+                      "not_applicable"
+                    ]
+                  }
+                },
+                "assumptions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            {
+              "type": "object",
+              "required": [
+                "status",
+                "answer",
+                "basis",
+                "assumptions",
+                "skip_reason"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "status": {
+                  "const": "skipped"
+                },
+                "answer": {
+                  "type": "null"
+                },
+                "basis": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "enum": [
+                      "scenario_fact",
+                      "scenario_inference",
+                      "model_assumption",
+                      "hypothetical_preference",
+                      "instrument_constraint",
+                      "not_applicable"
+                    ]
+                  }
+                },
+                "assumptions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "skip_reason": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            }
+          ]
+        },
+        "OLD_Q2": {
+          "oneOf": [
+            {
+              "type": "object",
+              "required": [
+                "status",
+                "answer",
+                "basis",
+                "assumptions"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "status": {
+                  "const": "answered"
+                },
+                "answer": {
+                  "type": "object",
+                  "required": [
+                    "selection"
+                  ],
+                  "properties": {
+                    "selection": {
+                      "type": "string",
+                      "enum": [
+                        "经常",
+                        "偶尔",
+                        "很少",
+                        "从未"
+                      ]
+                    }
+                  },
+                  "additionalProperties": false
+                },
+                "basis": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "enum": [
+                      "scenario_fact",
+                      "scenario_inference",
+                      "model_assumption",
+                      "hypothetical_preference",
+                      "instrument_constraint",
+                      "not_applicable"
+                    ]
+                  }
+                },
+                "assumptions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            {
+              "type": "object",
+              "required": [
+                "status",
+                "answer",
+                "basis",
+                "assumptions",
+                "skip_reason"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "status": {
+                  "const": "skipped"
+                },
+                "answer": {
+                  "type": "null"
+                },
+                "basis": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "enum": [
+                      "scenario_fact",
+                      "scenario_inference",
+                      "model_assumption",
+                      "hypothetical_preference",
+                      "instrument_constraint",
+                      "not_applicable"
+                    ]
+                  }
+                },
+                "assumptions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "skip_reason": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            }
+          ]
+        },
+        "OLD_Q3": {
+          "oneOf": [
+            {
+              "type": "object",
+              "required": [
+                "status",
+                "answer",
+                "basis",
+                "assumptions"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "status": {
+                  "const": "answered"
+                },
+                "answer": {
+                  "type": "object",
+                  "required": [
+                    "selected",
+                    "other_text"
+                  ],
+                  "properties": {
+                    "selected": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "enum": [
+                          "完全缺席其中一个会议",
+                          "同时开着两个会议，来回切换注意力",
+                          "请同学/同事会后转述",
+                          "查看录屏或会议纪要",
+                          "只在被 @ 或被点名时回来",
+                          "其他"
+                        ]
+                      }
+                    },
+                    "other_text": {
+                      "type": "string"
+                    }
+                  },
+                  "additionalProperties": false
+                },
+                "basis": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "enum": [
+                      "scenario_fact",
+                      "scenario_inference",
+                      "model_assumption",
+                      "hypothetical_preference",
+                      "instrument_constraint",
+                      "not_applicable"
+                    ]
+                  }
+                },
+                "assumptions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            {
+              "type": "object",
+              "required": [
+                "status",
+                "answer",
+                "basis",
+                "assumptions",
+                "skip_reason"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "status": {
+                  "const": "skipped"
+                },
+                "answer": {
+                  "type": "null"
+                },
+                "basis": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "enum": [
+                      "scenario_fact",
+                      "scenario_inference",
+                      "model_assumption",
+                      "hypothetical_preference",
+                      "instrument_constraint",
+                      "not_applicable"
+                    ]
+                  }
+                },
+                "assumptions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "skip_reason": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            }
+          ]
+        },
+        "OLD_Q4": {
+          "oneOf": [
+            {
+              "type": "object",
+              "required": [
+                "status",
+                "answer",
+                "basis",
+                "assumptions"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "status": {
+                  "const": "answered"
+                },
+                "answer": {
+                  "type": "object",
+                  "required": [
+                    "selected",
+                    "other_text"
+                  ],
+                  "properties": {
+                    "selected": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "enum": [
+                          "不知道讨论到了哪里",
+                          "担心错过与自己有关的信息",
+                          "担心错过需要我做决定的时刻",
+                          "频繁切换注意力，影响主要任务",
+                          "会后补信息成本很高",
+                          "感觉自己“脱离”了团队",
+                          "不知道什么时候值得重新加入",
+                          "其他"
+                        ]
+                      },
+                      "maxItems": 3
+                    },
+                    "other_text": {
+                      "type": "string"
+                    }
+                  },
+                  "additionalProperties": false
+                },
+                "basis": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "enum": [
+                      "scenario_fact",
+                      "scenario_inference",
+                      "model_assumption",
+                      "hypothetical_preference",
+                      "instrument_constraint",
+                      "not_applicable"
+                    ]
+                  }
+                },
+                "assumptions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            {
+              "type": "object",
+              "required": [
+                "status",
+                "answer",
+                "basis",
+                "assumptions",
+                "skip_reason"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "status": {
+                  "const": "skipped"
+                },
+                "answer": {
+                  "type": "null"
+                },
+                "basis": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "enum": [
+                      "scenario_fact",
+                      "scenario_inference",
+                      "model_assumption",
+                      "hypothetical_preference",
+                      "instrument_constraint",
+                      "not_applicable"
+                    ]
+                  }
+                },
+                "assumptions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "skip_reason": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            }
+          ]
+        },
+        "OLD_Q5": {
+          "oneOf": [
+            {
+              "type": "object",
+              "required": [
+                "status",
+                "answer",
+                "basis",
+                "assumptions"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "status": {
+                  "const": "answered"
+                },
+                "answer": {
+                  "type": "object",
+                  "required": [
+                    "r1",
+                    "r2",
+                    "r3",
+                    "r4",
+                    "r5",
+                    "r6",
+                    "r7",
+                    "r8"
+                  ],
+                  "properties": {
+                    "r1": {
+                      "type": "string",
+                      "enum": [
+                        "立即提醒",
+                        "稍后批量",
+                        "会后汇总",
+                        "无需提醒"
+                      ]
+                    },
+                    "r2": {
+                      "type": "string",
+                      "enum": [
+                        "立即提醒",
+                        "稍后批量",
+                        "会后汇总",
+                        "无需提醒"
+                      ]
+                    },
+                    "r3": {
+                      "type": "string",
+                      "enum": [
+                        "立即提醒",
+                        "稍后批量",
+                        "会后汇总",
+                        "无需提醒"
+                      ]
+                    },
+                    "r4": {
+                      "type": "string",
+                      "enum": [
+                        "立即提醒",
+                        "稍后批量",
+                        "会后汇总",
+                        "无需提醒"
+                      ]
+                    },
+                    "r5": {
+                      "type": "string",
+                      "enum": [
+                        "立即提醒",
+                        "稍后批量",
+                        "会后汇总",
+                        "无需提醒"
+                      ]
+                    },
+                    "r6": {
+                      "type": "string",
+                      "enum": [
+                        "立即提醒",
+                        "稍后批量",
+                        "会后汇总",
+                        "无需提醒"
+                      ]
+                    },
+                    "r7": {
+                      "type": "string",
+                      "enum": [
+                        "立即提醒",
+                        "稍后批量",
+                        "会后汇总",
+                        "无需提醒"
+                      ]
+                    },
+                    "r8": {
+                      "type": "string",
+                      "enum": [
+                        "立即提醒",
+                        "稍后批量",
+                        "会后汇总",
+                        "无需提醒"
+                      ]
+                    }
+                  },
+                  "additionalProperties": false
+                },
+                "basis": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "enum": [
+                      "scenario_fact",
+                      "scenario_inference",
+                      "model_assumption",
+                      "hypothetical_preference",
+                      "instrument_constraint",
+                      "not_applicable"
+                    ]
+                  }
+                },
+                "assumptions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            {
+              "type": "object",
+              "required": [
+                "status",
+                "answer",
+                "basis",
+                "assumptions",
+                "skip_reason"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "status": {
+                  "const": "skipped"
+                },
+                "answer": {
+                  "type": "null"
+                },
+                "basis": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "enum": [
+                      "scenario_fact",
+                      "scenario_inference",
+                      "model_assumption",
+                      "hypothetical_preference",
+                      "instrument_constraint",
+                      "not_applicable"
+                    ]
+                  }
+                },
+                "assumptions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "skip_reason": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            }
+          ]
+        },
+        "OLD_Q6": {
+          "oneOf": [
+            {
+              "type": "object",
+              "required": [
+                "status",
+                "answer",
+                "basis",
+                "assumptions"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "status": {
+                  "const": "answered"
+                },
+                "answer": {
+                  "type": "object",
+                  "required": [
+                    "selected",
+                    "other_text"
+                  ],
+                  "properties": {
+                    "selected": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "enum": [
+                          "是否直接提到我",
+                          "是否需要我的决定",
+                          "是否影响我的任务或责任",
+                          "事件紧急程度",
+                          "决定不可逆或代价较高",
+                          "会议参与者身份（如导师/客户）",
+                          "我当前主要任务有多忙",
+                          "我预先设置的个人偏好",
+                          "其他"
+                        ]
+                      },
+                      "maxItems": 4
+                    },
+                    "other_text": {
+                      "type": "string"
+                    }
+                  },
+                  "additionalProperties": false
+                },
+                "basis": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "enum": [
+                      "scenario_fact",
+                      "scenario_inference",
+                      "model_assumption",
+                      "hypothetical_preference",
+                      "instrument_constraint",
+                      "not_applicable"
+                    ]
+                  }
+                },
+                "assumptions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            {
+              "type": "object",
+              "required": [
+                "status",
+                "answer",
+                "basis",
+                "assumptions",
+                "skip_reason"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "status": {
+                  "const": "skipped"
+                },
+                "answer": {
+                  "type": "null"
+                },
+                "basis": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "enum": [
+                      "scenario_fact",
+                      "scenario_inference",
+                      "model_assumption",
+                      "hypothetical_preference",
+                      "instrument_constraint",
+                      "not_applicable"
+                    ]
+                  }
+                },
+                "assumptions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "skip_reason": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            }
+          ]
+        },
+        "OLD_Q7": {
+          "oneOf": [
+            {
+              "type": "object",
+              "required": [
+                "status",
+                "answer",
+                "basis",
+                "assumptions"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "status": {
+                  "const": "answered"
+                },
+                "answer": {
+                  "type": "object",
+                  "required": [
+                    "selection"
+                  ],
+                  "properties": {
+                    "selection": {
+                      "type": "string",
+                      "enum": [
+                        "高频短更新",
+                        "低频详细摘要",
+                        "取决于会议类型或当前任务",
+                        "不确定"
+                      ]
+                    }
+                  },
+                  "additionalProperties": false
+                },
+                "basis": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "enum": [
+                      "scenario_fact",
+                      "scenario_inference",
+                      "model_assumption",
+                      "hypothetical_preference",
+                      "instrument_constraint",
+                      "not_applicable"
+                    ]
+                  }
+                },
+                "assumptions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            {
+              "type": "object",
+              "required": [
+                "status",
+                "answer",
+                "basis",
+                "assumptions",
+                "skip_reason"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "status": {
+                  "const": "skipped"
+                },
+                "answer": {
+                  "type": "null"
+                },
+                "basis": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "enum": [
+                      "scenario_fact",
+                      "scenario_inference",
+                      "model_assumption",
+                      "hypothetical_preference",
+                      "instrument_constraint",
+                      "not_applicable"
+                    ]
+                  }
+                },
+                "assumptions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "skip_reason": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            }
+          ]
+        },
+        "OLD_Q8": {
+          "oneOf": [
+            {
+              "type": "object",
+              "required": [
+                "status",
+                "answer",
+                "basis",
+                "assumptions"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "status": {
+                  "const": "answered"
+                },
+                "answer": {
+                  "type": "object",
+                  "required": [
+                    "r1",
+                    "r2",
+                    "r3",
+                    "r4",
+                    "r5"
+                  ],
+                  "properties": {
+                    "r1": {
+                      "type": "integer",
+                      "enum": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5
+                      ]
+                    },
+                    "r2": {
+                      "type": "integer",
+                      "enum": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5
+                      ]
+                    },
+                    "r3": {
+                      "type": "integer",
+                      "enum": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5
+                      ]
+                    },
+                    "r4": {
+                      "type": "integer",
+                      "enum": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5
+                      ]
+                    },
+                    "r5": {
+                      "type": "integer",
+                      "enum": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5
+                      ]
+                    }
+                  },
+                  "additionalProperties": false
+                },
+                "basis": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "enum": [
+                      "scenario_fact",
+                      "scenario_inference",
+                      "model_assumption",
+                      "hypothetical_preference",
+                      "instrument_constraint",
+                      "not_applicable"
+                    ]
+                  }
+                },
+                "assumptions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            {
+              "type": "object",
+              "required": [
+                "status",
+                "answer",
+                "basis",
+                "assumptions",
+                "skip_reason"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "status": {
+                  "const": "skipped"
+                },
+                "answer": {
+                  "type": "null"
+                },
+                "basis": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "enum": [
+                      "scenario_fact",
+                      "scenario_inference",
+                      "model_assumption",
+                      "hypothetical_preference",
+                      "instrument_constraint",
+                      "not_applicable"
+                    ]
+                  }
+                },
+                "assumptions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "skip_reason": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            }
+          ]
+        },
+        "OLD_Q9": {
+          "oneOf": [
+            {
+              "type": "object",
+              "required": [
+                "status",
+                "answer",
+                "basis",
+                "assumptions"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "status": {
+                  "const": "answered"
+                },
+                "answer": {
+                  "type": "object",
+                  "required": [
+                    "r1",
+                    "r2",
+                    "r3",
+                    "r4"
+                  ],
+                  "properties": {
+                    "r1": {
+                      "type": "string",
+                      "enum": [
+                        "只提醒",
+                        "AI候选答案",
+                        "自己输入",
+                        "临时加入会议"
+                      ]
+                    },
+                    "r2": {
+                      "type": "string",
+                      "enum": [
+                        "只提醒",
+                        "AI候选答案",
+                        "自己输入",
+                        "临时加入会议"
+                      ]
+                    },
+                    "r3": {
+                      "type": "string",
+                      "enum": [
+                        "只提醒",
+                        "AI候选答案",
+                        "自己输入",
+                        "临时加入会议"
+                      ]
+                    },
+                    "r4": {
+                      "type": "string",
+                      "enum": [
+                        "只提醒",
+                        "AI候选答案",
+                        "自己输入",
+                        "临时加入会议"
+                      ]
+                    }
+                  },
+                  "additionalProperties": false
+                },
+                "basis": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "enum": [
+                      "scenario_fact",
+                      "scenario_inference",
+                      "model_assumption",
+                      "hypothetical_preference",
+                      "instrument_constraint",
+                      "not_applicable"
+                    ]
+                  }
+                },
+                "assumptions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            {
+              "type": "object",
+              "required": [
+                "status",
+                "answer",
+                "basis",
+                "assumptions",
+                "skip_reason"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "status": {
+                  "const": "skipped"
+                },
+                "answer": {
+                  "type": "null"
+                },
+                "basis": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "enum": [
+                      "scenario_fact",
+                      "scenario_inference",
+                      "model_assumption",
+                      "hypothetical_preference",
+                      "instrument_constraint",
+                      "not_applicable"
+                    ]
+                  }
+                },
+                "assumptions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "skip_reason": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            }
+          ]
+        },
+        "OLD_Q10": {
+          "oneOf": [
+            {
+              "type": "object",
+              "required": [
+                "status",
+                "answer",
+                "basis",
+                "assumptions"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "status": {
+                  "const": "answered"
+                },
+                "answer": {
+                  "type": "object",
+                  "required": [
+                    "selection"
+                  ],
+                  "properties": {
+                    "selection": {
+                      "type": "string",
+                      "enum": [
+                        "非常愿意",
+                        "比较愿意",
+                        "看场景",
+                        "不太愿意",
+                        "完全不愿意"
+                      ]
+                    }
+                  },
+                  "additionalProperties": false
+                },
+                "basis": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "enum": [
+                      "scenario_fact",
+                      "scenario_inference",
+                      "model_assumption",
+                      "hypothetical_preference",
+                      "instrument_constraint",
+                      "not_applicable"
+                    ]
+                  }
+                },
+                "assumptions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            {
+              "type": "object",
+              "required": [
+                "status",
+                "answer",
+                "basis",
+                "assumptions",
+                "skip_reason"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "status": {
+                  "const": "skipped"
+                },
+                "answer": {
+                  "type": "null"
+                },
+                "basis": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "enum": [
+                      "scenario_fact",
+                      "scenario_inference",
+                      "model_assumption",
+                      "hypothetical_preference",
+                      "instrument_constraint",
+                      "not_applicable"
+                    ]
+                  }
+                },
+                "assumptions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "skip_reason": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            }
+          ]
+        },
+        "OLD_Q11": {
+          "oneOf": [
+            {
+              "type": "object",
+              "required": [
+                "status",
+                "answer",
+                "basis",
+                "assumptions"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "status": {
+                  "const": "answered"
+                },
+                "answer": {
+                  "type": "object",
+                  "required": [
+                    "selected",
+                    "other_text"
+                  ],
+                  "properties": {
+                    "selected": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "enum": [
+                          "需要解释复杂背景",
+                          "出现分歧或争论",
+                          "决定影响较大",
+                          "对方需要进一步追问",
+                          "讨论涉及情绪或关系",
+                          "我对 AI 摘要缺乏信心",
+                          "其他"
+                        ]
+                      }
+                    },
+                    "other_text": {
+                      "type": "string"
+                    }
+                  },
+                  "additionalProperties": false
+                },
+                "basis": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "enum": [
+                      "scenario_fact",
+                      "scenario_inference",
+                      "model_assumption",
+                      "hypothetical_preference",
+                      "instrument_constraint",
+                      "not_applicable"
+                    ]
+                  }
+                },
+                "assumptions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            {
+              "type": "object",
+              "required": [
+                "status",
+                "answer",
+                "basis",
+                "assumptions",
+                "skip_reason"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "status": {
+                  "const": "skipped"
+                },
+                "answer": {
+                  "type": "null"
+                },
+                "basis": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "enum": [
+                      "scenario_fact",
+                      "scenario_inference",
+                      "model_assumption",
+                      "hypothetical_preference",
+                      "instrument_constraint",
+                      "not_applicable"
+                    ]
+                  }
+                },
+                "assumptions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "skip_reason": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            }
+          ]
+        },
+        "OLD_Q12": {
+          "oneOf": [
+            {
+              "type": "object",
+              "required": [
+                "status",
+                "answer",
+                "basis",
+                "assumptions"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "status": {
+                  "const": "answered"
+                },
+                "answer": {
+                  "type": "object",
+                  "required": [
+                    "r1",
+                    "r2",
+                    "r3",
+                    "r4",
+                    "r5"
+                  ],
+                  "properties": {
+                    "r1": {
+                      "type": "integer",
+                      "enum": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5
+                      ]
+                    },
+                    "r2": {
+                      "type": "integer",
+                      "enum": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5
+                      ]
+                    },
+                    "r3": {
+                      "type": "integer",
+                      "enum": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5
+                      ]
+                    },
+                    "r4": {
+                      "type": "integer",
+                      "enum": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5
+                      ]
+                    },
+                    "r5": {
+                      "type": "integer",
+                      "enum": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5
+                      ]
+                    }
+                  },
+                  "additionalProperties": false
+                },
+                "basis": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "enum": [
+                      "scenario_fact",
+                      "scenario_inference",
+                      "model_assumption",
+                      "hypothetical_preference",
+                      "instrument_constraint",
+                      "not_applicable"
+                    ]
+                  }
+                },
+                "assumptions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            {
+              "type": "object",
+              "required": [
+                "status",
+                "answer",
+                "basis",
+                "assumptions",
+                "skip_reason"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "status": {
+                  "const": "skipped"
+                },
+                "answer": {
+                  "type": "null"
+                },
+                "basis": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "enum": [
+                      "scenario_fact",
+                      "scenario_inference",
+                      "model_assumption",
+                      "hypothetical_preference",
+                      "instrument_constraint",
+                      "not_applicable"
+                    ]
+                  }
+                },
+                "assumptions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "skip_reason": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            }
+          ]
+        },
+        "OLD_Q13": {
+          "oneOf": [
+            {
+              "type": "object",
+              "required": [
+                "status",
+                "answer",
+                "basis",
+                "assumptions"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "status": {
+                  "const": "answered"
+                },
+                "answer": {
+                  "type": "object",
+                  "required": [
+                    "selected",
+                    "other_text"
+                  ],
+                  "properties": {
+                    "selected": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "enum": [
+                          "设置优先级/关键词",
+                          "只在被点名时提醒",
+                          "调整更新频率",
+                          "切换“专注模式/高感知模式”",
+                          "查看最近 1–3 分钟发生了什么",
+                          "一键临时加入会议",
+                          "暂停所有更新",
+                          "其他"
+                        ]
+                      }
+                    },
+                    "other_text": {
+                      "type": "string"
+                    }
+                  },
+                  "additionalProperties": false
+                },
+                "basis": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "enum": [
+                      "scenario_fact",
+                      "scenario_inference",
+                      "model_assumption",
+                      "hypothetical_preference",
+                      "instrument_constraint",
+                      "not_applicable"
+                    ]
+                  }
+                },
+                "assumptions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            {
+              "type": "object",
+              "required": [
+                "status",
+                "answer",
+                "basis",
+                "assumptions",
+                "skip_reason"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "status": {
+                  "const": "skipped"
+                },
+                "answer": {
+                  "type": "null"
+                },
+                "basis": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "enum": [
+                      "scenario_fact",
+                      "scenario_inference",
+                      "model_assumption",
+                      "hypothetical_preference",
+                      "instrument_constraint",
+                      "not_applicable"
+                    ]
+                  }
+                },
+                "assumptions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "skip_reason": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            }
+          ]
+        },
+        "OLD_Q14": {
+          "oneOf": [
+            {
+              "type": "object",
+              "required": [
+                "status",
+                "answer",
+                "basis",
+                "assumptions"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "status": {
+                  "const": "answered"
+                },
+                "answer": {
+                  "type": "object",
+                  "required": [
+                    "text"
+                  ],
+                  "properties": {
+                    "text": {
+                      "type": "string"
+                    }
+                  },
+                  "additionalProperties": false
+                },
+                "basis": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "enum": [
+                      "scenario_fact",
+                      "scenario_inference",
+                      "model_assumption",
+                      "hypothetical_preference",
+                      "instrument_constraint",
+                      "not_applicable"
+                    ]
+                  }
+                },
+                "assumptions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            {
+              "type": "object",
+              "required": [
+                "status",
+                "answer",
+                "basis",
+                "assumptions",
+                "skip_reason"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "status": {
+                  "const": "skipped"
+                },
+                "answer": {
+                  "type": "null"
+                },
+                "basis": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "enum": [
+                      "scenario_fact",
+                      "scenario_inference",
+                      "model_assumption",
+                      "hypothetical_preference",
+                      "instrument_constraint",
+                      "not_applicable"
+                    ]
+                  }
+                },
+                "assumptions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "skip_reason": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            }
+          ]
+        },
+        "NEW_M1": {
+          "oneOf": [
+            {
+              "type": "object",
+              "required": [
+                "status",
+                "answer",
+                "basis",
+                "assumptions"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "status": {
+                  "const": "answered"
+                },
+                "answer": {
+                  "type": "object",
+                  "required": [
+                    "text"
+                  ],
+                  "properties": {
+                    "text": {
+                      "type": "string"
+                    }
+                  },
+                  "additionalProperties": false
+                },
+                "basis": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "enum": [
+                      "scenario_fact",
+                      "scenario_inference",
+                      "model_assumption",
+                      "hypothetical_preference",
+                      "instrument_constraint",
+                      "not_applicable"
+                    ]
+                  }
+                },
+                "assumptions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            {
+              "type": "object",
+              "required": [
+                "status",
+                "answer",
+                "basis",
+                "assumptions",
+                "skip_reason"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "status": {
+                  "const": "skipped"
+                },
+                "answer": {
+                  "type": "null"
+                },
+                "basis": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "enum": [
+                      "scenario_fact",
+                      "scenario_inference",
+                      "model_assumption",
+                      "hypothetical_preference",
+                      "instrument_constraint",
+                      "not_applicable"
+                    ]
+                  }
+                },
+                "assumptions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "skip_reason": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            }
+          ]
+        },
+        "NEW_M2": {
+          "oneOf": [
+            {
+              "type": "object",
+              "required": [
+                "status",
+                "answer",
+                "basis",
+                "assumptions"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "status": {
+                  "const": "answered"
+                },
+                "answer": {
+                  "type": "object",
+                  "required": [
+                    "text"
+                  ],
+                  "properties": {
+                    "text": {
+                      "type": "string"
+                    }
+                  },
+                  "additionalProperties": false
+                },
+                "basis": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "enum": [
+                      "scenario_fact",
+                      "scenario_inference",
+                      "model_assumption",
+                      "hypothetical_preference",
+                      "instrument_constraint",
+                      "not_applicable"
+                    ]
+                  }
+                },
+                "assumptions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            {
+              "type": "object",
+              "required": [
+                "status",
+                "answer",
+                "basis",
+                "assumptions",
+                "skip_reason"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "status": {
+                  "const": "skipped"
+                },
+                "answer": {
+                  "type": "null"
+                },
+                "basis": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "enum": [
+                      "scenario_fact",
+                      "scenario_inference",
+                      "model_assumption",
+                      "hypothetical_preference",
+                      "instrument_constraint",
+                      "not_applicable"
+                    ]
+                  }
+                },
+                "assumptions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "skip_reason": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            }
+          ]
+        },
+        "NEW_M3": {
+          "oneOf": [
+            {
+              "type": "object",
+              "required": [
+                "status",
+                "answer",
+                "basis",
+                "assumptions"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "status": {
+                  "const": "answered"
+                },
+                "answer": {
+                  "type": "object",
+                  "required": [
+                    "text"
+                  ],
+                  "properties": {
+                    "text": {
+                      "type": "string"
+                    }
+                  },
+                  "additionalProperties": false
+                },
+                "basis": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "enum": [
+                      "scenario_fact",
+                      "scenario_inference",
+                      "model_assumption",
+                      "hypothetical_preference",
+                      "instrument_constraint",
+                      "not_applicable"
+                    ]
+                  }
+                },
+                "assumptions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            {
+              "type": "object",
+              "required": [
+                "status",
+                "answer",
+                "basis",
+                "assumptions",
+                "skip_reason"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "status": {
+                  "const": "skipped"
+                },
+                "answer": {
+                  "type": "null"
+                },
+                "basis": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "enum": [
+                      "scenario_fact",
+                      "scenario_inference",
+                      "model_assumption",
+                      "hypothetical_preference",
+                      "instrument_constraint",
+                      "not_applicable"
+                    ]
+                  }
+                },
+                "assumptions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "skip_reason": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            }
+          ]
+        },
+        "NEW_M4": {
+          "oneOf": [
+            {
+              "type": "object",
+              "required": [
+                "status",
+                "answer",
+                "basis",
+                "assumptions"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "status": {
+                  "const": "answered"
+                },
+                "answer": {
+                  "type": "object",
+                  "required": [
+                    "text"
+                  ],
+                  "properties": {
+                    "text": {
+                      "type": "string"
+                    }
+                  },
+                  "additionalProperties": false
+                },
+                "basis": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "enum": [
+                      "scenario_fact",
+                      "scenario_inference",
+                      "model_assumption",
+                      "hypothetical_preference",
+                      "instrument_constraint",
+                      "not_applicable"
+                    ]
+                  }
+                },
+                "assumptions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            {
+              "type": "object",
+              "required": [
+                "status",
+                "answer",
+                "basis",
+                "assumptions",
+                "skip_reason"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "status": {
+                  "const": "skipped"
+                },
+                "answer": {
+                  "type": "null"
+                },
+                "basis": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "enum": [
+                      "scenario_fact",
+                      "scenario_inference",
+                      "model_assumption",
+                      "hypothetical_preference",
+                      "instrument_constraint",
+                      "not_applicable"
+                    ]
+                  }
+                },
+                "assumptions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "skip_reason": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            }
+          ]
+        },
+        "NEW_M5": {
+          "oneOf": [
+            {
+              "type": "object",
+              "required": [
+                "status",
+                "answer",
+                "basis",
+                "assumptions"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "status": {
+                  "const": "answered"
+                },
+                "answer": {
+                  "type": "object",
+                  "required": [
+                    "text"
+                  ],
+                  "properties": {
+                    "text": {
+                      "type": "string"
+                    }
+                  },
+                  "additionalProperties": false
+                },
+                "basis": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "enum": [
+                      "scenario_fact",
+                      "scenario_inference",
+                      "model_assumption",
+                      "hypothetical_preference",
+                      "instrument_constraint",
+                      "not_applicable"
+                    ]
+                  }
+                },
+                "assumptions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            {
+              "type": "object",
+              "required": [
+                "status",
+                "answer",
+                "basis",
+                "assumptions",
+                "skip_reason"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "status": {
+                  "const": "skipped"
+                },
+                "answer": {
+                  "type": "null"
+                },
+                "basis": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "enum": [
+                      "scenario_fact",
+                      "scenario_inference",
+                      "model_assumption",
+                      "hypothetical_preference",
+                      "instrument_constraint",
+                      "not_applicable"
+                    ]
+                  }
+                },
+                "assumptions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "skip_reason": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            }
+          ]
+        },
+        "NEW_M6": {
+          "oneOf": [
+            {
+              "type": "object",
+              "required": [
+                "status",
+                "answer",
+                "basis",
+                "assumptions"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "status": {
+                  "const": "answered"
+                },
+                "answer": {
+                  "type": "object",
+                  "required": [
+                    "text"
+                  ],
+                  "properties": {
+                    "text": {
+                      "type": "string"
+                    }
+                  },
+                  "additionalProperties": false
+                },
+                "basis": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "enum": [
+                      "scenario_fact",
+                      "scenario_inference",
+                      "model_assumption",
+                      "hypothetical_preference",
+                      "instrument_constraint",
+                      "not_applicable"
+                    ]
+                  }
+                },
+                "assumptions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            {
+              "type": "object",
+              "required": [
+                "status",
+                "answer",
+                "basis",
+                "assumptions",
+                "skip_reason"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "status": {
+                  "const": "skipped"
+                },
+                "answer": {
+                  "type": "null"
+                },
+                "basis": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "enum": [
+                      "scenario_fact",
+                      "scenario_inference",
+                      "model_assumption",
+                      "hypothetical_preference",
+                      "instrument_constraint",
+                      "not_applicable"
+                    ]
+                  }
+                },
+                "assumptions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "skip_reason": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            }
+          ]
+        },
+        "NEW_M7": {
+          "oneOf": [
+            {
+              "type": "object",
+              "required": [
+                "status",
+                "answer",
+                "basis",
+                "assumptions"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "status": {
+                  "const": "answered"
+                },
+                "answer": {
+                  "type": "object",
+                  "required": [
+                    "text"
+                  ],
+                  "properties": {
+                    "text": {
+                      "type": "string"
+                    }
+                  },
+                  "additionalProperties": false
+                },
+                "basis": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "enum": [
+                      "scenario_fact",
+                      "scenario_inference",
+                      "model_assumption",
+                      "hypothetical_preference",
+                      "instrument_constraint",
+                      "not_applicable"
+                    ]
+                  }
+                },
+                "assumptions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            {
+              "type": "object",
+              "required": [
+                "status",
+                "answer",
+                "basis",
+                "assumptions",
+                "skip_reason"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "status": {
+                  "const": "skipped"
+                },
+                "answer": {
+                  "type": "null"
+                },
+                "basis": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "enum": [
+                      "scenario_fact",
+                      "scenario_inference",
+                      "model_assumption",
+                      "hypothetical_preference",
+                      "instrument_constraint",
+                      "not_applicable"
+                    ]
+                  }
+                },
+                "assumptions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "skip_reason": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            }
+          ]
+        }
+      },
+      "required": [
+        "NEW_Q1",
+        "NEW_Q2",
+        "NEW_Q3",
+        "NEW_Q4",
+        "NEW_Q5",
+        "NEW_Q6",
+        "NEW_Q7",
+        "NEW_Q8",
+        "NEW_Q9",
+        "NEW_Q10",
+        "NEW_Q11",
+        "NEW_Q12",
+        "NEW_Q13",
+        "NEW_Q14",
+        "NEW_Q15",
+        "NEW_Q16",
+        "NEW_Q17",
+        "NEW_Q18",
+        "NEW_Q19",
+        "NEW_Q20",
+        "NEW_Q21",
+        "NEW_Q22",
+        "NEW_Q23",
+        "NEW_Q24",
+        "NEW_Q25",
+        "NEW_Q26",
+        "NEW_Q27",
+        "OLD_Q1",
+        "OLD_Q2",
+        "OLD_Q3",
+        "OLD_Q4",
+        "OLD_Q5",
+        "OLD_Q6",
+        "OLD_Q7",
+        "OLD_Q8",
+        "OLD_Q9",
+        "OLD_Q10",
+        "OLD_Q11",
+        "OLD_Q12",
+        "OLD_Q13",
+        "OLD_Q14",
+        "NEW_M1",
+        "NEW_M2",
+        "NEW_M3",
+        "NEW_M4",
+        "NEW_M5",
+        "NEW_M6",
+        "NEW_M7"
+      ],
+      "additionalProperties": false
+    }
+  }
+}

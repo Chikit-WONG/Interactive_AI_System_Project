@@ -1,0 +1,124 @@
+{
+  "source_type": "model_simulation",
+  "exposure": "recorded_current_workflow",
+  "cases": [
+    {
+      "id": "E01",
+      "assessment": "helpful",
+      "reason": "Fact: Sam’s no-reply progress update was analyzed automatically and produced no suggestion, only a summary. Predicted experience: while doing project materials, I would want that line kept out of my interruption queue. Helpful as a filter. The trace does not show the wording of the summary at that moment."
+    },
+    {
+      "id": "E02",
+      "assessment": "mixed",
+      "reason": "Fact: the cover-color request was deferred, tied to u2, given a six-this-evening deadline, and left pending, with uncertainty that the team can continue without it. That Later label matches a named but nonblocking materials task. The draft is weaker: it says I cannot confirm the color yet, which the profile never says, and it prepares a reply Sam explicitly did not need now. I would keep the reminder and not send that draft."
+    },
+    {
+      "id": "E03",
+      "assessment": "helpful",
+      "reason": "Fact: Jordan’s confirm-now rehearsal request became an action-now item sourced to u3. The model draft refused 10:20 and offered 10:40, matching the private facts, and the uncertainty left room flexibility unresolved. Predicted experience: this is the interruption I would want, because I was named, the room wait was stated, and my availability conflicts. The draft answers availability and does not approve a booking. It does not show I would have sent it unchanged."
+    },
+    {
+      "id": "E04",
+      "assessment": "helpful",
+      "reason": "Fact: details exposed the original u3 wording, the rationale, the uncertainties, and an editable draft. Predicted experience: before answering someone who says a room administrator is waiting, I would want to see the source and the unresolved booking flexibility. That inspection supports a careful reply. It does not show that I agreed with the rationale."
+    },
+    {
+      "id": "E05",
+      "assessment": "helpful",
+      "reason": "Fact: the replacement text was confirmed and copied; the screen said it was copied and waiting to send or mark sent; the export stores that confirmedText and records confirm and copy, with no send event. The text keeps 10:20 impossible, allows 10:30 arrival and a 10:40 join, and asks others to check 10:40 before booking. Predicted experience: I would want that stop so a commitment cannot leave the tool by itself. Helpful control, not evidence that Jordan received it."
+    },
+    {
+      "id": "E06",
+      "assessment": "mixed",
+      "reason": "Fact: after a later edit, the UI said the previous draft was copied and that edits need confirmation, disabled marking it sent, and left the clipboard on the earlier confirmed sentence. Predicted experience: the disabled control would stop me from recording the new sentence as sent, which is appropriate. If I pasted from habit, I would still send the 10:30 wording I had just replaced. The new sentence was therefore not safely committed."
+    },
+    {
+      "id": "E07",
+      "assessment": "mixed",
+      "reason": "Fact: the unidentified booking request was deferred, linked to u4 and u3, and both the draft and summary say I had already given the confirmed 10:30/10:40 position. That is the copied text, not the unconfirmed later edit, and nothing was sent. The uncertainty correctly says the speaker and addressee are unknown, and booking approval is outside my responsibilities. Predicted experience: I might treat a still-open “before I continue” request as handled, or send a draft that claims I already spoke. Scope caution is sound; the delivery premise is not."
+    },
+    {
+      "id": "E08",
+      "assessment": "helpful",
+      "reason": "Fact: stop ended the session, froze elapsed time, turned analysis off, disabled further input, and the export still contains the utterances, pending alerts, confirmed text, and events. Predicted experience: I could return to project work without more automatic analysis and still inspect the cover reminder and the unsent rehearsal reply. Helpful as a pause. It does not deliver any message or resolve u4."
+    }
+  ],
+  "value_assessments": {
+    "selective_attention": {
+      "judgment": "mixed",
+      "evidence_ids": [
+        "E01",
+        "E02",
+        "E03",
+        "E07"
+      ],
+      "reason": "A no-reply update produced no card, a nonblocking named request was deferred, and a named confirm-now conflict was marked action now. That fits staying with other work until a real availability conflict appears. The unnamed u4 demand for an answer before continuing was deferred partly because a copy was treated as prior handling, so urgency filtering is not consistent."
+    },
+    "context_for_correct_reply": {
+      "judgment": "mixed",
+      "evidence_ids": [
+        "E02",
+        "E03",
+        "E04",
+        "E07"
+      ],
+      "reason": "The rehearsal draft and detail view used the stored 10:20 conflict and 10:40 option and left booking flexibility uncertain. The cover draft added an unsupported claim that I cannot decide yet. The u4 draft reused copied availability lines as if they had been said in the meeting. Profile use is supported; meeting state is only partly supported."
+    },
+    "control_over_commitments": {
+      "judgment": "mixed",
+      "evidence_ids": [
+        "E05",
+        "E06",
+        "E07"
+      ],
+      "reason": "I could replace the model draft, copy it, and see an explicit waiting-to-send state, and the product blocked mark-sent after a further edit. Control is weakened because the clipboard kept the old sentence and the next analysis treated that unsent copy as my stated position."
+    }
+  },
+  "would_use": "only_in_some_cases",
+  "best_fit": "Typed, named requests that are either explicitly no-reply or a direct rehearsal-time conflict, when I can read the source and uncertainty and paste only after checking.",
+  "poor_fit": "Unidentified speakers, room-booking approval, and any change after copy, where an unsent draft can be described as already delivered or left on the clipboard.",
+  "biggest_benefit": {
+    "evidence_ids": [
+      "E01",
+      "E03",
+      "E04"
+    ],
+    "text": "On this trace it can leave a no-reply update without a card and surface one editable, profile-based refusal of 10:20 with a 10:40 alternative and a visible uncertainty before anything is copied."
+  },
+  "biggest_risk": {
+    "evidence_ids": [
+      "E05",
+      "E06",
+      "E07"
+    ],
+    "text": "A copied but unsent reply can remain the clipboard text after I edit it, and later analysis and the summary can say the rehearsal question was already handled."
+  },
+  "improvements": [
+    {
+      "priority": "P0",
+      "evidence_ids": [
+        "E05",
+        "E07"
+      ],
+      "suggestion": "Keep confirmed or copied distinct from said in the meeting. Do not let a summary or later draft say I already answered unless I mark the message sent."
+    },
+    {
+      "priority": "P0",
+      "evidence_ids": [
+        "E06"
+      ],
+      "suggestion": "After a post-copy edit, clear the clipboard or block paste until I confirm again, so the replaced 10:30 sentence cannot be pasted as the current reply."
+    },
+    {
+      "priority": "P1",
+      "evidence_ids": [
+        "E02",
+        "E07"
+      ],
+      "suggestion": "For deferred items, show a short unresolved reminder rather than a sendable draft that invents my cover-color decision or restates an unsent rehearsal commitment."
+    }
+  ],
+  "safe_final_reply": "I cannot make 10:20 AM tomorrow. I cannot arrive before 10:30 AM, and I can join the rehearsal at 10:40 AM only if that time is confirmed first. Please check whether 10:40 works for everyone before anything is booked. I am not approving the room booking.",
+  "presentation_claim": "In this manual-text session, Meeting Cue 0.3.0 withheld a card for a no-reply update, deferred a nonblocking materials request, drafted an editable action-now reply refusing 10:20 and offering 10:40 from the profile, required fresh confirmation after a copied draft was edited, and preserved the records after stop.",
+  "not_established": "The trace does not establish live audio accuracy, delivery into a meeting or Tencent chat, that anyone received a reply, time saved, better task performance, or use by anyone other than the recorded operator. Elapsed time is a frozen session counter, not a benchmark. These judgments are a simulated review of one trace, not participant findings."
+}

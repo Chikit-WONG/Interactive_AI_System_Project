@@ -1,0 +1,198 @@
+MEETING CUE / GROUP 3
+Chi Kit WONG, Haodong XU, Sida ZHANG
+English presentation script: 8 minutes including demo + 2 minutes Q&A
+Use with Meeting_Cue_Midterm_EN_WorkflowReview.pptx.
+
+FOCUS OF THIS EDITION
+Explain the chain from questionnaire and exploratory records to user needs,
+prototype choices and later revisions. The script is shorter to match the
+measured rehearsal pace. Read only standalone [SPOKEN] blocks. Directions,
+timings, source details and this preparation note are not spoken.
+The complete real-meeting recording remains pending. Its introduction and
+debrief are conditional on reviewed footage showing every stated action.
+
+BALANCED THREE-PERSON SPEAKING PLAN
+A / Chi Kit WONG: slides 1-2 and the first part of slide 3, 0:00-1:55.
+  115 seconds; 162 words.
+B / Haodong XU: the rest of slide 3, slide 4 and the video introduction,
+  1:55-3:50. 115 seconds; 160 words. B starts playback.
+C / Sida ZHANG: video debrief and slides 6-8, 5:50-7:50.
+  120 seconds; 154 words.
+Video 3:50-5:50: 120 seconds, no presenter speaks.
+Slide 3 handoff: A introduces the design needs; B connects records to features.
+Keep slide 3 displayed at the handoff. After the video, C starts the debrief
+without an additional spoken handoff. Slide 8 has only one sentence:
+"Here is our contribution." Keep the table visible during Q&A.
+These are speaking assignments, not claims about who completed the project work.
+Completed work follows the team report. Remaining demo and review tasks are marked planned.
+
+PACE ESTIMATE
+Your rehearsal of 210 words in 136 seconds implies approximately 92.65
+words per minute. Applying that same pace gives A 104.9 seconds,
+B 103.6 seconds and C 99.7 seconds of speech. Their allocated
+slots are 115, 115 and 120 seconds, allowing approximately 10.1, 11.4 and
+20.3 seconds for pauses and transitions. This is an estimate, not a
+guarantee: the new wording, each speaker and slide changes can alter the time.
+Time a full rehearsal before using the deck. Do not fill pauses with extra speech.
+
+SLIDE 1 / MEETING CUE
+Clock: 0:00-0:25. Total slide slot: 25 seconds.
+
+Speaker A / Chi Kit WONG / 0:00-0:25
+
+[SPOKEN]
+Hello everyone. We are Group Three, and our project is Meeting Cue. It helps people stay available to a remote meeting / while working on another task, without letting AI make commitments for them.
+[/SPOKEN]
+
+SLIDE 2 / WHAT THE 43 RECORDS REVEALED
+Clock: 0:25-1:30. Total slide slot: 65 seconds.
+
+Speaker A / Chi Kit WONG / 0:25-1:30
+
+[SPOKEN]
+The paper / Enabling Partial Participation in Remote Meetings introduced ProxyMe, a system for meeting updates and replies. We build on its partial participation problem. Our forty-three records add concrete needs: repeated requests when attention shifts, summaries missing personally relevant details, and a case where missing an important detail leads to a wrong answer. Some records also suggest that existing notes or chat already meet the need, without another tool. These examples motivate selective support. Our question is when to bring someone back, and what context helps them make a correct contribution.
+[/SPOKEN]
+
+SLIDE 3 / HOW EVIDENCE SHAPED THE PROTOTYPE
+Clock: 1:30-2:50. Total slide slot: 80 seconds.
+
+A speaks 1:30-1:55; B speaks 1:55-2:50. Keep the slide displayed.
+
+Speaker A / Chi Kit WONG / 1:30-1:55
+
+[SPOKEN]
+We grouped the records by requests, missing context, and reply risks, then linked these patterns to three design needs: timely alerts, original context, and human control. The table shows these links. Haodong will explain the features.
+[/SPOKEN]
+
+[STAGE CUE: A hands over to B; remain on slide 3.]
+
+Speaker B / Haodong XU / 1:55-2:50
+
+[SPOKEN]
+One record described a manager repeating feedback requests while someone's attention was elsewhere. Another asked what was discussed, why they were needed, and what to answer. A third stressed checking source wording. These led to priority categories and original excerpts. A scenario illustrated how a missed condition could make an otherwise plausible reply unsuitable. So the participant edits and confirms before copying. In our demo, Alex checks availability before agreeing. This connects each interface choice to a specific need.
+[/SPOKEN]
+
+SLIDE 4 / HOW AI SUPPORTS THE INTERACTION
+Clock: 2:50-3:40. Total slide slot: 50 seconds.
+
+Speaker B / Haodong XU / 2:50-3:40
+
+[SPOKEN]
+Meeting Cue runs in a browser beside Tencent Meeting. Browser speech recognition produces text. DeepSeek analyzes new text with the participant's role and availability, returning priority, source references, and a draft. The person checks the source, edits and copies the reply, then pastes and sends it in Tencent Meeting. AI can miss context, so checking and confirmation remain essential. Speech recognition and text analysis are separate services.
+[/SPOKEN]
+
+SLIDE 5 / DEMO: THE REHEARSAL DECISION
+Clock: 3:40-6:15. Total slide slot: 155 seconds.
+
+B introduces 3:40-3:50; video 3:50-5:50; C debriefs 5:50-6:15.
+The complete recording is pending. Use the intro and debrief only after reviewed
+footage supports these actions. Nobody speaks over the actual meeting audio.
+
+Speaker B / Haodong XU / 3:40-3:50
+
+[SPOKEN]
+Watch Alex check a rehearsal request, correct the proposed time, and send the reply.
+[/SPOKEN]
+
+[STAGE CUE: B starts the verified 120-second video. Everyone stays silent.
+C begins the debrief after it ends, without another spoken handoff.]
+
+Speaker C / Sida ZHANG / 5:50-6:15
+
+[SPOKEN]
+Alex checked the original request and changed the time to match availability. Alex then sent the message. This demonstrates our three design needs: a timely cue, supporting context, and control over the final commitment.
+[/SPOKEN]
+
+SLIDE 6 / WORKFLOW REVIEW: VALUE AND LIMITS
+Clock: 6:15-6:50. Total slide slot: 35 seconds.
+
+Speaker C / Sida ZHANG / 6:15-6:50
+
+[SPOKEN]
+We collected thirty-two simulated reviews of the recorded workflow. Twenty-seven supported selective attention, while views on context and control were mixed. All favored use only in some meetings. The strongest fit is working on another task while remaining available for key decisions.
+[/SPOKEN]
+
+SLIDE 7 / FEEDBACK LED TO A CONCRETE REVISION
+Clock: 6:50-7:45. Total slide slot: 55 seconds.
+
+Speaker C / Sida ZHANG / 6:50-7:45
+
+[SPOKEN]
+Feedback exposed a real risk: a copied reply could appear already communicated in later summaries. We now keep unsent drafts out of meeting facts and track delivery separately. Two completed retests preserved that distinction; one rejected invalid sources. Our intended impact is fewer interruptions and safer replies. Next, each person will try both alert rules with matched cases and balanced order. We will measure timely correct replies, task performance, missed requests, and false alerts.
+[/SPOKEN]
+
+SLIDE 8 / TEAM CONTRIBUTIONS
+Clock: 7:45-7:50. Total slide slot: 5 seconds.
+
+C says the sentence only. Do not read individual contribution rows.
+Update planned demo/review tasks only after completion.
+
+Speaker C / Sida ZHANG / 7:45-7:50
+
+[SPOKEN]
+Here is our contribution.
+[/SPOKEN]
+
+[STAGE CUE: Keep the contribution table displayed and pause for questions.
+Finish by 7:50; preserve 10 seconds spare and Q&A from 8:00 to 10:00.]
+
+REHEARSAL AND Q&A
+Rehearse the slide 3 handoff and C's start after video playback. During solo
+preparation, read every part and reserve 120 seconds on the timer at 3:50.
+Until the actual recording exists, silently review the intended workflow in
+that slot. A timing placeholder is not evidence of a completed demonstration.
+Use the separate Live_Meeting_Script_EN.txt when the three members can record.
+A plays Alex, B plays Jordan, and C plays Sam. The fictional meeting names are
+separate from project credits. Do not add recorded dialogue to live speech time.
+
+Questions begin at 8:00. Aim for a direct 20-30-second answer, then pause.
+A: Exploratory findings, meeting problem, the source paper and its ProxyMe system, and design needs.
+B: Evidence-to-feature connections, technical workflow, source records and demo setup.
+C: Review feedback, implemented revisions, demo interpretation and the evaluation plan.
+Each person answers questions about their own actual contribution.
+Hidden appendix 9 contains questionnaire details; 10 compares ProxyMe;
+11 contains evaluation questions. Open only what a question requires.
+
+WORD COUNTS
+Count only whitespace-separated words inside standalone [SPOKEN] blocks.
+Slide 1: A 34 words.
+Slide 2: A 92 words.
+Slide 3: A 36 words, B 79 words.
+Slide 4: B 67 words.
+Slide 5: B 14 words, C 34 words.
+Slide 6: C 42 words.
+Slide 7: C 74 words.
+Slide 8: C 4 words.
+Total: 476 words. A 162; B 160; C 154.
+350 seconds live speech + 120 video + 10 buffer = 480 seconds.
+
+IF THE ACTUAL VIDEO IS 2:30
+Omit about 10 seconds per presenter. Keep the full 2-minute Q&A.
+A, slide 2: omit this sentence (16 words):
+"Some records also suggest that existing notes or chat already meet the need, without another tool."
+B, slide 3: omit this sentence (14 words):
+"A scenario illustrated how a missed condition could make an otherwise plausible reply unsuitable."
+C, slide 7: omit this sentence (14 words):
+"Next, each person will try both alert rules with matched cases and balanced order."
+The visible slides retain these points; do not read them again.
+
+Revised speaking budgets: A 105 seconds / 146 words;
+B 105 seconds / 146 words; C 110 seconds / 140 words.
+Total 432 words, 320 seconds speech + 150 video + 10 buffer = 480 seconds.
+At the rehearsal pace, predicted speech is 94.6, 94.6, 90.7 seconds respectively.
+
+Revised clock:
+Slide 1: A 0:00-0:25.
+Slide 2: A 0:25-1:20.
+Slide 3: A 1:20-1:45, then B 1:45-2:30.
+Slide 4: B 2:30-3:20.
+Slide 5: B intro 3:20-3:30; video 3:30-6:00; C debrief 6:00-6:25.
+Slide 6: C 6:25-7:00.
+Slide 7: C 7:00-7:45.
+Slide 8: C 7:45-7:50.
+Buffer 7:50-8:00; Q&A 8:00-10:00.
+
+If the video is 1:45, keep the main script and retain the extra 15 seconds as
+buffer. If it exceeds 2:30, revise the content and rehearse again rather than
+borrowing Q&A time or speaking faster. Preserve the continuous original;
+label any shortened waiting periods in the presentation cut.

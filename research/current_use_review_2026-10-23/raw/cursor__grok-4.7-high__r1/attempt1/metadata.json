@@ -1,0 +1,22 @@
+{
+  "run_id": "cursor__grok-4.7-high__r1",
+  "provider": "cursor",
+  "requested_model": "grok-4.7-high",
+  "reported_models": [
+    "Grok 4.7 256K High"
+  ],
+  "repeat": 1,
+  "attempt": 1,
+  "sessions": [
+    "c45200d6-c556-4730-a00e-7c697e4a922e"
+  ],
+  "prompt_sha256": "685f987369fbdc5cc55602a2f73ca985628fa9b2e4ecd0a6f7ff33bc0e419259",
+  "started": "2026-10-23T06:09:34.950029+00:00",
+  "seconds": 218.0,
+  "exit_code": 0,
+  "timed_out": false,
+  "tool_event_count": 0,
+  "valid": true,
+  "errors": [],
+  "path": "raw\\cursor__grok-4.7-high__r1\\attempt1"
+}

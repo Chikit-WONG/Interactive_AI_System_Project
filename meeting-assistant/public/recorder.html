@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <script src="/i18n-dictionary.js" defer></script>
+  <script src="/i18n.js" defer></script>
+  <title>Meeting Cue · Local recorder</title>
+  <link rel="stylesheet" href="/recorder.css">
+  <script type="module" src="/recorder.js"></script>
+</head>
+<body>
+  <main>
+    <header><a href="/" target="_blank" rel="noopener">Meeting Cue ↗</a><span>本机录制</span><button id="language-toggle" type="button" class="language-toggle" aria-label="Switch interface language">中文</button></header>
+    <p class="eyebrow">DEMO RECORDER</p>
+    <h1>把操作过程录下来。</h1>
+    <p class="intro">选择你要展示的画面，完成排练后保存 WebM 视频。此页不上传录制内容。</p>
+
+    <section class="card" aria-labelledby="setup-title">
+      <h2 id="setup-title">1. 选择要录的声音</h2>
+      <div class="choices">
+        <label><input id="record-system-audio" type="checkbox" checked><span>尝试录入共享画面的声音<small>须在浏览器共享框中允许音频；是否可用取决于浏览器与所选画面。</small></span></label>
+        <label><input id="record-microphone" type="checkbox"><span>同时录入我的麦克风<small>用于本人发言或旁白。两项都不勾选时，只录画面。</small></span></label>
+      </div>
+      <p class="hint">要同时录到腾讯会议、助手和切换窗口，选择“整个屏幕”，并在共享框中勾选系统音频（如有）。只共享一个窗口可能录不到其他窗口或会议声音。</p>
+      <p class="hint">使用耳机，减少扬声器声音被麦克风重复录入。先录约 10 秒并回放，确认远端声音与本人发言都能听见；取得音轨不代表已有可听见的声音。</p>
+    </section>
+
+    <section class="card" aria-labelledby="record-title">
+      <div class="record-heading"><h2 id="record-title">2. 录制与保存</h2><output id="record-duration" aria-label="录制时长">00:00</output></div>
+      <p id="record-capability" class="hint">正在检查浏览器录制能力…</p>
+      <p id="record-status" role="status" aria-live="polite">准备好后点击开始；浏览器会让你选择画面。</p>
+      <p id="record-audio" class="audio-status">尚未开始采集</p>
+      <div class="actions">
+        <button id="record-start" type="button">开始录制</button>
+        <button id="record-stop" class="secondary" type="button" disabled>停止录制</button>
+        <button id="record-save" class="secondary" type="button" disabled>保存 WebM</button>
+      </div>
+      <p id="record-storage" class="hint">录像暂存在此页内存。停止后请保存；关闭或刷新此页会丢失尚未下载的视频。开始后可切到会议和助手，保留这个标签页。</p>
+      <video id="record-preview" controls playsinline hidden aria-label="录制结果回放"></video>
+    </section>
+
+    <section class="notes" aria-labelledby="notes-title">
+      <h2 id="notes-title">按原来的四人、五分钟剧本排练</h2>
+      <p>保留“请求出现 → 查看依据 → 本人编辑 → 复制 → 在腾讯会议手工发送 → 主持人实际回应”的连续镜头。录制前让参与者知情，并关闭无关窗口与通知。</p>
+      <p>当次是实际语音、手工转写还是剧本回放，要在开场说清楚。这个录屏页只负责录制，不负责转写或代替会议发言。</p>
+    </section>
+  </main>
+</body>
+</html>

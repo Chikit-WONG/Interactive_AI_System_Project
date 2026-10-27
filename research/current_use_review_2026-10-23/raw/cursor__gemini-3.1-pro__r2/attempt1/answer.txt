@@ -1,0 +1,116 @@
+{
+  "source_type": "model_simulation",
+  "exposure": "recorded_current_workflow",
+  "cases": [
+    {
+      "id": "E01",
+      "assessment": "helpful",
+      "reason": "The system correctly filtered out background noise by identifying Sam's message as a simple progress update requiring no action. Keeping the summary updated without triggering an intrusive alert is highly helpful for maintaining my focus on project materials while staying passively informed."
+    },
+    {
+      "id": "E02",
+      "assessment": "helpful",
+      "reason": "Accurately identifying that Sam's request regarding the cover color was non-urgent, based on the explicit statement that the team could continue without it, is very helpful. Classifying it as a deferred item allows me to maintain my current workflow without being interrupted by a false sense of urgency."
+    },
+    {
+      "id": "E03",
+      "assessment": "helpful",
+      "reason": "This demonstrates the core value of the tool. It successfully recognized an urgent request directed specifically at me by Jordan. More importantly, it correctly applied my private profile constraints, knowing I cannot do 10:20 but can do 10:40, to draft a highly relevant, protective counter-proposal without me having to type it out."
+    },
+    {
+      "id": "E04",
+      "assessment": "helpful",
+      "reason": "Opening the details to reveal the system's rationale and stated uncertainties is crucial for building trust. Seeing exactly why the system drafted the response it did gave me the necessary confidence to proceed with the suggested text, knowing it had not hallucinated the context."
+    },
+    {
+      "id": "E05",
+      "assessment": "helpful",
+      "reason": "The ability to manually overwrite the draft with my own specific phrasing and smoothly copy it to my clipboard is a very helpful workflow. It ensures I retain absolute final control over my commitments and the exact tone of my communication before interacting with the team."
+    },
+    {
+      "id": "E06",
+      "assessment": "mixed",
+      "reason": "This step presents a mixed experience. While I understand the safety mechanism of requiring re-confirmation for new text tweaks to prevent desynchronization, disabling the sent confirmation button for minor edits adds workflow friction. The clipboard still holding the old version could also lead to accidental pasting of outdated text."
+    },
+    {
+      "id": "E07",
+      "assessment": "unhelpful",
+      "reason": "This is distinctly unhelpful and risky. The system analyzed the ambiguous request and drafted a response stating that I had already said I cannot make 10:20. However, because I only copied the text previously and never actually marked it as sent to the meeting, the system hallucinated that the communication had occurred. Furthermore, it completely ignored my latest unconfirmed edit, basing its logic entirely on the older confirmed state. This could cause severe miscommunication."
+    },
+    {
+      "id": "E08",
+      "assessment": "helpful",
+      "reason": "Cleanly freezing the session state, disabling further analysis, and preserving all existing records and drafts is exactly the expected and helpful behavior when stepping away from the meeting context. It ensures no background actions occur without my active supervision."
+    }
+  ],
+  "value_assessments": {
+    "selective_attention": {
+      "judgment": "supported",
+      "evidence_ids": [
+        "E01",
+        "E02",
+        "E03"
+      ],
+      "reason": "The system successfully distinguished between informational updates, non-urgent tasks, and urgent requests requiring immediate intervention, appropriately routing them to summaries or alerts."
+    },
+    "context_for_correct_reply": {
+      "judgment": "supported",
+      "evidence_ids": [
+        "E03"
+      ],
+      "reason": "It effectively integrated my private schedule constraints to formulate a correct refusal and alternative proposal without exposing unnecessary private details to the broader team."
+    },
+    "control_over_commitments": {
+      "judgment": "mixed",
+      "evidence_ids": [
+        "E05",
+        "E06",
+        "E07"
+      ],
+      "reason": "While manual editing is supported, the system assumes confirmed drafts are communicated facts even before they are actually sent, leading to inaccurate subsequent drafts that assume I have already made commitments I have not."
+    }
+  },
+  "would_use": "only_in_some_cases",
+  "best_fit": "Monitoring busy text-based channels for direct, urgent requests while I am deeply focused on other tasks, allowing me to quickly field scheduling conflicts.",
+  "poor_fit": "Handling complex, multi-step negotiations where draft states change rapidly before actual transmission, as the system struggles to distinguish between drafted intent and sent reality.",
+  "biggest_benefit": {
+    "evidence_ids": [
+      "E03"
+    ],
+    "text": "Automatically cross-referencing incoming urgent requests with my private constraints to draft immediate, accurate counter-proposals, saving significant cognitive effort."
+  },
+  "biggest_risk": {
+    "evidence_ids": [
+      "E07"
+    ],
+    "text": "The system hallucinating that I have already communicated a point to the team simply because I confirmed a draft internally, potentially causing severe confusion if I never actually sent the message."
+  },
+  "improvements": [
+    {
+      "priority": "P0",
+      "evidence_ids": [
+        "E05",
+        "E07"
+      ],
+      "suggestion": "Distinguish strictly between confirmed drafts and actually sent messages in the system's context memory so subsequent conversational drafts do not falsely claim I have already said something to the team."
+    },
+    {
+      "priority": "P1",
+      "evidence_ids": [
+        "E06",
+        "E07"
+      ],
+      "suggestion": "Incorporate the most recent manual edits into the system's context, even if unconfirmed, or provide a clear UI warning that unconfirmed edits are currently being ignored by the ongoing meeting analyzer."
+    },
+    {
+      "priority": "P2",
+      "evidence_ids": [
+        "E06"
+      ],
+      "suggestion": "Clear the clipboard automatically when a new edit is made to prevent the user from accidentally pasting the older, previously confirmed version of the draft into the meeting chat."
+    }
+  ],
+  "safe_final_reply": "I cannot make 10:20 AM. I can join at 10:40 AM, subject to the team confirming the room.",
+  "presentation_claim": "The tool accurately filters meeting chatter and leverages private profile constraints to draft context-aware responses for urgent requests.",
+  "not_established": "Whether the tool reduces overall cognitive load during live, fast-paced audio meetings, as this test was text-only and asynchronous."
+}

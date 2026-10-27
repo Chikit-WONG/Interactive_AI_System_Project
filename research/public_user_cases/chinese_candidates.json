@@ -1,0 +1,40 @@
+{
+  "source_type": "public_source",
+  "scope": "中文补充检索；只作为邻近需求或排除记录，不计入主案例集",
+  "accessed_date": "2026-10-16",
+  "queries": [
+    "腾讯会议 开会 没听到 叫我名字 开小差 会议 复盘",
+    "site.v2ex.com 会议 纪要 没听 开会",
+    "site.zhihu.com 线上会议 开小差 被点名",
+    "site.v2ex.com/t/ 开会 会议纪要 我 AI",
+    "site.v2ex.com/t/ 线上会议 一边",
+    "site.v2ex.com/t/ 腾讯会议 记录 错过",
+    "site.v2ex.com/t/ 会议 转录 不准",
+    "site.v2ex.com/t/ 开会 没听",
+    "site.v2ex.com/t/ 会议 纪要 我用"
+  ],
+  "candidate_count_note": "下列列出6个相关候选；搜索返回的广告、新闻、泛建议和无关结果未逐条计作候选。",
+  "candidates": [
+    {
+      "id": "CN-A01",
+      "url": "https://staging.v2ex.com/t/1177842",
+      "published_date": "2025-12-09",
+      "source_title": "macOS 免费应用：听悟会议助手，帮你完成会议转录并自动总结会议纪要",
+      "source_locator": "原帖第1–3段；web可读正文第23–27行",
+      "quote": "开会之前手动打开网页点击记录太麻烦了",
+      "reported_experience_zh": "发帖人称纪要不佳时容易忘记共识和待办；已有在线工具满足处理需要，但启动记录步骤有负担，因此制作了自动开始记录的小程序。",
+      "observed_vs_inferred": "以上是作者自述；不是实测效率，也未说明会议中断后是否错过回应。",
+      "source_incentive": "作者推广自己的免费开源应用，有自我呈现或推广动机。",
+      "classification": "adjacent_context_only",
+      "main_dataset_included": false,
+      "reason": "可核对第一人称来源，但主要是会后纪要与记录启动，不是部分参与或会中回应的直接证据。",
+      "supported_unified_items": {"Q7": "自述使用在线转录总结并开发启动工具", "Q8": "启动步骤的负担"},
+      "missing": "频率、过去四周经历、会议参与方式、回应时点、效果测量均未提供"
+    },
+    {"id":"CN-X01","url":"https://cn.v2ex.com/t/681850","classification":"excluded","reason":"检索摘要含第一人称没听清而按自己理解回答的经历，但原页打开失败，未核实远程会议上下文。"},
+    {"id":"CN-X02","url":"https://www.reddit.com/r/DoubanGoosegroup/comments/xb33zt/","classification":"excluded","reason":"检索摘要涉及做别的事后被host点名；两次原页打开均未取得正文，不补写场景。"},
+    {"id":"CN-X03","url":"https://us.v2ex.com/t/1157052","classification":"excluded","reason":"检索摘要有视频会议听不懂、录制后反复听的自述；原页不可读，未纳入。"},
+    {"id":"CN-X04","url":"https://us.v2ex.com/t/1202108","classification":"excluded","reason":"检索摘要比较团队异步文化；原页不可读且不直接报告部分参会事件。"},
+    {"id":"CN-X05","url":"https://www.v2ex.com/t/857186","classification":"excluded","reason":"检索摘要涉及语言学习和沟通；原页未取得，且非主要研究情境。"}
+  ]
+}

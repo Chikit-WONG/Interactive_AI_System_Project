@@ -1,0 +1,295 @@
+LATEST UPDATE — Presentation matched to supplied earlier video, 2026-10-23
+Working master: output/2026-10-23_legacy_demo/Meeting_Cue_Midterm_EN_LegacyDemo.pptx.
+Use matching three speaker copies and Demo_EarlyPrototype_EN_Captions.mp4.
+Pack: output/Meeting_Cue_LegacyDemo_Presentation_Pack.zip.
+User selected last week's output/demo.mp4 and supplied Demo_v2_Narration_zh.txt.
+Verified 64.36s, 1440x1080, 4:3, no audio. Early scripted v0.2 interaction, not
+live ASR/DeepSeek/Tencent sending. English banner added; UI/actions/timing intact.
+Video remains a separate MP4, not embedded. Slide 5 reserves the correct 4:3 area;
+see INSERT_DEMO_VIDEO_EN.txt, or play externally at the video cue.
+Slides 3/4/5/6 distinguish early recording from later implemented companion/reviews.
+Notes and scripts updated. A162 tokens (2 pause markers), B164, C157.
+Target 7:09 incl64.36s video, about51s buffer within8min, plus separate2minQA.
+Other six slides pixel-identical, including saved cover and corrected slide2.
+Previous video recording plans are superseded for this presentation only.
+
+--- Earlier updates follow ---
+
+LATEST UPDATE — Current workflow simulated review and reply-state fix, 2026-10-23
+Working master: output/2026-10-23_workflow_review/Meeting_Cue_Midterm_EN_WorkflowReview.pptx.
+Use matching Presenter_Script and Speaker_A/B/C_EN reading copies in that folder.
+Pack: output/Meeting_Cue_WorkflowReview_Presentation_Pack.zip.
+32 valid simulated reviews, 11 successful model configurations (Claude/Gemini included),
+26 Cursor + 6 Codex, 3 fresh conversations per model except Grok 2 successes.
+Actual recorded UI trace with real DeepSeek and clean text; no new audio/send test.
+Slides 6/7 updated. Other nine slides pixel-identical to latest Fixed master, including
+user-saved cover, slide 2 spacing and slide 5 video placeholder. 8 main + 3 hidden.
+Scripts A162 (two slash pause markers), B160, C154; unchanged 8+2 timing and 120s video.
+Research: research/current_use_review_2026-10-23/analysis.json and raw evidence.
+Reply-state repair: unsent confirmations excluded from model meeting context;
+explicit delivery status. 87 tests pass. After repair: two completed ambiguous
+retests preserve unsent status, one rejected invalid source IDs. Impact unmeasured.
+Repair becomes active after normal assistant restart; running production 8765
+was not interrupted and existing meeting state was not reset. Real video pending.
+
+--- Earlier updates follow ---
+
+LATEST FIX: use output/2026-10-23_rubric/Meeting_Cue_Midterm_EN_Fixed.pptx. Slide 2 uses fixed editable text boxes instead of an expanding table. Other slides and spoken notes unchanged.
+
+LATEST UPDATE — Rubric and spacing revision, 2026-10-23
+Working master: output/2026-10-23_rubric/Meeting_Cue_Midterm_EN_Ready.pptx.
+Use matching scripts in that directory. Slide 2 spacing fixed; slides 3,4,7 clarify methodology, AI and intended value. Slide 8 reports completed work and planned tasks based on user input.
+A/B/C 162/160/157 tokens by whitespace (A includes pause markers), same 8+2 clock including 120-second demo. Real video still pending.
+Original CleanCover and user-saved deck preserved. Check saved changes before future edits.
+
+LATEST UPDATE — 43-record findings and source-paper context, 2026-10-23
+Working master: output/2026-10-23_evidence43/Meeting_Cue_Midterm_EN_Evidence43.pptx.
+Pack: output/Meeting_Cue_Evidence43_Presentation_Pack.zip.
+Slide 2 now shows R13/R12/R36 and counterexamples R11/R39-R41, with implications.
+ProxyMe is explicitly introduced as the system in Enabling Partial Participation in Remote Meetings.
+Slide 3 maps records to functions. Questionnaire details remain in the appendix.
+Other ten slide visuals, including the cover and video placeholder, are unchanged.
+All reading copies and notes synchronized: A166/B167/C165 words. Same 8+2 timing.
+Preserve saved user changes before any subsequent edit.
+
+--- Earlier updates follow ---
+
+LATEST UPDATE — Formative evidence and measured speaking pace, 2026-10-23
+Working master: output/2026-10-23_formative/Meeting_Cue_Midterm_EN_Formative.pptx.
+Pack: output/Meeting_Cue_Formative_Presentation_Pack.zip.
+Use the matching three new reading copies in this folder.
+Slide 2 now shows original questionnaire counts and the research motivation.
+Slide 3 links concrete records R13/R03/R04/R36 to needs and implemented controls.
+Slide 6 shows 29 description-review suggestions linked to actual revisions.
+Slide 9 provides questionnaire detail for Q&A. Source provenance remains in notes.
+The existing user-edited cover and the 16:9 video placeholder on slide 5 are preserved.
+The user's 210-word rehearsal took 136 seconds (about 92.65 words/minute).
+New counts: A Chi Kit WONG 166, B Haodong XU 167, C Sida ZHANG 165, total 498.
+Estimated speech: 107.5, 108.2, 106.9 seconds; rehearse to verify.
+Slots remain A 115, B 115, C 120 seconds, plus 120-second video and 10-second buffer.
+Q&A remains a separate 120 seconds. Video and completed-work entries remain pending.
+All original data files are unchanged. New presentation data were checked against
+the original questionnaire tables and the existing evidence-to-design source map.
+Older presentation folders are historical. Before later edits, check the saved
+working master and recent files, preserve manual changes, and back up before writing.
+
+--- Earlier updates follow ---
+
+LATEST UPDATE — Demo video space, 2026-10-23
+Working master: output/2026-10-23_synced/Meeting_Cue_Midterm_EN_VideoReady.pptx.
+Pack: output/Meeting_Cue_VideoReady_Presentation_Pack.zip.
+Slide 5 now has a large editable 16:9 rectangle for the future recording.
+The old screenshot and scenario text moved out of the slide to make space.
+All other ten slides are pixel-identical to the user-edit-preserving Synced deck.
+The 120-second video slot, presenter handoffs and scripts are unchanged.
+No video is embedded yet. See INSERT_DEMO_VIDEO_EN.txt for insertion instructions.
+The earlier Synced file was open, so it remains preserved as the preceding version.
+Continue edits in the VideoReady master, after checking saved user changes.
+
+--- Earlier updates follow ---
+
+LATEST UPDATE — User edits recovered and merged, 2026-10-23
+Working master: output/2026-10-23_synced/Meeting_Cue_Midterm_EN_Synced.pptx.
+Pack: output/Meeting_Cue_Synced_Presentation_Pack.zip.
+This edition uses the user's 08:40 saved deck, preserving Group 3, Chi Kit WONG,
+Haodong XU, Sida ZHANG and the user's cover text positions, then applies the
+balanced speaking assignments and synchronized named scripts.
+A = Chi Kit WONG, 115 seconds / 210 words.
+B = Haodong XU, 115 seconds / 211 words.
+C = Sida ZHANG, 120 seconds / 212 words.
+The 120-second video and 10-second buffer keep the presentation within 8 minutes.
+Actual completed contributions remain To be confirmed. The recording is pending.
+The user's previous 3presenters PPT path also contains this corrected deck.
+Older Visual/Balanced folders are historical; use the synced folder going forward.
+
+PRESENTATION EDITING RULE
+Before every later edit, inspect the current saved master AND recent PPT files
+for user changes. Compare text, layout and notes; a generated filename or newer
+timestamp alone is not sufficient. Save a backup and merge the user's changes.
+Check destination hashes immediately before writing. Do not bulk overwrite aliases.
+
+--- Earlier updates follow ---
+
+LATEST UPDATE — Balanced three-presenter allocation, 2026-10-23
+Current deck: output/2026-10-23_balanced/Meeting_Cue_Midterm_EN_Balanced.pptx.
+Pack: output/Meeting_Cue_Balanced_Presentation_Pack.zip.
+A speaks slides1–2 and slide3 design insights, 0:00–1:55 (115seconds).
+B speaks slide3 evidence, slide4 technical approach and slide5 introduction,1:55–3:50 (115seconds), then starts the video.
+Video:3:50–5:50,120seconds, with no live presenter narration.
+C speaks the slide5 debrief and slides6–8,5:50–7:50 (120seconds).
+Contribution slide still uses only "Here is our contribution." The last10seconds remain spare;Q&A is8:00–10:00.
+PPT speaker labels, table, notes, master and allthree reading copies are synchronized. Real names/actual project contributions still need to be supplied.
+The real Tencent meeting recording remains pending. Current aliases and ZIP entry points were refreshed with previous files preserved privately.
+
+--- Earlier updates follow ---
+
+LATEST UPDATE — Visual revision 2, 2026-10-23
+Current deck: output/2026-10-23_visual/Meeting_Cue_Midterm_EN_Visual_v2.pptx.
+Slide 2 shows a computer with Tencent Meeting and Meeting Cue in separate windows. The conceptual illustration preserves Confirm & copy and manual chat sending.
+Slide 7 moves its three existing evaluation measures into the upper-right and keeps A/B comparison and shared controls.
+The other nine slides are pixel-identical to the preceding edition. All original speaking notes, the three-person assignment and the 8+2-minute schedule remain.
+The usual PPT entry points and current ZIP packs have been refreshed. The continuous meeting recording remains pending.
+
+--- Earlier updates follow ---
+
+LATEST UPDATE — Visual presentation edition, 2026-10-23
+Current visual deck: output/2026-10-23_visual/Meeting_Cue_Midterm_EN_Visual.pptx.
+Pack: output/Meeting_Cue_Visual_Presentation_Pack.zip.
+Two conceptual images were generated with the built-in image_gen tool; no exposed model selector or returned model ID confirmed GPT Image 2.5.
+The demo slide uses the existing actual prototype screenshot from a text-input test. No completed Tencent meeting recording is implied.
+Eight main slides and three hidden appendices remain. Original speaker notes and the three-person script/timing are unchanged.
+Contribution slide retains C's one-sentence five-second introduction. Real names and actual contributions are still unfilled.
+All final slides were rendered and visually reviewed, and the package preserves native editable text and tables. This is not a native PowerPoint playback test.
+Existing PPT entry points and current ZIP packs were refreshed. Previous decks are saved privately under tmp/english_visual/.
+
+--- Earlier updates follow ---
+
+LATEST UPDATE — Short contribution closing, 2026-10-23
+Current pack: output/2026-10-23_3presenters/START_HERE_EN.txt.
+A: slides 1–2. B: slides 3–4. C: slides 5–8 and video playback.
+Slide 8: C says only "Here is our contribution." in a 5-second slot at 7:45–7:50, then leaves the table visible through Q&A. Names and actual contributions still need to be filled in.
+The saved 20 seconds add 10 seconds to the demo debrief and 10 seconds to the evaluation explanation. No individual contribution speeches remain.
+The presentation still includes a target 2-minute video, finishes its planned content at 7:50, and keeps a 10-second buffer. Q&A remains 8:00–10:00.
+The real meeting recording remains pending. This change only updates presentation materials.
+
+--- Earlier updates follow ---
+
+LATEST UPDATE — Three presenters confirmed, 2026-10-23
+Current pack: output/2026-10-23_3presenters/START_HERE_EN.txt.
+A (the user): slides 1–2. B: slides 3–4. C: slides 5–7, video playback and the closing.
+On slide 8, all three state their own actual contributions. Names and completed work remain unfilled.
+Master script and three individual scripts contain matching spoken text and handoffs.
+Presentation time stays 8 minutes including the estimated 2-minute demo, followed by 2 minutes of Q&A.
+Future recording has three roles: A plays Alex, B plays Jordan, C plays Sam, who gives both the ordinary update and the deferred request. No fourth participant is needed in this live script.
+The real meeting recording remains pending. Current app code and the older optional replay fixture were not changed in this presentation-only revision.
+
+--- Earlier updates follow ---
+
+LATEST PRESENTATION UPDATE — 2026-10-23
+Confirmed by the user: 10 minutes per group = 8 minutes of presentation including demo + 2 minutes of Q&A.
+Current files: output/2026-10-23_8min/START_HERE_EN.txt and output/Meeting_Cue_8min_Presentation_Pack.zip.
+The English deck keeps 8 main slides and 3 hidden Q&A appendices. Notes contain the timed 640-word script.
+Base budget: live speech 5:50 + estimated demo 2:00 + transitions 0:10 = 8:00. Q&A is 8:00–10:00.
+Estimated raw demo: 1:45–2:30. The script includes explicit omissions saving 30 seconds for a 2:30 final video.
+The video is still pending until teammates are available. The user can privately rehearse all speaking roles alone now.
+Individual names and actual contributions remain unfilled. Existing PPT/script entry points were updated, with their prior files saved under tmp/english_8min/previous_current_files/.
+All 11 final slides were rendered and visually reviewed. This does not establish native PowerPoint playback or a completed meeting recording.
+
+--- Earlier updates follow ---
+
+LATEST UPDATE — 2026-10-23 — Meeting Cue English version
+
+Current presentation pack: output/2026-10-23_english/
+
+English-first UI with a persistent English / Chinese toggle; speech recognition follows the interface language.
+
+DeepSeek output, error messages, source review, edited-reply confirmation, feedback and recording pages support English.
+
+85 automated regression tests passed before the final audio-status fix. The 48 affected audio/feedback/localization tests passed afterward, including the new repeated-switch regression.
+
+An isolated real DeepSeek request with fictional English text produced English Respond now / Later / For awareness suggestions. Browser QA confirmed automatic analysis, draft editing, confirmation/copy and language-switch preservation. This did not test physical English audio or actual Tencent chat delivery.
+
+The stopped production service was upgraded. Six old utterances and five suggestions were saved to tmp/english_review/pre-english-upgrade-1792690273434.json. The original profile is in that backup. The current idle session has the fictional English Alex profile matching Live_Meeting_Script_EN.txt. No audio capture or automatic analysis is running.
+
+Launch: Open Meeting Cue.cmd. Recorder: Record Meeting Cue.cmd. Stop service: Close Meeting Cue.cmd.
+
+The English deck has 8 main slides and 3 hidden appendix slides, with English notes. Actual member names/contributions still need to be entered on slide 8.
+
+The user asked to finish the English version and script first; teammates will be available later. A new continuous Tencent Meeting recording is therefore pending. The new English pack does not include the earlier screenshot slideshow.
+
+Follow Live_Meeting_Script_EN.txt for real speech -> live transcription -> automatic analysis -> source check -> edit/copy -> manual Tencent chat send -> actual host acknowledgement.
+
+Research records remain traceable; 43 exploratory records are not 43 recruited interviewees.
+
+--- Previous status history follows ---
+
+当前状态：2026-10-23（凌晨更新）
+用户已确认腾讯会议说话能够进入当前demo；本机记录中已有系统混合音频发言进入DeepSeek并生成需回应提醒。当前只证明基本链路，未测量准确率或长时间稳定性。
+新增“全电脑声音/指定应用窗口”选择与可选麦克风。兼容模式仍默认；窗口模式要求浏览器提供应用音频并由用户确认选择，不支持时不自动扩大到系统音频。界面和32项音频生命周期/范围检查通过；腾讯会议应用隔离仍待实际干扰测试。
+10月22日深夜Edge实际识别测试：默认48kHz混音未得到有效最终文字；相同合成中文在16kHz下取得最终文字，已将正式混音改为16kHz。正式system-audio.js在Edge中也成功识别并保存测试文字。
+已增加静音后正常结束的自动继续和network错误最多2次重连；停止会取消定时继续。语音生命周期测试24/24通过。浏览器在线服务仍可能报network，不等于长时间真实会议已验证。
+本轮是合成语音对真实浏览器识别服务的实测，物理屏幕/麦克风以合成音轨替代，未调用DeepSeek、未改动正在使用的会议记录。
+10月22日晚远端声音排查：实际Edge页面显示“没有取得系统音频”，本轮0条发言，尚未触发分析。
+已增加共享声音三步指引、启动阶段提示、上方红色错误与直接重试入口。系统音频模拟测试18/18通过；远端语音仍待用户重新共享系统音频后实测。
+期中要求与展示准备：MIDTERM_PRESENTATION_REQUIREMENTS.txt
+当前实现：meeting-assistant/README.txt
+启动助手：打开会议助手.cmd（自动启动后台服务、等待就绪并开页）
+录屏入口：打开录屏工具.cmd
+退出服务：退出会议助手.cmd（退出前导出需要保留的会议日志）
+会议排练：meeting-assistant/rehearsal/README.txt
+录屏讲解稿：meeting-assistant/rehearsal/Narration_zh.txt
+
+当前助手与腾讯会议并排使用，已实现DeepSeek服务端接口、提醒/来源核查、
+编辑复制与人工发送记录，以及实验性的浏览器音频转写入口。
+当前版本0.3.0，顶部“使用反馈”支持持久保存、失败重试及导出。
+会话默认未开始；新增开始、停止、继续和新会话控制。
+停止会冻结计时、取消当前分析、停止语音采集与剧本回放，并保留已有记录。
+继续沿用本次记录和累计时间，不自动重启采集、回放或自动分析。
+新会话清空会议记录并回到未开始状态，保留个人职责设置；重启服务前应导出会议日志。
+新增“录制演示”入口 /recorder.html，支持本人选择共享画面及可选声音、预览和保存WebM。
+录屏与会话启停相互独立；录像保留在该标签页内存中，关闭前须下载，不自动上传。
+反馈仅保存在使用的电脑；异地试用需导出后交回项目组，不自动远程汇集。
+接收区持续显示输入状态、最近文字和自动分析状态；复制后保留待本人发送提示，
+再次编辑须重新确认复制；提示模型在请求对象不明时优先澄清。
+51项后端/反馈/音频/录屏测试、18项主界面、12项反馈界面及10项会话启停浏览器检查通过。
+录屏页还通过模拟采集流程、资源释放、末尾片段保存和实际WebM的Blob预览检查。
+上述检查未验证真实屏幕采集、会议声音或浏览器识别效果；首次使用应先录10秒并回放。
+真实DeepSeek文字分析已于10月22日完成调用；本机麦克风转写到分析的流程已有实际运行记录，远端会议声音及组员收发闭环录屏仍待实测。
+10月22日密钥配置修正：将误填在接口地址字段的密钥移至密钥字段，恢复官方接口地址。
+独立虚构测试调用deepseek-flash一次，官方接口200、分析约1.7秒、处理事件和引用校验通过。
+模型识别了13:30排练与14:00前有课的冲突，生成即时提醒和供本人确认的草稿；单次结果不代表稳定表现。
+测试记录：meeting-assistant/test-output/live-deepseek-latest.json（不含密钥，输入为虚构排练）。
+网页服务已重新加载配置，keyConfigured=true；重启前无会议记录，已保留并恢复填写的角色设置。
+10月22日启动修复：双击入口会启动独立后台服务、确认就绪后自动开页；关闭启动窗口不停止服务。
+重复启动只复用现有进程和会话；彻底退出使用“退出会议助手.cmd”，日常暂停使用网页会话按钮。
+6项启动器隔离检查通过，覆盖冷启动驻留、重复/并发启动、端口冲突、实例身份保护及错误配置等。
+真实项目已确认独立启动后仍可连接，重复启动PID及meetingId未变，主页面和录屏页均返回200。
+页面内提醒需保持助手可见；后台桌面通知尚未实现与验证。
+分析入口已突出“自动分析新发言”，手动按钮改为“立即分析一次”，显示不可用原因和下一步操作。
+自动模式在新文字停顿4秒或累计等待12秒后提交，前次结束后再处理下一批，避免连续转写一直等不到分析。
+缺少称呼/职责时等待补全；请求失败暂停自动模式，用户重新开启可重试相同发言，不自动持续重复失败请求。
+本次分析入口修改通过18项原主界面、10项启停及8项新增分析浏览器检查；测试未调用真实模型或采集声音。
+新增检查证实连续每3秒加入文字时在12秒上限触发、停止取消等待、失败后暂停及重新开启后重试同批发言。
+
+10月22日用户实测检查（只读，未更改或停止该会话）
+检查时共有5条发言：2条手工输入、3段browser_mic转写；4次分析全部完成，未记录analysis_failed。
+分析已覆盖最新u5，无未处理记录；3条建议的引用ID均有效，latest analysis error为空。
+简短问候没有生成提醒；一般性的讨论邀请被列为知悉/稍后，没有声称必须立即回应。
+这是本机麦克风输入到模型结果的一次流程验证；未取得原始音频，未测转写准确率。
+当前没有browser_mixed来源、确认/复制/人工发送操作的记录，故远端收音与会议收发仍需组员实测。
+
+10月22日操作示范
+output/2026-10-22_session_controls/session_controls_demo.webm
+34.4秒，展示开始、剧本回放、停止、继续及空反馈入口；已完成视频解码检查。
+这段是独立服务的界面操作录像，未调用模型、未采集声音，也不是多人腾讯会议录像。
+正式排练沿用四人约五分钟剧本；录制方法与讲解稿已补入rehearsal目录。
+
+10月20日初版评审
+已完成Codex与Cursor中10个模型配置、各3次独立文字走查：29份有效，1次最终失败。
+原始输入输出、失败尝试和收集方式均保存；模型未实际操作界面或参加会议。
+反馈—修改—核验记录：research/assistant_feedback_2026-10-20/findings_zh.txt
+全部答复及运行元数据：research/assistant_feedback_2026-10-20/all_reviews.json
+本轮未新增真人访谈，不将模型答复写入产品内反馈目录。
+录屏讲解稿已补可选的15秒反馈入口介绍；后续请试用者自己填写具体使用经历。
+
+展示按用户提供的Week 7期中要求及10月23日中午团队节点推进。
+新增五项评分维度、共同展示和个人贡献要求已记录，分项权重、时长与提交形式未知。
+成员姓名与实际贡献尚未提供，不能按演示角色代填。
+
+历史材料
+10月16日进度展示：output/2026-10-16_progress/START_HERE_v2.txt
+综合分析：research/analysis_2026-10-16/project_update_zh.txt
+历史离线原型：prototype/index.html
+早期proposal和10月16日PPT保留为历史记录，不能代表当前助手已完成真实联调。
+
+10月23日期中展示包
+用户已报告腾讯会议发言能被助手听到，声音来源选择修改后再次测试没有问题；此处是用户实测反馈，不是转写准确率或应用隔离效果的受控评估。
+展示材料目录：output/2026-10-23_midterm/；完整压缩包：output/Jianxi_Midterm_Presentation_Pack_2026-10-23.zip。
+最新PPT：Jianxi_Midterm_2026-10-23_v3.pptx，8页主讲、3页隐藏备答，按约5分钟编排；第8页成员姓名及实际贡献仍需团队填写。
+已逐页渲染检查，并通过结构、尺寸、字体、原生表格及重新导入检查；未声称经过原生PowerPoint播放验证。
+英文旁白视频92.79秒、中文旁白视频113.20秒；H264/AAC MP4已解码检查，PPT第5页链接同目录英文视频，没有嵌入视频。
+视频采用独立服务、虚构资料、人工输入的3条会议剧本，实际调用DeepSeek一次，得到需回应/稍后/知悉建议；核对u3、编辑并确认复制，未实际向腾讯会议发送或记录已发送。
+这是实际界面分段截图加本机合成旁白的讲解视频，不是多人会议连续录像，也没有提交伪造反馈。未操作或重置生产8765会话。
+中英讲稿、真实会议2–3分钟台词与录制步骤、试用反馈提纲和使用说明一并交付。闭环真人会议录像仍需组员实际发送、对方收到并回应后录制。
+研究表述按可追溯单位保留：43行=3条既有问卷开放评论+14段公开经历+26份模型模拟；不是43名访谈参与者，既有真人问卷N=7。
+本次原始界面截图、独立演示日志、构建脚本、视频解码检查和校验回执位于tmp/midterm_2026-10-23/。

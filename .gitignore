@@ -1,0 +1,36 @@
+# Credentials and local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials.json
+credentials.*.json
+# Local/runtime output
+node_modules/
+**/logs/
+**/recordings/
+**/test-output/
+**/data/feedback/
+*.log
+__pycache__/
+*.pyc
+~$*
+.DS_Store
+Thumbs.db
+/tmp/
+/research/proxy_probe/
+/research/model_probe_workspace/
+/research/model_pilot/
+**/scratch/
+**/isolated-feedback*/
+**/stdout.jsonl
+**/stderr.txt
+# Keep current deliverables and the proposal; old exports stay local.
+/output/*
+!/output/2026-10-23_legacy_demo/
+!/output/2026-10-23_workflow_review/
+!/output/2026-10-23_recording_script/
+!/output/proposal/
+!/output/demo.mp4
+!/output/Demo_v2_Narration_zh.txt

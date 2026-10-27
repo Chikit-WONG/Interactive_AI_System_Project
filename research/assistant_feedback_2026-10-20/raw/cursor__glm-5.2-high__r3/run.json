@@ -1,0 +1,42 @@
+{
+  "run_id": "cursor__glm-5.2-high__r3",
+  "provider": "cursor",
+  "requested_model": "glm-5.2-high",
+  "replicate": 3,
+  "valid": true,
+  "status": "valid",
+  "accepted_attempt": 1,
+  "attempts": [
+    {
+      "attempt": 1,
+      "started_at": "2026-10-20T15:37:23.914102+00:00",
+      "timeout_seconds": 180,
+      "timed_out": false,
+      "exit_code": 0,
+      "process_id": 74488,
+      "ended_at": "2026-10-20T15:37:55.487324+00:00",
+      "provider": "cursor",
+      "requested_model": "glm-5.2-high",
+      "requested_reasoning_effort": "model_id",
+      "returned_models": [
+        "GLM 5.2"
+      ],
+      "model_identity_status": "verified",
+      "session_ids": [
+        "abfcf19c-0287-4bb9-bf53-700c1d44fb34"
+      ],
+      "input_sha256": "7486863387d749425546f9bd81d5480b40f8972eed1ce2169d17a6d8a18ece75",
+      "prompt_echo_matches": true,
+      "prompt_transport_note": "Exact text equality checked against user stream event.",
+      "tool_event_count": 0,
+      "tool_events": [],
+      "malformed_stream_line_numbers": [],
+      "extracted_markdown_fence": false,
+      "structure_errors": [],
+      "quota_or_rate_limit": false,
+      "valid": true,
+      "errors": [],
+      "raw_directory": "raw\\cursor__glm-5.2-high__r3\\attempt_1"
+    }
+  ]
+}

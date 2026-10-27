@@ -1,0 +1,20 @@
+INSERTING THE DEMO VIDEO
+
+Current PPT: Meeting_Cue_Midterm_EN_WorkflowReview.pptx
+Slide 5 reserves one 16:9 video area. The video has not been embedded yet.
+
+1. Select and delete the pale green rectangle that says Demo video / 2 minutes.
+2. Insert the completed recording as a video from your device.
+3. Keep the aspect ratio locked. Match the reserved area:
+   Width 24.977 cm, height 14.049 cm, X 4.445 cm, Y 3.546 cm.
+4. Set playback to start on click, so Haodong XU can introduce and start it.
+   Full-screen playback is optional if the interface text is hard to read.
+5. Rehearse audio and playback on the actual presentation computer.
+
+The slot is unchanged: B introduces 3:40-3:50, video plays 3:50-5:50,
+then C debriefs 5:50-6:15. Target 2 minutes. If it is 2:30, use the existing
+shorter-script option in Timing_and_Demo_Plan_EN.txt.
+
+The video should show real meeting speech, transcription, automatic DeepSeek
+analysis, source review, an edited reply, manual chat sending and acknowledgement.
+The earlier screenshot is retained in Art_Assets/prototype-reply-screenshot.png.

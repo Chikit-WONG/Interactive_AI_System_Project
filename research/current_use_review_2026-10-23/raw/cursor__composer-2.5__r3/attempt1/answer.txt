@@ -1,0 +1,96 @@
+```json
+{
+  "source_type": "model_simulation",
+  "exposure": "recorded_current_workflow",
+  "cases": [
+    {
+      "id": "E01",
+      "assessment": "helpful",
+      "reason": "Automatic analysis of u1 produced zero alerts while the export summary still captured Sam’s progress update and explicit no-reply note. As Alex juggling materials work, I would prefer not to get nudged for noise; the trace shows the tool stayed quiet instead of inventing a task."
+    },
+    {
+      "id": "E02",
+      "assessment": "helpful",
+      "reason": "u2 was classified defer with a Later-style framing aligned with Sam’s own wording that the team can continue without an immediate answer. The draft acknowledges the cover review and deadline without over-committing, which matches my coordinator role on presentation materials without forcing an interrupt."
+    },
+    {
+      "id": "E03",
+      "assessment": "helpful",
+      "reason": "u3 triggered action_now with a draft that refused 10:20 and offered 10:40, consistent with privateFacts and Jordan’s urgency. The question tied room booking to my answer, which I would want surfaced immediately even though I cannot book rooms myself."
+    },
+    {
+      "id": "E04",
+      "assessment": "helpful",
+      "reason": "Opening details exposed u3 as source, reasoning, uncertainty about moving rehearsal versus booking flexibility, and an editable draft. That transparency would help me verify the model used my constraints before I speak for the team."
+    },
+    {
+      "id": "E05",
+      "assessment": "helpful",
+      "reason": "I could replace the model draft with clearer wording (10:30 arrival, 10:40 join, ask others before booking) and confirm-and-copy successfully. The UI state explicitly separated copy from send, which fits my need to stay accurate without the tool auto-posting."
+    },
+    {
+      "id": "E06",
+      "assessment": "mixed",
+      "reason": "Requiring re-confirmation after edits and blocking “I sent it” until renewed confirmation supports control over commitments. However, the clipboard retaining the prior confirmed text while I edited toward room-confirmation language creates a realistic paste-wrong-version risk if I multitask and forget to re-confirm."
+    },
+    {
+      "id": "E07",
+      "assessment": "mixed",
+      "reason": "u4 defer reasoning correctly noted unidentified speaker, room booking outside my responsibilities, and linkage to u3 timing. The draft’s “I’ve already said” line overstates outbound communication because no message was sent in this run; it also echoed the confirmed E05 text, not my unconfirmed E06 edit that emphasized team room confirmation."
+    },
+    {
+      "id": "E08",
+      "assessment": "helpful",
+      "reason": "Stopping the session disabled further input and analysis, froze elapsed time, and left utterances, alerts, summary, and events intact. That would let me pause materials work without losing the rehearsal thread or audit trail."
+    }
+  ],
+  "value_assessments": {
+    "selective_attention": {
+      "judgment": "supported",
+      "evidence_ids": ["E01", "E02"],
+      "reason": "Progress with no reply needed yielded no alert; the cover-color ask was deferred rather than escalated to respond-now, matching stated non-urgency in u2."
+    },
+    "context_for_correct_reply": {
+      "judgment": "mixed",
+      "evidence_ids": ["E03", "E04", "E07"],
+      "reason": "Profile availability shaped the u3 draft and uncertainties; u4 linked booking to prior rehearsal context and role boundaries. Gaps remain: no proof of what was actually communicated to the room administrator, and u4 draft language implied prior disclosure that did not occur in-session."
+    },
+    "control_over_commitments": {
+      "judgment": "supported",
+      "evidence_ids": ["E05", "E06"],
+      "reason": "Confirm-and-copy plus edit-gating before marking sent keeps me from accidentally endorsing model text. Residual risk is clipboard staleness after edits without a second confirm."
+    }
+  },
+  "would_use": "only_in_some_cases",
+  "best_fit": "Manual capture of clean English meeting text while I focus on project materials but need triage, profile-aware drafts, and a copy-then-send gate for time-conflict requests.",
+  "poor_fit": "Live audio meetings, unidentified speakers, or room-booking threads where send status and latest edited wording must stay synchronized without manual re-confirm discipline.",
+  "biggest_benefit": {
+    "evidence_ids": ["E01", "E03", "E04"],
+    "text": "Urgent rehearsal conflict was surfaced with source-linked rationale, uncertainties, and a draft aligned to my stated cannot-do-10:20 / can-do-10:40 facts, while ordinary updates did not spam alerts."
+  },
+  "biggest_risk": {
+    "evidence_ids": ["E06", "E07"],
+    "text": "After editing a confirmed draft, the clipboard can still hold the older confirmed version, and downstream analysis may treat unsent confirmed text as if the team already heard me, inviting wrong paste or misleading follow-up drafts."
+  },
+  "improvements": [
+    {
+      "priority": "P0",
+      "evidence_ids": ["E06"],
+      "suggestion": "On post-confirm edits, auto-clear or overwrite clipboard with a stale marker until re-confirm, and show side-by-side confirmed versus pending text."
+    },
+    {
+      "priority": "P1",
+      "evidence_ids": ["E07"],
+      "suggestion": "Distinguish confirmed-copied-not-sent from sent-in-meeting in drafts and summaries so u4-style follow-ups do not claim prior statements to the room administrator."
+    },
+    {
+      "priority": "P2",
+      "evidence_ids": ["E02", "E07"],
+      "suggestion": "When speaker is unidentified and responsibility excludes booking, offer a one-line defer rationale in the summary without opening a full second draft unless Alex is named."
+    }
+  ],
+  "safe_final_reply": "I cannot make 10:20 AM tomorrow. I can join the rehearsal at 10:40 AM, subject to the team confirming the room works for everyone. I am not the person who approves room bookings—please loop in whoever owns that once timing is agreed.",
+  "presentation_claim": "In this recorded manual-text session, version 0.3.0 automatically triaged utterances, avoided alerting on a no-reply progress update, deferred a nonblocking materials ask, escalated an urgent availability conflict with profile-informed editable draft, and preserved state on session stop.",
+  "not_established": "Real-time audio transcription accuracy, actual chat or meeting delivery, human productivity or response-time gains, comparison to unaided workflow, or whether participants received any confirmed wording."
+}
+```

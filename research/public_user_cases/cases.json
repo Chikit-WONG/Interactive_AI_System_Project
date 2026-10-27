@@ -1,0 +1,1120 @@
+{
+  "schemaVersion": 1,
+  "title": "远程会议与部分参与：公开第一人称经历",
+  "compiledOn": "2026-10-16",
+  "accessedAt": "2026-10-16",
+  "newRecruitedParticipants": 0,
+  "caseCount": 14,
+  "sourceClusterCount": 8,
+  "identityVerification": "none",
+  "sampling": "目的性便利采样；用于发现情境、既有做法与反例，不是代表性用户调查。",
+  "caseUnit": "公开经历片段；不是一份完整答卷，也不是一个经核验的独立自然人。",
+  "questionnaireVersion": "unified_questionnaire_zh.md 的Q1–Q10；只映射实际提供的相关信息",
+  "cases": [
+    {
+      "caseId": "PU01",
+      "sourceId": "PS01",
+      "source_type": "public_user_narrative_unverified",
+      "sourceUrl": "https://www.reddit.com/r/ADHD_Programmers/comments/164jtrf/sometimes_taking_notes_in_a_meeting_helps_and/",
+      "threadClusterId": "PS01",
+      "visibleAuthorClusterId": "A01",
+      "postKind": "comment",
+      "postedAt": null,
+      "postedDatePrecision": "comment_date_not_reported",
+      "threadPostedAt": "2023-08-29",
+      "accessedAt": "2026-10-16",
+      "identityVerified": false,
+      "usernamesRetained": false,
+      "remoteContext": "remote_explicit",
+      "excerpt": {
+        "language": "en",
+        "text": "I never watch zoom recordings",
+        "wordCount": 5
+      },
+      "paraphraseZh": "这位回复者表示自己不回看Zoom录屏，依靠转写定位短片段；遇到技术术语转错时，可听对应原始音频。",
+      "reportedFacts": [
+        "自述不看完整Zoom录屏。",
+        "描述用可搜索转写定位音频并核对术语的办法。"
+      ],
+      "researcherInference": "可测试摘要是否需要链接到原始发言；不能据此认定所有人都偏好文字或不需要录音。",
+      "tags": [
+        "既有办法有效",
+        "补上下文",
+        "来源核查"
+      ],
+      "questionnaireMapping": {
+        "Q1": {
+          "status": "not_reported",
+          "evidence_zh": null
+        },
+        "Q2": {
+          "status": "not_reported",
+          "evidence_zh": null
+        },
+        "Q3": {
+          "status": "not_reported",
+          "evidence_zh": null
+        },
+        "Q4": {
+          "status": "partial_historical_evidence",
+          "evidence_zh": "回顾Zoom会议内容时不看整段录像。",
+          "not_a_completed_answer": true
+        },
+        "Q5": {
+          "status": "not_reported",
+          "evidence_zh": null
+        },
+        "Q6": {
+          "status": "not_reported",
+          "evidence_zh": null
+        },
+        "Q7": {
+          "status": "partial_historical_evidence",
+          "evidence_zh": "使用转写搜索/定位短音频，并在术语识别不佳时核查原音。",
+          "not_a_completed_answer": true
+        },
+        "Q8": {
+          "status": "not_reported",
+          "evidence_zh": null
+        },
+        "Q9": {
+          "status": "not_reported",
+          "evidence_zh": null
+        },
+        "Q10": {
+          "status": "not_reported",
+          "evidence_zh": null
+        }
+      },
+      "sourceLimitations": "自述使用经验与一般功能介绍混合；未报告节省时间、回应成功或确切会议日期。",
+      "temporalLimit": "历史公开叙述，不属于本项目问卷的过去四周时间窗；Q1/Q3频次不补值，Q9/Q10方案偏好不代答。"
+    },
+    {
+      "caseId": "PU02",
+      "sourceId": "PS01",
+      "source_type": "public_user_narrative_unverified",
+      "sourceUrl": "https://www.reddit.com/r/ADHD_Programmers/comments/164jtrf/sometimes_taking_notes_in_a_meeting_helps_and/",
+      "threadClusterId": "PS01",
+      "visibleAuthorClusterId": "A02",
+      "postKind": "comment",
+      "postedAt": null,
+      "postedDatePrecision": "comment_date_not_reported",
+      "threadPostedAt": "2023-08-29",
+      "accessedAt": "2026-10-16",
+      "identityVerified": false,
+      "usernamesRetained": false,
+      "remoteContext": "remote_context_not_explicit_in_this_comment",
+      "excerpt": {
+        "language": "en",
+        "text": "transcripts are comically wrong",
+        "wordCount": 4
+      },
+      "paraphraseZh": "同串首帖作者补充说，团队成员主要为外籍人士，在自己的团队里转写常常很不准确。",
+      "reportedFacts": [
+        "作者把转写不准描述为当前团队经历。",
+        "原话未给出错误率或具体错误示例。"
+      ],
+      "researcherInference": "原型应允许核查和纠正来源；不能把该主观反馈当作某产品、语言或群体的准确率评测。",
+      "tags": [
+        "转写错误",
+        "补上下文"
+      ],
+      "questionnaireMapping": {
+        "Q1": {
+          "status": "not_reported",
+          "evidence_zh": null
+        },
+        "Q2": {
+          "status": "not_reported",
+          "evidence_zh": null
+        },
+        "Q3": {
+          "status": "not_reported",
+          "evidence_zh": null
+        },
+        "Q4": {
+          "status": "not_reported",
+          "evidence_zh": null
+        },
+        "Q5": {
+          "status": "not_reported",
+          "evidence_zh": null
+        },
+        "Q6": {
+          "status": "not_reported",
+          "evidence_zh": null
+        },
+        "Q7": {
+          "status": "partial_historical_evidence",
+          "evidence_zh": "试图依靠转写，但自述团队中的转写表现很差。",
+          "not_a_completed_answer": true
+        },
+        "Q8": {
+          "status": "not_reported",
+          "evidence_zh": null
+        },
+        "Q9": {
+          "status": "not_reported",
+          "evidence_zh": null
+        },
+        "Q10": {
+          "status": "not_reported",
+          "evidence_zh": null
+        }
+      },
+      "sourceLimitations": "不能根据论坛类别推断诊断，或根据外籍描述推断国籍、语言能力；远程平台未在本条说明。",
+      "temporalLimit": "历史公开叙述，不属于本项目问卷的过去四周时间窗；Q1/Q3频次不补值，Q9/Q10方案偏好不代答。"
+    },
+    {
+      "caseId": "PU03",
+      "sourceId": "PS02",
+      "source_type": "public_user_narrative_unverified",
+      "sourceUrl": "https://www.reddit.com/r/remotework/comments/1l4mzk7/remote_working_is_awesome_but_the_meetings_kind/",
+      "threadClusterId": "PS02",
+      "visibleAuthorClusterId": "A03",
+      "postKind": "post",
+      "postedAt": "2025-06-06",
+      "postedDatePrecision": "day",
+      "threadPostedAt": "2025-06-06",
+      "accessedAt": "2026-10-16",
+      "identityVerified": false,
+      "usernamesRetained": false,
+      "remoteContext": "remote_explicit",
+      "excerpt": {
+        "language": "en",
+        "text": "better than nothing but nothing mind blowing",
+        "wordCount": 7
+      },
+      "paraphraseZh": "发帖者自述远程工作多年，会议中的约定很少被记录和分享；正在试用转写与摘要，认为有帮助但改善有限。",
+      "reportedFacts": [
+        "自述使用Slack、Zoom、Notion。",
+        "反映缺乏会议准备、记录和后续跟进。",
+        "正在尝试会议转写/摘要，评价为有限帮助。"
+      ],
+      "researcherInference": "只呈现摘要可能不足以支持贡献；可追问用户最缺的是决策、行动项还是参与责任。",
+      "tags": [
+        "行动项",
+        "现有方案不足"
+      ],
+      "questionnaireMapping": {
+        "Q1": {
+          "status": "not_reported",
+          "evidence_zh": null
+        },
+        "Q2": {
+          "status": "partial_historical_evidence",
+          "evidence_zh": "工作团队远程会议，使用Slack/Zoom/Notion；具体职位未说明。",
+          "not_a_completed_answer": true
+        },
+        "Q3": {
+          "status": "not_reported",
+          "evidence_zh": null
+        },
+        "Q4": {
+          "status": "partial_historical_evidence",
+          "evidence_zh": "描述远程会议中准备不足、决议未记录等重复经历。",
+          "not_a_completed_answer": true
+        },
+        "Q5": {
+          "status": "not_reported",
+          "evidence_zh": null
+        },
+        "Q6": {
+          "status": "partial_historical_evidence",
+          "evidence_zh": "自述约定缺少后续跟进，未给出具体损失。",
+          "not_a_completed_answer": true
+        },
+        "Q7": {
+          "status": "partial_historical_evidence",
+          "evidence_zh": "正在尝试转写与摘要，自述改善有限。",
+          "not_a_completed_answer": true
+        },
+        "Q8": {
+          "status": "not_reported",
+          "evidence_zh": null
+        },
+        "Q9": {
+          "status": "not_reported",
+          "evidence_zh": null
+        },
+        "Q10": {
+          "status": "not_reported",
+          "evidence_zh": null
+        }
+      },
+      "sourceLimitations": "概括性回忆，没有单次会议记录或独立成效测量；不能把作者对他人注意力的评价当客观事实。",
+      "temporalLimit": "历史公开叙述，不属于本项目问卷的过去四周时间窗；Q1/Q3频次不补值，Q9/Q10方案偏好不代答。"
+    },
+    {
+      "caseId": "PU04",
+      "sourceId": "PS02",
+      "source_type": "public_user_narrative_unverified",
+      "sourceUrl": "https://www.reddit.com/r/remotework/comments/1l4mzk7/remote_working_is_awesome_but_the_meetings_kind/",
+      "threadClusterId": "PS02",
+      "visibleAuthorClusterId": "A04",
+      "postKind": "comment",
+      "postedAt": null,
+      "postedDatePrecision": "comment_date_not_reported",
+      "threadPostedAt": "2025-06-06",
+      "accessedAt": "2026-10-16",
+      "identityVerified": false,
+      "usernamesRetained": false,
+      "remoteContext": "remote_thread_context",
+      "excerpt": {
+        "language": "en",
+        "text": "We have been using the meeting summary tools and stuff.",
+        "wordCount": 10
+      },
+      "paraphraseZh": "同串回复者说团队已使用Copilot会议摘要，并同时实施议程、纪要和组织者负责等规范，认为有益。",
+      "reportedFacts": [
+        "自述团队已经使用会议摘要工具。",
+        "同时改变会议组织规范，而非只安装软件。"
+      ],
+      "researcherInference": "现有工具加组织规则可能已解决部分问题；不能把改善归因给AI单一因素，也不能声称我们必须再建一个助手。",
+      "tags": [
+        "既有办法有效",
+        "组织流程"
+      ],
+      "questionnaireMapping": {
+        "Q1": {
+          "status": "not_reported",
+          "evidence_zh": null
+        },
+        "Q2": {
+          "status": "not_reported",
+          "evidence_zh": null
+        },
+        "Q3": {
+          "status": "not_reported",
+          "evidence_zh": null
+        },
+        "Q4": {
+          "status": "not_reported",
+          "evidence_zh": null
+        },
+        "Q5": {
+          "status": "not_reported",
+          "evidence_zh": null
+        },
+        "Q6": {
+          "status": "not_reported",
+          "evidence_zh": null
+        },
+        "Q7": {
+          "status": "partial_historical_evidence",
+          "evidence_zh": "已使用会议摘要并实施会议议程/纪要等团队规则，作者主观评价有益。",
+          "not_a_completed_answer": true
+        },
+        "Q8": {
+          "status": "not_reported",
+          "evidence_zh": null
+        },
+        "Q9": {
+          "status": "not_reported",
+          "evidence_zh": null
+        },
+        "Q10": {
+          "status": "not_reported",
+          "evidence_zh": null
+        }
+      },
+      "sourceLimitations": "无法分离工具与流程变化的效果；回复未给出具体事件或量化结果。",
+      "temporalLimit": "历史公开叙述，不属于本项目问卷的过去四周时间窗；Q1/Q3频次不补值，Q9/Q10方案偏好不代答。"
+    },
+    {
+      "caseId": "PU05",
+      "sourceId": "PS03",
+      "source_type": "public_user_narrative_unverified",
+      "sourceUrl": "https://www.reddit.com/r/remotework/comments/1r0fhn8/i_was_called_out/",
+      "threadClusterId": "PS03",
+      "visibleAuthorClusterId": "A05",
+      "postKind": "post",
+      "postedAt": "2026-02-09",
+      "postedDatePrecision": "day",
+      "threadPostedAt": "2026-02-09",
+      "accessedAt": "2026-10-16",
+      "identityVerified": false,
+      "usernamesRetained": false,
+      "remoteContext": "remote_community_only",
+      "excerpt": {
+        "language": "en",
+        "text": "discussion was about changes that I was not directly involved in",
+        "wordCount": 11
+      },
+      "paraphraseZh": "发帖者在讨论自己未直接参与的变更时保持安静，约45分钟后被上级要求发言；后来说明自己仍在学习该领域，并分享自己的工作更新。",
+      "reportedFacts": [
+        "自述因议题与自身工作联系有限而少发言。",
+        "被上级当场要求表达意见。",
+        "实际回应为说明知识边界并补充自身工作更新。"
+      ],
+      "researcherInference": "被点名不等于必须提供实质决策；原型应允许说明不适用、请求澄清或转交，而非只催促答案。",
+      "tags": [
+        "参与责任",
+        "及时回应",
+        "不必强求贡献"
+      ],
+      "questionnaireMapping": {
+        "Q1": {
+          "status": "not_reported",
+          "evidence_zh": null
+        },
+        "Q2": {
+          "status": "not_reported",
+          "evidence_zh": null
+        },
+        "Q3": {
+          "status": "not_reported",
+          "evidence_zh": null
+        },
+        "Q4": {
+          "status": "partial_historical_evidence",
+          "evidence_zh": "具体会议中因议题非自身负责范围而安静听会。",
+          "not_a_completed_answer": true
+        },
+        "Q5": {
+          "status": "partial_historical_evidence",
+          "evidence_zh": "上级直接要求意见，作者因此回应；未报告截止时间。",
+          "not_a_completed_answer": true
+        },
+        "Q6": {
+          "status": "partial_historical_evidence",
+          "evidence_zh": "作者报告焦虑和尴尬；不是量表或客观工作效果。",
+          "not_a_completed_answer": true
+        },
+        "Q7": {
+          "status": "partial_historical_evidence",
+          "evidence_zh": "说明仍在学习该领域，并分享与自己工作相关的更新。",
+          "not_a_completed_answer": true
+        },
+        "Q8": {
+          "status": "not_reported",
+          "evidence_zh": null
+        },
+        "Q9": {
+          "status": "not_reported",
+          "evidence_zh": null
+        },
+        "Q10": {
+          "status": "not_reported",
+          "evidence_zh": null
+        }
+      },
+      "sourceLimitations": "来自远程工作社区，但首帖没有明确说该次使用视频会议；不可强行归类为已确认远程案例。",
+      "temporalLimit": "历史公开叙述，不属于本项目问卷的过去四周时间窗；Q1/Q3频次不补值，Q9/Q10方案偏好不代答。"
+    },
+    {
+      "caseId": "PU06",
+      "sourceId": "PS04",
+      "source_type": "public_user_narrative_unverified",
+      "sourceUrl": "https://www.reddit.com/r/remotework/comments/1hxmirw/zoom_meetings_take_up_all_my_deep_work_time_any/",
+      "threadClusterId": "PS04",
+      "visibleAuthorClusterId": "A06",
+      "postKind": "post",
+      "postedAt": "2025-01-09",
+      "postedDatePrecision": "day",
+      "threadPostedAt": "2025-01-09",
+      "accessedAt": "2026-10-16",
+      "identityVerified": false,
+      "usernamesRetained": false,
+      "remoteContext": "remote_explicit",
+      "excerpt": {
+        "language": "en",
+        "text": "endless zoom meetings that eat into your actual work time",
+        "wordCount": 10
+      },
+      "paraphraseZh": "发帖者表示自己完全远程工作，新年尚未形成固定会议安排时感觉更有生产力，同时询问如何处理挤占工作时间的Zoom会议。",
+      "reportedFacts": [
+        "自述完全远程。",
+        "把会议安排较少的阶段与更有生产力的感受联系起来。"
+      ],
+      "researcherInference": "试用应观察另一项任务的代价，但该帖子不能证明会议减少导致生产率提高。",
+      "tags": [
+        "主任务打断",
+        "会议负担"
+      ],
+      "questionnaireMapping": {
+        "Q1": {
+          "status": "not_reported",
+          "evidence_zh": null
+        },
+        "Q2": {
+          "status": "partial_historical_evidence",
+          "evidence_zh": "完全远程工作；职位未报告。",
+          "not_a_completed_answer": true
+        },
+        "Q3": {
+          "status": "not_reported",
+          "evidence_zh": null
+        },
+        "Q4": {
+          "status": "partial_historical_evidence",
+          "evidence_zh": "新年会议安排尚未固定时，自述工作更顺畅。",
+          "not_a_completed_answer": true
+        },
+        "Q5": {
+          "status": "not_reported",
+          "evidence_zh": null
+        },
+        "Q6": {
+          "status": "partial_historical_evidence",
+          "evidence_zh": "自述Zoom会议占用实际工作时间，属于主观感受。",
+          "not_a_completed_answer": true
+        },
+        "Q7": {
+          "status": "not_reported",
+          "evidence_zh": null
+        },
+        "Q8": {
+          "status": "partial_historical_evidence",
+          "evidence_zh": "明确询问应对Zoom会议挤占工作时间的方法。",
+          "not_a_completed_answer": true
+        },
+        "Q9": {
+          "status": "not_reported",
+          "evidence_zh": null
+        },
+        "Q10": {
+          "status": "not_reported",
+          "evidence_zh": null
+        }
+      },
+      "sourceLimitations": "没有客观产出指标、确切会议次数或具体被打断事件；不等于过去四周问卷答卷。",
+      "temporalLimit": "历史公开叙述，不属于本项目问卷的过去四周时间窗；Q1/Q3频次不补值，Q9/Q10方案偏好不代答。"
+    },
+    {
+      "caseId": "PU07",
+      "sourceId": "PS04",
+      "source_type": "public_user_narrative_unverified",
+      "sourceUrl": "https://www.reddit.com/r/remotework/comments/1hxmirw/zoom_meetings_take_up_all_my_deep_work_time_any/",
+      "threadClusterId": "PS04",
+      "visibleAuthorClusterId": "A07",
+      "postKind": "comment",
+      "postedAt": null,
+      "postedDatePrecision": "comment_date_not_reported",
+      "threadPostedAt": "2025-01-09",
+      "accessedAt": "2026-10-16",
+      "identityVerified": false,
+      "usernamesRetained": false,
+      "remoteContext": "remote_thread_context",
+      "excerpt": {
+        "language": "en",
+        "text": "Consolidating my meetings into chunks of time helps a lot.",
+        "wordCount": 10
+      },
+      "paraphraseZh": "回复者表示把会议集中在几个时段很有帮助：连续开会虽累，却能保留其余时间做实际工作。",
+      "reportedFacts": [
+        "自述已把会议集中安排。",
+        "报告疲劳与完整工作时间并存。"
+      ],
+      "researcherInference": "调整会议安排可能比新增提醒工具更有效；可作为无需新助手的候选反例，但作者并未明确拒绝AI。",
+      "tags": [
+        "既有办法有效",
+        "非技术替代",
+        "混合收益代价"
+      ],
+      "questionnaireMapping": {
+        "Q1": {
+          "status": "not_reported",
+          "evidence_zh": null
+        },
+        "Q2": {
+          "status": "not_reported",
+          "evidence_zh": null
+        },
+        "Q3": {
+          "status": "not_reported",
+          "evidence_zh": null
+        },
+        "Q4": {
+          "status": "not_reported",
+          "evidence_zh": null
+        },
+        "Q5": {
+          "status": "not_reported",
+          "evidence_zh": null
+        },
+        "Q6": {
+          "status": "partial_historical_evidence",
+          "evidence_zh": "集中会议使连续开会疲劳，但留出其他工作时间。",
+          "not_a_completed_answer": true
+        },
+        "Q7": {
+          "status": "partial_historical_evidence",
+          "evidence_zh": "实际采用集中安排会议的办法，并自述有帮助。",
+          "not_a_completed_answer": true
+        },
+        "Q8": {
+          "status": "not_reported",
+          "evidence_zh": null
+        },
+        "Q9": {
+          "status": "not_reported",
+          "evidence_zh": null
+        },
+        "Q10": {
+          "status": "not_reported",
+          "evidence_zh": null
+        }
+      },
+      "sourceLimitations": "没有前后对照；与首帖同一线程，不能将两条当独立随机样本。",
+      "temporalLimit": "历史公开叙述，不属于本项目问卷的过去四周时间窗；Q1/Q3频次不补值，Q9/Q10方案偏好不代答。"
+    },
+    {
+      "caseId": "PU08",
+      "sourceId": "PS05",
+      "source_type": "public_user_narrative_unverified",
+      "sourceUrl": "https://news.ycombinator.com/item?id=43773813",
+      "threadClusterId": "PS05",
+      "visibleAuthorClusterId": "A08",
+      "postKind": "comment",
+      "postedAt": "2025-04-23",
+      "postedDatePrecision": "day",
+      "threadPostedAt": "2025-04-23",
+      "accessedAt": "2026-10-16",
+      "identityVerified": false,
+      "usernamesRetained": false,
+      "remoteContext": "remote_call_context",
+      "excerpt": {
+        "language": "en",
+        "text": "it was highly illustrative to read the summaries after the fact.",
+        "wordCount": 11
+      },
+      "paraphraseZh": "回复者回顾作为初创企业工程师的经历：很少需要亲自参加销售通话，团队用AI转写和总结，自己会后阅读摘要，部分产品功能据此产生。",
+      "reportedFacts": [
+        "自述团队曾转写并总结企业销售通话。",
+        "自述作为开发者会后读摘要很有帮助。",
+        "自述一些功能来自这些行动项。"
+      ],
+      "researcherInference": "对只需获取销售背景的开发者，异步摘要可能已经足够；不应把即时参与设成所有角色的默认目标。",
+      "tags": [
+        "会后摘要足够",
+        "角色相关性",
+        "既有AI有效"
+      ],
+      "questionnaireMapping": {
+        "Q1": {
+          "status": "not_reported",
+          "evidence_zh": null
+        },
+        "Q2": {
+          "status": "partial_historical_evidence",
+          "evidence_zh": "作者自述当时是初创公司的工程师。",
+          "not_a_completed_answer": true
+        },
+        "Q3": {
+          "status": "not_reported",
+          "evidence_zh": null
+        },
+        "Q4": {
+          "status": "partial_historical_evidence",
+          "evidence_zh": "多数销售通话不亲自参加，会后读摘要。",
+          "not_a_completed_answer": true
+        },
+        "Q5": {
+          "status": "not_reported",
+          "evidence_zh": null
+        },
+        "Q6": {
+          "status": "partial_historical_evidence",
+          "evidence_zh": "作者认为摘要有启发，并影响后续功能开发。",
+          "not_a_completed_answer": true
+        },
+        "Q7": {
+          "status": "partial_historical_evidence",
+          "evidence_zh": "团队使用AI转写/摘要，作者异步阅读。",
+          "not_a_completed_answer": true
+        },
+        "Q8": {
+          "status": "not_reported",
+          "evidence_zh": null
+        },
+        "Q9": {
+          "status": "not_reported",
+          "evidence_zh": null
+        },
+        "Q10": {
+          "status": "not_reported",
+          "evidence_zh": null
+        }
+      },
+      "sourceLimitations": "这是回顾性自述，未给出原始行动项或功能记录；不能据此计算摘要准确率或生产率。",
+      "temporalLimit": "历史公开叙述，不属于本项目问卷的过去四周时间窗；Q1/Q3频次不补值，Q9/Q10方案偏好不代答。"
+    },
+    {
+      "caseId": "PU09",
+      "sourceId": "PS05",
+      "source_type": "public_user_narrative_unverified",
+      "sourceUrl": "https://news.ycombinator.com/item?id=43773813",
+      "threadClusterId": "PS05",
+      "visibleAuthorClusterId": "A09",
+      "postKind": "comment",
+      "postedAt": "2025-04-23",
+      "postedDatePrecision": "day",
+      "threadPostedAt": "2025-04-23",
+      "accessedAt": "2026-10-16",
+      "identityVerified": false,
+      "usernamesRetained": false,
+      "remoteContext": "remote_tool_explicit",
+      "excerpt": {
+        "language": "en",
+        "text": "only I know what's important to me",
+        "wordCount": 7
+      },
+      "paraphraseZh": "另一回复者认为自己更了解哪些信息重要；其体验是Teams Premium摘要有时只写讨论了什么，缺乏想知道的具体内容。自己会后检查个人笔记中的跟进事项，通常不长期保留。",
+      "reportedFacts": [
+        "自述使用个人选择性笔记并检查后续事项。",
+        "提及Teams Premium摘要过于笼统的体验。",
+        "自述从未需要去年会议笔记。"
+      ],
+      "researcherInference": "应保留用户自己的关注点，考虑短期行动需求；该用户对长期笔记存档需求低，不能代表所有用户。",
+      "tags": [
+        "个人相关性",
+        "既有办法够用",
+        "摘要细节不足"
+      ],
+      "questionnaireMapping": {
+        "Q1": {
+          "status": "not_reported",
+          "evidence_zh": null
+        },
+        "Q2": {
+          "status": "not_reported",
+          "evidence_zh": null
+        },
+        "Q3": {
+          "status": "not_reported",
+          "evidence_zh": null
+        },
+        "Q4": {
+          "status": "not_reported",
+          "evidence_zh": null
+        },
+        "Q5": {
+          "status": "not_reported",
+          "evidence_zh": null
+        },
+        "Q6": {
+          "status": "partial_historical_evidence",
+          "evidence_zh": "描述摘要遗漏个人关心的细节，未报告具体错误决定。",
+          "not_a_completed_answer": true
+        },
+        "Q7": {
+          "status": "partial_historical_evidence",
+          "evidence_zh": "个人记录要点，会后检查跟进或研究事项。",
+          "not_a_completed_answer": true
+        },
+        "Q8": {
+          "status": "partial_historical_evidence",
+          "evidence_zh": "明确表达笔记应用对自己缺少必要性；是本人的评价。",
+          "not_a_completed_answer": true
+        },
+        "Q9": {
+          "status": "not_reported",
+          "evidence_zh": null
+        },
+        "Q10": {
+          "status": "not_reported",
+          "evidence_zh": null
+        }
+      },
+      "sourceLimitations": "同线程不同回复，讨论环境可能放大共同立场；没有核查具体产品版本或摘要样本。",
+      "temporalLimit": "历史公开叙述，不属于本项目问卷的过去四周时间窗；Q1/Q3频次不补值，Q9/Q10方案偏好不代答。"
+    },
+    {
+      "caseId": "PU10",
+      "sourceId": "PS06",
+      "source_type": "public_user_narrative_unverified",
+      "sourceUrl": "https://workplace.stackexchange.com/questions/198413/team-member-working-from-home-is-distracted-with-kids-while-on-video-calls-sho",
+      "threadClusterId": "PS06",
+      "visibleAuthorClusterId": "A10",
+      "postKind": "post",
+      "postedAt": "2024-07-11",
+      "postedDatePrecision": "day",
+      "threadPostedAt": "2024-07-11",
+      "accessedAt": "2026-10-16",
+      "identityVerified": false,
+      "usernamesRetained": false,
+      "remoteContext": "remote_explicit",
+      "excerpt": {
+        "language": "en",
+        "text": "questions or request for feedback directed at her needed to be repeated.",
+        "wordCount": 12
+      },
+      "paraphraseZh": "一名管理者描述自己参加的Teams视频会议：远程团队成员因家庭照护事务分心，面向她的问题或反馈请求有时需要重复。",
+      "reportedFacts": [
+        "作者明确自称是该成员的管理者。",
+        "作者称在实际Teams会议中观察到分心和问题重复。"
+      ],
+      "researcherInference": "参与请求重述及上下文恢复可能有价值；不要将家庭状况当成普遍原因，也不能仅凭管理者视角判断员工需求。",
+      "tags": [
+        "漏听请求",
+        "重述上下文",
+        "参与时机"
+      ],
+      "questionnaireMapping": {
+        "Q1": {
+          "status": "not_reported",
+          "evidence_zh": null
+        },
+        "Q2": {
+          "status": "partial_historical_evidence",
+          "evidence_zh": "管理者视角，Teams跨地点工作会议。",
+          "not_a_completed_answer": true
+        },
+        "Q3": {
+          "status": "not_reported",
+          "evidence_zh": null
+        },
+        "Q4": {
+          "status": "partial_historical_evidence",
+          "evidence_zh": "多次视频会议中观察到成员离开或分心。",
+          "not_a_completed_answer": true
+        },
+        "Q5": {
+          "status": "partial_historical_evidence",
+          "evidence_zh": "定向问题/反馈请求需要重复。",
+          "not_a_completed_answer": true
+        },
+        "Q6": {
+          "status": "partial_historical_evidence",
+          "evidence_zh": "报告重复沟通的负担，未量化。",
+          "not_a_completed_answer": true
+        },
+        "Q7": {
+          "status": "partial_historical_evidence",
+          "evidence_zh": "实际发生的应对是重复提问。",
+          "not_a_completed_answer": true
+        },
+        "Q8": {
+          "status": "not_reported",
+          "evidence_zh": null
+        },
+        "Q9": {
+          "status": "not_reported",
+          "evidence_zh": null
+        },
+        "Q10": {
+          "status": "not_reported",
+          "evidence_zh": null
+        }
+      },
+      "sourceLimitations": "第一人称观察者记录而非被打断者自述；没有员工本人解释；不保存家庭成员身份或推断人口特征。",
+      "temporalLimit": "历史公开叙述，不属于本项目问卷的过去四周时间窗；Q1/Q3频次不补值，Q9/Q10方案偏好不代答。"
+    },
+    {
+      "caseId": "PU11",
+      "sourceId": "PS07",
+      "source_type": "public_user_narrative_unverified",
+      "sourceUrl": "https://workplace.stackexchange.com/questions/36126/meeting-etiquette",
+      "threadClusterId": "PS07",
+      "visibleAuthorClusterId": "A11",
+      "postKind": "answer",
+      "postedAt": "2014-11-11",
+      "postedDatePrecision": "day",
+      "threadPostedAt": "2014-11-11",
+      "accessedAt": "2026-10-16",
+      "identityVerified": false,
+      "usernamesRetained": false,
+      "remoteContext": "remote_explicit",
+      "excerpt": {
+        "language": "en",
+        "text": "with the headset on, listening for questions to answer.",
+        "wordCount": 9
+      },
+      "paraphraseZh": "回答者描述其客户团队的现行做法：开发人员参加项目状态会时留在工位或远程连接，戴耳机边做开发边听可能需要自己回答的问题。",
+      "reportedFacts": [
+        "作者明确说这是其当前客户团队经常使用的做法。",
+        "开发人员保持音频连接，等待问题。"
+      ],
+      "researcherInference": "部分参与已有低技术实现；新工具需要证明比耳机旁听更有效，而非只证明能间断参与。",
+      "tags": [
+        "现有部分参与",
+        "无需新工具的候选"
+      ],
+      "questionnaireMapping": {
+        "Q1": {
+          "status": "not_reported",
+          "evidence_zh": null
+        },
+        "Q2": {
+          "status": "partial_historical_evidence",
+          "evidence_zh": "作者亲历客户软件开发团队的项目状态会；本人职位未报告。",
+          "not_a_completed_answer": true
+        },
+        "Q3": {
+          "status": "not_reported",
+          "evidence_zh": null
+        },
+        "Q4": {
+          "status": "partial_historical_evidence",
+          "evidence_zh": "会议同时继续开发，保持音频连接。",
+          "not_a_completed_answer": true
+        },
+        "Q5": {
+          "status": "partial_historical_evidence",
+          "evidence_zh": "以听到面向自己的问题作为参与线索。",
+          "not_a_completed_answer": true
+        },
+        "Q6": {
+          "status": "not_reported",
+          "evidence_zh": null
+        },
+        "Q7": {
+          "status": "partial_historical_evidence",
+          "evidence_zh": "使用耳机旁听，作者说这样开发不干扰会议。",
+          "not_a_completed_answer": true
+        },
+        "Q8": {
+          "status": "not_reported",
+          "evidence_zh": null
+        },
+        "Q9": {
+          "status": "not_reported",
+          "evidence_zh": null
+        },
+        "Q10": {
+          "status": "not_reported",
+          "evidence_zh": null
+        }
+      },
+      "sourceLimitations": "2014年经验较旧；未报告漏答率或主任务绩效；同篇其他泛建议不作为案例事实。",
+      "temporalLimit": "历史公开叙述，不属于本项目问卷的过去四周时间窗；Q1/Q3频次不补值，Q9/Q10方案偏好不代答。"
+    },
+    {
+      "caseId": "PU12",
+      "sourceId": "PS08",
+      "source_type": "public_user_narrative_unverified",
+      "sourceUrl": "https://stackoverflow.blog/2020/04/30/have-better-meetings-in-person-or-remote/",
+      "threadClusterId": "PS08",
+      "visibleAuthorClusterId": "A12",
+      "postKind": "article",
+      "postedAt": "2020-04-30",
+      "postedDatePrecision": "day",
+      "threadPostedAt": "2020-04-30",
+      "accessedAt": "2026-10-16",
+      "identityVerified": false,
+      "usernamesRetained": false,
+      "remoteContext": "remote_explicit",
+      "excerpt": {
+        "language": "en",
+        "text": "I was on a call for a half hour and contributed nothing",
+        "wordCount": 12
+      },
+      "paraphraseZh": "实践文章作者回忆，自己曾在一次远程通话里待了半小时却没有贡献，因为不知道会议为何召开及要达到什么。",
+      "reportedFacts": [
+        "作者明确叙述一次发生在文章前一周的远程通话。",
+        "将没有贡献归因于不了解会议目的。"
+      ],
+      "researcherInference": "上下文卡应帮助理解当前目的和需要贡献的内容；提醒到达本身不保证能有效回答。",
+      "tags": [
+        "议题背景",
+        "有效贡献"
+      ],
+      "questionnaireMapping": {
+        "Q1": {
+          "status": "not_reported",
+          "evidence_zh": null
+        },
+        "Q2": {
+          "status": "partial_historical_evidence",
+          "evidence_zh": "作者自述软件开发工作背景，远程团队。",
+          "not_a_completed_answer": true
+        },
+        "Q3": {
+          "status": "not_reported",
+          "evidence_zh": null
+        },
+        "Q4": {
+          "status": "partial_historical_evidence",
+          "evidence_zh": "一次半小时通话中不清楚目的。",
+          "not_a_completed_answer": true
+        },
+        "Q5": {
+          "status": "not_reported",
+          "evidence_zh": null
+        },
+        "Q6": {
+          "status": "partial_historical_evidence",
+          "evidence_zh": "自述没有作出贡献；未报告后续后果。",
+          "not_a_completed_answer": true
+        },
+        "Q7": {
+          "status": "not_reported",
+          "evidence_zh": null
+        },
+        "Q8": {
+          "status": "not_reported",
+          "evidence_zh": null
+        },
+        "Q9": {
+          "status": "not_reported",
+          "evidence_zh": null
+        },
+        "Q10": {
+          "status": "not_reported",
+          "evidence_zh": null
+        }
+      },
+      "sourceLimitations": "署名实践文章不是研究实验；作者同时提出一般建议，本案例只取亲历叙述。",
+      "temporalLimit": "历史公开叙述，不属于本项目问卷的过去四周时间窗；Q1/Q3频次不补值，Q9/Q10方案偏好不代答。"
+    },
+    {
+      "caseId": "PU13",
+      "sourceId": "PS08",
+      "source_type": "public_user_narrative_unverified",
+      "sourceUrl": "https://stackoverflow.blog/2020/04/30/have-better-meetings-in-person-or-remote/",
+      "threadClusterId": "PS08",
+      "visibleAuthorClusterId": "A12",
+      "postKind": "article",
+      "postedAt": "2020-04-30",
+      "postedDatePrecision": "day",
+      "threadPostedAt": "2020-04-30",
+      "accessedAt": "2026-10-16",
+      "identityVerified": false,
+      "usernamesRetained": false,
+      "remoteContext": "remote_chat_adjacent",
+      "excerpt": {
+        "language": "en",
+        "text": "the conversation had moved on to an entirely different topic.",
+        "wordCount": 10
+      },
+      "paraphraseZh": "同一作者说，在远程协作聊天中输入较长、复杂的问题时，有几次还没写完，话题已经转向别处。",
+      "reportedFacts": [
+        "作者报告多次长文本输入期间话题已推进。",
+        "原文情境是协作聊天，不是明确的会中音频回复。"
+      ],
+      "researcherInference": "可用来检验回复形成时间与讨论进度的关系，但需另做会议场景验证，不能直接当会议迟答结果。",
+      "tags": [
+        "形成回复的时间",
+        "参与窗口"
+      ],
+      "questionnaireMapping": {
+        "Q1": {
+          "status": "not_reported",
+          "evidence_zh": null
+        },
+        "Q2": {
+          "status": "not_reported",
+          "evidence_zh": null
+        },
+        "Q3": {
+          "status": "not_reported",
+          "evidence_zh": null
+        },
+        "Q4": {
+          "status": "partial_historical_evidence",
+          "evidence_zh": "远程协作聊天中组织复杂长文本时讨论已变化。",
+          "not_a_completed_answer": true
+        },
+        "Q5": {
+          "status": "not_reported",
+          "evidence_zh": null
+        },
+        "Q6": {
+          "status": "partial_historical_evidence",
+          "evidence_zh": "作者认为表达失去原先话题窗口，未量化。",
+          "not_a_completed_answer": true
+        },
+        "Q7": {
+          "status": "partial_historical_evidence",
+          "evidence_zh": "当时使用长文本聊天表达；后文分句建议不当成已验证成功办法。",
+          "not_a_completed_answer": true
+        },
+        "Q8": {
+          "status": "not_reported",
+          "evidence_zh": null
+        },
+        "Q9": {
+          "status": "not_reported",
+          "evidence_zh": null
+        },
+        "Q10": {
+          "status": "not_reported",
+          "evidence_zh": null
+        }
+      },
+      "sourceLimitations": "与PU12同一公开作者，非独立参与者；为相邻协作情境，不能外推到会议截止时间。",
+      "temporalLimit": "历史公开叙述，不属于本项目问卷的过去四周时间窗；Q1/Q3频次不补值，Q9/Q10方案偏好不代答。"
+    },
+    {
+      "caseId": "PU14",
+      "sourceId": "PS01",
+      "source_type": "public_user_narrative_unverified",
+      "sourceUrl": "https://www.reddit.com/r/ADHD_Programmers/comments/164jtrf/sometimes_taking_notes_in_a_meeting_helps_and/",
+      "threadClusterId": "PS01",
+      "visibleAuthorClusterId": "A14",
+      "postKind": "comment",
+      "postedAt": null,
+      "postedDatePrecision": "comment_date_not_reported",
+      "threadPostedAt": "2023-08-29",
+      "accessedAt": "2026-10-16",
+      "identityVerified": false,
+      "usernamesRetained": false,
+      "remoteContext": "meeting_mode_not_reported",
+      "excerpt": {
+        "language": "en",
+        "text": "asking for others to add what I missed tends to work well enough.",
+        "wordCount": 13
+      },
+      "paraphraseZh": "回复者表示，当自己没有深度参与讨论且能理解内容时可以记笔记；会后发布尽力记录的内容，再请其他人补充遗漏，通常已经够用。",
+      "reportedFacts": [
+        "自述记笔记能力随参与强度和理解负担变化。",
+        "自述已有团队补记流程通常够用。"
+      ],
+      "researcherInference": "需要比较助手与现有协作补记；无法把没有完美笔记直接当作未满足需求。",
+      "tags": [
+        "既有办法够用",
+        "协作补全",
+        "参与负担"
+      ],
+      "questionnaireMapping": {
+        "Q1": {
+          "status": "not_reported",
+          "evidence_zh": null
+        },
+        "Q2": {
+          "status": "not_reported",
+          "evidence_zh": null
+        },
+        "Q3": {
+          "status": "not_reported",
+          "evidence_zh": null
+        },
+        "Q4": {
+          "status": "partial_historical_evidence",
+          "evidence_zh": "深度参与较少、理解负担可承受时记录会议。",
+          "not_a_completed_answer": true
+        },
+        "Q5": {
+          "status": "not_reported",
+          "evidence_zh": null
+        },
+        "Q6": {
+          "status": "partial_historical_evidence",
+          "evidence_zh": "作者主观评价协作补记通常够用。",
+          "not_a_completed_answer": true
+        },
+        "Q7": {
+          "status": "partial_historical_evidence",
+          "evidence_zh": "会后发布笔记，请其他人补充遗漏。",
+          "not_a_completed_answer": true
+        },
+        "Q8": {
+          "status": "not_reported",
+          "evidence_zh": null
+        },
+        "Q9": {
+          "status": "not_reported",
+          "evidence_zh": null
+        },
+        "Q10": {
+          "status": "not_reported",
+          "evidence_zh": null
+        }
+      },
+      "sourceLimitations": "本条未明确远程平台，作为一般会议的相邻证据；自述成功没有客观测量。",
+      "temporalLimit": "历史公开叙述，不属于本项目问卷的过去四周时间窗；Q1/Q3频次不补值，Q9/Q10方案偏好不代答。"
+    }
+  ]
+}
+

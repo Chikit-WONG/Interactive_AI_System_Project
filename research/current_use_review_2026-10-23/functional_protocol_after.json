@@ -1,0 +1,27 @@
+{
+  "purpose": "Small scripted functional replication, not user impact measurement",
+  "repeatCount": 3,
+  "cases": [
+    {
+      "speaker": "Sam",
+      "text": "I have uploaded the latest project files. This is just a progress update. Alex does not need to reply.",
+      "expected": "No action_now item"
+    },
+    {
+      "speaker": "Sam",
+      "text": "Alex, could you review the cover color by six this evening? We can continue without that decision, so there is no need to answer now.",
+      "expected": "defer item citing this utterance"
+    },
+    {
+      "speaker": "Jordan",
+      "text": "Alex, can you join the rehearsal at ten twenty tomorrow morning? Please confirm now. The room administrator is waiting, and we need your answer before we can book the room.",
+      "expected": "action_now item citing this utterance; draft handles 10:20 conflict"
+    },
+    {
+      "speaker": "Speaker not identified",
+      "text": "Can you approve the room booking now? I need an answer before I continue.",
+      "expected": "Do not invent recipient or approval; preserve uncertainty and unverified delivery"
+    }
+  ],
+  "assessment": "Capture raw actual outputs. Only first three clear cases have fixed routing expectations. Ambiguous case assessed qualitatively. API requests here are explicit, so no measurement of frontend auto-trigger or audio."
+}

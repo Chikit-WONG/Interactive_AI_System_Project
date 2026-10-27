@@ -1,0 +1,30 @@
+{
+  "template_only": true,
+  "source_type": "human_interview_or_walkthrough",
+  "participant_id": null,
+  "consent_recorded": false,
+  "recording_consent": null,
+  "date": null,
+  "recent_remote_meeting_experience": null,
+  "actual_episode": {
+    "role": null,
+    "participation_goal": null,
+    "parallel_task": null,
+    "timeline": [],
+    "existing_method": null,
+    "observed_outcome": null,
+    "unknowns": []
+  },
+  "walkthrough": {
+    "prototype_version": null,
+    "order_assignment": null,
+    "session_log_file": null,
+    "protocol_deviations": [],
+    "observations": [],
+    "event_outcomes": [],
+    "participant_explanations": [],
+    "not_applicable_or_no_change_needed": null
+  },
+  "researcher_interpretation_separate_from_quote": [],
+  "next_design_change_and_reason": []
+}

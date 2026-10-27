@@ -1,0 +1,2 @@
+Current workflow review, 2026-10-23. 11 model configurations x 3 new conversations planned. Same frozen trace, no tool use. Units are independent model review runs, not recruited people. Actual UI trace with DeepSeek and clean text input; no audio or Tencent delivery. Separate from earlier 43 exploratory records and 29 description reviews. Inspect raw session IDs and response validity. No population inference. Preserve negative cases and repeat-specific variability.
+Prompt SHA256: 2b5793db3cd2931eb16b4f81b3b7b5ca7aef99f2a876eabcb3e418977f6e43b3

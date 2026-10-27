@@ -1,0 +1,121 @@
+{
+  "source_type": "model_simulation",
+  "exposure": "recorded_current_workflow",
+  "cases": [
+    {
+      "id": "E01",
+      "assessment": "helpful",
+      "reason": "The system correctly recognized a progress update that explicitly required no reply and produced only a summary. As Alex, I would expect this to reduce interruption while preserving awareness of the meeting context."
+    },
+    {
+      "id": "E02",
+      "assessment": "mixed",
+      "reason": "The request matched Alex's presentation-material responsibility and was captured with a deadline, uncertainty, and a draft. However, the speaker explicitly said the team could continue without an answer, so generating a pending reply may add attention cost. The Later suggestion appropriately reduces urgency, but the usefulness depends on whether Alex wants reminders for nonblocking work."
+    },
+    {
+      "id": "E03",
+      "assessment": "helpful",
+      "reason": "The system identified a direct, time-sensitive request that blocked room booking, classified it as Respond now, used Alex's availability constraints, and proposed a feasible alternative. The draft did not falsely commit Alex to 10:20 and cited the relevant utterance."
+    },
+    {
+      "id": "E04",
+      "assessment": "helpful",
+      "reason": "Showing the original request, rationale, uncertainties, and editable draft gives Alex enough context to judge whether the recommendation is appropriate. This supports review rather than requiring blind acceptance."
+    },
+    {
+      "id": "E05",
+      "assessment": "helpful",
+      "reason": "Alex could replace the model draft with a more precise response that distinguishes arrival at 10:30 from joining at 10:40. Confirm and copy succeeded, and the interface explicitly said the text was copied while still waiting for Alex to send or mark it sent. That accurately preserves the boundary between drafting and communication."
+    },
+    {
+      "id": "E06",
+      "assessment": "helpful",
+      "reason": "The system detected that the draft had changed after copying, required renewed confirmation, and disabled the sent-state control. This is a valuable safeguard against treating an edited, unconfirmed message as already approved. The original clipboard remaining unchanged is also useful, although it creates a possible version-confusion risk."
+    },
+    {
+      "id": "E07",
+      "assessment": "mixed",
+      "reason": "The analysis correctly noticed that room booking is outside Alex's stated responsibility, that the speaker is unidentified, and that u3 may already address the timing dependency. However, the new request says an answer is needed before the speaker can continue, so deferring it may under-prioritize a potentially blocking issue. The final summary also says u3 was already handled, although the message was only copied and never sent, and the later edit was unconfirmed."
+    },
+    {
+      "id": "E08",
+      "assessment": "helpful",
+      "reason": "Stopping disabled further input and analysis, froze elapsed time, and preserved the records. This gives Alex a clear stopping point without evidence of data loss or continued processing."
+    }
+  ],
+  "value_assessments": {
+    "selective_attention": {
+      "judgment": "supported",
+      "evidence_ids": [
+        "E01",
+        "E02",
+        "E03"
+      ],
+      "reason": "The trace shows differentiated handling: no alert for a no-reply update, a later suggestion for a nonblocking request, and immediate attention for a request tied to room booking."
+    },
+    "context_for_correct_reply": {
+      "judgment": "mixed",
+      "evidence_ids": [
+        "E03",
+        "E04",
+        "E07"
+      ],
+      "reason": "The profile and transcript produced a contextually appropriate response for u3, with visible rationale and uncertainty. The ambiguous u4 case shows that context can support cautious reasoning but still lead to a questionable urgency decision."
+    },
+    "control_over_commitments": {
+      "judgment": "supported",
+      "evidence_ids": [
+        "E05",
+        "E06",
+        "E08"
+      ],
+      "reason": "Alex could edit before confirmation, copying was distinguished from sending, later edits required renewed confirmation, and stopping preserved the state. The trace supports control, though the separate clipboard version needs clearer handling."
+    }
+  },
+  "would_use": "only_in_some_cases",
+  "best_fit": "Triage and drafting replies for clear requests where the user's responsibilities, constraints, urgency, and source speaker are reasonably identifiable.",
+  "poor_fit": "Ambiguous multi-party requests, requests involving authority Alex does not hold, and situations where a copied draft might be mistaken for a sent message.",
+  "biggest_benefit": {
+    "evidence_ids": [
+      "E03",
+      "E04",
+      "E05"
+    ],
+    "text": "Meeting Cue turns a time-sensitive request that conflicts with Alex's availability into an editable, constraint-aware response while exposing the reasoning and preserving user approval."
+  },
+  "biggest_risk": {
+    "evidence_ids": [
+      "E06",
+      "E07"
+    ],
+    "text": "The workflow can leave multiple message versions in different states: an older confirmed clipboard copy, a newer unconfirmed edit, and a summary that describes the earlier request as handled even though nothing was sent."
+  },
+  "improvements": [
+    {
+      "priority": "P0",
+      "evidence_ids": [
+        "E05",
+        "E06",
+        "E07"
+      ],
+      "suggestion": "Make the current draft, copied version, confirmed version, and sent status visibly distinct, and prevent summaries from calling a request handled unless it was actually sent or explicitly marked sent."
+    },
+    {
+      "priority": "P1",
+      "evidence_ids": [
+        "E07"
+      ],
+      "suggestion": "When an unidentified speaker says an answer is needed before continuing, surface the ambiguity and blocking claim as requiring clarification or immediate review rather than automatically deferring it."
+    },
+    {
+      "priority": "P2",
+      "evidence_ids": [
+        "E02"
+      ],
+      "suggestion": "Allow Alex to suppress or batch drafts for nonblocking requests that do not require an immediate response."
+    }
+  ],
+  "safe_final_reply": "I cannot make 10:20 AM. I can arrive at 10:30 AM and join the rehearsal at 10:40 AM. Please check whether 10:40 works for everyone before booking.",
+  "presentation_claim": "This trace supports a claim that Meeting Cue can prioritize clear meeting requests and help a user prepare a constraint-aware reply while retaining approval control.",
+  "not_established": "The trace does not establish human productivity gains, audio transcription accuracy, successful meeting delivery, successful message sending, sustained usefulness, or performance relative to another workflow."
+}

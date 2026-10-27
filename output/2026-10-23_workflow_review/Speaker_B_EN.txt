@@ -1,0 +1,85 @@
+MEETING CUE / GROUP 3
+SPEAKER B / Haodong XU: ENGLISH READING COPY
+Use with Meeting_Cue_Midterm_EN_WorkflowReview.pptx.
+
+Read only standalone [SPOKEN] blocks. Stage cues and timing are not spoken.
+Your part: slide 3 evidence, slide 4 and video intro, 1:55-3:50.
+Start after Chi Kit on slide 3. Introduce and start the video yourself.
+Your count: 160 words. At the measured rehearsal pace of 92.65 words/minute,
+this predicts 103.6 seconds of speech. Your slot is 115 seconds.
+This estimate is not a guarantee; time your own rehearsal with slide changes.
+No one speaks over the 120-second video. Demo claims require verified footage.
+
+SLIDE 3 / HOW EVIDENCE SHAPED THE PROTOTYPE
+Clock: 1:30-2:50. Total slide slot: 80 seconds.
+
+A speaks 1:30-1:55; B speaks 1:55-2:50. Keep the slide displayed.
+
+Speaker B / Haodong XU / 1:55-2:50
+
+[SPOKEN]
+One record described a manager repeating feedback requests while someone's attention was elsewhere. Another asked what was discussed, why they were needed, and what to answer. A third stressed checking source wording. These led to priority categories and original excerpts. A scenario illustrated how a missed condition could make an otherwise plausible reply unsuitable. So the participant edits and confirms before copying. In our demo, Alex checks availability before agreeing. This connects each interface choice to a specific need.
+[/SPOKEN]
+
+SLIDE 4 / HOW AI SUPPORTS THE INTERACTION
+Clock: 2:50-3:40. Total slide slot: 50 seconds.
+
+Speaker B / Haodong XU / 2:50-3:40
+
+[SPOKEN]
+Meeting Cue runs in a browser beside Tencent Meeting. Browser speech recognition produces text. DeepSeek analyzes new text with the participant's role and availability, returning priority, source references, and a draft. The person checks the source, edits and copies the reply, then pastes and sends it in Tencent Meeting. AI can miss context, so checking and confirmation remain essential. Speech recognition and text analysis are separate services.
+[/SPOKEN]
+
+SLIDE 5 / DEMO: THE REHEARSAL DECISION
+Clock: 3:40-6:15. Total slide slot: 155 seconds.
+
+B introduces 3:40-3:50; video 3:50-5:50; C debriefs 5:50-6:15.
+The complete recording is pending. Use the intro and debrief only after reviewed
+footage supports these actions. Nobody speaks over the actual meeting audio.
+
+Speaker B / Haodong XU / 3:40-3:50
+
+[SPOKEN]
+Watch Alex check a rehearsal request, correct the proposed time, and send the reply.
+[/SPOKEN]
+
+[STAGE CUE: B starts the verified 120-second video. Everyone stays silent.
+C begins the debrief after it ends, without another spoken handoff.]
+
+
+On slide 8, Sida alone says "Here is our contribution." You do not speak.
+
+Q&A OWNERSHIP
+Evidence-to-feature connections, technical workflow, source records and demo setup.
+Explain your own actual contribution if asked. Aim for 20-30 seconds per answer.
+
+IF THE ACTUAL VIDEO IS 2:30
+Omit about 10 seconds per presenter. Keep the full 2-minute Q&A.
+A, slide 2: omit this sentence (16 words):
+"Some records also suggest that existing notes or chat already meet the need, without another tool."
+B, slide 3: omit this sentence (14 words):
+"A scenario illustrated how a missed condition could make an otherwise plausible reply unsuitable."
+C, slide 7: omit this sentence (14 words):
+"Next, each person will try both alert rules with matched cases and balanced order."
+The visible slides retain these points; do not read them again.
+
+Revised speaking budgets: A 105 seconds / 146 words;
+B 105 seconds / 146 words; C 110 seconds / 140 words.
+Total 432 words, 320 seconds speech + 150 video + 10 buffer = 480 seconds.
+At the rehearsal pace, predicted speech is 94.6, 94.6, 90.7 seconds respectively.
+
+Revised clock:
+Slide 1: A 0:00-0:25.
+Slide 2: A 0:25-1:20.
+Slide 3: A 1:20-1:45, then B 1:45-2:30.
+Slide 4: B 2:30-3:20.
+Slide 5: B intro 3:20-3:30; video 3:30-6:00; C debrief 6:00-6:25.
+Slide 6: C 6:25-7:00.
+Slide 7: C 7:00-7:45.
+Slide 8: C 7:45-7:50.
+Buffer 7:50-8:00; Q&A 8:00-10:00.
+
+If the video is 1:45, keep the main script and retain the extra 15 seconds as
+buffer. If it exceeds 2:30, revise the content and rehearse again rather than
+borrowing Q&A time or speaking faster. Preserve the continuous original;
+label any shortened waiting periods in the presentation cut.

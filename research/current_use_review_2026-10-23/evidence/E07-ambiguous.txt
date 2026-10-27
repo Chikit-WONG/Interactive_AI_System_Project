@@ -1,0 +1,133 @@
+Browser tab: 3, Title: "Meeting Cue · Meeting companion", URL: "http://127.0.0.1:8876/".
+0 AXWebArea Meeting Cue · Meeting companion, URL: 127.0.0.1:8876/
+	1 container
+		2 link Description: Meeting Cue, Value: 127.0.0.1:8876/
+		122 text Text input
+		4 container connection-state
+			123 text Local service connected
+		6 button Description: Switch to Chinese, ID: language-toggle
+		7 button Feedback, ID: feedback-open
+		8 link Description: Record demo, Value: 127.0.0.1:8876/recorder.html
+		9 button Export log, ID: export-log
+	10 container
+		11 text PARTIAL PARTICIPATION
+		12 heading Rejoin when your input matters., Value: 1
+			13 text Rejoin when your input matters.
+		14 text Check the source, consider your role and decide how to respond. Use beside Tencent Meeting; this is a standalone companion.
+		15 container Session controls
+			124 text Session running
+			17 container Description: Total active time, ID: meeting-clock
+				125 text 06:47
+			126 text The session timer is running. Turn on audio capture, replay and automatic analysis separately. Stopping preserves the records.
+			20 button (disabled) Start session, ID: start-session
+			21 button Stop session, ID: stop-session
+			22 button New session, ID: reset-meeting
+		23 container 01 Set your role
+			24 heading 01 Set your role, Value: 2, ID: setup-title
+				25 text 01 Set your role
+			26 text Saved for the next analysis
+			27 container
+				28 text Your name
+				29 text field (settable) Your name, Value: <redacted>
+			30 container
+				31 text Your role in the meeting
+				32 text field (settable) Your role in the meeting, Value: Project materials coordinator, ID: user-role
+			33 container
+				34 text Your responsibilities
+				35 text entry area (settable) Your responsibilities, ID: user-responsibilities, Value: Confirm my rehearsal availability and check presentation materials. I am not responsible for booking rooms.
+			36 container
+				37 button (expanded) Context and response preferences, Secondary Actions: Collapse
+					38 text Context and response preferences
+				39 text Facts and constraints you know
+				40 text entry area (settable) Facts and constraints you know, ID: user-context, Value: Tomorrow I cannot arrive before 10:30 AM. I can join a rehearsal at 10:40 AM. I cannot commit to 10:20 AM.
+		41 container 02 Receive meeting content
+			42 heading 02 Receive meeting content, Value: 2, ID: transcript-title
+				43 text 02 Receive meeting content
+			127 text 4 utterance(s)
+			45 tab group Input source
+				46 tab (selected, settable, boolean) Paste text, Value: 1, ID: manual-tab
+				47 tab (selectable, settable, boolean) Microphone, Value: 0, ID: microphone-tab
+				48 tab (selectable, settable, boolean) Scripted replay, Value: 0, ID: replay-tab
+			49 container Description: Current input and analysis status, ID: monitor-status
+				50 text INPUT STATUS
+				128 text Input: Text input · no audio capture
+				129 text Latest text: 47s ago · u4 · Text input
+				130 text Automatic analysis: on · submits after a 4s pause or 12s of input; waits for the previous request
+				54 text Suggestions appear on this page. Keep the assistant window visible while working.
+			55 container Description: Paste text, ID: manual-source
+				56 container
+					57 text Speaker
+					58 text field (settable) Speaker, Value: Speaker not identified, ID: speaker-name
+				59 text New utterance
+				60 text entry area (settable) New utterance, ID: transcript-input
+				61 text Click Add to transcript after entering text. Only recorded utterances are sent to DeepSeek for analysis.
+				62 text Ctrl / ⌘ + Enter to add
+				63 button Add to transcript, ID: add-transcript
+			64 heading Transcript, Value: 3
+				65 text Transcript
+			66 button Catch up: last 60s, ID: catchup-button
+			67 container Description: Current meeting transcript, ID: transcript-list
+				131 container
+					132 text u1 Sam Text input 14:00:21 I have uploaded the latest project files. This is just a progress update. Alex does not need to reply.
+				133 container
+					134 text u2 Sam Text input 14:01:37 Alex, could you review the cover color by six this evening? We can continue without that decision, so there is no need to answer now.
+				135 container
+					136 text u3 Jordan Text input 14:02:36 Alex, can you join the rehearsal at ten twenty tomorrow morning? Please confirm now. The room administrator is waiting, and we need your answer before we can book the room.
+				137 container
+					138 text u4 Speaker not identified Text input 14:05:40 Can you approve the room booking now? I need an answer before I continue.
+		74 container 03 Decide how to participate
+			75 heading 03 Decide how to participate, Value: 2, ID: assistant-title
+				76 text 03 Decide how to participate
+			139 text 3 suggestion(s)
+			78 container
+				79 checkbox (settable, integer) Description: Analyze new utterances automatically Enable once; new content will be analyzed as it arrives, Value: 1, ID: auto-analyze
+				80 text Analyze new utterances automatically Enable once; new content will be analyzed as it arrives
+			140 text On
+			82 text New text is analyzed after a 4s pause. During continuous input, a batch is submitted after 12s. Each batch waits for the previous request.
+			141 text Automatic analysis is on. New utterances are submitted without repeated clicks.
+			84 button Analyze now, ID: analyze-button
+			85 text Process or retry immediately when needed. Automatic analysis can be turned off at any time.
+			142 text Analysis updated · through u4. Check the source before acting.
+			87 button (collapsed) What is sent for analysis?, Secondary Actions: Expand
+				88 text What is sent for analysis?
+			89 container summary-box
+				90 text DISCUSSION SUMMARY
+				143 text Sam posted a no-reply progress update on uploaded project files and asked Alex to review the cover color by six this evening, noting no immediate answer is needed. Jordan asked Alex to confirm a 10:20 AM rehearsal tomorrow so the room could be booked; this was already handled via Alex's confirmed reply that 10:20 does not work and 10:40 might. An unidentified speaker then asked for approval of the room booking, which relates to the rehearsal timing already addressed but does not name Alex or establish who is being asked.
+				144 text Analyzed through u4
+			93 container Suggestion filters
+				94 button All 3
+					95 text All 
+					145 text 3
+				97 button Respond now 1
+					98 text Respond now 
+					146 text 1
+				100 button Later 2
+					101 text Later 
+					147 text 2
+				103 button For awareness 0
+					104 text For awareness 
+					148 text 0
+			106 container alert-list
+				149 container
+					150 text Later Needs review
+					151 heading Will Alex review the cover color by six this evening?, Value: 3
+						152 text Will Alex review the cover color by six this evening?
+					153 text Sam asked Alex directly to review the cover color today, which fits Alex's responsibility for presentation materials. The team does not need this decision to proceed, so it can wait until later. Sources u2
+					154 button Review & respond
+				155 container
+					156 text Respond now Previous draft copied · edits need confirmation
+					157 heading Value: 3, Can Alex join the rehearsal at ten twenty tomorrow morning, and what should be told to the room administrator waiting on the answer?
+						158 text Can Alex join the rehearsal at ten twenty tomorrow morning, and what should be told to the room administrator waiting on the answer?
+					159 text Jordan explicitly asks for confirmation now and ties the room booking to it, so the discussion cannot proceed without a response. Alex's own availability facts conflict with the requested time, so the conflict needs to be resolved by Alex. Sources u3
+					160 button Review & respond
+				161 container
+					162 text Later Needs review
+					163 heading Value: 3, An unidentified speaker asks for approval of the room booking before continuing. Is this directed at Alex, and if so, does the confirmed 10:40 rehearsal start resolve it?
+						164 text An unidentified speaker asks for approval of the room booking before continuing. Is this directed at Alex, and if so, does the confirmed 10:40 rehearsal start resolve it?
+					165 text Room booking is outside Alex's stated responsibilities, which cover confirming rehearsal availability and checking presentation materials, not booking rooms. The request is also from an unidentified speaker and does not name Alex. Alex's confirmed position (10:20 not possible, 10:40 possible) may already be what the booking depends on, so a brief check is enough rather than an immediate response. Sources u4 · u3
+					166 button Review & respond
+			119 text AI suggestions may be wrong. Copying does not send to Tencent Meeting; review the reply and send it in the meeting yourself.
+		120 text DeepSeek · deepseek-flash · Meeting Cue 0.3.0
+		121 text Records are held in local server memory · export before restarting
+
+The focused UI element is 0 AXWebArea Meeting Cue · Meeting companion, URL: 127.0.0.1:8876/

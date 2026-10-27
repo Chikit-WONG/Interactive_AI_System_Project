@@ -1,0 +1,591 @@
+{
+  "schemaVersion": "1.0",
+  "title": "公开经历证据分析：从案例到可被否定的原型假设",
+  "analysisDate": "2026-10-16",
+  "inputs": [
+    "../public_user_cases/cases.json",
+    "../public_user_cases/sources.json"
+  ],
+  "evidenceBoundary": {
+    "unit": "14 条公开经历片段；不是 14 名独立参与者，也不是 14 份问卷",
+    "identityAndFactsIndependentlyVerified": false,
+    "newlyRecruitedParticipants": 0,
+    "modelOutputsUsed": false,
+    "sampling": "目的性便利采样，用于发现情境、既有方法和反例；不估计人群普遍率。",
+    "meaningOfStrongDirect": "强/直接仅指文本明确出现远程会议、通话、平台或远程参与方式，不表示研究质量强、因果关系成立或身份已核实。",
+    "noCompletedSurvey": "Q1/Q3 的四周频次及 Q9/Q10 的本项目方案偏好均未报告；其他题号只是历史材料相关性映射。",
+    "sourceIndependence": "按来源簇组织证据，保留同簇的不同观点，但不当作独立重复验证。不同簇也不代表统计独立样本。"
+  },
+  "classification": {
+    "directRemote": {
+      "label": "明确远程情境（8 条）",
+      "count": 8,
+      "caseIds": [
+        "PU01",
+        "PU03",
+        "PU06",
+        "PU08",
+        "PU09",
+        "PU10",
+        "PU11",
+        "PU12"
+      ],
+      "sourceClusterIds": [
+        "PS01",
+        "PS02",
+        "PS04",
+        "PS05",
+        "PS06",
+        "PS07",
+        "PS08"
+      ],
+      "cases": [
+        {
+          "caseId": "PU01",
+          "basis": "原文明确 Zoom 录屏、转写定位及原始音频核查。"
+        },
+        {
+          "caseId": "PU03",
+          "basis": "自述远程工作，并明确 Slack/Zoom 等会议协作工具。"
+        },
+        {
+          "caseId": "PU06",
+          "basis": "明确完全远程工作及 Zoom 会议。"
+        },
+        {
+          "caseId": "PU08",
+          "basis": "销售通话被转写和总结，开发者会后阅读；通话情境明确。"
+        },
+        {
+          "caseId": "PU09",
+          "basis": "明确 Teams Premium 会议笔记体验。"
+        },
+        {
+          "caseId": "PU10",
+          "basis": "明确远程成员和 Teams 视频会议；是管理者的亲历观察，不是被打断者本人需求。"
+        },
+        {
+          "caseId": "PU11",
+          "basis": "明确工位或远程接入状态会并戴耳机等待问题；不表示所有成员均远程。"
+        },
+        {
+          "caseId": "PU12",
+          "basis": "文章明确远程通话中的一次经历。"
+        }
+      ]
+    },
+    "threadContext": {
+      "label": "依赖远程讨论串语境（2 条）",
+      "count": 2,
+      "caseIds": [
+        "PU04",
+        "PU07"
+      ],
+      "sourceClusterIds": [
+        "PS02",
+        "PS04"
+      ],
+      "cases": [
+        {
+          "caseId": "PU04",
+          "basis": "在远程会议讨论串中报告摘要工具和团队规范；本条没有单独还原一次远程会议。"
+        },
+        {
+          "caseId": "PU07",
+          "basis": "在 Zoom/远程工作讨论串中报告集中安排会议；本条没有再次明确会议方式。"
+        }
+      ]
+    },
+    "adjacent": {
+      "label": "邻近证据（4 条）",
+      "count": 4,
+      "caseIds": [
+        "PU02",
+        "PU05",
+        "PU13",
+        "PU14"
+      ],
+      "sourceClusterIds": [
+        "PS01",
+        "PS03",
+        "PS08"
+      ],
+      "cases": [
+        {
+          "caseId": "PU02",
+          "basis": "本条只说明团队转写不准，没有独立确认远程方式。"
+        },
+        {
+          "caseId": "PU05",
+          "basis": "原帖及同作者补充只确认工作会议、周例会和无关议题；r/remotework 所在社区不能证明这次会议远程。没有 AI 或提醒系统使用记录。",
+          "permittedUse": "参与责任与被要求发言可能不一致的邻近情境。",
+          "prohibitedInference": "不能称为真实远程 AI 误报、系统误判、忽略通知的成功案例，或作者无任何回应义务。"
+        },
+        {
+          "caseId": "PU13",
+          "basis": "远程协作聊天中长文本未写完话题已变化；不是明确的会议音频回应。"
+        },
+        {
+          "caseId": "PU14",
+          "basis": "一般会议的协作补记经验，方式未报告。"
+        }
+      ]
+    }
+  },
+  "sourceClusters": [
+    {
+      "sourceId": "PS01",
+      "platform": "Reddit",
+      "caseIds": [
+        "PU01",
+        "PU02",
+        "PU14"
+      ],
+      "url": "https://www.reddit.com/r/ADHD_Programmers/comments/164jtrf/sometimes_taking_notes_in_a_meeting_helps_and/"
+    },
+    {
+      "sourceId": "PS02",
+      "platform": "Reddit",
+      "caseIds": [
+        "PU03",
+        "PU04"
+      ],
+      "url": "https://www.reddit.com/r/remotework/comments/1l4mzk7/remote_working_is_awesome_but_the_meetings_kind/"
+    },
+    {
+      "sourceId": "PS03",
+      "platform": "Reddit",
+      "caseIds": [
+        "PU05"
+      ],
+      "url": "https://www.reddit.com/r/remotework/comments/1r0fhn8/i_was_called_out/"
+    },
+    {
+      "sourceId": "PS04",
+      "platform": "Reddit",
+      "caseIds": [
+        "PU06",
+        "PU07"
+      ],
+      "url": "https://www.reddit.com/r/remotework/comments/1hxmirw/zoom_meetings_take_up_all_my_deep_work_time_any/"
+    },
+    {
+      "sourceId": "PS05",
+      "platform": "Hacker News",
+      "caseIds": [
+        "PU08",
+        "PU09"
+      ],
+      "url": "https://news.ycombinator.com/item?id=43773813"
+    },
+    {
+      "sourceId": "PS06",
+      "platform": "Workplace Stack Exchange",
+      "caseIds": [
+        "PU10"
+      ],
+      "url": "https://workplace.stackexchange.com/questions/198413/team-member-working-from-home-is-distracted-with-kids-while-on-video-calls-sho"
+    },
+    {
+      "sourceId": "PS07",
+      "platform": "Workplace Stack Exchange",
+      "caseIds": [
+        "PU11"
+      ],
+      "url": "https://workplace.stackexchange.com/questions/36126/meeting-etiquette"
+    },
+    {
+      "sourceId": "PS08",
+      "platform": "Stack Overflow Blog",
+      "caseIds": [
+        "PU12",
+        "PU13"
+      ],
+      "url": "https://stackoverflow.blog/2020/04/30/have-better-meetings-in-person-or-remote/"
+    }
+  ],
+  "deduplication": {
+    "narrativeFragments": 14,
+    "uniqueSourceClusters": 8,
+    "directRemoteFragments": 8,
+    "directRemoteSourceClusters": 7,
+    "directPlusThreadFragments": 10,
+    "directPlusThreadSourceClusters": 7,
+    "adjacentFragments": 4,
+    "sameVisibleAuthor": [
+      {
+        "caseIds": [
+          "PU12",
+          "PU13"
+        ],
+        "sourceClusterId": "PS08",
+        "note": "同一实践文章作者，不是两名参与者。"
+      }
+    ],
+    "method": "同一 thread/article 的不同片段共同归入 PS 来源簇。分析可以比较同簇相反观点，但不累加成独立支持票数。PU02/PU14 与 PU01 共簇，PU04 与 PU03 共簇，PU07 与 PU06 共簇，PU08 与 PU09 共簇，PU12 与 PU13 共簇。相同案例可以关联多条发现，各发现计数不可相加。"
+  },
+  "findings": [
+    {
+      "findingId": "F01",
+      "title": "部分参与包括自行补回信息，不总需要即时加入或回应",
+      "observed": [
+        {
+          "caseIds": [
+            "PU01"
+          ],
+          "sourceClusterIds": [
+            "PS01"
+          ],
+          "fact": "自述不用完整 Zoom 录屏，而使用可检索转写与音频片段。"
+        },
+        {
+          "caseIds": [
+            "PU08"
+          ],
+          "sourceClusterIds": [
+            "PS05"
+          ],
+          "fact": "开发者自述会后读销售通话摘要已有价值。"
+        }
+      ],
+      "counterEvidenceOrBoundary": [
+        {
+          "caseIds": [
+            "PU09"
+          ],
+          "fact": "摘要可能只有话题概括而缺少个人真正需要的内容；与 PU08 同簇，不当独立重复。"
+        },
+        {
+          "caseIds": [
+            "PU10"
+          ],
+          "fact": "另一个实际 Teams 情境存在需要重复的反馈请求，不能把所有贡献都推迟到会后。"
+        }
+      ],
+      "interpretation": "有理由把‘我主动补看’与‘系统要求我回应’分开，但材料没有比较主动补看与推送提醒的效果。",
+      "hypothesis": {
+        "id": "H01",
+        "text": "当目标是恢复已发生的讨论、且当前没有必须即时作出的贡献时，自行选择补看的时间可保留主任务控制权；成效取决于是否找到足以理解的信息，而非是否点开过面板。",
+        "scope": "近期有真实部分参会经历、能区分信息需求与贡献需求的目标用户。"
+      },
+      "prototypeChange": {
+        "status": "已实现的初版功能，尚无真人效果验证",
+        "implementation": "recentContext 快照及‘回看最近 60 秒’，保留完整记录入口，记录打开/刷新时段；不自动把补看记为处理完成。",
+        "evidenceGap": "60 秒是演示参数，公开材料没有支持该窗口长度；静态脚本也不能验证真实转写质量。"
+      },
+      "humanValidation": {
+        "method": "先访谈一个真实补看事件，确认当时要知道什么及最迟何时知道。试用中采用内容匹配的两个短场景，比较现有完整记录入口与增加主动补看入口，交叉安排顺序；不同时改变提醒策略。",
+        "observations": [
+          "能否找到回答具体会议问题的来源",
+          "理解题正确性与关键约束遗漏",
+          "补看后是否继续原任务",
+          "为找更早信息是否反复切换记录"
+        ],
+        "avoid": "不给‘看得越快越好’或‘必须使用新入口’的提示；不将打开次数作为理解成功。"
+      },
+      "possibleDisconfirmation": [
+        "参与者主要需要超过 60 秒的历史，新入口增加查找与切换负担。",
+        "已有摘要或完整记录足以满足需求，新入口没有可辨别的任务收益。",
+        "所谓信息需求实际有时限，延后补看造成遗漏的有效贡献。"
+      ]
+    },
+    {
+      "findingId": "F02",
+      "title": "是否应回应需要结合角色与当时目标，用户拒绝也不能自动视为系统误报",
+      "observed": [
+        {
+          "caseIds": [
+            "PU05"
+          ],
+          "sourceClusterIds": [
+            "PS03"
+          ],
+          "fact": "邻近案例中，作者认为当前话题与自身工作联系有限，被要求发言后说明知识边界并提供自己的更新；不是 AI 提醒经历。"
+        },
+        {
+          "caseIds": [
+            "PU10"
+          ],
+          "sourceClusterIds": [
+            "PS06"
+          ],
+          "fact": "管理者观察到实际 Teams 会议中的反馈请求需要重复，说明有些参与请求确实仍未得到满足。"
+        }
+      ],
+      "counterEvidenceOrBoundary": [
+        {
+          "caseIds": [
+            "PU11"
+          ],
+          "fact": "开发者已有戴耳机等待问题的做法，可能无需新的判断界面。"
+        },
+        {
+          "caseIds": [
+            "PU05"
+          ],
+          "fact": "原帖无法证明作者完全无需回应，也不能确定上级请求客观上不合理；只能保留双方目标可能不同的解释。"
+        }
+      ],
+      "interpretation": "原型需要表达‘用户判断无需我回应’这一状态，并与已确认回复分开；这是一项待检验设计选择。",
+      "hypothesis": {
+        "id": "H02",
+        "text": "在角色职责不匹配、已通过别处处理和只需知悉的情境中，明确记录无需回应的原因可以减少未解决状态的歧义；在确有贡献责任的情境中，它也可能掩盖漏答。"
+      },
+      "prototypeChange": {
+        "status": "已实现的初版功能，尚无真人效果验证",
+        "implementation": "markNotNeeded 接收明确原因，支持 restoreAlert；不创建回复，不将关键未答事项自动视作完成；日志标注 user judgment、有效性未验证。",
+        "evidenceGap": "PU05 仅作为邻近情境启发，不作为远程误报率、分类准确率或该功能有效性的证据。"
+      },
+      "humanValidation": {
+        "method": "用访谈还原职责与回应时限如何确定；试用安排‘确实无需新行动’及‘确有不可替代信息’两种内容匹配场景，允许参与者使用已有做法或新状态。会后询问当时理解，再以预先写明的角色约束和任务目标核对。",
+        "observations": [
+          "选择无需回应的具体理由是否与情境相符",
+          "是否知道该操作没有向会议发送回应",
+          "是否误把需澄清/需转交理解为无需处理",
+          "恢复后是否仍找到原问题与期限"
+        ],
+        "avoid": "不能把自报不相关直接编码为系统误报，也不能把关闭按钮算有效参与。"
+      },
+      "possibleDisconfirmation": [
+        "参与者把该状态误以为已经告知其他参会者，造成责任落空。",
+        "具有必要信息的角色误选无需回应，漏答比原流程更多。",
+        "关闭、忽略或一句澄清已足够，新增理由选择没有帮助。"
+      ]
+    },
+    {
+      "findingId": "F03",
+      "title": "收到信息与能够贡献是两件事；上下文需要解释当前目的和待作判断",
+      "observed": [
+        {
+          "caseIds": [
+            "PU12"
+          ],
+          "sourceClusterIds": [
+            "PS08"
+          ],
+          "fact": "作者描述远程通话中不了解会议目的，停留半小时仍未贡献。"
+        },
+        {
+          "caseIds": [
+            "PU09"
+          ],
+          "sourceClusterIds": [
+            "PS05"
+          ],
+          "fact": "作者认为 Teams 摘要过于概括，个人笔记更贴近真正关心的细节。"
+        },
+        {
+          "caseIds": [
+            "PU03"
+          ],
+          "sourceClusterIds": [
+            "PS02"
+          ],
+          "fact": "发帖者认为转写/摘要只有有限帮助，会议准备、记录与跟进也存在问题。"
+        }
+      ],
+      "counterEvidenceOrBoundary": [
+        {
+          "caseIds": [
+            "PU02"
+          ],
+          "fact": "邻近转写经历提示来源本身可能不可靠；来源卡不等于事实核验。"
+        },
+        {
+          "caseIds": [
+            "PU13"
+          ],
+          "fact": "同 PS08 作者在远程聊天中描述输入期间话题已改变；这只提示另测回复形成时间，不能直接推定会议迟答。"
+        }
+      ],
+      "interpretation": "可研究在既定阅读负担下，哪些信息组合支持有根据的贡献；不能只问模型能否生成更长摘要。",
+      "hypothesis": {
+        "id": "H03",
+        "text": "相近信息量下，说明当前待决事项、与角色有关的约束并可核查来源，可能比仅概括话题更能支持正确而有边界的回应；收益会随用户已有知识、权限及任务变化。"
+      },
+      "prototypeChange": {
+        "status": "原型已提供上下文、来源、草稿与确认；比较不同信息组合尚待准备",
+        "implementation": "保留为什么需要你、已发生来源和用户编辑确认；confirmedReplies 与 responseValidity 分开，不能把点击确认解释为有效回答。",
+        "evidenceGap": "现有脚本中的 why 与 suggestions 是预先写好的；不能据此声称 AI 能可靠判断责任或生成有效回复。"
+      },
+      "humanValidation": {
+        "method": "先依据真实事件确定候选信息缺口；采用相近字数、相同来源可靠性的两个版本，对比‘话题概括’和‘待决事项/角色约束’信息组织，每次只改变这一因素并平衡顺序。给出允许拒绝、澄清和转交的任务。",
+        "observations": [
+          "回复是否覆盖必要事实与约束",
+          "是否包含无依据承诺",
+          "参与者能否指出回复依据",
+          "是否知道何时应澄清或不作决定",
+          "另一项任务恢复和完成情况"
+        ],
+        "scoring": "先依据任务事实制定回答判定规则；两名研究者独立判断并讨论分歧，保留原始回答。不把参与者偏好或确认次数作为正确性。",
+        "avoid": "不以长度更多的一版对比更少的一版后直接归因于信息结构；小样本零差异不等于等效。"
+      },
+      "possibleDisconfirmation": [
+        "参与者主要缺的是权限或可联系的人，上下文组织变化无助于贡献。",
+        "卡片造成过度自信，错误来源被更顺畅地转成错误承诺。",
+        "已有知识足够，新增结构只增加阅读与恢复成本。"
+      ]
+    },
+    {
+      "findingId": "F04",
+      "title": "已有工具和组织安排可能已经够用，比较对象必须包含现有做法",
+      "observed": [
+        {
+          "caseIds": [
+            "PU04"
+          ],
+          "sourceClusterIds": [
+            "PS02"
+          ],
+          "fact": "讨论串回复报告摘要工具与议程、纪要责任等规范共同使用。"
+        },
+        {
+          "caseIds": [
+            "PU07"
+          ],
+          "sourceClusterIds": [
+            "PS04"
+          ],
+          "fact": "讨论串回复报告集中安排会议有助于留下完整工作时段，同时连续开会也会累。"
+        },
+        {
+          "caseIds": [
+            "PU08"
+          ],
+          "sourceClusterIds": [
+            "PS05"
+          ],
+          "fact": "明确通话情境中，会后读摘要已有实际用途。"
+        },
+        {
+          "caseIds": [
+            "PU11"
+          ],
+          "sourceClusterIds": [
+            "PS07"
+          ],
+          "fact": "明确包含远程方式的团队实践已有耳机旁听。"
+        },
+        {
+          "caseIds": [
+            "PU14"
+          ],
+          "sourceClusterIds": [
+            "PS01"
+          ],
+          "fact": "一般会议邻近经验中，发布笔记并请同伴补漏通常够用。"
+        }
+      ],
+      "counterEvidenceOrBoundary": [
+        {
+          "caseIds": [
+            "PU06"
+          ],
+          "fact": "另一明确远程发帖者仍感到 Zoom 会议挤占工作，但不能从主观感受推断减少会议必然提高产出。"
+        },
+        {
+          "caseIds": [
+            "PU10"
+          ],
+          "fact": "旁听或现有会议流程并不能保证所有反馈请求都被及时满足。"
+        }
+      ],
+      "interpretation": "项目价值应由它在哪些任务条件下提供额外帮助来界定，而不是证明所有人需要新的会议助手。",
+      "hypothesis": {
+        "id": "H04",
+        "text": "新增支持可能只在‘现有方法留下具体信息缺口，且存在角色特定的贡献需求’时有价值；仅获取背景、可延后处理或能调整会议安排时，现有方法可能更合适。",
+        "status": "边界假设，不是由公开片段证实的必要/充分条件。"
+      },
+      "prototypeChange": {
+        "status": "对后续试用设计的调整；不要求此刻增加更多功能",
+        "implementation": "现有两种提醒规则比较只能回答规则之间的差异；下一轮应另设参与者现有做法作为基线，并允许明确报告没有改进需求。",
+        "evidenceGap": "尚无新一轮真实用户试用；不能宣布原型优于 Teams、Copilot、耳机旁听或会后纪要。"
+      },
+      "humanValidation": {
+        "method": "招募时按近期真实部分参会事件筛选，而非只招对 AI 感兴趣者。先让参与者示范自己当前做法，找出仍未满足的具体结果；若确有缺口，再用内容匹配任务与原型比较。保留没有缺口的案例。",
+        "observations": [
+          "现有办法实际满足了什么",
+          "新的有效贡献是否伴随主任务代价",
+          "是否增加核验或解释成本",
+          "用户是否更愿意调整会议安排或会后补看"
+        ],
+        "avoid": "不要用‘没有提醒/没有任何工具’作为所有用户的虚弱基线，也不将满意度当性能证据。"
+      },
+      "possibleDisconfirmation": [
+        "目标用户大多找不到现有办法未满足的具体事件，需收窄或改变目标。",
+        "现有工具/组织规则已满足需要，原型没有额外收益或反而增加负担。",
+        "收益仅来自更好议程或更多信息，无法归因于提醒与参与支持机制。"
+      ]
+    }
+  ],
+  "validationAudit": {
+    "caseIdsUnique": true,
+    "classificationExclusiveAndExhaustive": true,
+    "classificationTotal": 14,
+    "sourceClusterTotal": 8,
+    "candidateSourcePagesAttempted": 13,
+    "sourcePagesIncluded": 8,
+    "sourcePagesExcluded": 5,
+    "excludedUnreadableFullText": 3,
+    "excludedScopeDateOrRedundancy": 2,
+    "sourceDatePolicy": "部分评论精确日期未报告，沿用 null 和线程日期；没有将线程日期冒充评论日期。",
+    "quotes": {
+      "basis": "按 cases.json excerpt.text 的空白分词重新计算，并与 sources.json 保存值核对。",
+      "nonRedditPerSourceLimitWords": 25,
+      "additionsInThisAnalysis": 0,
+      "sourceTotals": [
+        {
+          "sourceId": "PS01",
+          "platform": "Reddit",
+          "words": 22
+        },
+        {
+          "sourceId": "PS02",
+          "platform": "Reddit",
+          "words": 17
+        },
+        {
+          "sourceId": "PS03",
+          "platform": "Reddit",
+          "words": 11
+        },
+        {
+          "sourceId": "PS04",
+          "platform": "Reddit",
+          "words": 20
+        },
+        {
+          "sourceId": "PS05",
+          "platform": "Hacker News",
+          "words": 18
+        },
+        {
+          "sourceId": "PS06",
+          "platform": "Workplace Stack Exchange",
+          "words": 12
+        },
+        {
+          "sourceId": "PS07",
+          "platform": "Workplace Stack Exchange",
+          "words": 9
+        },
+        {
+          "sourceId": "PS08",
+          "platform": "Stack Overflow Blog",
+          "words": 22
+        }
+      ],
+      "allStoredCountsMatch": true,
+      "allNonRedditSourcesWithinLimit": true,
+      "totalQuotedWordsInCaseDataset": 131
+    },
+    "limitations": [
+      "采样与编码由研究团队目的性选择，尚无独立编码者复核。",
+      "选择公开可读帖子可能偏向表达强烈经历的人群。",
+      "未核验身份和原始会议记录，不能判定实际效果或因果机制。",
+      "跨年代、角色、工具和讨论语境材料不可合并计算发生率。"
+    ]
+  },
+  "classroomStatement": "我们补充整理了 14 条可追溯的公开经历片段，来自 8 个来源簇：8 条明确远程情境、2 条依赖远程讨论串语境、4 条邻近情境。它们促成主动补看和无需回应状态等候选设计，并保留现有方法够用的反例。新增招募参与者仍为 0；下一步用真实事件与原型试用检验这些设计何时有用、何时无用。"
+}
+

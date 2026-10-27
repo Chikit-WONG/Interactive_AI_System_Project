@@ -1,0 +1,942 @@
+{
+  "contract_version": "1.0",
+  "answer_encoding": "所有answered题answer为对象；字段全保留，原题可选补充可用空字符串/空数组。selection用规范中文标签，等级NEW用字符串，OLD矩阵用整数。",
+  "questions": {
+    "NEW_Q1": {
+      "fields": {
+        "selection": "string"
+      },
+      "required_fields": [
+        "selection"
+      ],
+      "options": {
+        "selection": [
+          "0 次",
+          "1–4 次",
+          "5–10 次",
+          "11–20 次",
+          "21–40 次",
+          "41 次及以上",
+          "记不清"
+        ]
+      },
+      "max_items": {}
+    },
+    "NEW_Q2": {
+      "fields": {
+        "meeting_topics": "string",
+        "role": "string"
+      },
+      "required_fields": [
+        "meeting_topics",
+        "role"
+      ],
+      "options": {},
+      "max_items": {}
+    },
+    "NEW_Q3": {
+      "fields": {
+        "meeting_purpose": "string",
+        "personal_goal": "string",
+        "actual_participation": "string"
+      },
+      "required_fields": [
+        "meeting_purpose",
+        "personal_goal",
+        "actual_participation"
+      ],
+      "options": {},
+      "max_items": {}
+    },
+    "NEW_Q4": {
+      "fields": {
+        "before": "string",
+        "during": "string",
+        "after": "string"
+      },
+      "required_fields": [
+        "before",
+        "during",
+        "after"
+      ],
+      "options": {},
+      "max_items": {}
+    },
+    "NEW_Q5": {
+      "fields": {
+        "selection": "string",
+        "episode": "string"
+      },
+      "required_fields": [
+        "selection",
+        "episode"
+      ],
+      "options": {
+        "selection": [
+          "有",
+          "没有",
+          "暂时想不到"
+        ]
+      },
+      "max_items": {}
+    },
+    "NEW_Q6": {
+      "fields": {
+        "selection": "string"
+      },
+      "required_fields": [
+        "selection"
+      ],
+      "options": {
+        "selection": [
+          "1 次",
+          "2–3 次",
+          "4–6 次",
+          "7 次及以上",
+          "记不清"
+        ]
+      },
+      "max_items": {}
+    },
+    "NEW_Q7": {
+      "fields": {
+        "selection": "string",
+        "impact_detail": "string"
+      },
+      "required_fields": [
+        "selection",
+        "impact_detail"
+      ],
+      "options": {
+        "selection": [
+          "0",
+          "1",
+          "2",
+          "3",
+          "4",
+          "无法判断"
+        ]
+      },
+      "max_items": {}
+    },
+    "NEW_Q8": {
+      "fields": {
+        "actual_method": "string",
+        "reason": "string"
+      },
+      "required_fields": [
+        "actual_method",
+        "reason"
+      ],
+      "options": {},
+      "max_items": {}
+    },
+    "NEW_Q9": {
+      "fields": {
+        "Q9a": "string",
+        "Q9b": "string",
+        "extra_time": "string"
+      },
+      "required_fields": [
+        "Q9a",
+        "Q9b",
+        "extra_time"
+      ],
+      "options": {
+        "Q9a": [
+          "0",
+          "1",
+          "2",
+          "3",
+          "4",
+          "仍在处理中，尚不能评价",
+          "无法判断"
+        ],
+        "Q9b": [
+          "0",
+          "1",
+          "2",
+          "3",
+          "4",
+          "无法判断"
+        ]
+      },
+      "max_items": {}
+    },
+    "NEW_Q10": {
+      "fields": {
+        "unmet_need": "string",
+        "possible_cause": "string"
+      },
+      "required_fields": [
+        "unmet_need",
+        "possible_cause"
+      ],
+      "options": {},
+      "max_items": {}
+    },
+    "NEW_Q11": {
+      "fields": {
+        "selection": "string"
+      },
+      "required_fields": [
+        "selection"
+      ],
+      "options": {
+        "selection": [
+          "没有",
+          "1 次",
+          "2–3 次",
+          "4–6 次",
+          "7 次及以上",
+          "记不清"
+        ]
+      },
+      "max_items": {}
+    },
+    "NEW_Q12": {
+      "fields": {
+        "desired_participation": "string",
+        "actual_participation": "string",
+        "reason": "string"
+      },
+      "required_fields": [
+        "desired_participation",
+        "actual_participation",
+        "reason"
+      ],
+      "options": {},
+      "max_items": {}
+    },
+    "NEW_Q13": {
+      "fields": {
+        "selection": "string",
+        "evidence": "string"
+      },
+      "required_fields": [
+        "selection",
+        "evidence"
+      ],
+      "options": {
+        "selection": [
+          "明显妨碍",
+          "有些妨碍",
+          "没有明显影响",
+          "有些帮助",
+          "明显帮助",
+          "既有帮助也有妨碍，难以合并评价",
+          "无法判断"
+        ]
+      },
+      "max_items": {}
+    },
+    "NEW_Q14": {
+      "fields": {
+        "items": "array",
+        "none_status": "string"
+      },
+      "required_fields": [
+        "items",
+        "none_status"
+      ],
+      "options": {},
+      "max_items": {
+        "items": 3
+      }
+    },
+    "NEW_Q15": {
+      "fields": {
+        "text": "string"
+      },
+      "required_fields": [
+        "text"
+      ],
+      "options": {},
+      "max_items": {}
+    },
+    "NEW_Q16": {
+      "fields": {
+        "selection": "string",
+        "task_example": "string",
+        "result_example": "string"
+      },
+      "required_fields": [
+        "selection",
+        "task_example",
+        "result_example"
+      ],
+      "options": {
+        "selection": [
+          "使用过",
+          "没有使用过",
+          "不确定所用工具是否属于 AI"
+        ]
+      },
+      "max_items": {}
+    },
+    "NEW_Q17": {
+      "fields": {
+        "willing_status": "string",
+        "willing_tasks": "array",
+        "unsuitable_tasks": "array"
+      },
+      "required_fields": [
+        "willing_status",
+        "willing_tasks",
+        "unsuitable_tasks"
+      ],
+      "options": {
+        "willing_status": [
+          "has_task",
+          "no_task",
+          "uncertain"
+        ]
+      },
+      "max_items": {}
+    },
+    "NEW_Q18": {
+      "fields": {
+        "trigger": "string",
+        "ai_action": "string",
+        "result_and_recipient": "string",
+        "success_criterion": "string"
+      },
+      "required_fields": [
+        "trigger",
+        "ai_action",
+        "result_and_recipient",
+        "success_criterion"
+      ],
+      "options": {},
+      "max_items": {}
+    },
+    "NEW_Q19": {
+      "fields": {
+        "selection": "string",
+        "reason": "string"
+      },
+      "required_fields": [
+        "selection",
+        "reason"
+      ],
+      "options": {
+        "selection": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "信息不足，无法判断"
+        ]
+      },
+      "max_items": {}
+    },
+    "NEW_Q20": {
+      "fields": {
+        "autonomous": "string",
+        "requires_confirmation": "string",
+        "human_only": "string"
+      },
+      "required_fields": [
+        "autonomous",
+        "requires_confirmation",
+        "human_only"
+      ],
+      "options": {},
+      "max_items": {}
+    },
+    "NEW_Q21": {
+      "fields": {
+        "text": "string"
+      },
+      "required_fields": [
+        "text"
+      ],
+      "options": {},
+      "max_items": {}
+    },
+    "NEW_Q22": {
+      "fields": {
+        "evidence_needed": "string",
+        "failure_response": "string"
+      },
+      "required_fields": [
+        "evidence_needed",
+        "failure_response"
+      ],
+      "options": {},
+      "max_items": {}
+    },
+    "NEW_Q23": {
+      "fields": {
+        "text": "string"
+      },
+      "required_fields": [
+        "text"
+      ],
+      "options": {},
+      "max_items": {}
+    },
+    "NEW_Q24": {
+      "fields": {
+        "text": "string"
+      },
+      "required_fields": [
+        "text"
+      ],
+      "options": {},
+      "max_items": {}
+    },
+    "NEW_Q25": {
+      "fields": {
+        "stop_conditions": "string",
+        "alternative": "string"
+      },
+      "required_fields": [
+        "stop_conditions",
+        "alternative"
+      ],
+      "options": {},
+      "max_items": {}
+    },
+    "NEW_Q26": {
+      "fields": {
+        "priority_and_reason": "string"
+      },
+      "required_fields": [
+        "priority_and_reason"
+      ],
+      "options": {},
+      "max_items": {}
+    },
+    "NEW_Q27": {
+      "fields": {
+        "text": "string"
+      },
+      "required_fields": [
+        "text"
+      ],
+      "options": {},
+      "max_items": {}
+    },
+    "OLD_Q1": {
+      "fields": {
+        "selection": "string"
+      },
+      "required_fields": [
+        "selection"
+      ],
+      "options": {
+        "selection": [
+          "几乎每天",
+          "每周数次",
+          "每周约一次",
+          "每月数次",
+          "很少或从不"
+        ]
+      },
+      "max_items": {}
+    },
+    "OLD_Q2": {
+      "fields": {
+        "selection": "string"
+      },
+      "required_fields": [
+        "selection"
+      ],
+      "options": {
+        "selection": [
+          "经常",
+          "偶尔",
+          "很少",
+          "从未"
+        ]
+      },
+      "max_items": {}
+    },
+    "OLD_Q3": {
+      "fields": {
+        "selected": "array",
+        "other_text": "string"
+      },
+      "required_fields": [
+        "selected",
+        "other_text"
+      ],
+      "options": {
+        "selected": [
+          "完全缺席其中一个会议",
+          "同时开着两个会议，来回切换注意力",
+          "请同学/同事会后转述",
+          "查看录屏或会议纪要",
+          "只在被 @ 或被点名时回来",
+          "其他"
+        ]
+      },
+      "max_items": {}
+    },
+    "OLD_Q4": {
+      "fields": {
+        "selected": "array",
+        "other_text": "string"
+      },
+      "required_fields": [
+        "selected",
+        "other_text"
+      ],
+      "options": {
+        "selected": [
+          "不知道讨论到了哪里",
+          "担心错过与自己有关的信息",
+          "担心错过需要我做决定的时刻",
+          "频繁切换注意力，影响主要任务",
+          "会后补信息成本很高",
+          "感觉自己“脱离”了团队",
+          "不知道什么时候值得重新加入",
+          "其他"
+        ]
+      },
+      "max_items": {
+        "selected": 3
+      }
+    },
+    "OLD_Q5": {
+      "fields": {
+        "r1": "string",
+        "r2": "string",
+        "r3": "string",
+        "r4": "string",
+        "r5": "string",
+        "r6": "string",
+        "r7": "string",
+        "r8": "string"
+      },
+      "required_fields": [
+        "r1",
+        "r2",
+        "r3",
+        "r4",
+        "r5",
+        "r6",
+        "r7",
+        "r8"
+      ],
+      "options": {
+        "r1": [
+          "立即提醒",
+          "稍后批量",
+          "会后汇总",
+          "无需提醒"
+        ],
+        "r2": [
+          "立即提醒",
+          "稍后批量",
+          "会后汇总",
+          "无需提醒"
+        ],
+        "r3": [
+          "立即提醒",
+          "稍后批量",
+          "会后汇总",
+          "无需提醒"
+        ],
+        "r4": [
+          "立即提醒",
+          "稍后批量",
+          "会后汇总",
+          "无需提醒"
+        ],
+        "r5": [
+          "立即提醒",
+          "稍后批量",
+          "会后汇总",
+          "无需提醒"
+        ],
+        "r6": [
+          "立即提醒",
+          "稍后批量",
+          "会后汇总",
+          "无需提醒"
+        ],
+        "r7": [
+          "立即提醒",
+          "稍后批量",
+          "会后汇总",
+          "无需提醒"
+        ],
+        "r8": [
+          "立即提醒",
+          "稍后批量",
+          "会后汇总",
+          "无需提醒"
+        ]
+      },
+      "max_items": {},
+      "row_labels": {
+        "r1": "有人直接点名或 @ 你",
+        "r2": "需要你做决定或表态",
+        "r3": "给你分配了新的任务",
+        "r4": "出现与你负责内容有关的重要变更",
+        "r5": "出现截止日期、时间或安排变化",
+        "r6": "会议主题发生较大变化",
+        "r7": "一般性进展更新",
+        "r8": "闲聊或低优先级讨论"
+      }
+    },
+    "OLD_Q6": {
+      "fields": {
+        "selected": "array",
+        "other_text": "string"
+      },
+      "required_fields": [
+        "selected",
+        "other_text"
+      ],
+      "options": {
+        "selected": [
+          "是否直接提到我",
+          "是否需要我的决定",
+          "是否影响我的任务或责任",
+          "事件紧急程度",
+          "决定不可逆或代价较高",
+          "会议参与者身份（如导师/客户）",
+          "我当前主要任务有多忙",
+          "我预先设置的个人偏好",
+          "其他"
+        ]
+      },
+      "max_items": {
+        "selected": 4
+      }
+    },
+    "OLD_Q7": {
+      "fields": {
+        "selection": "string"
+      },
+      "required_fields": [
+        "selection"
+      ],
+      "options": {
+        "selection": [
+          "高频短更新",
+          "低频详细摘要",
+          "取决于会议类型或当前任务",
+          "不确定"
+        ]
+      },
+      "max_items": {}
+    },
+    "OLD_Q8": {
+      "fields": {
+        "r1": "integer",
+        "r2": "integer",
+        "r3": "integer",
+        "r4": "integer",
+        "r5": "integer"
+      },
+      "required_fields": [
+        "r1",
+        "r2",
+        "r3",
+        "r4",
+        "r5"
+      ],
+      "options": {
+        "r1": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "r2": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "r3": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "r4": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "r5": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      "max_items": {},
+      "row_labels": {
+        "r1": "频繁的短更新会让我更有“参与会议”的感觉",
+        "r2": "频繁通知会显著打断我的主要任务",
+        "r3": "较少但更完整的摘要更适合我专注工作时使用",
+        "r4": "如果很久没有更新，我会担心自己错过重要进展",
+        "r5": "我希望系统根据会议进展和我的当前状态自动调整更新频率"
+      }
+    },
+    "OLD_Q9": {
+      "fields": {
+        "r1": "string",
+        "r2": "string",
+        "r3": "string",
+        "r4": "string"
+      },
+      "required_fields": [
+        "r1",
+        "r2",
+        "r3",
+        "r4"
+      ],
+      "options": {
+        "r1": [
+          "只提醒",
+          "AI候选答案",
+          "自己输入",
+          "临时加入会议"
+        ],
+        "r2": [
+          "只提醒",
+          "AI候选答案",
+          "自己输入",
+          "临时加入会议"
+        ],
+        "r3": [
+          "只提醒",
+          "AI候选答案",
+          "自己输入",
+          "临时加入会议"
+        ],
+        "r4": [
+          "只提醒",
+          "AI候选答案",
+          "自己输入",
+          "临时加入会议"
+        ]
+      },
+      "max_items": {},
+      "row_labels": {
+        "r1": "简单确认事实（如“你周二有空吗？”）",
+        "r2": "在几个明确方案中选择",
+        "r3": "表达个人意见或理由",
+        "r4": "讨论复杂、敏感或有争议的问题"
+      }
+    },
+    "OLD_Q10": {
+      "fields": {
+        "selection": "string"
+      },
+      "required_fields": [
+        "selection"
+      ],
+      "options": {
+        "selection": [
+          "非常愿意",
+          "比较愿意",
+          "看场景",
+          "不太愿意",
+          "完全不愿意"
+        ]
+      },
+      "max_items": {}
+    },
+    "OLD_Q11": {
+      "fields": {
+        "selected": "array",
+        "other_text": "string"
+      },
+      "required_fields": [
+        "selected",
+        "other_text"
+      ],
+      "options": {
+        "selected": [
+          "需要解释复杂背景",
+          "出现分歧或争论",
+          "决定影响较大",
+          "对方需要进一步追问",
+          "讨论涉及情绪或关系",
+          "我对 AI 摘要缺乏信心",
+          "其他"
+        ]
+      },
+      "max_items": {}
+    },
+    "OLD_Q12": {
+      "fields": {
+        "r1": "integer",
+        "r2": "integer",
+        "r3": "integer",
+        "r4": "integer",
+        "r5": "integer"
+      },
+      "required_fields": [
+        "r1",
+        "r2",
+        "r3",
+        "r4",
+        "r5"
+      ],
+      "options": {
+        "r1": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "r2": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "r3": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "r4": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "r5": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      "max_items": {},
+      "row_labels": {
+        "r1": "即使不能完整参加，我也希望知道会议当前处于什么阶段",
+        "r2": "只要关键时刻能及时提醒，我不需要知道所有讨论细节",
+        "r3": "我希望能设置“什么情况下才允许打断我”",
+        "r4": "我希望系统明确告诉其他参会者：我目前是“部分参与”状态",
+        "r5": "如果 AI 能帮助我在不持续分心的情况下保持会议感知，我愿意使用它"
+      }
+    },
+    "OLD_Q13": {
+      "fields": {
+        "selected": "array",
+        "other_text": "string"
+      },
+      "required_fields": [
+        "selected",
+        "other_text"
+      ],
+      "options": {
+        "selected": [
+          "设置优先级/关键词",
+          "只在被点名时提醒",
+          "调整更新频率",
+          "切换“专注模式/高感知模式”",
+          "查看最近 1–3 分钟发生了什么",
+          "一键临时加入会议",
+          "暂停所有更新",
+          "其他"
+        ]
+      },
+      "max_items": {}
+    },
+    "OLD_Q14": {
+      "fields": {
+        "text": "string"
+      },
+      "required_fields": [
+        "text"
+      ],
+      "options": {},
+      "max_items": {}
+    },
+    "NEW_M1": {
+      "fields": {
+        "text": "string"
+      },
+      "required_fields": [
+        "text"
+      ],
+      "options": {},
+      "max_items": {}
+    },
+    "NEW_M2": {
+      "fields": {
+        "text": "string"
+      },
+      "required_fields": [
+        "text"
+      ],
+      "options": {},
+      "max_items": {}
+    },
+    "NEW_M3": {
+      "fields": {
+        "text": "string"
+      },
+      "required_fields": [
+        "text"
+      ],
+      "options": {},
+      "max_items": {}
+    },
+    "NEW_M4": {
+      "fields": {
+        "text": "string"
+      },
+      "required_fields": [
+        "text"
+      ],
+      "options": {},
+      "max_items": {}
+    },
+    "NEW_M5": {
+      "fields": {
+        "text": "string"
+      },
+      "required_fields": [
+        "text"
+      ],
+      "options": {},
+      "max_items": {}
+    },
+    "NEW_M6": {
+      "fields": {
+        "text": "string"
+      },
+      "required_fields": [
+        "text"
+      ],
+      "options": {},
+      "max_items": {}
+    },
+    "NEW_M7": {
+      "fields": {
+        "text": "string"
+      },
+      "required_fields": [
+        "text"
+      ],
+      "options": {},
+      "max_items": {}
+    }
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "rules": [
+    {
+      "rule_id": "R1",
+      "if_question": "NEW_Q1",
+      "if_field": "selection",
+      "if_in": [
+        "0 次"
+      ],
+      "skip": [
+        "NEW_Q2",
+        "NEW_Q3",
+        "NEW_Q4",
+        "NEW_Q5",
+        "NEW_Q6",
+        "NEW_Q7",
+        "NEW_Q8",
+        "NEW_Q9",
+        "NEW_Q10",
+        "NEW_Q11",
+        "NEW_Q12",
+        "NEW_Q13",
+        "NEW_Q14",
+        "NEW_Q15",
+        "NEW_Q16",
+        "NEW_Q17",
+        "NEW_Q18",
+        "NEW_Q19",
+        "NEW_Q20",
+        "NEW_Q21",
+        "NEW_Q22",
+        "NEW_Q23",
+        "NEW_Q24",
+        "NEW_Q25",
+        "NEW_Q26",
+        "NEW_Q27",
+        "NEW_M1",
+        "NEW_M2",
+        "NEW_M3",
+        "NEW_M4",
+        "NEW_M5",
+        "NEW_M6",
+        "NEW_M7"
+      ],
+      "origin": "原问卷Q1结束逻辑"
+    },
+    {
+      "rule_id": "R2",
+      "if_question": "NEW_Q5",
+      "if_field": "selection",
+      "if_in": [
+        "没有",
+        "暂时想不到"
+      ],
+      "skip": [
+        "NEW_Q6",
+        "NEW_Q7",
+        "NEW_Q8",
+        "NEW_Q9",
+        "NEW_Q10"
+      ],
+      "origin": "原问卷Q5跳至Q11"
+    },
+    {
+      "rule_id": "R3",
+      "if_question": "NEW_Q11",
+      "if_field": "selection",
+      "if_in": [
+        "没有",
+        "记不清"
+      ],
+      "skip": [
+        "NEW_Q12",
+        "NEW_Q13"
+      ],
+      "origin": "原问卷Q11跳至Q14"
+    },
+    {
+      "rule_id": "R4",
+      "if_question": "NEW_Q17",
+      "if_field": "willing_status",
+      "if_in": [
+        "no_task",
+        "uncertain"
+      ],
+      "skip": [
+        "NEW_Q18",
+        "NEW_Q19",
+        "NEW_Q20",
+        "NEW_Q21",
+        "NEW_Q22"
+      ],
+      "origin": "原问卷Q17跳至Q23"
+    },
+    {
+      "rule_id": "M4",
+      "if_question": "NEW_Q17",
+      "if_field": "willing_status",
+      "if_in": [
+        "no_task",
+        "uncertain"
+      ],
+      "skip": [
+        "NEW_M4",
+        "NEW_M7"
+      ],
+      "origin": "本次可选模块适用规则：模块依赖Q18任务；不是新增原问卷跳题"
+    }
+  ],
+  "priority": "R1 overrides remaining NEW rules; OLD has no added skips",
+  "optional_policy": "NEW_M1,M2,M3,M5,M6默认回答；无相关经历可写没有/不适用而不编造痛点。NEW_M4,M7依赖Q18，未形成任务则跳过。所有被跳题保留对象、answer=null、skip_reason写rule_id。"
+}

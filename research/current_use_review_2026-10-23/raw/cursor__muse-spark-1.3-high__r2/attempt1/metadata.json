@@ -1,0 +1,22 @@
+{
+  "run_id": "cursor__muse-spark-1.3-high__r2",
+  "provider": "cursor",
+  "requested_model": "muse-spark-1.3-high",
+  "reported_models": [
+    "Muse Spark 1.3 300K High"
+  ],
+  "repeat": 2,
+  "attempt": 1,
+  "sessions": [
+    "6e95e48b-674a-4757-b864-4ab20f1b891b"
+  ],
+  "prompt_sha256": "685f987369fbdc5cc55602a2f73ca985628fa9b2e4ecd0a6f7ff33bc0e419259",
+  "started": "2026-10-23T06:13:08.164414+00:00",
+  "seconds": 31.6,
+  "exit_code": 0,
+  "timed_out": false,
+  "tool_event_count": 0,
+  "valid": true,
+  "errors": [],
+  "path": "raw\\cursor__muse-spark-1.3-high__r2\\attempt1"
+}

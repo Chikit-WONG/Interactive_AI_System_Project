@@ -1,0 +1,22 @@
+Browser tab: 3, Title: "Meeting Cue · Meeting companion", URL: "http://127.0.0.1:8876/".
+The following is a diff from the previous accessibility tree with ~ and + representing changed and added elements, respectively. Removed elements are summarized by ID range.
+Removed element IDs: 98, 135, 154, 156-164
+~				141 text 02:55
+~				145 text Latest text: 58s ago · u2 · Text input
+~			151 text 1 suggestion(s)
++			154 text Analysis updated · through u2. Check the source before acting.
+~				155 text Sam uploaded the latest project files as a progress update and said Alex does not need to reply. Sam then asked Alex to review the cover color by six this evening, but said the team can proceed without that decision, so there is no need to answer now.
++				156 text Analyzed through u2
+~				86 button All 1
++					157 text 1
++					158 text 0
+~				92 button Later 1
++					159 text 1
++					160 text 0
++			161 container
++				162 text Later Needs review
++				163 heading Will Alex review the cover color by six this evening?, Value: 3
++					164 text Will Alex review the cover color by six this evening?
++				165 text Sam asked Alex directly to review the cover color today, which fits Alex's responsibility for presentation materials. The team does not need this decision to proceed, so it can wait until later. Sources u2
++				166 button Review & respond
+The focused UI element is 0 AXWebArea Meeting Cue · Meeting companion, URL: 127.0.0.1:8876/

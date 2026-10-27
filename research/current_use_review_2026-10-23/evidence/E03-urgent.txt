@@ -1,0 +1,29 @@
+Browser tab: 3, Title: "Meeting Cue · Meeting companion", URL: "http://127.0.0.1:8876/".
+The following is a diff from the previous accessibility tree with ~ and + representing changed and added elements, respectively. Removed elements are summarized by ID range.
+Removed element IDs: 154, 173, 175-185
+~				158 text 04:16
+~				162 text Latest text: 1m 20s ago · u3 · Text input
+~			170 text 2 suggestion(s)
++			173 text Analysis updated · through u3. Check the source before acting.
+~				174 text Sam posted a project-file progress update with no reply needed and asked Alex to review the cover color by six this evening, but noted the decision is not blocking. Jordan now asks Alex to confirm joining the rehearsal at ten twenty tomorrow morning, saying the room administrator is waiting and the booking depends on that answer.
++				175 text Analyzed through u3
+~				86 button All 2
++					176 text 2
+~				89 button Respond now 1
++					177 text 1
++					178 text 1
++					179 text 0
++			180 container alert-list
++				181 container
++					182 text Later Needs review
++					183 heading Will Alex review the cover color by six this evening?, Value: 3
++						184 text Will Alex review the cover color by six this evening?
++					185 text Sam asked Alex directly to review the cover color today, which fits Alex's responsibility for presentation materials. The team does not need this decision to proceed, so it can wait until later. Sources u2
++					186 button Review & respond
++				187 container
++					188 text Respond now Needs review
++					189 heading Value: 3, Can Alex join the rehearsal at ten twenty tomorrow morning, and what should be told to the room administrator waiting on the answer?
++						190 text Can Alex join the rehearsal at ten twenty tomorrow morning, and what should be told to the room administrator waiting on the answer?
++					191 text Jordan explicitly asks for confirmation now and ties the room booking to it, so the discussion cannot proceed without a response. Alex's own availability facts conflict with the requested time, so the conflict needs to be resolved by Alex. Sources u3
++					192 button Review & respond
+The focused UI element is 0 AXWebArea Meeting Cue · Meeting companion, URL: 127.0.0.1:8876/

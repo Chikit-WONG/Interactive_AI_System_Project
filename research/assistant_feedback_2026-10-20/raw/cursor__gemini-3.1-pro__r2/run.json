@@ -1,0 +1,42 @@
+{
+  "run_id": "cursor__gemini-3.1-pro__r2",
+  "provider": "cursor",
+  "requested_model": "gemini-3.1-pro",
+  "replicate": 2,
+  "valid": true,
+  "status": "valid",
+  "accepted_attempt": 1,
+  "attempts": [
+    {
+      "attempt": 1,
+      "started_at": "2026-10-20T15:31:23.890045+00:00",
+      "timeout_seconds": 180,
+      "timed_out": false,
+      "exit_code": 0,
+      "process_id": 37224,
+      "ended_at": "2026-10-20T15:32:22.521748+00:00",
+      "provider": "cursor",
+      "requested_model": "gemini-3.1-pro",
+      "requested_reasoning_effort": "model_id",
+      "returned_models": [
+        "Gemini 3.1 Pro"
+      ],
+      "model_identity_status": "verified",
+      "session_ids": [
+        "af0a52e6-6bdb-4427-96cc-9d09fe158731"
+      ],
+      "input_sha256": "7486863387d749425546f9bd81d5480b40f8972eed1ce2169d17a6d8a18ece75",
+      "prompt_echo_matches": true,
+      "prompt_transport_note": "Exact text equality checked against user stream event.",
+      "tool_event_count": 0,
+      "tool_events": [],
+      "malformed_stream_line_numbers": [],
+      "extracted_markdown_fence": false,
+      "structure_errors": [],
+      "quota_or_rate_limit": false,
+      "valid": true,
+      "errors": [],
+      "raw_directory": "raw\\cursor__gemini-3.1-pro__r2\\attempt_1"
+    }
+  ]
+}

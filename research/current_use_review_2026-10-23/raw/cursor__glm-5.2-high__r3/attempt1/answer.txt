@@ -1,0 +1,96 @@
+```json
+{
+  "source_type": "model_simulation",
+  "exposure": "recorded_current_workflow",
+  "cases": [
+    {
+      "id": "E01",
+      "assessment": "helpful",
+      "reason": "u1 explicitly states Alex does not need to reply and is only a progress update. The analyzer returned itemCount 0 with no suggestion card, just a summary entry. This is the correct selective-attention outcome: a no-reply update did not surface a draft or alert, so Alex would not be interrupted while working on materials. The behavior matches the stated intent in the utterance and avoids false urgency."
+    },
+    {
+      "id": "E02",
+      "assessment": "helpful",
+      "reason": "u2 is a direct but explicitly nonblocking request (no need to answer now). The analyzer produced a single defer alert with a Later framing, a deadline of 'six this evening', and a draft that does not overcommit ('I can't confirm a decision... I will follow up'). The classification respects Sam's own statement that the team can continue without the decision, so Alex would not feel pressured to context-switch mid-task. The uncertainty note is appropriate."
+    },
+    {
+      "id": "E03",
+      "assessment": "helpful",
+      "reason": "u3 is genuinely urgent (confirm now, room administrator waiting). The analyzer classified it as action_now and the draft correctly declined 10:20 and proposed 10:40, drawing on Alex's privateFacts ('cannot arrive before 10:30', 'can join at 10:40'). The draft cited u3 implicitly and surfaced the conflict between requested time and availability. This is the strongest evidence of context-for-correct-reply: the profile constraints shaped the proposed time rather than producing a generic acknowledgment."
+    },
+    {
+      "id": "E04",
+      "assessment": "helpful",
+      "reason": "The details view exposed the original u3 text, the model's rationale, and explicit uncertainties (whether rehearsal can move, whether booking has flexibility). For Alex, who is not responsible for booking rooms, seeing the uncertainty about room flexibility before confirming is valuable: it signals what the model does and does not know, so Alex can decide whether to add caveats. Transparency here supports an informed confirm/edit decision rather than blind acceptance."
+    },
+    {
+      "id": "E05",
+      "assessment": "helpful",
+      "reason": "The operator's edited draft added 'Please check whether 10:40 works for everyone before booking,' which aligns with Alex's responsibility boundary (not booking rooms) and the profile's pending-confirmation stance. Confirm & copy succeeded and the UI honestly reported 'Copied; waiting for you to send or mark sent' rather than claiming a send. No actual message was sent, which is correctly represented. The edit-then-confirm flow gave Alex control over the exact commitment wording."
+    },
+    {
+      "id": "E06",
+      "assessment": "mixed",
+      "reason": "The second edit produced a clear warning ('Previous draft copied - edits need confirmation') and disabled 'I sent it' until renewed confirmation, which is a good safety guard against claiming a send of an unconfirmed text. However, the clipboard still holds the previous confirmed version, creating a stale-copy hazard: Alex could paste the older 10:30/10:40 wording while believing the newer 'subject to the team confirming the room' version is what will be sent. The guard protects the in-app state but not the OS clipboard, so the safety is partial."
+    },
+    {
+      "id": "E07",
+      "assessment": "mixed",
+      "reason": "The u4 alert correctly classifies as defer, correctly notes room booking is outside Alex's responsibilities, and correctly references the earlier 10:40 position. But examined against E05-E06, the draft says 'I've already said I can't make 10:20 tomorrow; I can arrive at 10:30 and join at 10:40,' which assumes a reply was actually sent. In this trace nothing was sent (only copied). The model has no signal that the confirmed draft is still unsent, so the u4 draft could lead Alex to reference a message the room never received. The unidentified-speaker handling is good; the sent-state assumption is the flaw."
+    },
+    {
+      "id": "E08",
+      "assessment": "helpful",
+      "reason": "Stop session disabled input/analysis, froze elapsed time, and preserved existing records (alerts, summary, events all retained in the export). For Alex stepping away from the materials-and-availability workflow, freezing state prevents new utterances from triggering analysis while away and preserves an auditable record. The clean stop with no data loss is a sound session boundary."
+    }
+  ],
+  "value_assessments": {
+    "selective_attention": {
+      "judgment": "supported",
+      "evidence_ids": ["E01", "E02"],
+      "reason": "E01 produced no alert for an explicit no-reply update, and E02 produced only a defer alert for an explicitly nonblocking request. The analyzer respected the speakers' own urgency signals rather than treating every direct mention as actionable, which is the core of selective attention."
+    },
+    "context_for_correct_reply": {
+      "judgment": "supported",
+      "evidence_ids": ["E03", "E04"],
+      "reason": "E03's draft used Alex's privateFacts to decline 10:20 and propose 10:40, and E04 exposed the rationale and uncertainties so Alex could verify the context use. The reply was shaped by profile constraints, not generic. The support is slightly tempered by E07's sent-state assumption, but for the u3 reply itself the context use is clear."
+    },
+    "control_over_commitments": {
+      "judgment": "mixed",
+      "evidence_ids": ["E05", "E06"],
+      "reason": "E05 shows strong control: edit, confirm, copy, with honest 'waiting to send' status. E06 shows the reconfirmation guard but also a stale-clipboard hazard: the OS clipboard retains an older confirmed version while the in-app state tracks the newer edit. Control is solid inside the app and partial across the clipboard boundary, so the value is supported only in part."
+    }
+  },
+  "would_use": "only_in_some_cases",
+  "best_fit": "Best fit is a text-based meeting where Alex needs to defer nonblocking requests, decline conflicting times using personal availability constraints, and keep an auditable record of drafts and decisions without auto-sending. The selective-attention and profile-aware drafting reduce interruption risk during focused materials work.",
+  "poor_fit": "Poor fit for any workflow where the clipboard is treated as the source of truth, or where replies must be referenced across later utterances (as in E07). Also poor fit when the user expects the tool to know whether a draft was actually sent; the model assumes prior sends that may only have been copied.",
+  "biggest_benefit": {
+    "evidence_ids": ["E03", "E05"],
+    "text": "Profile-aware drafting that declines an impossible time and proposes a feasible one, combined with an edit-confirm-copy flow that never auto-sends, lets Alex make a precise commitment without leaving the materials task or risking an unwanted send."
+  },
+  "biggest_risk": {
+    "evidence_ids": ["E06", "E07"],
+    "text": "The clipboard can hold a stale confirmed draft after a later edit, and downstream alerts (u4) assume earlier drafts were actually sent. Alex could paste outdated wording or reference a message the room never received, undermining the very commitment control the tool is meant to provide."
+  },
+  "improvements": [
+    {
+      "priority": "P0",
+      "evidence_ids": ["E06"],
+      "suggestion": "On re-edit after a copy, refresh the OS clipboard to the latest confirmed text (or explicitly mark the clipboard as stale and require a re-copy) so the pasted content always matches the in-app confirmed state."
+    },
+    {
+      "priority": "P0",
+      "evidence_ids": ["E07"],
+      "suggestion": "Track whether a confirmed draft was actually marked sent before letting later drafts reference it as already-said. If unsent, downstream drafts should phrase references as pending rather than 'I've already said.'"
+    },
+    {
+      "priority": "P1",
+      "evidence_ids": ["E02"],
+      "suggestion": "For defer alerts with an explicit deadline, surface the deadline in the alert card header (not only in the detail) so Alex can triage without expanding details while focused on other work."
+    }
+  ],
+  "safe_final_reply": "Hi Jordan. I can't make 10:20 AM tomorrow. I can arrive at 10:30 and join the rehearsal at 10:40 AM. Please check whether 10:40 works for everyone before booking the room, since I'm not the one who approves room bookings. I'll confirm once the time is agreed.",
+  "presentation_claim": "In this trace, Meeting Cue correctly deferred a nonblocking request, declined an impossible rehearsal time using Alex's stated availability, and produced an editable draft that was confirmed and copied without any automatic send.",
+  "not_established": "The trace does not establish that Alex actually sent any reply, that replies were received by participants, that audio or live chat integration works, that the tool improves human task performance or meeting outcomes, or that the clipboard and sent-state tracking are reliable across a real multi-message exchange."
+}
+```

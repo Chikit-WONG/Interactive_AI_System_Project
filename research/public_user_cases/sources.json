@@ -1,0 +1,220 @@
+{
+  "schemaVersion": 1,
+  "compiledOn": "2026-10-16",
+  "searchQueries": [
+    "site.reddit.com/r/remotework \"meetings\" \"called\" \"attention\"",
+    "site.reddit.com \"meeting\" \"missed\" \"transcript\" \"I\"",
+    "site.workplace.stackexchange.com \"meeting\" \"attention\" \"remote\"",
+    "site.news.ycombinator.com \"meetings\" \"transcript\" \"miss\"",
+    "site.workplace.stackexchange.com/questions \"meetings\" \"not paying attention\"",
+    "site.workplace.stackexchange.com/questions \"remote\" \"missed\" \"meeting\"",
+    "site.news.ycombinator.com \"I\" \"meeting notes\" \"use\" \"missed\"",
+    "site.reddit.com/r/remotework \"multitasking\" \"meetings\"",
+    "\"I never watch zoom recordings\" \"August\"",
+    "\"Posting best effort notes\" \"meeting\"",
+    "\"Consolidating my meetings into chunks\"",
+    "\"This is where CoPilot has been beneficial\""
+  ],
+  "screening": {
+    "search_result_screening": "先按标题与摘录筛选；搜索结果总数未系统计数，不报告检索召回率。",
+    "full_text_candidates_attempted": 13,
+    "included_source_clusters": 8,
+    "excluded_source_clusters": 5,
+    "excluded_unavailable_full_text": 3,
+    "excluded_scope_or_date_selection": 2,
+    "included_narrative_fragments": 14,
+    "counts_unit": "以上13是明确选择并尝试打开的来源页；不是所有搜索命中数。",
+    "inclusion": "公开可读，第一人称经历或亲历观察；与远程部分参与、会议信息恢复、贡献或既有替代方法有关。",
+    "exclusion": "只见搜索摘录、营销/一般建议无亲历事实、与目标关系较弱、无法核定日期且已有更合适材料。",
+    "adjacent_evidence": "PU02、PU05、PU14的单条叙述未确认远程方式；PU13为协作聊天，均已标记，不伪装成直接远程会议结果。"
+  },
+  "copyright": {
+    "non_reddit_quote_limit_words_per_source_page": 25,
+    "applies_across_cases_in_same_source": true
+  },
+  "sources": [
+    {
+      "id": "PS01",
+      "platform": "Reddit",
+      "source_type": "discussion_thread",
+      "title": "Sometimes taking notes in a meeting helps and other times I end up with this...",
+      "url": "https://www.reddit.com/r/ADHD_Programmers/comments/164jtrf/sometimes_taking_notes_in_a_meeting_helps_and/",
+      "thread_posted_date": "2023-08-29",
+      "date_basis": "搜索结果日期及页面日期页脚；所选评论仅显示相对日期，未冒充精确评论日期",
+      "locator": "首帖及转写、集体补记相关回复",
+      "case_ids": [
+        "PU01",
+        "PU02",
+        "PU14"
+      ],
+      "accessedAt": "2026-10-16",
+      "full_text_opened": true,
+      "identity_verified": false,
+      "usernames_retained": false,
+      "quotedWordsAcrossCases": 22
+    },
+    {
+      "id": "PS02",
+      "platform": "Reddit",
+      "source_type": "discussion_thread",
+      "title": "Remote working is awesome but the meetings kind of suck.",
+      "url": "https://www.reddit.com/r/remotework/comments/1l4mzk7/remote_working_is_awesome_but_the_meetings_kind/",
+      "thread_posted_date": "2025-06-06",
+      "date_basis": "搜索结果明确日期；评论页面仅有相对日期",
+      "locator": "首帖及以 This is where CoPilot has been beneficial 开头的回复",
+      "case_ids": [
+        "PU03",
+        "PU04"
+      ],
+      "accessedAt": "2026-10-16",
+      "full_text_opened": true,
+      "identity_verified": false,
+      "usernames_retained": false,
+      "quotedWordsAcrossCases": 17
+    },
+    {
+      "id": "PS03",
+      "platform": "Reddit",
+      "source_type": "discussion_thread",
+      "title": "I was called out",
+      "url": "https://www.reddit.com/r/remotework/comments/1r0fhn8/i_was_called_out/",
+      "thread_posted_date": "2026-02-09",
+      "date_basis": "搜索结果明确日期；原页正文核实，页面相对日期缓存可能陈旧",
+      "locator": "首帖及同作者说明会议议题停留45分钟的回复",
+      "case_ids": [
+        "PU05"
+      ],
+      "accessedAt": "2026-10-16",
+      "full_text_opened": true,
+      "identity_verified": false,
+      "usernames_retained": false,
+      "quotedWordsAcrossCases": 11
+    },
+    {
+      "id": "PS04",
+      "platform": "Reddit",
+      "source_type": "discussion_thread",
+      "title": "Zoom meetings take up all my deep work time - any strategies?",
+      "url": "https://www.reddit.com/r/remotework/comments/1hxmirw/zoom_meetings_take_up_all_my_deep_work_time_any/",
+      "thread_posted_date": "2025-01-09",
+      "date_basis": "页面日期页脚；所选评论只有相对时间",
+      "locator": "首帖及以 Consolidating my meetings into chunks of time 开头的回复",
+      "case_ids": [
+        "PU06",
+        "PU07"
+      ],
+      "accessedAt": "2026-10-16",
+      "full_text_opened": true,
+      "identity_verified": false,
+      "usernames_retained": false,
+      "quotedWordsAcrossCases": 20
+    },
+    {
+      "id": "PS05",
+      "platform": "Hacker News",
+      "source_type": "discussion_thread",
+      "title": "AI Horseless Carriages",
+      "url": "https://news.ycombinator.com/item?id=43773813",
+      "thread_posted_date": "2025-04-23",
+      "date_basis": "所选两条回复均显示 on April 23, 2025",
+      "locator": "以 When I was a founding engineer 开头、以及 I'm not a CTO 开头的两条回复",
+      "case_ids": [
+        "PU08",
+        "PU09"
+      ],
+      "accessedAt": "2026-10-16",
+      "full_text_opened": true,
+      "identity_verified": false,
+      "usernames_retained": false,
+      "quotedWordsAcrossCases": 18
+    },
+    {
+      "id": "PS06",
+      "platform": "Workplace Stack Exchange",
+      "source_type": "question_and_answer",
+      "title": "Team member working from home is distracted with kids while on video calls - should I say anything as her manager?",
+      "url": "https://workplace.stackexchange.com/questions/198413/team-member-working-from-home-is-distracted-with-kids-while-on-video-calls-sho",
+      "thread_posted_date": "2024-07-11",
+      "date_basis": "页面 asked Jul 11, 2024 at 20:09；时区未另行验证，不转换到本地时间",
+      "locator": "提问正文",
+      "case_ids": [
+        "PU10"
+      ],
+      "accessedAt": "2026-10-16",
+      "full_text_opened": true,
+      "identity_verified": false,
+      "usernames_retained": false,
+      "quotedWordsAcrossCases": 12
+    },
+    {
+      "id": "PS07",
+      "platform": "Workplace Stack Exchange",
+      "source_type": "question_and_answer",
+      "title": "Meeting etiquette",
+      "url": "https://workplace.stackexchange.com/questions/36126/meeting-etiquette",
+      "thread_posted_date": "2014-11-11",
+      "date_basis": "所选回答 answered Nov 11, 2014 at 22:26",
+      "locator": "以 Taking at face value your assertion 开头的回答，第3点中的亲历做法",
+      "case_ids": [
+        "PU11"
+      ],
+      "accessedAt": "2026-10-16",
+      "full_text_opened": true,
+      "identity_verified": false,
+      "usernames_retained": false,
+      "quotedWordsAcrossCases": 9
+    },
+    {
+      "id": "PS08",
+      "platform": "Stack Overflow Blog",
+      "source_type": "first_person_practitioner_article",
+      "title": "Have better meetings—in person or remote",
+      "url": "https://stackoverflow.blog/2020/04/30/have-better-meetings-in-person-or-remote/",
+      "thread_posted_date": "2020-04-30",
+      "date_basis": "页面文章日期 April 30, 2020",
+      "locator": "Have an agenda 和 Write in clear, easily digestible bits 两节中的第一人称经历；一般建议不纳入",
+      "case_ids": [
+        "PU12",
+        "PU13"
+      ],
+      "accessedAt": "2026-10-16",
+      "full_text_opened": true,
+      "identity_verified": false,
+      "usernames_retained": false,
+      "quotedWordsAcrossCases": 22
+    }
+  ],
+  "excluded": [
+    {
+      "id": "PX01",
+      "url": "https://www.reddit.com/r/ProductManagement/comments/15fan24",
+      "reason_code": "full_text_unavailable",
+      "reason": "搜索摘录含第一人称任务遗漏经历，但打开原页返回Cache miss；未纳入。"
+    },
+    {
+      "id": "PX02",
+      "url": "https://www.reddit.com/r/cscareerquestions/comments/1gsuxoe",
+      "reason_code": "full_text_unavailable",
+      "reason": "搜索摘录涉及线上会议多任务；原页无法打开，未以摘录充当核实全文。"
+    },
+    {
+      "id": "PX03",
+      "url": "https://www.reddit.com/r/tifu/comments/1c4sgrs",
+      "reason_code": "full_text_unavailable",
+      "reason": "搜索摘录为Teams转写纠纷经历；原页返回Cache miss，未纳入。"
+    },
+    {
+      "id": "PX04",
+      "url": "https://news.ycombinator.com/item?id=27664419",
+      "reason_code": "scope_selection",
+      "reason": "可读，但重点候选为普通会议录音或课堂笔记，未明确远程；本轮优先更贴近远程参与的材料。"
+    },
+    {
+      "id": "PX05",
+      "url": "https://news.ycombinator.com/item?id=47061194",
+      "reason_code": "date_and_redundancy",
+      "reason": "可读，但选中候选只显示相对日期，主题与已选有明确日期的AI笔记经历重叠，本轮不纳入。"
+    }
+  ]
+}
+

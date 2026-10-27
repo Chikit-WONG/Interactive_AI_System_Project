@@ -1,0 +1,445 @@
+{
+  "attempt": 1,
+  "started_at": "2026-10-16T00:23:55.482343+08:00",
+  "finished_at": "2026-10-16T00:24:24.604919+08:00",
+  "duration_seconds": 29.109,
+  "exit_code": 0,
+  "timed_out": false,
+  "timeout_seconds": 240,
+  "exception": null,
+  "owned_process_id": 66764,
+  "cli_path": "C:\\Users\\chikitwong\\AppData\\Local\\cursor-agent\\agent.ps1",
+  "command_arguments": [
+    "C:\\Program Files\\PowerShell\\7\\pwsh.exe",
+    "-NoLogo",
+    "-NoProfile",
+    "-File",
+    "D:\\Users\\chikitwong\\Desktop\\Class\\AIAA4435(L01)-Interactive_AI_Systems_Design_&_Implementation\\Midterm_Group_Project\\research\\model_simulation\\run_one.ps1",
+    "-ModelId",
+    "composer-2.5",
+    "-PromptPath",
+    "D:\\Users\\chikitwong\\Desktop\\Class\\AIAA4435(L01)-Interactive_AI_Systems_Design_&_Implementation\\Midterm_Group_Project\\research\\model_simulation\\raw\\composer-2.5__S1__r1\\attempt_1\\input.txt",
+    "-WorkspacePath",
+    "D:\\Users\\chikitwong\\Desktop\\Class\\AIAA4435(L01)-Interactive_AI_Systems_Design_&_Implementation\\Midterm_Group_Project\\research\\model_simulation\\neutral_workspaces\\composer-2.5__S1__r1\\attempt_1"
+  ],
+  "cli_mode": "ask",
+  "output_format": "stream-json",
+  "used_resume": false,
+  "fresh_session_requested": true,
+  "fresh_empty_workspace": "D:\\Users\\chikitwong\\Desktop\\Class\\AIAA4435(L01)-Interactive_AI_Systems_Design_&_Implementation\\Midterm_Group_Project\\research\\model_simulation\\neutral_workspaces\\composer-2.5__S1__r1\\attempt_1",
+  "tool_restriction": "Prompt prohibits all tools; ask mode is read-only; tool events audited. No hard tools-disable flag is exposed by this CLI.",
+  "proxy_mode": "process_scope_HTTP_PROXY_only",
+  "proxy_url": "http://127.0.0.1:7897",
+  "global_config_changed": false,
+  "temperature_and_seed": "CLI does not expose controls; provider defaults are unknown",
+  "prompt_source_path": "prompts/S1.txt",
+  "prompt_sha256": "aea25b92ab7ad2d18fa53b6de92091805bebee6b29ad3f95b0c4c8ec911536a3",
+  "run_id": "composer-2.5__S1__r1",
+  "model_id": "composer-2.5",
+  "scenario": "S1",
+  "replicate": 1,
+  "purpose": "fixed_input_repetition",
+  "source_type": "model_simulation",
+  "fictional_persona": true,
+  "reported_model": "Composer 2.5",
+  "session_id": "35465a00-5d72-4c95-912f-8a17aa80e821",
+  "conditions": {
+    "exit_code_zero": true,
+    "not_timed_out": true,
+    "successful_result": true,
+    "single_user_message": true,
+    "prompt_exact_match": true,
+    "nominal_model_match": true,
+    "session_id_present": true,
+    "zero_tool_events": true,
+    "zero_malformed_event_lines": true,
+    "zero_replacement_characters": true,
+    "response_validation_passed": false
+  },
+  "tool_event_count": 0,
+  "malformed_event_line_numbers": [],
+  "replacement_character_count": 0,
+  "stdout_sha256": "d2c30e0e653ad263f8bd647c67cc34392879830778f78be141c30c67f15b67d0",
+  "answer_characters": 7959,
+  "usage": {
+    "inputTokens": 18347,
+    "outputTokens": 3606,
+    "cacheReadTokens": 3840,
+    "cacheWriteTokens": 0
+  },
+  "validation": {
+    "valid": false,
+    "schema_valid": false,
+    "validator": "Restricted validator covering every keyword present in frozen response.schema.json plus explicit semantic and routing checks",
+    "expected_question_count": 48,
+    "observed_question_count": 48,
+    "counts": {
+      "answered": 48,
+      "skipped": 0,
+      "missing": 0,
+      "model_assumption_questions": 11,
+      "instrument_constraint_questions": 0
+    },
+    "errors": [
+      "$.questions.NEW_Q14:oneOf_failure",
+      "$.questions.NEW_Q14.answer.items[0]:expected_string",
+      "NEW_M3:model_assumption_without_reference"
+    ],
+    "warnings": [
+      "NEW_Q6:frequency_without_explicit_assumption_reference",
+      "NEW_Q11:frequency_without_explicit_assumption_reference"
+    ],
+    "per_question": {
+      "NEW_Q1": {
+        "present": true,
+        "status": "answered",
+        "expected_skip_rules": [],
+        "assumption_reference_count": 1,
+        "errors": []
+      },
+      "NEW_Q2": {
+        "present": true,
+        "status": "answered",
+        "expected_skip_rules": [],
+        "assumption_reference_count": 0,
+        "errors": []
+      },
+      "NEW_Q3": {
+        "present": true,
+        "status": "answered",
+        "expected_skip_rules": [],
+        "assumption_reference_count": 1,
+        "errors": []
+      },
+      "NEW_Q4": {
+        "present": true,
+        "status": "answered",
+        "expected_skip_rules": [],
+        "assumption_reference_count": 2,
+        "errors": []
+      },
+      "NEW_Q5": {
+        "present": true,
+        "status": "answered",
+        "expected_skip_rules": [],
+        "assumption_reference_count": 1,
+        "errors": []
+      },
+      "NEW_Q6": {
+        "present": true,
+        "status": "answered",
+        "expected_skip_rules": [],
+        "assumption_reference_count": 0,
+        "errors": []
+      },
+      "NEW_Q7": {
+        "present": true,
+        "status": "answered",
+        "expected_skip_rules": [],
+        "assumption_reference_count": 1,
+        "errors": []
+      },
+      "NEW_Q8": {
+        "present": true,
+        "status": "answered",
+        "expected_skip_rules": [],
+        "assumption_reference_count": 2,
+        "errors": []
+      },
+      "NEW_Q9": {
+        "present": true,
+        "status": "answered",
+        "expected_skip_rules": [],
+        "assumption_reference_count": 1,
+        "errors": []
+      },
+      "NEW_Q10": {
+        "present": true,
+        "status": "answered",
+        "expected_skip_rules": [],
+        "assumption_reference_count": 1,
+        "errors": []
+      },
+      "NEW_Q11": {
+        "present": true,
+        "status": "answered",
+        "expected_skip_rules": [],
+        "assumption_reference_count": 0,
+        "errors": []
+      },
+      "NEW_Q12": {
+        "present": true,
+        "status": "answered",
+        "expected_skip_rules": [],
+        "assumption_reference_count": 1,
+        "errors": []
+      },
+      "NEW_Q13": {
+        "present": true,
+        "status": "answered",
+        "expected_skip_rules": [],
+        "assumption_reference_count": 1,
+        "errors": []
+      },
+      "NEW_Q14": {
+        "present": true,
+        "status": "answered",
+        "expected_skip_rules": [],
+        "assumption_reference_count": 0,
+        "errors": []
+      },
+      "NEW_Q15": {
+        "present": true,
+        "status": "answered",
+        "expected_skip_rules": [],
+        "assumption_reference_count": 1,
+        "errors": []
+      },
+      "NEW_Q16": {
+        "present": true,
+        "status": "answered",
+        "expected_skip_rules": [],
+        "assumption_reference_count": 1,
+        "errors": []
+      },
+      "NEW_Q17": {
+        "present": true,
+        "status": "answered",
+        "expected_skip_rules": [],
+        "assumption_reference_count": 0,
+        "errors": []
+      },
+      "NEW_Q18": {
+        "present": true,
+        "status": "answered",
+        "expected_skip_rules": [],
+        "assumption_reference_count": 0,
+        "errors": []
+      },
+      "NEW_Q19": {
+        "present": true,
+        "status": "answered",
+        "expected_skip_rules": [],
+        "assumption_reference_count": 0,
+        "errors": []
+      },
+      "NEW_Q20": {
+        "present": true,
+        "status": "answered",
+        "expected_skip_rules": [],
+        "assumption_reference_count": 0,
+        "errors": []
+      },
+      "NEW_Q21": {
+        "present": true,
+        "status": "answered",
+        "expected_skip_rules": [],
+        "assumption_reference_count": 1,
+        "errors": []
+      },
+      "NEW_Q22": {
+        "present": true,
+        "status": "answered",
+        "expected_skip_rules": [],
+        "assumption_reference_count": 0,
+        "errors": []
+      },
+      "NEW_Q23": {
+        "present": true,
+        "status": "answered",
+        "expected_skip_rules": [],
+        "assumption_reference_count": 0,
+        "errors": []
+      },
+      "NEW_Q24": {
+        "present": true,
+        "status": "answered",
+        "expected_skip_rules": [],
+        "assumption_reference_count": 0,
+        "errors": []
+      },
+      "NEW_Q25": {
+        "present": true,
+        "status": "answered",
+        "expected_skip_rules": [],
+        "assumption_reference_count": 1,
+        "errors": []
+      },
+      "NEW_Q26": {
+        "present": true,
+        "status": "answered",
+        "expected_skip_rules": [],
+        "assumption_reference_count": 1,
+        "errors": []
+      },
+      "NEW_Q27": {
+        "present": true,
+        "status": "answered",
+        "expected_skip_rules": [],
+        "assumption_reference_count": 0,
+        "errors": []
+      },
+      "OLD_Q1": {
+        "present": true,
+        "status": "answered",
+        "expected_skip_rules": [],
+        "assumption_reference_count": 1,
+        "errors": []
+      },
+      "OLD_Q2": {
+        "present": true,
+        "status": "answered",
+        "expected_skip_rules": [],
+        "assumption_reference_count": 1,
+        "errors": []
+      },
+      "OLD_Q3": {
+        "present": true,
+        "status": "answered",
+        "expected_skip_rules": [],
+        "assumption_reference_count": 1,
+        "errors": []
+      },
+      "OLD_Q4": {
+        "present": true,
+        "status": "answered",
+        "expected_skip_rules": [],
+        "assumption_reference_count": 1,
+        "errors": []
+      },
+      "OLD_Q5": {
+        "present": true,
+        "status": "answered",
+        "expected_skip_rules": [],
+        "assumption_reference_count": 0,
+        "errors": []
+      },
+      "OLD_Q6": {
+        "present": true,
+        "status": "answered",
+        "expected_skip_rules": [],
+        "assumption_reference_count": 1,
+        "errors": []
+      },
+      "OLD_Q7": {
+        "present": true,
+        "status": "answered",
+        "expected_skip_rules": [],
+        "assumption_reference_count": 1,
+        "errors": []
+      },
+      "OLD_Q8": {
+        "present": true,
+        "status": "answered",
+        "expected_skip_rules": [],
+        "assumption_reference_count": 0,
+        "errors": []
+      },
+      "OLD_Q9": {
+        "present": true,
+        "status": "answered",
+        "expected_skip_rules": [],
+        "assumption_reference_count": 0,
+        "errors": []
+      },
+      "OLD_Q10": {
+        "present": true,
+        "status": "answered",
+        "expected_skip_rules": [],
+        "assumption_reference_count": 0,
+        "errors": []
+      },
+      "OLD_Q11": {
+        "present": true,
+        "status": "answered",
+        "expected_skip_rules": [],
+        "assumption_reference_count": 0,
+        "errors": []
+      },
+      "OLD_Q12": {
+        "present": true,
+        "status": "answered",
+        "expected_skip_rules": [],
+        "assumption_reference_count": 0,
+        "errors": []
+      },
+      "OLD_Q13": {
+        "present": true,
+        "status": "answered",
+        "expected_skip_rules": [],
+        "assumption_reference_count": 0,
+        "errors": []
+      },
+      "OLD_Q14": {
+        "present": true,
+        "status": "answered",
+        "expected_skip_rules": [],
+        "assumption_reference_count": 0,
+        "errors": []
+      },
+      "NEW_M1": {
+        "present": true,
+        "status": "answered",
+        "expected_skip_rules": [],
+        "assumption_reference_count": 1,
+        "errors": []
+      },
+      "NEW_M2": {
+        "present": true,
+        "status": "answered",
+        "expected_skip_rules": [],
+        "assumption_reference_count": 0,
+        "errors": []
+      },
+      "NEW_M3": {
+        "present": true,
+        "status": "answered",
+        "expected_skip_rules": [],
+        "assumption_reference_count": 0,
+        "errors": [
+          "model_assumption_without_reference"
+        ]
+      },
+      "NEW_M4": {
+        "present": true,
+        "status": "answered",
+        "expected_skip_rules": [],
+        "assumption_reference_count": 0,
+        "errors": []
+      },
+      "NEW_M5": {
+        "present": true,
+        "status": "answered",
+        "expected_skip_rules": [],
+        "assumption_reference_count": 0,
+        "errors": []
+      },
+      "NEW_M6": {
+        "present": true,
+        "status": "answered",
+        "expected_skip_rules": [],
+        "assumption_reference_count": 0,
+        "errors": []
+      },
+      "NEW_M7": {
+        "present": true,
+        "status": "answered",
+        "expected_skip_rules": [],
+        "assumption_reference_count": 0,
+        "errors": []
+      }
+    },
+    "required_skip_question_count": 0,
+    "semantic_limit": "Machine checks cannot establish realism or truthful attribution of every narrative claim; flagged source attribution and substantive content require human review."
+  },
+  "errors": [
+    "$.questions.NEW_Q14:oneOf_failure",
+    "$.questions.NEW_Q14.answer.items[0]:expected_string",
+    "NEW_M3:model_assumption_without_reference",
+    "response_validation_passed"
+  ],
+  "status": "failed_validation_or_execution",
+  "raw_directory": "raw/composer-2.5__S1__r1/attempt_1",
+  "json_fence_removed_for_parsing": false,
+  "retry_is_independent_sample": false
+}

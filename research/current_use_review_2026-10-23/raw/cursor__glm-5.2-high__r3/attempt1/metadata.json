@@ -1,0 +1,22 @@
+{
+  "run_id": "cursor__glm-5.2-high__r3",
+  "provider": "cursor",
+  "requested_model": "glm-5.2-high",
+  "reported_models": [
+    "GLM 5.2 High"
+  ],
+  "repeat": 3,
+  "attempt": 1,
+  "sessions": [
+    "6c52e42e-6fda-451a-9e6a-0f2d170df0a1"
+  ],
+  "prompt_sha256": "685f987369fbdc5cc55602a2f73ca985628fa9b2e4ecd0a6f7ff33bc0e419259",
+  "started": "2026-10-23T06:16:03.193608+00:00",
+  "seconds": 39.1,
+  "exit_code": 0,
+  "timed_out": false,
+  "tool_event_count": 0,
+  "valid": true,
+  "errors": [],
+  "path": "raw\\cursor__glm-5.2-high__r3\\attempt1"
+}

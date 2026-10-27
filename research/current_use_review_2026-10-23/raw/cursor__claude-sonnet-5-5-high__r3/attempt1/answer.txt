@@ -1,0 +1,96 @@
+```json
+{
+  "source_type": "model_simulation",
+  "exposure": "recorded_current_workflow",
+  "cases": [
+    {
+      "id": "E01",
+      "assessment": "helpful",
+      "reason": "u1 says it is a progress update and that Alex does not need to reply. The tool correctly made no card and only updated the summary (itemCount 0). As Alex, I would not be interrupted while working on materials. This is one clean, explicit example, so it says little about subtler non-requests."
+    },
+    {
+      "id": "E02",
+      "assessment": "mixed",
+      "reason": "Classifying the cover-color request as Defer and keeping the six-evening deadline is sensible, because Sam said no answer is needed now. The draft is weaker. It says the decision is 'not final' and promises to 'follow up once I get to it'. Sam asked only for a review, and that wording adds a vague commitment nobody requested. As Alex, I would keep the reminder and probably discard the draft."
+    },
+    {
+      "id": "E03",
+      "assessment": "helpful",
+      "reason": "u3 was labelled Respond now, with the question tied to the room booking and to u3. The draft refused 10:20 and offered 10:40, which matches the private facts and does not accept the booking task. The deadline field was null despite the 'confirm now' wording. 'Or let me know another time' could invite times Alex cannot meet. Overall it is a good starting point for a quick edit."
+    },
+    {
+      "id": "E04",
+      "assessment": "helpful",
+      "reason": "Showing the original u3, the rationale, the uncertainty (can the rehearsal move, is the booking flexible) and an editable draft lets Alex check the suggestion against the source before acting. It does not ask Alex to trust a bare recommendation. This was one inspection of one card, so it does not show that the detail view stays easy to scan under time pressure."
+    },
+    {
+      "id": "E05",
+      "assessment": "helpful",
+      "reason": "Alex could replace the draft with a more cautious version, and Confirm & copy worked. The state 'Copied; waiting for you to send or mark sent' is honest that nothing was sent. The operator's text still keeps the 10:20 refusal and 10:40 availability. The extra '10:30 arrival' detail is consistent with the profile but was not asked for. Sending was never tested."
+    },
+    {
+      "id": "E06",
+      "assessment": "helpful",
+      "reason": "After the second edit the UI showed 'Previous draft copied - edits need confirmation' and disabled 'I sent it in the meeting' until reconfirmation. This blocks marking an unconfirmed edit as sent. The remaining problem is that the clipboard still holds the older confirmed text, so a careless paste could send the wrong version. The warning reduces that risk but does not remove it."
+    },
+    {
+      "id": "E07",
+      "assessment": "mixed",
+      "reason": "Defer, the 'not directed at Alex' uncertainty and the refusal to approve a booking outside Alex's responsibilities are reasonable. But the summary says u3 'was already handled via Alex's confirmed reply'. The reply was only confirmed and copied, never sent, and was edited again afterward. The summary also softens 'can join 10:40' to 'might'. The u4 draft says 'I've already said' and reuses the E05 wording, not the pending E06 edit ('subject to the team confirming the room'). The export keeps only the E05 confirmed text and does not show the later unconfirmed edit. This could make Alex or a teammate believe the question was answered. It is a substantive trust problem."
+    },
+    {
+      "id": "E08",
+      "assessment": "helpful",
+      "reason": "Stop session disabled input and analysis, froze elapsed time and kept the records. That is a clean end state and prevents further analysis or edits after a meeting. The trace shows only this one stop, with no restart or data-handling checks."
+    }
+  ],
+  "value_assessments": {
+    "selective_attention": {
+      "judgment": "supported",
+      "evidence_ids": ["E01", "E02", "E03", "E07"],
+      "reason": "Across four clean text turns, the no-reply update produced no card, the nonblocking request produced Later, the urgent request produced Respond now, and the unclear speaker produced Defer. That is consistent with fewer interruptions. The sample is tiny and scripted, with clean English and manual input. No missed-alert rate, false-alarm rate or real-time behaviour is shown. Deferring a 'now' request from an unidentified speaker is defensible but arguable."
+    },
+    "context_for_correct_reply": {
+      "judgment": "mixed",
+      "evidence_ids": ["E03", "E04", "E07"],
+      "reason": "For u3 the profile (cannot commit to 10:20, can do 10:40, not responsible for rooms) was used correctly and the source was cited. For u4 the context was stale or overstated: the summary says the matter was 'already handled' and the draft reuses the earlier wording. The tool follows the profile well, but it does not reliably track the current status of Alex's own commitment."
+    },
+    "control_over_commitments": {
+      "judgment": "supported",
+      "evidence_ids": ["E04", "E05", "E06", "E08"],
+      "reason": "Alex had to review and edit drafts, confirm them, and reconfirm after edits. The UI states that nothing was sent and blocks 'I sent it' after an unconfirmed edit. This is the strongest part of the trace. The limits are the stale clipboard (E06) and the misleading summary and draft in E07. Actual sending was not tested."
+    }
+  },
+  "would_use": "only_in_some_cases",
+  "best_fit": "Low-volume text meetings where Alex is a secondary participant. Most messages are not for Alex, and a few time-sensitive requests need a checked reply based on stated availability. It suits cases where Alex wants an explicit confirmation step before anything is copied or sent.",
+  "poor_fit": "Fast or ambiguous conversations where the summary or later drafts might be treated as the source of truth. Also poor where several versions of a reply exist, since stale clipboard text and stale 'handled' claims could cause wrong commitments. Live audio and chat-send conditions are untested.",
+  "biggest_benefit": {
+    "evidence_ids": ["E03", "E04", "E05", "E06"],
+    "text": "The urgent request got a profile-grounded draft, source detail and uncertainty, and Alex stayed in control through edit-and-confirm gates that make clear nothing was sent."
+  },
+  "biggest_risk": {
+    "evidence_ids": ["E05", "E06", "E07"],
+    "text": "The system can describe a copied but unsent, later-edited reply as 'already handled'. It can also reuse the outdated confirmed wording in new drafts. Alex or teammates could then wrongly believe 10:40 was communicated or approved."
+  },
+  "improvements": [
+    {
+      "priority": "P0",
+      "evidence_ids": ["E05", "E06", "E07"],
+      "suggestion": "Give summaries and follow-up drafts the explicit commitment state (suggested, confirmed, copied, sent, edited-unconfirmed). They should never say 'handled' or 'already said' unless the user marked it sent, and should keep the user's wording instead of softening it."
+    },
+    {
+      "priority": "P0",
+      "evidence_ids": ["E06", "E07"],
+      "suggestion": "When a draft is edited after confirmation, mark dependent drafts and summaries as stale and regenerate them from the latest wording or from a neutral 'pending' state. Never reuse the superseded confirmed text."
+    },
+    {
+      "priority": "P1",
+      "evidence_ids": ["E06"],
+      "suggestion": "Warn directly on the stale clipboard, for example with a one-click 'copy current confirmed text' action, and include the pending unconfirmed edit in the export so the audit trail matches what the user saw."
+    }
+  ],
+  "safe_final_reply": "Thanks, Jordan. I can't make 10:20 tomorrow morning. I can join the rehearsal at 10:40 AM, subject to the team confirming the room. Please check that 10:40 works for everyone before booking. I'm not handling the room booking, so please confirm that part with whoever owns it.",
+  "presentation_claim": "In one recorded text-only session with fictional input, the tool separated a no-reply update, a deferrable request and an urgent request. It produced a profile-consistent draft for the urgent one. It also kept the reply behind explicit review, confirmation and re-confirmation steps, with no message sent.",
+  "not_established": "The trace does not establish real human use, productivity or attention gains, time saved, audio transcription accuracy, speaker attribution, Tencent chat delivery, or recipient reactions. It does not establish how the tool performs on messy or multi-speaker input, or that users would catch the stale summary or draft in E07. It does not show that the confirm gates prevent real sending errors. There is no comparison group, and only one scripted run."
+}
+```

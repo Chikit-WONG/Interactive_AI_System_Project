@@ -1,0 +1,126 @@
+{
+  "planned": 6,
+  "prompt_sha256": "685f987369fbdc5cc55602a2f73ca985628fa9b2e4ecd0a6f7ff33bc0e419259",
+  "attempts": [
+    {
+      "run_id": "codex__gpt-5.6-luna__r2",
+      "provider": "codex",
+      "requested_model": "gpt-5.6-luna",
+      "reported_models": [],
+      "repeat": 2,
+      "attempt": 1,
+      "sessions": [
+        "01a16764-1b39-74d1-903c-334cb23264cc"
+      ],
+      "prompt_sha256": "685f987369fbdc5cc55602a2f73ca985628fa9b2e4ecd0a6f7ff33bc0e419259",
+      "started": "2026-10-23T06:12:53.208044+00:00",
+      "seconds": 27.0,
+      "exit_code": 0,
+      "timed_out": false,
+      "tool_event_count": 0,
+      "valid": true,
+      "errors": [],
+      "path": "raw\\codex__gpt-5.6-luna__r2\\attempt1"
+    },
+    {
+      "run_id": "codex__gpt-5.6-luna__r1",
+      "provider": "codex",
+      "requested_model": "gpt-5.6-luna",
+      "reported_models": [],
+      "repeat": 1,
+      "attempt": 1,
+      "sessions": [
+        "01a16764-22a4-7493-a42d-67465146a6c1"
+      ],
+      "prompt_sha256": "685f987369fbdc5cc55602a2f73ca985628fa9b2e4ecd0a6f7ff33bc0e419259",
+      "started": "2026-10-23T06:12:53.207034+00:00",
+      "seconds": 31.2,
+      "exit_code": 0,
+      "timed_out": false,
+      "tool_event_count": 0,
+      "valid": true,
+      "errors": [],
+      "path": "raw\\codex__gpt-5.6-luna__r1\\attempt1"
+    },
+    {
+      "run_id": "codex__gpt-5.6-sol__r2",
+      "provider": "codex",
+      "requested_model": "gpt-5.6-sol",
+      "reported_models": [],
+      "repeat": 2,
+      "attempt": 1,
+      "sessions": [
+        "01a16764-2640-7dd1-b1a6-5529385aa3c5"
+      ],
+      "prompt_sha256": "685f987369fbdc5cc55602a2f73ca985628fa9b2e4ecd0a6f7ff33bc0e419259",
+      "started": "2026-10-23T06:12:53.208044+00:00",
+      "seconds": 32.8,
+      "exit_code": 0,
+      "timed_out": false,
+      "tool_event_count": 0,
+      "valid": true,
+      "errors": [],
+      "path": "raw\\codex__gpt-5.6-sol__r2\\attempt1"
+    },
+    {
+      "run_id": "codex__gpt-5.6-sol__r1",
+      "provider": "codex",
+      "requested_model": "gpt-5.6-sol",
+      "reported_models": [],
+      "repeat": 1,
+      "attempt": 1,
+      "sessions": [
+        "01a16764-1d14-7f11-94d4-e92b2f10e661"
+      ],
+      "prompt_sha256": "685f987369fbdc5cc55602a2f73ca985628fa9b2e4ecd0a6f7ff33bc0e419259",
+      "started": "2026-10-23T06:12:53.207034+00:00",
+      "seconds": 39.6,
+      "exit_code": 0,
+      "timed_out": false,
+      "tool_event_count": 0,
+      "valid": true,
+      "errors": [],
+      "path": "raw\\codex__gpt-5.6-sol__r1\\attempt1"
+    },
+    {
+      "run_id": "codex__gpt-5.6-luna__r3",
+      "provider": "codex",
+      "requested_model": "gpt-5.6-luna",
+      "reported_models": [],
+      "repeat": 3,
+      "attempt": 1,
+      "sessions": [
+        "01a16764-8bbf-7aa1-a11d-052c9c7087dc"
+      ],
+      "prompt_sha256": "685f987369fbdc5cc55602a2f73ca985628fa9b2e4ecd0a6f7ff33bc0e419259",
+      "started": "2026-10-23T06:13:24.388757+00:00",
+      "seconds": 26.8,
+      "exit_code": 0,
+      "timed_out": false,
+      "tool_event_count": 0,
+      "valid": true,
+      "errors": [],
+      "path": "raw\\codex__gpt-5.6-luna__r3\\attempt1"
+    },
+    {
+      "run_id": "codex__gpt-5.6-sol__r3",
+      "provider": "codex",
+      "requested_model": "gpt-5.6-sol",
+      "reported_models": [],
+      "repeat": 3,
+      "attempt": 1,
+      "sessions": [
+        "01a16764-7b7a-79c2-b918-1a05590d789b"
+      ],
+      "prompt_sha256": "685f987369fbdc5cc55602a2f73ca985628fa9b2e4ecd0a6f7ff33bc0e419259",
+      "started": "2026-10-23T06:13:20.225779+00:00",
+      "seconds": 40.7,
+      "exit_code": 0,
+      "timed_out": false,
+      "tool_event_count": 0,
+      "valid": true,
+      "errors": [],
+      "path": "raw\\codex__gpt-5.6-sol__r3\\attempt1"
+    }
+  ]
+}

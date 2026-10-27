@@ -1,0 +1,708 @@
+你正在参加一个明确标注的AI合成情境研究。你的任务是作为下列虚构人物，逐题填写两份原问卷，不是审阅问卷、批评设计或给项目提建议。
+所有人物、经历和答复都是模型模拟，没有真人受访者，也不是你对训练数据中真实个体的回忆。不得声称查阅了训练数据、做过真实会议或代表真实用户人群。不得联网、访问其他文件或使用工具。
+
+你必须填写NEW_Q1–NEW_Q27及OLD_Q1–OLD_Q14，保留全部48个question_id对象（含NEW_M1–NEW_M7）。统一10题只用于后续交叉映射，本次不能用它替代两份原问卷。
+只输出一个符合下述约定的JSON对象，不加Markdown围栏或前后说明。依据原题选项回答，严格遵守跳题。矩阵每行必答；同一人的跨问卷答案应一致，注意新问卷过去四周、旧Q2过去六个月。
+
+虚构补全规则：情境只规定列明的事实，不规定痛点或期望答案。你可以回答无问题、无需AI或现有办法足够。未提供的会议次数、时间、既往AI使用、后果等，如为完成问卷需要而补充，必须在assumption_registry中用A1/A2等记录，并在相应题assumptions数组引用；basis加入model_assumption。模型形成的偏好或判断标hypothetical_preference或scenario_inference，不能标成情境已经给出的事实。情境给定的事件本身无需再虚构。
+所有单项字符串通常控制在35个汉字以内，必要时可稍长，做到直接回答题目，不重复题干。无补充可填空字符串或空数组。assumption_registry每项一句话，可跨题复用，避免重复长叙述。
+原题缺少合适选项时，优先使用原有“其他/不确定/无需/没有”等，不为迎合研究假造痛点；若必须在原选项中选最接近项，basis加instrument_constraint，并在assumption_registry说明选项限制。
+
+JSON顶层固定：schema_version="1.0"；source_type="model_simulation"；scenario_id为当前S编号；fictional_persona=true；experience_status="all_experiences_are_hypothetical"；scenario_induced=true；assumption_registry为假设ID到简短描述的对象；questions为逐题对象。
+回答对象：{"status":"answered","answer":{字段:值},"basis":[依据类型],"assumptions":[假设ID]}。
+跳过对象：{"status":"skipped","answer":null,"basis":["not_applicable"],"assumptions":[],"skip_reason":"规则ID及原因"}。
+basis允许scenario_fact、scenario_inference、model_assumption、hypothetical_preference、instrument_constraint、not_applicable。任何题都不能声称human_data。
+NEW_Q17中的willing_status是将原题意愿编码为has_task/no_task/uncertain的路由字段，非新增问题；has_task时willing_tasks至少一项，否则该数组为空。NEW_Q14无希望改变时items=[]并填写none_status。NEW_Q5非“有”时episode=""；NEW_Q16非“使用过”时两个例子字段为空。NEW_Q4的三个阶段和其他原题可选补充可以为空，但字段仍保留。等级NEW_Q7/Q9/Q19用字符串数值；旧Q8/Q12矩阵用整数1–5。
+
+【固定情境】
+{
+  "scenario_id": "S2",
+  "label": "主要获取信息及已有会后记录",
+  "facts": [
+    "你是虚构的项目成员，负责完成已分配的后续工作。",
+    "过去四周内有一次远程进度会议，你需要知道最终任务安排，但这次会议不需要你当场提供意见或批准。",
+    "你没有加入这次通话，会后收到列明最终决定、负责人和时间安排的纪要；其中包含完成这次后续工作所需的信息。",
+    "是否满意、是否有其他会议问题、是否想改变流程或使用AI没有预设。"
+  ],
+  "not_fixed": [
+    "过去四周总会议次数及过去半年冲突频率",
+    "获取纪要的投入、其他会议经历及总体满意度",
+    "是否需要额外支持、主动更新或AI"
+  ]
+}
+
+【跳题与可选模块规则】
+{
+  "rules": [
+    {
+      "rule_id": "R1",
+      "if_question": "NEW_Q1",
+      "if_field": "selection",
+      "if_in": [
+        "0 次"
+      ],
+      "skip": [
+        "NEW_Q2",
+        "NEW_Q3",
+        "NEW_Q4",
+        "NEW_Q5",
+        "NEW_Q6",
+        "NEW_Q7",
+        "NEW_Q8",
+        "NEW_Q9",
+        "NEW_Q10",
+        "NEW_Q11",
+        "NEW_Q12",
+        "NEW_Q13",
+        "NEW_Q14",
+        "NEW_Q15",
+        "NEW_Q16",
+        "NEW_Q17",
+        "NEW_Q18",
+        "NEW_Q19",
+        "NEW_Q20",
+        "NEW_Q21",
+        "NEW_Q22",
+        "NEW_Q23",
+        "NEW_Q24",
+        "NEW_Q25",
+        "NEW_Q26",
+        "NEW_Q27",
+        "NEW_M1",
+        "NEW_M2",
+        "NEW_M3",
+        "NEW_M4",
+        "NEW_M5",
+        "NEW_M6",
+        "NEW_M7"
+      ],
+      "origin": "原问卷Q1结束逻辑"
+    },
+    {
+      "rule_id": "R2",
+      "if_question": "NEW_Q5",
+      "if_field": "selection",
+      "if_in": [
+        "没有",
+        "暂时想不到"
+      ],
+      "skip": [
+        "NEW_Q6",
+        "NEW_Q7",
+        "NEW_Q8",
+        "NEW_Q9",
+        "NEW_Q10"
+      ],
+      "origin": "原问卷Q5跳至Q11"
+    },
+    {
+      "rule_id": "R3",
+      "if_question": "NEW_Q11",
+      "if_field": "selection",
+      "if_in": [
+        "没有",
+        "记不清"
+      ],
+      "skip": [
+        "NEW_Q12",
+        "NEW_Q13"
+      ],
+      "origin": "原问卷Q11跳至Q14"
+    },
+    {
+      "rule_id": "R4",
+      "if_question": "NEW_Q17",
+      "if_field": "willing_status",
+      "if_in": [
+        "no_task",
+        "uncertain"
+      ],
+      "skip": [
+        "NEW_Q18",
+        "NEW_Q19",
+        "NEW_Q20",
+        "NEW_Q21",
+        "NEW_Q22"
+      ],
+      "origin": "原问卷Q17跳至Q23"
+    },
+    {
+      "rule_id": "M4",
+      "if_question": "NEW_Q17",
+      "if_field": "willing_status",
+      "if_in": [
+        "no_task",
+        "uncertain"
+      ],
+      "skip": [
+        "NEW_M4",
+        "NEW_M7"
+      ],
+      "origin": "本次可选模块适用规则：模块依赖Q18任务；不是新增原问卷跳题"
+    }
+  ],
+  "priority": "R1 overrides remaining NEW rules; OLD has no added skips",
+  "optional_policy": "NEW_M1,M2,M3,M5,M6默认回答；无相关经历可写没有/不适用而不编造痛点。NEW_M4,M7依赖Q18，未形成任务则跳过。所有被跳题保留对象、answer=null、skip_reason写rule_id。"
+}
+
+
+【NEW原问卷主问题，全27题】
+### Q1. 过去四周，你实际参加过或原本需要参加的远程会议大约有多少次？
+【单选】
+
+0 次／1–4 次／5–10 次／11–20 次／21–40 次／41 次及以上／记不清。
+
+*同一场会议只计算一次；原计划参加但最终未参加的会议也可以计入。*
+
+**跳题说明：**选择“0 次”则结束本次问卷，不要求回答假设性的会议经历。
+
+### Q2. 这些会议通常围绕什么事情展开？你通常承担什么角色或任务？
+【开放题，两个简短填写框】
+
+会议通常讨论的事情：________
+
+我通常承担的角色或任务：________
+
+---
+
+## B. 一次真实的会议经历
+
+### Q3. 请回想最近一次你参加过或原本需要参加的远程会议，简要说明下面三件事。
+【开放题】
+
+| 回忆内容 | 你的回答 |
+|---|---|
+| 这次会议主要是为了什么？ | ________ |
+| 你原本希望通过这次会议完成或获得什么？ | ________ |
+| 你实际上是如何参与这次会议的？ | ________ |
+
+### Q4. 从会议准备、会议进行到会后，你觉得有哪些值得提及的经历？
+【开放题】
+
+可以描述符合你需要的地方、不符合你需要的地方，或者没有特别感受的地方。请尽量说清楚当时发生了什么。
+
+会前：________
+
+会中：________
+
+会后：________
+
+*不需要每个阶段都填写。*
+
+### Q5. 在刚才的经历或过去四周的其他会议中，有没有一件你希望做法或结果有所不同的事情？
+【单选＋条件开放题】
+
+有／没有／暂时想不到。
+
+**选择“有”时：**请选最近发生的一次，描述你原本期待什么，实际上发生了什么。
+
+________
+
+**跳题说明：**选择“没有”或“暂时想不到”，跳至 Q11。
+
+### Q6. 包括刚才描述的这一次，过去四周类似情况大约发生了多少次？
+【单选】
+
+1 次／2–3 次／4–6 次／7 次及以上／记不清。
+
+### Q7. 这件事对你完成当时目标的不利影响有多大？
+【等级选择题】
+
+0＝没有不利影响  
+1＝影响很小  
+2＝影响中等  
+3＝影响较大  
+4＝影响很大  
+另设：无法判断。
+
+可选补充：具体产生了什么影响？________
+
+### Q8. 当时或之后，你是如何处理这件事的？
+【开放题】
+
+请描述实际采用的做法，以及使用的方法、工具或求助对象。没有采取任何处理方式也可以说明。
+
+________
+
+可选补充：你为什么采取这种做法，或者为什么没有处理？________
+
+### Q9. 请分别评价事情目前的处理结果，以及你为处理它投入的额外精力。
+【两道独立的等级选择题】
+
+**Q9a. 与你原本的期待相比，这件事目前得到解决的程度如何？**
+
+0＝完全没有解决  
+1＝只解决了少部分  
+2＝大约解决了一半  
+3＝解决了大部分  
+4＝完全解决  
+另设：仍在处理中，尚不能评价／无法判断。
+
+**Q9b. 你为处理这件事投入了多少额外精力？**
+
+0＝没有额外投入  
+1＝很少  
+2＝中等  
+3＝较多  
+4＝非常多  
+另设：无法判断。
+
+可选填写：额外花费的时间大约为 ________；也可以填写“无法估计”。
+
+### Q10. 目前还有哪些地方没有满足你的需要？
+【开放题】
+
+事情本身尚未解决，或者事情已经解决、但处理方式仍有你希望改变的地方，都可以说明。也可以回答“已经满足”或“无法判断”。
+
+________
+
+可选补充：你认为是什么因素造成了目前的情况？不知道原因也可以说明。________
+
+---
+
+## C. 实际参与方式与参与需要
+
+### Q11. 过去四周，是否出现过以下情况：你需要了解某次会议或贡献意见，但实际上只参加了部分时段、间断关注，或者没有加入会议通话？
+【单选】
+
+没有／1 次／2–3 次／4–6 次／7 次及以上／记不清。
+
+**跳题说明：**选择“没有”或“记不清”，跳至 Q14。
+
+### Q12. 请描述最近一次这样的情况。
+【开放题】
+
+| 回忆内容 | 你的回答 |
+|---|---|
+| 当时你希望怎样参与？ | ________ |
+| 实际上怎样安排了自己的参与？ | ________ |
+| 这样安排的原因是什么？ | ________ |
+
+### Q13. 按照你自己的判断，这种参与安排对你完成当时相关事情的总体影响如何？
+【单选】
+
+明显妨碍／有些妨碍／没有明显影响／有些帮助／明显帮助。
+
+另设：既有帮助也有妨碍，难以合并评价／无法判断。
+
+可选补充：发生了什么，让你作出这样的判断？________
+
+---
+
+## D. 先讨论需要的变化，不限定解决方式
+
+> 本部分暂时不限定通过工具、其他人、会议安排或其他方式来实现。
+
+### Q14. 对于今后的远程会议，你希望哪些事情有所变化？
+【开放题，最多填写三项，也可以不填写】
+
+请描述你希望得到的结果，不需要先想出具体技术或功能。
+
+可以使用下面的句式，也可以直接表达：
+
+> 当 ________ 时，我希望能够 ________，这样我就能 ________。
+
+第一项：________
+
+第二项：________
+
+第三项：________
+
+另设：目前没有希望改变的事情／暂时无法确定。
+
+### Q15. 在现有会议方式中，哪些方面已经符合你的需要，你希望继续保留？
+【开放题】
+
+________
+
+也可以回答“暂时想不到”。
+
+---
+
+## E. AI 是否适合参与，以及可以承担什么任务
+
+### 本部分说明
+
+下面讨论一种**尚未确定具体功能和使用条件的会议相关 AI 助手**。它是否需要存在、适合处理什么事情，都可以根据你的实际需要判断。你不需要使用过 AI，也不需要认为 AI 一定能改善会议体验。
+
+### Q16. 过去四周，你本人是否实际使用过 AI 来处理远程会议相关事务？
+【单选】
+
+使用过／没有使用过／不确定所用工具是否属于 AI。
+
+**选择“使用过”时，可补充一例：**
+
+当时让它处理什么事情？________
+
+实际得到什么结果？________
+
+*这里记录的是实际使用经历，不是对未来功能的期待。*
+
+### Q17. 对于你前面提到的事情，或者其他实际会议经历，有没有你愿意考虑让 AI 提供支持的任务？有没有你认为不适合交给 AI 的任务？
+【开放题】
+
+愿意考虑的任务及原因：________
+
+不适合的任务及原因：________
+
+也可以回答“都不需要 AI”或“目前无法判断”。
+
+**跳题说明：**没有提出任何愿意考虑的任务，或目前无法判断，跳至 Q23；仍继续回答使用边界和其他参会者相关问题。
+
+### Q18. 请从你愿意考虑的任务中选择一项，描述你希望它怎样完成。
+【开放题】
+
+| 需要说明的内容 | 你的回答 |
+|---|---|
+| 在什么情况下，这项任务需要开始？ | ________ |
+| 你希望 AI 具体做什么？ | ________ |
+| 你希望得到什么结果，结果应当交给谁？ | ________ |
+| 出现什么可观察的结果，才算完成了你的需要？ | ________ |
+
+*只写你认为必要的部分即可；不需要设想一个完整产品。*
+
+### Q19. 就 Q18 这项具体任务而言，与继续采用现有方式相比，你目前是否愿意考虑使用 AI 支持？
+【等级选择题】
+
+1＝明确不愿意考虑  
+2＝倾向于不愿意考虑  
+3＝没有明显倾向  
+4＝倾向于愿意考虑  
+5＝明确愿意考虑  
+另设：信息不足，无法判断。
+
+可选补充：影响你判断的主要原因是什么？________
+
+### Q20. 在这项任务中，你希望自己和 AI 分别负责哪些部分？
+【开放题】
+
+| 责任范围 | 你的回答 |
+|---|---|
+| 可以交由 AI 自行处理的部分 | ________ |
+| 必须先得到我确认的部分或情况 | ________ |
+| 只希望由我本人处理的部分 | ________ |
+
+任何一栏都可以为空，也可以回答“全部自己处理”或“尚未确定”。
+
+### Q21. 任务进行过程中，你希望怎样获知进展，或者向它提供意见？
+【开放题】
+
+请说明你认为合适的联系时机、方式，以及不希望被联系的情况。
+
+________
+
+也可以回答“不需要主动联系我”“不需要我作出回应”或“需要视情况决定”。
+
+### Q22. 你需要什么依据，才能判断它处理的结果是否可以使用？
+【开放题】
+
+________
+
+**假设结果出现错误，或者你无法判断结果是否可靠，你希望接下来怎样处理？**
+
+________
+
+---
+
+## F. 使用条件、其他参与者与优先级
+
+### Q23. 如果 AI 涉及会议信息或与你有关的信息，你希望它遵守哪些使用规则？
+【开放题】
+
+可以说明哪些信息可以使用、哪些不应使用，以及你认为需要满足的条件。也可以回答“不希望使用任何相关信息”或“目前不清楚”。
+
+________
+
+*请填写规则或信息类别，不要提交真实会议资料或个人信息。*
+
+### Q24. 当其他参会者使用会议相关 AI 助手时，你在什么情况下会接受、不接受，或者没有特别意见？
+【开放题】
+
+请从你作为同场参会者的角度回答；有主持会议经历的，也可以补充主持人的考虑。
+
+________
+
+### Q25. 在哪些情况下，你会选择不使用或停止使用这类助手？
+【开放题】
+
+________
+
+可选补充：在这些情况下，你希望怎样处理会议相关事务？维持现有方式也可以。________
+
+### Q26. 回看你自己提出的改进事项，假如目前只能优先处理一项，你会选择哪一项？为什么？
+【开放题】
+
+________
+
+也可以回答“目前都不需要优先处理”。
+
+*这里可以选择 AI 相关或非 AI 相关的改进，不限于功能开发。*
+
+### Q27. 还有哪些与远程会议相关的经历、需要或顾虑，是前面的问题没有给你表达机会的？
+【开放题】
+
+________
+
+---
+
+【NEW可选模块，全7个，依规则逐项答或明确跳过】
+NEW_M1 **理解会议，而不只是获取信息**
+当你需要了解一场会议时，通常依靠哪些信息来判断自己已经理解？这些信息是否足够？请结合一次经历说明。
+
+NEW_M2 **表达意见及意见的后续处理**
+当你希望表达意见时，通常怎样让其他人了解？你如何得知这条意见后来被怎样处理？这种方式是否符合你的需要？
+
+NEW_M3 **语言、设备与使用环境**
+你使用的语言、设备、所处环境或个人使用需要，是否影响过参会体验？没有影响也可以；有影响时，请描述具体发生了什么，不需要提供健康或身份信息。
+
+NEW_M4 **信息更新的时机和详细程度**
+针对你在 Q18 提出的任务，你分别希望在什么时候看到信息、每次看到多少内容？这些安排应由谁决定？在什么情况下需要改变？没有固定偏好也可以。
+
+NEW_M5 **参与自主权与退出边界**
+在实际会议中，通常由谁决定你是否参加、何时参加，以及是否需要立即回应？假如引入 AI，你认为这些安排可能发生什么变化，也可能保持不变？请区分实际情况和你的设想。
+
+NEW_M6 **结果来源与责任**
+假设 AI 的输出会被其他人使用，或引起后续行动，你希望相关人员知道哪些信息？发生意见分歧或错误时，你认为应怎样处理？
+
+NEW_M7 **接入现有工作方式**
+对于你提出的任务，新工具需要怎样与现有的人、工具或流程配合？在决定尝试之前，你还需要了解什么，或满足哪些条件？
+
+【OLD原问卷主问题，全14题】
+Q1. 你平均多久参加一次线上会议、线上组会或远程讨论？
+
+How often do you attend online meetings, remote group meetings, or remote discussions?
+
+| ☐ 几乎每天 / Almost every day | ☐ 每周数次 / Several times a week |
+
+| --- | --- |
+
+| ☐ 每周约一次 / About once a week | ☐ 每月数次 / Several times a month |
+
+| ☐ 很少或从不 / Rarely or never |  |
+
+Q2. 过去 6 个月，你是否遇到过“两个会议/课程/任务时间冲突，只能把注意力主要放在其中一个”的情况？
+
+In the past 6 months, have you experienced overlapping meetings/classes/tasks where you could mainly focus on only one?
+
+| ☐ 经常 / Often | ☐ 偶尔 / Sometimes |
+
+| --- | --- |
+
+| ☐ 很少 / Rarely | ☐ 从未 / Never |
+
+Q3. 遇到冲突时，你通常怎么处理？（可多选）
+
+What do you usually do when this happens? (Select all that apply)
+
+☐ 完全缺席其中一个会议 / Skip one meeting entirely
+
+☐ 同时开着两个会议，来回切换注意力 / Keep both open and switch attention
+
+☐ 请同学/同事会后转述 / Ask someone for a recap later
+
+☐ 查看录屏或会议纪要 / Review recording/notes later
+
+☐ 只在被 @ 或被点名时回来 / Return only when mentioned
+
+☐ 其他 / Other: ______
+
+Q4. 当你无法完整参加次要会议时，最让你焦虑或麻烦的是什么？（最多选 3 项）
+
+What is most difficult when you cannot fully attend a secondary meeting? (Choose up to 3)
+
+☐ 不知道讨论到了哪里 / Not knowing what has been discussed
+
+☐ 担心错过与自己有关的信息 / Missing information relevant to me
+
+☐ 担心错过需要我做决定的时刻 / Missing moments that require my decision
+
+☐ 频繁切换注意力，影响主要任务 / Attention switching harms my primary task
+
+☐ 会后补信息成本很高 / Catching up afterwards takes too much time
+
+☐ 感觉自己“脱离”了团队 / Feeling socially disconnected from the team
+
+☐ 不知道什么时候值得重新加入 / Not knowing when it is worth rejoining
+
+☐ 其他 / Other: ______
+
+B. 哪些信息值得打断你？ / What Is Worth Interrupting You For?
+
+Q5. 假设你正在专注于一个主要任务，同时有 AI 帮你监控另一个远程会议。对于下列事件，你希望系统什么时候提醒你？
+
+Suppose you are focused on a primary task while AI monitors a secondary remote meeting. When should the system alert you about each event?
+
+| 事件 / Event | 立即提醒Immediate | 稍后批量Batch later | 会后汇总After meeting | 无需提醒No need |
+
+| --- | --- | --- | --- | --- |
+
+| 有人直接点名或 @ 你Someone directly mentions you | ○ | ○ | ○ | ○ |
+
+| 需要你做决定或表态A decision or opinion from you is required | ○ | ○ | ○ | ○ |
+
+| 给你分配了新的任务A new task is assigned to you | ○ | ○ | ○ | ○ |
+
+| 出现与你负责内容有关的重要变更An important change affects your responsibility | ○ | ○ | ○ | ○ |
+
+| 出现截止日期、时间或安排变化A deadline/schedule changes | ○ | ○ | ○ | ○ |
+
+| 会议主题发生较大变化The meeting topic changes substantially | ○ | ○ | ○ | ○ |
+
+| 一般性进展更新General progress update | ○ | ○ | ○ | ○ |
+
+| 闲聊或低优先级讨论Casual / low-priority discussion | ○ | ○ | ○ | ○ |
+
+Q6. 你希望 AI 判断“是否值得立即打断你”时，主要考虑哪些因素？（最多选 4 项）
+
+Which factors should AI consider when deciding whether to interrupt you immediately? (Choose up to 4)
+
+☐ 是否直接提到我 / Whether I am directly mentioned
+
+☐ 是否需要我的决定 / Whether my decision is needed
+
+☐ 是否影响我的任务或责任 / Whether it affects my responsibilities
+
+☐ 事件紧急程度 / Urgency
+
+☐ 决定不可逆或代价较高 / High cost / irreversibility
+
+☐ 会议参与者身份（如导师/客户） / Who is in the meeting, e.g. supervisor/client
+
+☐ 我当前主要任务有多忙 / How busy my primary task is
+
+☐ 我预先设置的个人偏好 / My predefined preferences
+
+☐ 其他 / Other: ______
+
+C. 更新方式：频率 vs. 详细程度 / Update Style: Frequency vs. Detail
+
+Q7. 如果只能二选一，你更偏好哪种更新方式？
+
+If you had to choose one, which update style would you prefer?
+
+☐ 高频短更新：每隔较短时间给 1–2 句关键信息 / High-frequency short updates: 1–2 key sentences at short intervals
+
+☐ 低频详细摘要：更少打扰，但每次给更完整的阶段总结 / Low-frequency detailed summaries: fewer interruptions but more complete summaries
+
+☐ 取决于会议类型或当前任务 / It depends on the meeting or my primary task
+
+☐ 不确定 / Not sure
+
+Q8. 请评价以下说法（1=非常不同意，5=非常同意）。
+
+Rate the following statements (1=Strongly disagree, 5=Strongly agree).
+
+| 陈述 / Statement | 1 | 2 | 3 | 4 | 5 |
+
+| --- | --- | --- | --- | --- | --- |
+
+| 频繁的短更新会让我更有“参与会议”的感觉Frequent short updates would make me feel more connected to the meeting. | ○ | ○ | ○ | ○ | ○ |
+
+| 频繁通知会显著打断我的主要任务Frequent notifications would significantly disrupt my primary task. | ○ | ○ | ○ | ○ | ○ |
+
+| 较少但更完整的摘要更适合我专注工作时使用Fewer but more complete summaries suit me better when I need to focus. | ○ | ○ | ○ | ○ | ○ |
+
+| 如果很久没有更新，我会担心自己错过重要进展If there is no update for a long time, I would worry that I missed important developments. | ○ | ○ | ○ | ○ | ○ |
+
+| 我希望系统根据会议进展和我的当前状态自动调整更新频率I want the system to adapt update frequency based on meeting events and my current state. | ○ | ○ | ○ | ○ | ○ |
+
+D. 什么时候、以什么方式重新参与？ / When and How Should You Re-engage?
+
+Q9. 当会议确实需要你参与时，你更希望采用哪种方式？每行选一个最合适的选项。
+
+When the meeting truly needs your input, which method would you prefer? Choose one per scenario.
+
+| 场景 / Scenario | 只提醒Alert only | AI候选答案AI options | 自己输入Type myself | 临时加入会议Join briefly |
+
+| --- | --- | --- | --- | --- |
+
+| 简单确认事实（如“你周二有空吗？”）Simple factual confirmation, e.g. “Are you free Tuesday?” | ○ | ○ | ○ | ○ |
+
+| 在几个明确方案中选择Choose among several clear options | ○ | ○ | ○ | ○ |
+
+| 表达个人意见或理由Express your personal opinion or reasoning | ○ | ○ | ○ | ○ |
+
+| 讨论复杂、敏感或有争议的问题Discuss a complex, sensitive, or controversial issue | ○ | ○ | ○ | ○ |
+
+Q10. 如果 AI 为你生成 2–3 个候选回复供快速选择，你的态度是？
+
+How would you feel about AI generating 2–3 candidate replies for quick selection?
+
+| ☐ 非常愿意 / Very willing | ☐ 比较愿意 / Somewhat willing |
+
+| --- | --- |
+
+| ☐ 看场景 / Depends on context | ☐ 不太愿意 / Somewhat unwilling |
+
+| ☐ 完全不愿意 / Not willing at all |  |
+
+Q11. 哪种情况下你更愿意“临时加入会议”，而不是只通过 AI 快速回复？（可多选）
+
+When would you prefer to briefly join the meeting instead of replying through AI? (Select all that apply)
+
+☐ 需要解释复杂背景 / I need to explain complex context
+
+☐ 出现分歧或争论 / There is disagreement/conflict
+
+☐ 决定影响较大 / The decision has major consequences
+
+☐ 对方需要进一步追问 / Others may need follow-up questions
+
+☐ 讨论涉及情绪或关系 / The discussion is socially/emotionally sensitive
+
+☐ 我对 AI 摘要缺乏信心 / I do not trust the AI summary enough
+
+☐ 其他 / Other: ______
+
+E. 控制、社会感与总体接受度 / Control, Social Presence & Overall Acceptance
+
+Q12. 请评价以下说法（1=非常不同意，5=非常同意）。
+
+Rate the following statements (1=Strongly disagree, 5=Strongly agree).
+
+| 陈述 / Statement | 1 | 2 | 3 | 4 | 5 |
+
+| --- | --- | --- | --- | --- | --- |
+
+| 即使不能完整参加，我也希望知道会议当前处于什么阶段Even if I cannot fully attend, I want to know what stage the meeting is at. | ○ | ○ | ○ | ○ | ○ |
+
+| 只要关键时刻能及时提醒，我不需要知道所有讨论细节If I am alerted at key moments, I do not need all discussion details. | ○ | ○ | ○ | ○ | ○ |
+
+| 我希望能设置“什么情况下才允许打断我”I want to configure when the system is allowed to interrupt me. | ○ | ○ | ○ | ○ | ○ |
+
+| 我希望系统明确告诉其他参会者：我目前是“部分参与”状态I want the system to make my partial-participation status clear to other attendees. | ○ | ○ | ○ | ○ | ○ |
+
+| 如果 AI 能帮助我在不持续分心的情况下保持会议感知，我愿意使用它I would use such a system if it helped me stay aware without constant distraction. | ○ | ○ | ○ | ○ | ○ |
+
+Q13. 你最希望拥有哪些控制功能？（可多选）
+
+Which controls would you most want? (Select all that apply)
+
+☐ 设置优先级/关键词 / Set priorities/keywords
+
+☐ 只在被点名时提醒 / Alert only when mentioned
+
+☐ 调整更新频率 / Adjust update frequency
+
+☐ 切换“专注模式/高感知模式” / Switch between focus mode and high-awareness mode
+
+☐ 查看最近 1–3 分钟发生了什么 / Quick catch-up on the last 1–3 minutes
+
+☐ 一键临时加入会议 / One-click temporary join
+
+☐ 暂停所有更新 / Pause all updates
+
+☐ 其他 / Other: ______
+
+Q14. 如果你可以提出一个改进建议：怎样的“部分参与”工具最能帮到你？
+
+If you could propose one improvement, what would make a partial-participation tool most useful to you?
+
+________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+感谢参与 / Thank you for your participation
+
+【输出字段及规范选项；r编号严格按表中行序】
+{"NEW_Q1":{"fields":{"selection":"string"},"options":{"selection":["0 次","1–4 次","5–10 次","11–20 次","21–40 次","41 次及以上","记不清"]}},"NEW_Q2":{"fields":{"meeting_topics":"string","role":"string"}},"NEW_Q3":{"fields":{"meeting_purpose":"string","personal_goal":"string","actual_participation":"string"}},"NEW_Q4":{"fields":{"before":"string","during":"string","after":"string"}},"NEW_Q5":{"fields":{"selection":"string","episode":"string"},"options":{"selection":["有","没有","暂时想不到"]}},"NEW_Q6":{"fields":{"selection":"string"},"options":{"selection":["1 次","2–3 次","4–6 次","7 次及以上","记不清"]}},"NEW_Q7":{"fields":{"selection":"string","impact_detail":"string"},"options":{"selection":["0","1","2","3","4","无法判断"]}},"NEW_Q8":{"fields":{"actual_method":"string","reason":"string"}},"NEW_Q9":{"fields":{"Q9a":"string","Q9b":"string","extra_time":"string"},"options":{"Q9a":["0","1","2","3","4","仍在处理中，尚不能评价","无法判断"],"Q9b":["0","1","2","3","4","无法判断"]}},"NEW_Q10":{"fields":{"unmet_need":"string","possible_cause":"string"}},"NEW_Q11":{"fields":{"selection":"string"},"options":{"selection":["没有","1 次","2–3 次","4–6 次","7 次及以上","记不清"]}},"NEW_Q12":{"fields":{"desired_participation":"string","actual_participation":"string","reason":"string"}},"NEW_Q13":{"fields":{"selection":"string","evidence":"string"},"options":{"selection":["明显妨碍","有些妨碍","没有明显影响","有些帮助","明显帮助","既有帮助也有妨碍，难以合并评价","无法判断"]}},"NEW_Q14":{"fields":{"items":"array","none_status":"string"},"max_items":{"items":3}},"NEW_Q15":{"fields":{"text":"string"}},"NEW_Q16":{"fields":{"selection":"string","task_example":"string","result_example":"string"},"options":{"selection":["使用过","没有使用过","不确定所用工具是否属于 AI"]}},"NEW_Q17":{"fields":{"willing_status":"string","willing_tasks":"array","unsuitable_tasks":"array"},"options":{"willing_status":["has_task","no_task","uncertain"]}},"NEW_Q18":{"fields":{"trigger":"string","ai_action":"string","result_and_recipient":"string","success_criterion":"string"}},"NEW_Q19":{"fields":{"selection":"string","reason":"string"},"options":{"selection":["1","2","3","4","5","信息不足，无法判断"]}},"NEW_Q20":{"fields":{"autonomous":"string","requires_confirmation":"string","human_only":"string"}},"NEW_Q21":{"fields":{"text":"string"}},"NEW_Q22":{"fields":{"evidence_needed":"string","failure_response":"string"}},"NEW_Q23":{"fields":{"text":"string"}},"NEW_Q24":{"fields":{"text":"string"}},"NEW_Q25":{"fields":{"stop_conditions":"string","alternative":"string"}},"NEW_Q26":{"fields":{"priority_and_reason":"string"}},"NEW_Q27":{"fields":{"text":"string"}},"OLD_Q1":{"fields":{"selection":"string"},"options":{"selection":["几乎每天","每周数次","每周约一次","每月数次","很少或从不"]}},"OLD_Q2":{"fields":{"selection":"string"},"options":{"selection":["经常","偶尔","很少","从未"]}},"OLD_Q3":{"fields":{"selected":"array","other_text":"string"},"options":{"selected":["完全缺席其中一个会议","同时开着两个会议，来回切换注意力","请同学/同事会后转述","查看录屏或会议纪要","只在被 @ 或被点名时回来","其他"]}},"OLD_Q4":{"fields":{"selected":"array","other_text":"string"},"options":{"selected":["不知道讨论到了哪里","担心错过与自己有关的信息","担心错过需要我做决定的时刻","频繁切换注意力，影响主要任务","会后补信息成本很高","感觉自己“脱离”了团队","不知道什么时候值得重新加入","其他"]},"max_items":{"selected":3}},"OLD_Q5":{"fields":{"r1":"string","r2":"string","r3":"string","r4":"string","r5":"string","r6":"string","r7":"string","r8":"string"},"options":{"r1":["立即提醒","稍后批量","会后汇总","无需提醒"],"r2":["立即提醒","稍后批量","会后汇总","无需提醒"],"r3":["立即提醒","稍后批量","会后汇总","无需提醒"],"r4":["立即提醒","稍后批量","会后汇总","无需提醒"],"r5":["立即提醒","稍后批量","会后汇总","无需提醒"],"r6":["立即提醒","稍后批量","会后汇总","无需提醒"],"r7":["立即提醒","稍后批量","会后汇总","无需提醒"],"r8":["立即提醒","稍后批量","会后汇总","无需提醒"]},"row_labels":{"r1":"有人直接点名或 @ 你","r2":"需要你做决定或表态","r3":"给你分配了新的任务","r4":"出现与你负责内容有关的重要变更","r5":"出现截止日期、时间或安排变化","r6":"会议主题发生较大变化","r7":"一般性进展更新","r8":"闲聊或低优先级讨论"}},"OLD_Q6":{"fields":{"selected":"array","other_text":"string"},"options":{"selected":["是否直接提到我","是否需要我的决定","是否影响我的任务或责任","事件紧急程度","决定不可逆或代价较高","会议参与者身份（如导师/客户）","我当前主要任务有多忙","我预先设置的个人偏好","其他"]},"max_items":{"selected":4}},"OLD_Q7":{"fields":{"selection":"string"},"options":{"selection":["高频短更新","低频详细摘要","取决于会议类型或当前任务","不确定"]}},"OLD_Q8":{"fields":{"r1":"integer","r2":"integer","r3":"integer","r4":"integer","r5":"integer"},"options":{"r1":[1,2,3,4,5],"r2":[1,2,3,4,5],"r3":[1,2,3,4,5],"r4":[1,2,3,4,5],"r5":[1,2,3,4,5]},"row_labels":{"r1":"频繁的短更新会让我更有“参与会议”的感觉","r2":"频繁通知会显著打断我的主要任务","r3":"较少但更完整的摘要更适合我专注工作时使用","r4":"如果很久没有更新，我会担心自己错过重要进展","r5":"我希望系统根据会议进展和我的当前状态自动调整更新频率"}},"OLD_Q9":{"fields":{"r1":"string","r2":"string","r3":"string","r4":"string"},"options":{"r1":["只提醒","AI候选答案","自己输入","临时加入会议"],"r2":["只提醒","AI候选答案","自己输入","临时加入会议"],"r3":["只提醒","AI候选答案","自己输入","临时加入会议"],"r4":["只提醒","AI候选答案","自己输入","临时加入会议"]},"row_labels":{"r1":"简单确认事实（如“你周二有空吗？”）","r2":"在几个明确方案中选择","r3":"表达个人意见或理由","r4":"讨论复杂、敏感或有争议的问题"}},"OLD_Q10":{"fields":{"selection":"string"},"options":{"selection":["非常愿意","比较愿意","看场景","不太愿意","完全不愿意"]}},"OLD_Q11":{"fields":{"selected":"array","other_text":"string"},"options":{"selected":["需要解释复杂背景","出现分歧或争论","决定影响较大","对方需要进一步追问","讨论涉及情绪或关系","我对 AI 摘要缺乏信心","其他"]}},"OLD_Q12":{"fields":{"r1":"integer","r2":"integer","r3":"integer","r4":"integer","r5":"integer"},"options":{"r1":[1,2,3,4,5],"r2":[1,2,3,4,5],"r3":[1,2,3,4,5],"r4":[1,2,3,4,5],"r5":[1,2,3,4,5]},"row_labels":{"r1":"即使不能完整参加，我也希望知道会议当前处于什么阶段","r2":"只要关键时刻能及时提醒，我不需要知道所有讨论细节","r3":"我希望能设置“什么情况下才允许打断我”","r4":"我希望系统明确告诉其他参会者：我目前是“部分参与”状态","r5":"如果 AI 能帮助我在不持续分心的情况下保持会议感知，我愿意使用它"}},"OLD_Q13":{"fields":{"selected":"array","other_text":"string"},"options":{"selected":["设置优先级/关键词","只在被点名时提醒","调整更新频率","切换“专注模式/高感知模式”","查看最近 1–3 分钟发生了什么","一键临时加入会议","暂停所有更新","其他"]}},"OLD_Q14":{"fields":{"text":"string"}},"NEW_M1":{"fields":{"text":"string"}},"NEW_M2":{"fields":{"text":"string"}},"NEW_M3":{"fields":{"text":"string"}},"NEW_M4":{"fields":{"text":"string"}},"NEW_M5":{"fields":{"text":"string"}},"NEW_M6":{"fields":{"text":"string"}},"NEW_M7":{"fields":{"text":"string"}}}
+
+最后检查：questions必须恰好含NEW_Q1–27、OLD_Q1–14、NEW_M1–7。依法跳过不删题，OLD四个矩阵不得只给总分。只输出JSON。

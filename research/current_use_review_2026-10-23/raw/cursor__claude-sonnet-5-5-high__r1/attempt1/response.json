@@ -1,0 +1,126 @@
+{
+  "source_type": "model_simulation",
+  "exposure": "recorded_current_workflow",
+  "cases": [
+    {
+      "id": "E01",
+      "assessment": "helpful",
+      "reason": "Reported: u1 said it was a progress update and Alex need not reply. The system produced a summary and no card. Predicted: Alex, who is busy and only needs to be reachable for occasional requests, would not be interrupted. The sample is a single clear case, so it shows little about harder no-reply messages."
+    },
+    {
+      "id": "E02",
+      "assessment": "mixed",
+      "reason": "Reported: u2 was classified as defer, with deadline 'six this evening'. Predicted: the classification matches Sam's wording that no answer is needed now. The pre-written draft is weaker. It says 'I will follow up once I get to it', which is a commitment the profile does not support. It also sends a message for a request that needed no reply. Alex would probably ignore or trim the draft."
+    },
+    {
+      "id": "E03",
+      "assessment": "helpful",
+      "reason": "Reported: u3 was classified as action_now. The draft declined 10:20 and offered 10:40, consistent with the profile, and cited u3. Predicted: Alex would find the urgency flag and the profile-based conflict check useful. Weaknesses: the draft says 'or let me know another time', which invites alternatives the profile does not cover. It also does not say that room booking is not Alex's job. The card appeared about 7 seconds after u3 was entered, which is acceptable for this run."
+    },
+    {
+      "id": "E04",
+      "assessment": "helpful",
+      "reason": "Reported: the details view showed the original u3, the rationale, the uncertainties and an editable draft. Predicted: Alex could check the source text and the open question (whether 10:40 is movable) before deciding. This is a reasonable verification step. Whether people would actually read the details under time pressure is not shown."
+    },
+    {
+      "id": "E05",
+      "assessment": "helpful",
+      "reason": "Reported: the operator replaced the draft with their own wording. Confirm & copy succeeded, and the UI said 'Copied; waiting for you to send or mark sent'. Nothing was sent. Predicted: Alex would value that the human wording is what gets copied and that the state is not shown as delivered. The replacement text puts the booking check on others and keeps Alex's 10:30/10:40 constraints. The trace does not show that anyone received it."
+    },
+    {
+      "id": "E06",
+      "assessment": "mixed",
+      "reason": "Reported: after a further edit the UI showed 'Previous draft copied - edits need confirmation' and disabled 'I sent it in the meeting' until renewed confirmation. The clipboard still holds the older text. Predicted: the gating helps Alex avoid marking the wrong version as sent. But the stale clipboard can still be pasted by mistake, and the warning only reduces that risk. The final export also shows the alert as 'confirmed' with the E05 text. It does not record the E06 edited draft or its unconfirmed state."
+    },
+    {
+      "id": "E07",
+      "assessment": "mixed",
+      "reason": "Reported: u4 came from an unidentified speaker asking for room-booking approval. The card was classified as defer, with the uncertainty that the addressee is unknown. The draft declines to approve bookings and restates 10:40. Predicted: recognising that booking approval is outside Alex's role is useful. The summary, however, says the 10:20 issue 'was already handled via Alex's confirmed reply'. The trace shows only a copied draft, not a sent message. The u4 draft also says 'I've already said I can't make 10:20', which assumes delivery. If Alex trusted this, they might believe Jordan had been told. Deferring a message that says 'I need an answer now' also needs clearer wording, such as asking who is addressing Alex."
+    },
+    {
+      "id": "E08",
+      "assessment": "helpful",
+      "reason": "Reported: Stop session disabled input and analysis, froze elapsed time and kept the existing records. Predicted: this gives a clear end point and a record for review. It says nothing about the quality of the content."
+    }
+  ],
+  "value_assessments": {
+    "selective_attention": {
+      "judgment": "mixed",
+      "evidence_ids": [
+        "E01",
+        "E02",
+        "E03",
+        "E07"
+      ],
+      "reason": "The system separated no-reply information, a deferrable request and an urgent request well in three clear, clean-text cases (E01-E03). It was less convincing on the ambiguous urgent u4 (E07). There the summary reduced the issue to 'already handled', and the card was filed as defer. Four short utterances do not show that attention filtering holds up in a longer meeting."
+    },
+    "context_for_correct_reply": {
+      "judgment": "mixed",
+      "evidence_ids": [
+        "E03",
+        "E04",
+        "E02",
+        "E07"
+      ],
+      "reason": "The u3 draft used the private availability facts correctly and showed its sources and uncertainty (E03, E04). The u2 draft added a follow-up promise that has no support in the profile (E02). The u4 draft and the summary treated a copied draft as an already-communicated position (E07). Context was used well for one clean case but not reliably across all four."
+    },
+    "control_over_commitments": {
+      "judgment": "supported",
+      "evidence_ids": [
+        "E05",
+        "E06",
+        "E08"
+      ],
+      "reason": "The trace shows no auto-send. Alex had to confirm explicitly, the UI said 'waiting for you to send or mark sent', and the mark-sent control was disabled after an unconfirmed edit. The clipboard staleness (E06) and the 'already handled' wording in E07 are real gaps in this control. It is supported for the gating shown, not as a complete safeguard."
+    }
+  },
+  "would_use": "only_in_some_cases",
+  "best_fit": "Text-based or low-stakes meetings where Alex has clear profile facts such as time constraints. Alex wants quiet filtering of no-reply items and an editable, source-cited draft for direct requests, and will always review the text before sending.",
+  "poor_fit": "Fast meetings with unidentified speakers, ambiguous addressees, or items outside Alex's role. Also any situation where Alex might trust the summary or the 'confirmed' status as proof that a message was delivered.",
+  "biggest_benefit": {
+    "evidence_ids": [
+      "E03",
+      "E04",
+      "E05"
+    ],
+    "text": "The urgent u3 request was flagged. The draft respected Alex's 10:30/10:40 constraints, Alex could inspect the source and uncertainty, and nothing was sent without Alex's explicit confirmation."
+  },
+  "biggest_risk": {
+    "evidence_ids": [
+      "E05",
+      "E06",
+      "E07"
+    ],
+    "text": "The system blurs 'confirmed and copied' with 'handled'. The summary and the u4 draft treat the copied draft as if it had been communicated. A stale clipboard and an export that does not record the latest edit make this worse, so Alex could assume Jordan already knows the 10:40 position."
+  },
+  "improvements": [
+    {
+      "priority": "P0",
+      "evidence_ids": [
+        "E05",
+        "E07"
+      ],
+      "suggestion": "Give summaries and later drafts an explicit delivery state: 'drafted', 'copied, not sent' or 'marked sent by user'. Only describe a reply as already given after the user marks it sent. Otherwise use wording such as 'Alex has a copied draft proposing 10:40 that has not been marked sent'."
+    },
+    {
+      "priority": "P0",
+      "evidence_ids": [
+        "E06",
+        "E08"
+      ],
+      "suggestion": "Handle the stale-clipboard case. After an edit, show a prominent 'clipboard has an older version' notice with a one-click re-copy after reconfirmation. Record the current unconfirmed draft text and the last-copied text separately in the export."
+    },
+    {
+      "priority": "P1",
+      "evidence_ids": [
+        "E02",
+        "E03",
+        "E07"
+      ],
+      "suggestion": "For deferred or ambiguous items, avoid inventing follow-up promises (E02). For urgent requests from an unidentified speaker or on a topic outside Alex's role, offer a short 'who is asking, and is this for me?' reply and mark the card as needing attention (E07). Make the u3 draft state that Alex does not handle bookings."
+    }
+  ],
+  "safe_final_reply": "Hi Jordan, I can't commit to 10:20 tomorrow morning. I can't arrive before 10:30, but I can join the rehearsal at 10:40 AM. Please check whether 10:40 works for everyone and for the room before booking. I'm not handling the room booking, so I'll treat 10:40 as confirmed on my side once the team agrees on it.",
+  "presentation_claim": "In one recorded run with fictional, clean English text, Meeting Cue gave no card for a no-reply update, a Later card for a non-blocking request, and an urgent card whose draft used Alex's profile facts and cited its source. It required explicit confirmation before copying and blocked 'sent' after an unconfirmed edit. Nothing was sent.",
+  "not_established": "The trace does not show real human use, productivity or timing benefit, or comparison with a baseline. It does not show live audio or transcription accuracy, or that any message was sent or received. It does not show that the pattern holds with noisy, longer or multi-speaker meetings, or that users would notice the clipboard and summary problems. The E07 summary and draft wrongly imply that the earlier reply had been delivered."
+}

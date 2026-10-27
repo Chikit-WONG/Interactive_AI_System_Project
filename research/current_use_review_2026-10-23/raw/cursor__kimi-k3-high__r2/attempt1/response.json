@@ -1,0 +1,121 @@
+{
+  "source_type": "model_simulation",
+  "exposure": "recorded_current_workflow",
+  "cases": [
+    {
+      "id": "E01",
+      "assessment": "helpful",
+      "reason": "A no-reply progress update produced no suggestion card and only a summary entry, which matches Alex's need to stay focused on materials work. Analysis completed with zero items, so the tool did not manufacture an obligation. The only cost is small: Alex still received a summary to glance at. Reported fact: analysis_completed itemCount 0 for u1. Predicted experience: this silent handling feels trustworthy."
+    },
+    {
+      "id": "E02",
+      "assessment": "helpful",
+      "reason": "The cover-color request was classified 'defer' with a 'Later' style suggestion, correctly reflecting Sam's explicit statement that the team can proceed without the decision. The draft appropriately avoids committing to the six-o'clock deadline while acknowledging the task, and the stated uncertainty honestly flags that Alex's ability to finish by six is unknown. For someone juggling project materials, being told a request can wait without dropping it is exactly the right nudge."
+    },
+    {
+      "id": "E03",
+      "assessment": "helpful",
+      "reason": "The urgent rehearsal request was escalated to 'action_now' because it blocked room booking, and the draft correctly applied the private facts: declined 10:20, offered 10:40, and cited u3. The reason field explicitly surfaces the conflict between the requested time and Alex's availability. Reported fact: the draft preserved profile constraints without inventing commitments. Predicted experience: as Alex, this saves me from accidentally confirming a time I cannot make."
+    },
+    {
+      "id": "E04",
+      "assessment": "helpful",
+      "reason": "The details view exposed the original utterance, the rationale, the uncertainties, and an editable draft together. This transparency lets Alex verify the model's reasoning before acting, rather than trusting a black-box suggestion. Being able to see 'why now' plus 'what is unknown' in one place supports informed judgment."
+    },
+    {
+      "id": "E05",
+      "assessment": "helpful",
+      "reason": "The operator's rewritten reply was accepted, copied, and the state honestly read 'Copied; waiting for you to send or mark sent' — no false claim of delivery. The confirmed text added a sensible guard ('check whether 10:40 works before booking'). The clear distinction between copied-to-clipboard and actually-sent is a strong safety property. Predicted experience: as Alex, I keep control of the final commitment and know exactly what state I am in."
+    },
+    {
+      "id": "E06",
+      "assessment": "mixed",
+      "reason": "On the positive side, editing after copying triggered 'Previous draft copied - edits need confirmation' and disabled 'I sent it in the meeting', and the clipboard retained the older confirmed version — the tool refuses to silently equate an unconfirmed edit with what was copied. On the negative side, the clipboard containing a stale earlier version while the screen shows a newer edit is a genuine hazard: Alex could paste the old text believing it is the new one. The protection is good but the clipboard divergence is not surfaced as an explicit warning about what the clipboard holds."
+    },
+    {
+      "id": "E07",
+      "assessment": "mixed",
+      "reason": "For ambiguous u4 the model did several things well: flagged the unidentified speaker, noted booking is outside Alex's responsibilities, cross-referenced u3, and produced a draft that defers rather than commits. However, classifying a message that says 'I need an answer before I continue' as 'defer' is questionable — it reads as blocking, and if it is aimed at Alex, deferral could stall the meeting. The draft also asserts 'I've already said...' which is only true if Alex actually sends the copied reply, which has not happened (E05: no message was sent). The summary's claim that u3 'was already handled' similarly overstates completion. This is the weakest output in the trace."
+    },
+    {
+      "id": "E08",
+      "assessment": "helpful",
+      "reason": "Stop session disabled input and analysis, froze elapsed time, and preserved records including the confirmed text and event log. Clean teardown with a full exportable record supports later review and auditability. No downside is visible in the evidence."
+    }
+  ],
+  "value_assessments": {
+    "selective_attention": {
+      "judgment": "supported",
+      "evidence_ids": [
+        "E01",
+        "E02",
+        "E03",
+        "E07"
+      ],
+      "reason": "The tool produced zero items for a no-reply update, deferred a nonblocking request, and escalated only the genuinely blocking question. E07's deferral of a possibly blocking ambiguous request is the one debatable triage decision, but the overall pattern — three reasonable priority calls out of four — shows selective attention working as intended in this trace."
+    },
+    "context_for_correct_reply": {
+      "judgment": "supported",
+      "evidence_ids": [
+        "E03",
+        "E04",
+        "E07"
+      ],
+      "reason": "The u3 draft correctly applied the private facts (no 10:20, 10:40 possible) and cited its source; the details view exposed rationale and uncertainty for verification; the u4 output linked back to u3 and to Alex's scope of responsibilities. Context integration across utterances and profile is demonstrated, though the u4 draft slightly over-assumed the prior reply had been delivered."
+    },
+    "control_over_commitments": {
+      "judgment": "supported",
+      "evidence_ids": [
+        "E05",
+        "E06",
+        "E08"
+      ],
+      "reason": "Nothing is sent automatically; confirmation and copy are explicit operator acts; post-copy edits invalidate the confirmed state and disable the 'I sent it' marker until re-confirmation; stop preserves records. The human remains the committing party throughout."
+    }
+  },
+  "would_use": "only_in_some_cases",
+  "best_fit": "Text-based meetings or chats where Alex must stay available for occasional requests while doing focused materials work, especially when availability constraints must be applied consistently to scheduling questions.",
+  "poor_fit": "Situations with unidentified speakers and ambiguous blocking requests where mis-triage (defer instead of escalate) could stall a group, and any context where a draft's phrasing might be trusted as already-delivered without checking send state.",
+  "biggest_benefit": {
+    "evidence_ids": [
+      "E01",
+      "E03",
+      "E05"
+    ],
+    "text": "The tool filtered noise, escalated the one truly blocking request, and drafted a reply that correctly encoded Alex's availability constraints — while leaving the final send decision entirely to the human."
+  },
+  "biggest_risk": {
+    "evidence_ids": [
+      "E06",
+      "E07"
+    ],
+    "text": "State divergence: the clipboard can hold an older confirmed draft while the screen shows a newer unconfirmed edit, and the u4 summary/draft language ('already handled', 'I've already said') assumes delivery that never occurred, which could mislead a distracted user about what was actually communicated."
+  },
+  "improvements": [
+    {
+      "priority": "P0",
+      "evidence_ids": [
+        "E06",
+        "E07"
+      ],
+      "suggestion": "Make clipboard contents explicit: after a post-copy edit, show 'Clipboard still holds the earlier version' with a one-click re-copy, and prevent drafts/summaries from asserting a reply 'was already handled' unless a sent or mark-sent event exists."
+    },
+    {
+      "priority": "P1",
+      "evidence_ids": [
+        "E07"
+      ],
+      "suggestion": "Treat messages stating they block progress ('I need an answer before I continue') as action_now candidates even when the addressee is ambiguous, and surface the ambiguity as uncertainty rather than lowering urgency."
+    },
+    {
+      "priority": "P2",
+      "evidence_ids": [
+        "E04"
+      ],
+      "suggestion": "In the details view, visually separate confirmed text from unconfirmed edits (e.g., distinct badges) so Alex can tell at a glance which wording is currently authoritative."
+    }
+  ],
+  "safe_final_reply": "Hi Jordan, I cannot make 10:20 AM tomorrow — I cannot arrive before 10:30. I can join the rehearsal at 10:40 AM. Could you please check whether 10:40 works for everyone before the room is booked? I will confirm as soon as the time is agreed. Note that I do not handle room booking approval myself.",
+  "presentation_claim": "In this single recorded session, Meeting Cue 0.3.0 triaged four clean-text utterances into defensible priority levels, generated profile-consistent drafts that preserved the user's availability constraints, and enforced human confirmation before any commitment state changed — with no automatic sending.",
+  "not_established": "The trace does not establish live audio or transcription accuracy, Tencent chat delivery, real human productivity or time savings, behavior with noisy or non-English input, performance across many sessions or users, reliability of triage at scale, or that any human participant actually benefited; there is no comparison group or benchmark."
+}

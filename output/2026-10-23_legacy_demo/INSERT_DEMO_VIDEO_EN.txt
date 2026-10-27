@@ -1,0 +1,11 @@
+SLIDE 5 VIDEO SETUP
+Video: Demo_EarlyPrototype_EN_Captions.mp4, included in this folder.
+The PPT reserves a 4:3 area. The MP4 is supplied separately, not embedded.
+In PowerPoint: delete the rectangle labeled 64-second recording; Insert > Video >
+This Device; select the MP4. Lock aspect ratio, set width 17.61 cm and height
+13.21 cm, position X 1.69 cm, Y 4.23 cm. This matches x64,y160,w665.6,h499.2 px.
+Set Start: On Click. Optional Play Full Screen improves text visibility.
+The right-hand English guide remains useful before playback and afterwards.
+Try playback once on the presentation computer. If insertion is unavailable,
+open the MP4 in a media player, play full-screen at the slide 5 cue, then return
+to the slides. The source has no audio; no sound setup is required.

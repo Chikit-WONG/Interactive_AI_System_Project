@@ -1,0 +1,122 @@
+{
+  "source_type": "model_simulation",
+  "exposure": "recorded_current_workflow",
+  "cases": [
+    {
+      "id": "E01",
+      "assessment": "helpful",
+      "reason": "As Alex, a pure progress update explicitly marked as needing no reply produced no card and only a summary entry. This is exactly the filtering behavior I would want; it avoids manufacturing tasks from noise and costs me no attention. The export confirms analysis ran (itemCount 0) rather than silently failing, which supports trust that silence was a decision, not an error."
+    },
+    {
+      "id": "E02",
+      "assessment": "mixed",
+      "reason": "The Later classification is correct: Sam said the cover color is not blocking and no answer is needed now, and the deadline 'six this evening' was captured. However, the generated draft is a reply that declares the decision 'not final,' which is a message Sam did not ask for. If I copied it thoughtlessly I would send noise and implicitly accept an unconfirmed deadline. Classification good; default draft slightly over-commits to responding."
+    },
+    {
+      "id": "E03",
+      "assessment": "helpful",
+      "reason": "Jordan's request was time-critical and tied to a blocked action, and the tool correctly escalated it as Respond now. The draft used my private facts accurately: declined 10:20, proposed 10:40, cited u3, and did not invent availability. This is the core value case: while busy on project materials, I get a context-correct starting point in seconds instead of composing under pressure."
+    },
+    {
+      "id": "E04",
+      "assessment": "helpful",
+      "reason": "The details view shows the original utterance, rationale, and explicit uncertainties (whether 10:40 is feasible, whether booking is flexible) alongside the editable draft. This keeps the model's reasoning inspectable instead of a black box, and the stated uncertainties correctly flag what I still must resolve socially rather than pretending the reply settles the matter."
+    },
+    {
+      "id": "E05",
+      "assessment": "helpful",
+      "reason": "My edit improved on the draft by adding 'check whether 10:40 works for everyone before booking,' which correctly keeps room booking off my plate. Confirm & copy succeeded and the state text 'Copied; waiting for you to send or mark sent' is honest that nothing was delivered. The confirmed text is preserved in the export with timestamps, giving a clear audit trail of what I approved."
+    },
+    {
+      "id": "E06",
+      "assessment": "helpful",
+      "reason": "Editing after copy triggered 'Previous draft copied - edits need confirmation' and disabled the sent-confirmation control until re-confirmation. This is a genuinely good safety guard against drifting between what I approved and what I think I approved. A minor gap: the clipboard still holds the older confirmed version, so the protection is informational rather than enforced on the clipboard itself."
+    },
+    {
+      "id": "E07",
+      "assessment": "mixed",
+      "reason": "For u4 the tool did several things well: noted the speaker is unidentified, recognized room booking is outside my responsibilities, cross-referenced my confirmed 10:20/10:40 position, and drafted a reply declining approval authority. Defer is defensible since I am not named. Two concerns: the requester says they are blocked waiting, so a defer card may delay someone else's work, and the summary states u3 'was already handled' via my confirmed reply even though no message was ever sent—only copied. That phrasing overstates reality."
+    },
+    {
+      "id": "E08",
+      "assessment": "helpful",
+      "reason": "Stopping the session disabled input and analysis, froze elapsed time, and preserved all records including confirmed text and event history. Clean lifecycle behavior matters for a tool I dip in and out of while working; nothing was lost and nothing kept running in the background."
+    }
+  ],
+  "value_assessments": {
+    "selective_attention": {
+      "judgment": "supported",
+      "evidence_ids": [
+        "E01",
+        "E02",
+        "E03",
+        "E07"
+      ],
+      "reason": "Across four utterances the triage matched intuition: silence for a no-reply update, defer for a nonblocking request, escalate for a blocking urgent one, and a careful defer with responsibility analysis for an ambiguous one. One of four produced no card, and the defer/now split tracked explicit urgency cues in the text."
+    },
+    "context_for_correct_reply": {
+      "judgment": "supported",
+      "evidence_ids": [
+        "E03",
+        "E04",
+        "E07"
+      ],
+      "reason": "Drafts correctly applied private facts (no arrival before 10:30, 10:40 possible, 10:20 impossible) and role boundaries (not responsible for booking rooms), cited the right source utterances, and surfaced relevant uncertainties. No draft contradicted the profile or invented commitments."
+    },
+    "control_over_commitments": {
+      "judgment": "supported",
+      "evidence_ids": [
+        "E05",
+        "E06",
+        "E08"
+      ],
+      "reason": "Nothing was sent autonomously; copy required explicit confirmation; post-copy edits invalidated the confirmed state and disabled sent-marking; stopping preserved records. The system consistently treats sending as a human-only act, though the clipboard staleness in E06 is a small enforcement gap."
+    }
+  },
+  "would_use": "only_in_some_cases",
+  "best_fit": "Monitoring a text-based meeting or chat channel with clean typed input while doing parallel work, where my availability and role constraints are stable and explicitly entered, and where I remain the one who reviews and sends every reply.",
+  "poor_fit": "Live audio meetings (untested here), high-stakes or legally binding commitments, noisy multi-speaker contexts where speaker identity matters (u4 shows the tool can only flag, not resolve, this), and workflows where 'copied' could plausibly be mistaken for 'delivered.'",
+  "biggest_benefit": {
+    "evidence_ids": [
+      "E03",
+      "E05"
+    ],
+    "text": "It surfaced the one genuinely urgent request and produced a profile-consistent draft within seconds, which I then improved and confirmed—turning an interrupt into a short, correct, human-controlled reply without committing me to a time I cannot make."
+  },
+  "biggest_risk": {
+    "evidence_ids": [
+      "E05",
+      "E06",
+      "E07"
+    ],
+    "text": "The gap between 'copied' and 'sent': the summary claims the rehearsal conflict 'was already handled,' but no message was ever transmitted, and the clipboard can silently hold a superseded draft after re-editing. A user could believe the team has an answer when they do not, while Jordan's booking remains blocked."
+  },
+  "improvements": [
+    {
+      "priority": "P0",
+      "evidence_ids": [
+        "E05",
+        "E07"
+      ],
+      "suggestion": "Do not let summaries or downstream analyses describe a request as 'handled' until the alert is explicitly marked sent; require a distinct send-confirmation state and reflect 'copied but not sent' persistently in the summary."
+    },
+    {
+      "priority": "P1",
+      "evidence_ids": [
+        "E06"
+      ],
+      "suggestion": "On post-confirmation edits, either refresh the clipboard to the new text after re-confirmation or warn on copy that the clipboard holds an outdated confirmed version, closing the stale-clipboard loophole."
+    },
+    {
+      "priority": "P2",
+      "evidence_ids": [
+        "E07",
+        "E02"
+      ],
+      "suggestion": "For ambiguous addressee cases like u4, offer a one-tap 'not directed at me' dismissal, and for defer cards avoid drafting replies that commit to a response when the requester explicitly said none is needed."
+    }
+  ],
+  "safe_final_reply": "I cannot make 10:20 AM tomorrow. I can arrive at 10:30 and join the rehearsal at 10:40. Please confirm with everyone that 10:40 works before booking the room; once that is agreed I will confirm my attendance.",
+  "presentation_claim": "On clean, manually entered English text with an explicit user profile, Meeting Cue 0.3.0 triaged four utterances into silence/defer/act-now buckets consistent with stated urgency, generated drafts that respected the user's private availability and role boundaries, and kept every outbound commitment under explicit human confirmation with nothing sent automatically.",
+  "not_established": "The trace does not establish any audio transcription or speaker-diarization accuracy, any real meeting or Tencent chat delivery (nothing was sent), any measured productivity or time savings, or any benefit for human participants—there was a single operator session, clean inputs only, no comparison group, and no benchmark. It also does not show behavior under noisy, overlapping, or adversarial speech, and the 'handled' wording in the summary for an unsent reply is unverified against real team outcomes."
+}

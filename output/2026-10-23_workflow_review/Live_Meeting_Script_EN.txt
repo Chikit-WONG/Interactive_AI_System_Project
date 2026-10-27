@@ -1,0 +1,177 @@
+MEETING CUE
+English live meeting script and recording guide
+
+Purpose
+Record real operation: speech through Tencent Meeting, live transcription,
+automatic DeepSeek analysis, source inspection, an edited reply, and the reply
+appearing in Tencent Meeting chat. The scenario is rehearsed. The system
+responses should remain the actual responses produced during the recording.
+
+Target final video: about 120 seconds. Allow roughly 105-150 seconds for a raw take.
+The course allows 8 minutes including this video, followed by 2 minutes of Q&A. This video duration is an estimate until the actual take is timed. See Timing_and_Demo_Plan_EN.txt.
+
+Three-person cast
+Member A (you) plays Alex: participant using Meeting Cue and operating the app.
+Member B plays Jordan: meeting chair who asks for a decision and acknowledges
+the reply after it actually appears in Tencent Meeting chat.
+Member C plays Sam: gives the routine progress update and then a request that
+can wait. Sam takes both speaking turns, so no additional participant is needed.
+These are fictional demonstration names. They do not replace the group's real
+names in the individual-contribution slide.
+
+Before recording
+1. Use a dedicated rehearsal meeting. All participants know it will be recorded.
+2. Arrange Tencent Meeting and Meeting Cue side by side. Keep the transcript,
+   analysis results, and Tencent chat large enough to read.
+3. Set the demo page to English. Use English display names in Tencent Meeting.
+   The English interface selects English (en-US) speech recognition automatically.
+4. Enter Alex's profile below. Use a fresh demo session so old Chinese transcripts
+   or reminders do not appear in the recording.
+5. Click Start session, then enable automatic analysis. Start meeting-audio
+   transcription using the source
+   selection that passed your device test. Check a short spoken sentence before
+   recording. Do not assume a selected window guarantees audio isolation.
+6. Keep the actual meeting speaker and the computer receiving the sound separate.
+   For a clear test, Jordan speaks from another device with headphones.
+7. Start the screen recorder with meeting audio enabled. Let the recording run
+   continuously through the final message and acknowledgement.
+
+Alex's demonstration profile
+Name: Alex
+Role: Project materials coordinator
+Responsibilities: Confirm my rehearsal availability and check the presentation
+materials. I am not responsible for booking the room or choosing the cover color
+during the meeting.
+Additional context: Tomorrow I cannot arrive before 10:30 AM. I can join a
+rehearsal at 10:40 AM. I cannot commit to 10:20 AM. I prefer to inspect the exact
+request before confirming a time.
+
+SCENE 1: ORDINARY PROGRESS (about 0:00-0:15)
+
+Sam (Member C), speaking in Tencent Meeting:
+"I have uploaded the latest project files. This is just a progress update.
+Alex does not need to reply."
+
+Alex: Continue working for a moment. Keep the assistant visible so the audience
+can see the new transcript arrive. Do not press the manual analysis button.
+
+SCENE 2: A REQUEST THAT CAN WAIT (about 0:15-0:30)
+
+Sam (Member C), speaking in Tencent Meeting:
+"Alex, could you review the cover color by six this evening? We can continue
+without that decision, so there is no need to answer now."
+
+Pause briefly. The model may summarize or group items differently across runs.
+Show the actual result. Do not edit the transcript to force the desired category.
+
+SCENE 3: AN IMMEDIATE DECISION (about 0:30-0:50)
+
+Jordan (Member B), speaking in Tencent Meeting:
+"Alex, can you join the rehearsal at ten twenty tomorrow morning? Please
+confirm now. The room administrator is waiting, and we need your answer before
+we can book the room."
+
+Everyone: Pause so speech recognition can finish the sentence and automatic
+analysis can run. Leave the transcript and analysis status visible. Normal model
+latency is part of the live operation. If it is unusually slow, keep the original
+recording and label any later cut as a shortened wait.
+
+SCENE 4: AUTOMATIC ANALYSIS, SOURCE CHECK AND EDIT (about 0:50-1:40)
+
+Alex: Open the reminder for the rehearsal request. Show the source excerpt and
+the timing condition. Read the draft before changing it.
+
+Alex, spoken commentary, if narration is useful:
+"The team needs my answer now. I will check the request and make my actual
+availability explicit before replying."
+
+Alex: Edit the draft in the app. Use the following reply only if it still matches
+the actual request and the profile:
+
+"I cannot make 10:20 AM. I can arrive at 10:30 and join the rehearsal at 10:40.
+Please book the room for 10:40 if that works for everyone."
+
+Alex: Confirm and copy the edited reply. Keep the app's copy status visible.
+Copying does not send the reply to Tencent Meeting.
+
+SCENE 5: THE REPLY REACHES THE MEETING (about 1:40-2:00)
+
+Alex: Switch to Tencent Meeting chat, paste the copied text, inspect it, then
+press Send. Keep the sent message visible long enough for the audience to read.
+
+Jordan (Member B), only after receiving the actual chat message:
+"Thanks, Alex. I can see your message. We will book the room for ten forty."
+
+Alex: If the assistant has a sent-status control, use it only after the message
+has actually been sent. The control records the participant's report of sending.
+It does not independently verify delivery.
+
+SCENE 6: FEEDBACK (optional extra shot, outside the core 2-minute sequence)
+
+Alex: Open the feedback entry to show how future users can comment. Submit only
+feedback from the actual person who used the prototype. Do not invent feedback.
+
+Suggested question for the person trying the app:
+"At which moment did the assistant help or confuse you, and what would you
+change about that exact step?"
+
+Stop the recording after the acknowledgement and save the original file.
+Suggested final filename after review: Meeting_Cue_Live_Demo.mp4
+
+Optional narration inside the finished recording
+If narration is needed, record it separately in English and include it within
+the two-minute video. No presenter speaks over playback during the presentation.
+Use these lines only over footage that actually shows the corresponding step.
+Keep the meeting dialogue audible. Narration can be recorded separately in
+English after the screen recording, without replacing the actual app operation.
+
+Opening:
+"Alex is working on project materials while the meeting continues. Meeting Cue
+helps Alex notice requests that need a response."
+
+During automatic analysis:
+"Meeting speech becomes text. DeepSeek analyzes new content automatically using
+Alex's role and availability."
+
+During source checking:
+"Alex opens the original request and checks the proposed rehearsal time."
+
+During editing:
+"The reply must match Alex's availability. Alex edits and confirms it."
+
+During chat sending:
+"Alex copies the reply, sends it in Tencent Meeting chat, and receives an
+acknowledgement. The participant stays responsible for the final message."
+
+Recording review
+- Is the actual spoken request audible?
+- Can the audience see the same request appear as a transcript?
+- Does analysis happen without a manual analysis click?
+- Can the audience read the original condition and the edited time?
+- Does the message actually appear in Tencent Meeting chat?
+- Does Jordan acknowledge the received message rather than merely reading a script?
+- Are all app labels, role names, subtitles, and narration in English?
+- If a wait or retry is cut, is the cut disclosed rather than presented as real-time?
+
+If a service fails
+Stop and fix the connection before a new take. Preserve a note of the failure.
+If using typed text as a fallback, label it as typed input and do not describe
+that take as speech transcription. If the reply never reaches chat, describe
+the actual endpoint instead of claiming a completed meeting workflow.
+
+
+
+RUBRIC-FOCUSED SHOT CHECKS (no extra video time)
+0:00-0:30: Show progress and a deferrable request. Keep actual model outputs.
+0:30-0:50: Show an urgent booking request arriving through real meeting audio.
+0:50-1:40: Show automatic analysis, original request, availability and editing.
+If the draft already offers 10:40 correctly, clarify it rather than implying
+that AI proposed an incorrect time.
+1:40-2:00: Show manual send and actual receipt acknowledgement in Tencent.
+This demonstrates operation, not measured reduction in interruptions.
+
+Remaining task allocation:
+Chi Kit: operate Alex's assistant, integration check, assemble final cut.
+Haodong: host as Jordan, verify transcript and reply against spoken dialogue.
+Sida: speak as Sam, check video/audio readability, collect actual-use feedback.
+Keep these tasks marked planned until each is complete.

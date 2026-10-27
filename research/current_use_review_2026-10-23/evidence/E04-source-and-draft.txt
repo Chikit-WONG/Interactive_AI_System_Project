@@ -1,0 +1,40 @@
+Browser tab: 3, Title: "Meeting Cue · Meeting companion", URL: "http://127.0.0.1:8876/".
+0 AXWebArea Meeting Cue · Meeting companion, URL: 127.0.0.1:8876/
+	1 container ID: alert-dialog, Can Alex join the rehearsal at ten twenty tomorrow morning, and what should be told to the room administrator waiting on the answer?
+		37 text Respond now
+		3 button Description: Close suggestion details, ID: close-alert-dialog
+		4 heading Value: 2, ID: alert-dialog-title, Can Alex join the rehearsal at ten twenty tomorrow morning, and what should be told to the room administrator waiting on the answer?
+			38 text Can Alex join the rehearsal at ten twenty tomorrow morning, and what should be told to the room administrator waiting on the answer?
+		39 text Needs review
+		7 heading Why this matters, Value: 3
+			8 text Why this matters
+		40 text Jordan explicitly asks for confirmation now and ties the room booking to it, so the discussion cannot proceed without a response. Alex's own availability facts conflict with the requested time, so the conflict needs to be resolved by Alex.
+		41 text No explicit deadline provided. To verify: The requested time is ten twenty, but Alex's availability facts say tomorrow cannot start before 10:30 and 10:40 is possible. It is unclear whether the rehearsal can move to 10:40 or whether the room booking has any flexibility.
+		11 heading Relevant context, Value: 3
+			12 text Relevant context
+		42 text These excerpts were cited for this suggestion. Check the specific conditions.
+		14 container
+			15 heading Check the source excerpts, Value: 3
+				16 text Check the source excerpts
+			43 container
+				44 text u3 Jordan Text input 14:02:36 Alex, can you join the rehearsal at ten twenty tomorrow morning? Please confirm now. The room administrator is waiting, and we need your answer before we can book the room.
+		19 container reply-section
+			20 text Review and edit the reply draft
+			21 text entry area (settable) Review and edit the reply draft, ID: reply-draft, Value: Thanks Jordan. I can't commit to 10:20 tomorrow morning. I can join a rehearsal at 10:40 tomorrow. Could we use 10:40, or let me know another time, and I can confirm once that's agreed?
+			45 text AI-suggested draft. Not sent.
+			23 button Confirm & copy reply, ID: copy-reply
+			24 button (disabled) I sent it in the meeting, ID: mark-sent
+			25 button Deferred, ID: snooze-alert
+		26 container
+			27 text No response needed from you?
+			28 pop up button (collapsed, settable) No response needed from you?, Value: Select a reason, ID: not-needed-reason, Secondary Actions: Expand
+				29 menu
+					30 (selected) Select a reason
+					31 Outside my responsibilities
+					32 Already handled
+					33 For awareness only
+					34 Other reason
+			35 button Mark not needed, ID: mark-not-needed
+			36 text This is not counted as a successful reply and does not send an explanation to the meeting.
+
+The focused UI element is 3 button Description: Close suggestion details, ID: close-alert-dialog

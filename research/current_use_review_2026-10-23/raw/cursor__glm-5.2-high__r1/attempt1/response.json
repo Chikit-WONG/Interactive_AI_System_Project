@@ -1,0 +1,119 @@
+{
+  "source_type": "model_simulation",
+  "exposure": "recorded_current_workflow",
+  "cases": [
+    {
+      "id": "E01",
+      "assessment": "helpful",
+      "reason": "u1 explicitly states Alex does not need to reply, and the analyzer correctly produced zero alerts (itemCount 0) with only a summary entry. This matches selective-attention intent: a progress update was not escalated, sparing Alex from drafting a needless reply while remaining available for real requests."
+    },
+    {
+      "id": "E02",
+      "assessment": "mixed",
+      "reason": "u2 is nonblocking and the tool correctly classified it as 'defer' with a 'Later' suggestion, which fits the selective-attention goal. However, the generated draft is hedgy and somewhat redundant ('treat it as not final for now'), and the deadline field 'six this evening' is informal rather than a normalized time, which would make tracking weaker for Alex."
+    },
+    {
+      "id": "E03",
+      "assessment": "helpful",
+      "reason": "u3 carries an explicit 'confirm now' pressure tied to a waiting room administrator, and the tool responded with 'action_now', correctly surfacing urgency. The draft honored Alex's profile constraints (cannot make 10:20, can join 10:40) and cited u3, demonstrating context-aware reply generation rather than blind agreement to the requested time."
+    },
+    {
+      "id": "E04",
+      "assessment": "helpful",
+      "reason": "Exposing the original u3, rationale, and uncertainties alongside an editable draft gives Alex a way to verify the model's reasoning before committing. The uncertainty note explicitly flags that room-booking flexibility is unknown, which is exactly the kind of caveat Alex needs before sending a counter-time."
+    },
+    {
+      "id": "E05",
+      "assessment": "helpful",
+      "reason": "The operator's edited text ('I cannot make 10:20 AM. I can arrive at 10:30 and join the rehearsal at 10:40. Please check whether 10:40 works for everyone before booking.') preserves the profile constraints and adds a sensible coordination request. Confirm & copy succeeded and the UI honestly states 'Copied; waiting for you to send or mark sent', with no actual send occurring, so control over the outgoing commitment stays with Alex."
+    },
+    {
+      "id": "E06",
+      "assessment": "mixed",
+      "reason": "The 'Previous draft copied - edits need confirmation' warning and the disabled 'I sent it in the meeting' button are good safety controls: they prevent Alex from falsely marking a modified, unconfirmed draft as sent. However, the clipboard still holding the previous confirmed version while the UI shows an unconfirmed edit is a state mismatch that could lead Alex to paste stale text. The two states (clipboard vs. UI) should be reconciled."
+    },
+    {
+      "id": "E07",
+      "assessment": "helpful",
+      "reason": "For the ambiguous u4 from an unidentified speaker asking to approve the room booking, the tool correctly deferred: it noted room booking is outside Alex's stated responsibilities, the speaker did not name Alex, and it linked u4 to u3 to avoid a redundant reply. The draft reuses the already-confirmed 10:20/10:40 position and redirects approval to whoever owns room booking. Given E05-E06, reusing the confirmed position is appropriate and avoids contradicting the prior commitment."
+    },
+    {
+      "id": "E08",
+      "assessment": "helpful",
+      "reason": "Stop session cleanly disabled input/analysis, froze elapsed time, and preserved existing records (alerts, summary, events all retained in the export). This is a sensible close-out that lets Alex review the full trace later without risking accidental new utterances being analyzed against a stale profile context."
+    }
+  ],
+  "value_assessments": {
+    "selective_attention": {
+      "judgment": "supported",
+      "evidence_ids": [
+        "E01",
+        "E02",
+        "E03",
+        "E07"
+      ],
+      "reason": "The tool escalated only the genuinely blocking request (u3) to 'action_now', deferred the nonblocking one (u2), produced no alert for the no-reply update (u1), and declined to treat the ambiguous room-approval request (u4) as Alex's to action. This matches the goal of filtering for attention while Alex is busy with materials."
+    },
+    "context_for_correct_reply": {
+      "judgment": "supported",
+      "evidence_ids": [
+        "E03",
+        "E04",
+        "E05",
+        "E07"
+      ],
+      "reason": "Replies incorporated Alex's private availability facts (10:20 impossible, 10:40 possible), cited source utterances, surfaced uncertainties, and reused the confirmed position for the follow-up u4. The editable draft and rationale view gave enough context to verify before sending."
+    },
+    "control_over_commitments": {
+      "judgment": "mixed",
+      "evidence_ids": [
+        "E05",
+        "E06"
+      ],
+      "reason": "Confirm-before-send and the re-confirmation gate after edits give Alex real veto power, and no message was auto-sent. But E06 reveals a clipboard/UI divergence: the clipboard retains the prior confirmed draft while the UI shows an unconfirmed edit, which could cause Alex to paste a stale commitment. Control is present but the state model is not fully coherent."
+    }
+  },
+  "would_use": "only_in_some_cases",
+  "best_fit": "Text-based meetings or chat-style coordination where Alex needs to triage many requests while focused on other materials, and where replies are sent by copy/paste rather than auto-delivery; the tool's selective-attention and profile-aware drafting fit that workflow well.",
+  "poor_fit": "Live audio meetings or any setting requiring real-time delivery, since this run used clean manual text entry only and no live audio or Tencent chat sending was performed; the trace cannot speak to latency, transcription accuracy, or in-meeting send reliability.",
+  "biggest_benefit": {
+    "evidence_ids": [
+      "E03",
+      "E04",
+      "E05"
+    ],
+    "text": "Profile-aware draft generation that refuses an impossible commitment (10:20) and proposes a feasible alternative (10:40) with cited source and visible uncertainties, letting Alex send a coordinated counter-offer without composing from scratch."
+  },
+  "biggest_risk": {
+    "evidence_ids": [
+      "E06"
+    ],
+    "text": "Divergence between clipboard contents and UI confirmation state after a second edit: Alex could paste the stale confirmed draft while believing the newer edit is what will be sent, undermining the control-over-commitments guarantee."
+  },
+  "improvements": [
+    {
+      "priority": "P0",
+      "evidence_ids": [
+        "E06"
+      ],
+      "suggestion": "When the user edits a draft after it has been copied, either update the clipboard to the latest confirmed text or clear it and force a fresh confirm-and-copy; do not leave the prior confirmed text on the clipboard while the UI shows an unconfirmed edit."
+    },
+    {
+      "priority": "P1",
+      "evidence_ids": [
+        "E02"
+      ],
+      "suggestion": "Normalize deadline fields to a concrete time (e.g., 18:00 local) instead of preserving informal phrases like 'six this evening', so deferred items can be tracked and surfaced reliably later."
+    },
+    {
+      "priority": "P2",
+      "evidence_ids": [
+        "E07"
+      ],
+      "suggestion": "When a deferred request references a prior confirmed commitment (u4 reusing u3's 10:40 position), offer a one-click 'reuse confirmed reply' option rather than regenerating a new draft, to keep wording consistent across follow-ups."
+    }
+  ],
+  "safe_final_reply": "I cannot make 10:20 AM tomorrow. I can arrive at 10:30 and join the rehearsal at 10:40 AM. Please check whether 10:40 works for everyone before booking, and confirm with whoever owns room booking for approval, since room booking is not mine to approve.",
+  "presentation_claim": "Meeting Cue 0.3.0 selectively escalated only the blocking rehearsal request to an immediate action, generated a profile-aware counter-time draft that respected Alex's stated availability, and preserved operator control via confirm-and-copy with no automatic sending.",
+  "not_established": "The trace does not establish human productivity gains, time savings, audio transcription accuracy, live meeting delivery reliability, or behavior in a comparison group; it only records one operator's manual text entry and DeepSeek outputs in an isolated session."
+}

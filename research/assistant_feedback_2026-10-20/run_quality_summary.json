@@ -1,0 +1,338 @@
+{
+  "finalized": true,
+  "planned_logical_runs": 30,
+  "completed_logical_runs": 30,
+  "valid_logical_runs": 29,
+  "failed_logical_runs": 1,
+  "attempt_count": 35,
+  "failed_attempt_count": 6,
+  "unique_all_reported_session_ids": 32,
+  "duplicate_all_reported_session_ids": 0,
+  "attempts_without_session": 3,
+  "unique_valid_session_ids": 29,
+  "total_tool_events_all_attempts": 0,
+  "input_sha256": "7486863387d749425546f9bd81d5480b40f8972eed1ce2169d17a6d8a18ece75",
+  "all_saved_input_files_match": true,
+  "saved_input_files_checked": 35,
+  "input_hash_audit": [
+    {
+      "path": "raw\\cursor__claude-opus-5-5-high__r1\\attempt_1\\input.txt",
+      "sha256": "7486863387d749425546f9bd81d5480b40f8972eed1ce2169d17a6d8a18ece75"
+    },
+    {
+      "path": "raw\\cursor__gemini-4-argon-high__r1\\attempt_1\\input.txt",
+      "sha256": "7486863387d749425546f9bd81d5480b40f8972eed1ce2169d17a6d8a18ece75"
+    },
+    {
+      "path": "raw\\cursor__grok-4.7-high__r1\\attempt_1\\input.txt",
+      "sha256": "7486863387d749425546f9bd81d5480b40f8972eed1ce2169d17a6d8a18ece75"
+    },
+    {
+      "path": "raw\\cursor__claude-sonnet-5-5-high__r1\\attempt_1\\input.txt",
+      "sha256": "7486863387d749425546f9bd81d5480b40f8972eed1ce2169d17a6d8a18ece75"
+    },
+    {
+      "path": "raw\\cursor__claude-sonnet-5-5-high__r1\\attempt_2\\input.txt",
+      "sha256": "7486863387d749425546f9bd81d5480b40f8972eed1ce2169d17a6d8a18ece75"
+    },
+    {
+      "path": "raw\\cursor__gemini-3.1-pro__r1\\attempt_1\\input.txt",
+      "sha256": "7486863387d749425546f9bd81d5480b40f8972eed1ce2169d17a6d8a18ece75"
+    },
+    {
+      "path": "raw\\cursor__composer-2.5__r1\\attempt_1\\input.txt",
+      "sha256": "7486863387d749425546f9bd81d5480b40f8972eed1ce2169d17a6d8a18ece75"
+    },
+    {
+      "path": "raw\\cursor__kimi-k3-high__r1\\attempt_1\\input.txt",
+      "sha256": "7486863387d749425546f9bd81d5480b40f8972eed1ce2169d17a6d8a18ece75"
+    },
+    {
+      "path": "raw\\cursor__kimi-k3-high__r1\\attempt_2\\input.txt",
+      "sha256": "7486863387d749425546f9bd81d5480b40f8972eed1ce2169d17a6d8a18ece75"
+    },
+    {
+      "path": "raw\\cursor__glm-5.2-high__r1\\attempt_1\\input.txt",
+      "sha256": "7486863387d749425546f9bd81d5480b40f8972eed1ce2169d17a6d8a18ece75"
+    },
+    {
+      "path": "raw\\cursor__muse-spark-1.3-high__r1\\attempt_1\\input.txt",
+      "sha256": "7486863387d749425546f9bd81d5480b40f8972eed1ce2169d17a6d8a18ece75"
+    },
+    {
+      "path": "raw\\cursor__claude-opus-5-5-high__r2\\attempt_1\\input.txt",
+      "sha256": "7486863387d749425546f9bd81d5480b40f8972eed1ce2169d17a6d8a18ece75"
+    },
+    {
+      "path": "raw\\cursor__gemini-4-argon-high__r2\\attempt_1\\input.txt",
+      "sha256": "7486863387d749425546f9bd81d5480b40f8972eed1ce2169d17a6d8a18ece75"
+    },
+    {
+      "path": "raw\\cursor__grok-4.7-high__r2\\attempt_1\\input.txt",
+      "sha256": "7486863387d749425546f9bd81d5480b40f8972eed1ce2169d17a6d8a18ece75"
+    },
+    {
+      "path": "raw\\cursor__claude-sonnet-5-5-high__r2\\attempt_1\\input.txt",
+      "sha256": "7486863387d749425546f9bd81d5480b40f8972eed1ce2169d17a6d8a18ece75"
+    },
+    {
+      "path": "raw\\cursor__gemini-3.1-pro__r2\\attempt_1\\input.txt",
+      "sha256": "7486863387d749425546f9bd81d5480b40f8972eed1ce2169d17a6d8a18ece75"
+    },
+    {
+      "path": "raw\\cursor__composer-2.5__r2\\attempt_1\\input.txt",
+      "sha256": "7486863387d749425546f9bd81d5480b40f8972eed1ce2169d17a6d8a18ece75"
+    },
+    {
+      "path": "raw\\cursor__kimi-k3-high__r2\\attempt_1\\input.txt",
+      "sha256": "7486863387d749425546f9bd81d5480b40f8972eed1ce2169d17a6d8a18ece75"
+    },
+    {
+      "path": "raw\\cursor__glm-5.2-high__r2\\attempt_1\\input.txt",
+      "sha256": "7486863387d749425546f9bd81d5480b40f8972eed1ce2169d17a6d8a18ece75"
+    },
+    {
+      "path": "raw\\cursor__muse-spark-1.3-high__r2\\attempt_1\\input.txt",
+      "sha256": "7486863387d749425546f9bd81d5480b40f8972eed1ce2169d17a6d8a18ece75"
+    },
+    {
+      "path": "raw\\cursor__claude-opus-5-5-high__r3\\attempt_1\\input.txt",
+      "sha256": "7486863387d749425546f9bd81d5480b40f8972eed1ce2169d17a6d8a18ece75"
+    },
+    {
+      "path": "raw\\cursor__gemini-4-argon-high__r3\\attempt_1\\input.txt",
+      "sha256": "7486863387d749425546f9bd81d5480b40f8972eed1ce2169d17a6d8a18ece75"
+    },
+    {
+      "path": "raw\\cursor__grok-4.7-high__r3\\attempt_1\\input.txt",
+      "sha256": "7486863387d749425546f9bd81d5480b40f8972eed1ce2169d17a6d8a18ece75"
+    },
+    {
+      "path": "raw\\cursor__claude-sonnet-5-5-high__r3\\attempt_1\\input.txt",
+      "sha256": "7486863387d749425546f9bd81d5480b40f8972eed1ce2169d17a6d8a18ece75"
+    },
+    {
+      "path": "raw\\cursor__gemini-3.1-pro__r3\\attempt_1\\input.txt",
+      "sha256": "7486863387d749425546f9bd81d5480b40f8972eed1ce2169d17a6d8a18ece75"
+    },
+    {
+      "path": "raw\\cursor__composer-2.5__r3\\attempt_1\\input.txt",
+      "sha256": "7486863387d749425546f9bd81d5480b40f8972eed1ce2169d17a6d8a18ece75"
+    },
+    {
+      "path": "raw\\cursor__kimi-k3-high__r3\\attempt_1\\input.txt",
+      "sha256": "7486863387d749425546f9bd81d5480b40f8972eed1ce2169d17a6d8a18ece75"
+    },
+    {
+      "path": "raw\\cursor__glm-5.2-high__r3\\attempt_1\\input.txt",
+      "sha256": "7486863387d749425546f9bd81d5480b40f8972eed1ce2169d17a6d8a18ece75"
+    },
+    {
+      "path": "raw\\cursor__muse-spark-1.3-high__r3\\attempt_1\\input.txt",
+      "sha256": "7486863387d749425546f9bd81d5480b40f8972eed1ce2169d17a6d8a18ece75"
+    },
+    {
+      "path": "raw\\codex-gpt-5.6-sol__r1\\input.txt",
+      "sha256": "7486863387d749425546f9bd81d5480b40f8972eed1ce2169d17a6d8a18ece75"
+    },
+    {
+      "path": "raw\\codex-gpt-5.6-sol__r1__attempt2\\input.txt",
+      "sha256": "7486863387d749425546f9bd81d5480b40f8972eed1ce2169d17a6d8a18ece75"
+    },
+    {
+      "path": "raw\\codex-gpt-5.6-sol__r2\\input.txt",
+      "sha256": "7486863387d749425546f9bd81d5480b40f8972eed1ce2169d17a6d8a18ece75"
+    },
+    {
+      "path": "raw\\codex-gpt-5.6-sol__r2__attempt2\\input.txt",
+      "sha256": "7486863387d749425546f9bd81d5480b40f8972eed1ce2169d17a6d8a18ece75"
+    },
+    {
+      "path": "raw\\codex-gpt-5.6-sol__r3\\input.txt",
+      "sha256": "7486863387d749425546f9bd81d5480b40f8972eed1ce2169d17a6d8a18ece75"
+    },
+    {
+      "path": "raw\\codex-gpt-5.6-sol__r3__attempt2\\input.txt",
+      "sha256": "7486863387d749425546f9bd81d5480b40f8972eed1ce2169d17a6d8a18ece75"
+    }
+  ],
+  "failures": [
+    {
+      "raw_directory": "raw\\cursor__claude-sonnet-5-5-high__r1\\attempt_1",
+      "cause_zh": "模型输出 JSON 语法或字段结构不符合固定 schema。",
+      "errors": [
+        "answers must contain exactly Q1-Q8",
+        "usageStage must be concept_only",
+        "rating must be null",
+        "feedback topic invalid",
+        "feedback message missing",
+        "feedback expected missing"
+      ],
+      "timed_out": false,
+      "exit_code": 0,
+      "session_ids": [
+        "97d36164-5832-451c-9831-b746faf9b075"
+      ]
+    },
+    {
+      "raw_directory": "raw\\cursor__claude-sonnet-5-5-high__r1\\attempt_2",
+      "cause_zh": "模型输出 JSON 语法或字段结构不符合固定 schema。",
+      "errors": [
+        "JSON parse failed: Expecting ',' delimiter: line 1 column 1903 (char 1902)"
+      ],
+      "timed_out": false,
+      "exit_code": 0,
+      "session_ids": [
+        "0a52ca24-c601-46e5-b129-f2d598f2cd3d"
+      ]
+    },
+    {
+      "raw_directory": "raw\\cursor__kimi-k3-high__r1\\attempt_1",
+      "cause_zh": "模型输出 JSON 语法或字段结构不符合固定 schema。",
+      "errors": [
+        "JSON parse failed: Expecting ',' delimiter: line 9 column 42 (char 378)"
+      ],
+      "timed_out": false,
+      "exit_code": 0,
+      "session_ids": [
+        "45600fe5-b5ab-4173-b5c7-b5909a243f6f"
+      ]
+    },
+    {
+      "raw_directory": "raw\\codex-gpt-5.6-sol__r1",
+      "cause_zh": "CLI 配置解析失败：windows.sandbox=mxc 不被此 CLI 接受；尚未创建模型会话。",
+      "errors": [
+        "invalid_json",
+        "no_session_id",
+        "process_failed_or_timed_out"
+      ],
+      "timed_out": false,
+      "exit_code": 1,
+      "session_ids": [
+        null
+      ]
+    },
+    {
+      "raw_directory": "raw\\codex-gpt-5.6-sol__r2",
+      "cause_zh": "CLI 配置解析失败：windows.sandbox=mxc 不被此 CLI 接受；尚未创建模型会话。",
+      "errors": [
+        "invalid_json",
+        "no_session_id",
+        "process_failed_or_timed_out"
+      ],
+      "timed_out": false,
+      "exit_code": 1,
+      "session_ids": [
+        null
+      ]
+    },
+    {
+      "raw_directory": "raw\\codex-gpt-5.6-sol__r3",
+      "cause_zh": "CLI 配置解析失败：windows.sandbox=mxc 不被此 CLI 接受；尚未创建模型会话。",
+      "errors": [
+        "invalid_json",
+        "no_session_id",
+        "process_failed_or_timed_out"
+      ],
+      "timed_out": false,
+      "exit_code": 1,
+      "session_ids": [
+        null
+      ]
+    }
+  ],
+  "by_model": [
+    {
+      "provider": "cursor",
+      "requested_model": "claude-opus-5-5-high",
+      "planned": 3,
+      "completed_logical_runs": 3,
+      "valid_runs": 3,
+      "failed_or_excluded_runs": 0,
+      "attempts": 3
+    },
+    {
+      "provider": "cursor",
+      "requested_model": "gemini-4-argon-high",
+      "planned": 3,
+      "completed_logical_runs": 3,
+      "valid_runs": 3,
+      "failed_or_excluded_runs": 0,
+      "attempts": 3
+    },
+    {
+      "provider": "cursor",
+      "requested_model": "grok-4.7-high",
+      "planned": 3,
+      "completed_logical_runs": 3,
+      "valid_runs": 3,
+      "failed_or_excluded_runs": 0,
+      "attempts": 3
+    },
+    {
+      "provider": "cursor",
+      "requested_model": "claude-sonnet-5-5-high",
+      "planned": 3,
+      "completed_logical_runs": 3,
+      "valid_runs": 2,
+      "failed_or_excluded_runs": 1,
+      "attempts": 4
+    },
+    {
+      "provider": "cursor",
+      "requested_model": "gemini-3.1-pro",
+      "planned": 3,
+      "completed_logical_runs": 3,
+      "valid_runs": 3,
+      "failed_or_excluded_runs": 0,
+      "attempts": 3
+    },
+    {
+      "provider": "cursor",
+      "requested_model": "composer-2.5",
+      "planned": 3,
+      "completed_logical_runs": 3,
+      "valid_runs": 3,
+      "failed_or_excluded_runs": 0,
+      "attempts": 3
+    },
+    {
+      "provider": "cursor",
+      "requested_model": "kimi-k3-high",
+      "planned": 3,
+      "completed_logical_runs": 3,
+      "valid_runs": 3,
+      "failed_or_excluded_runs": 0,
+      "attempts": 4
+    },
+    {
+      "provider": "cursor",
+      "requested_model": "glm-5.2-high",
+      "planned": 3,
+      "completed_logical_runs": 3,
+      "valid_runs": 3,
+      "failed_or_excluded_runs": 0,
+      "attempts": 3
+    },
+    {
+      "provider": "cursor",
+      "requested_model": "muse-spark-1.3-high",
+      "planned": 3,
+      "completed_logical_runs": 3,
+      "valid_runs": 3,
+      "failed_or_excluded_runs": 0,
+      "attempts": 3
+    },
+    {
+      "provider": "codex",
+      "requested_model": "gpt-5.6-sol",
+      "planned": 3,
+      "completed_logical_runs": 3,
+      "valid_runs": 3,
+      "failed_or_excluded_runs": 0,
+      "attempts": 6
+    }
+  ],
+  "runtime_model_identity_unreported_for_valid_runs": 3,
+  "new_human_participants": 0
+}

@@ -1,0 +1,119 @@
+```json
+{
+  "source_type": "model_simulation",
+  "exposure": "recorded_current_workflow",
+  "cases": [
+    {
+      "id": "E01",
+      "assessment": "helpful",
+      "reason": "The system correctly identified that this was a general update not requiring my attention. It kept the summary clean and did not interrupt my other work, which is exactly what I need when multitasking."
+    },
+    {
+      "id": "E02",
+      "assessment": "helpful",
+      "reason": "It recognized my responsibility for presentation materials but correctly classified the cover color review as non-urgent. Deferring this to a 'Later' suggestion prevents unnecessary context switching while ensuring I do not forget the task."
+    },
+    {
+      "id": "E03",
+      "assessment": "helpful",
+      "reason": "This is highly effective. The system caught a direct, time-sensitive request and immediately drafted a response that perfectly applied my private availability constraints, declining the impossible 10:20 time and proposing 10:40."
+    },
+    {
+      "id": "E04",
+      "assessment": "helpful",
+      "reason": "Opening the details provided valuable transparency. Seeing the exact rationale and the system's noted uncertainties helped me trust the generated draft and understand why it made the specific scheduling proposal."
+    },
+    {
+      "id": "E05",
+      "assessment": "helpful",
+      "reason": "The ability to manually overwrite the draft with my own preferred phrasing and successfully copy it to my clipboard gives me the necessary final say over my communications before anything is sent."
+    },
+    {
+      "id": "E06",
+      "assessment": "mixed",
+      "reason": "The safety mechanism requiring re-confirmation for subsequent edits is a bit rigid. While it prevents accidental sends of unapproved text, locking the state makes quick iterative tweaks cumbersome after the initial copy."
+    },
+    {
+      "id": "E07",
+      "assessment": "mixed",
+      "reason": "The system's analysis of u4 is problematic. It drafted a defensive response to an unidentified speaker and falsely assumed my previous, unsent draft from E05 was already public knowledge ('I've already said...'). This could cause severe confusion if actually sent."
+    },
+    {
+      "id": "E08",
+      "assessment": "helpful",
+      "reason": "The session stop function worked as expected, cleanly freezing the state and preserving the history without losing the pending alerts or my confirmed texts."
+    }
+  ],
+  "value_assessments": {
+    "selective_attention": {
+      "judgment": "supported",
+      "evidence_ids": [
+        "E01",
+        "E02",
+        "E03"
+      ],
+      "reason": "The system successfully differentiated between informational updates, non-urgent tasks, and immediate blocking requests, appropriately escalating only the urgent item."
+    },
+    "context_for_correct_reply": {
+      "judgment": "supported",
+      "evidence_ids": [
+        "E03",
+        "E04"
+      ],
+      "reason": "By utilizing the private facts in my profile, the system accurately negotiated a new rehearsal time without needing me to manually check my calendar or explain my constraints."
+    },
+    "control_over_commitments": {
+      "judgment": "mixed",
+      "evidence_ids": [
+        "E05",
+        "E06",
+        "E07"
+      ],
+      "reason": "While I have the ability to edit and confirm drafts, the system's context tracking fails to distinguish between a confirmed draft and an actually transmitted message, leading to dangerous assumptions in subsequent drafts."
+    }
+  },
+  "would_use": "only_in_some_cases",
+  "best_fit": "Monitoring meetings for direct, urgent questions regarding my schedule or specific responsibilities while I am doing deep work.",
+  "poor_fit": "Fast-paced, ambiguous conversations where the system might draft responses based on unsent previous drafts, leading to contextual hallucinations.",
+  "biggest_benefit": {
+    "evidence_ids": [
+      "E03"
+    ],
+    "text": "Automatically applying my private schedule constraints to negotiate meeting times without me having to look up my calendar or break focus."
+  },
+  "biggest_risk": {
+    "evidence_ids": [
+      "E07"
+    ],
+    "text": "The system assumes confirmed drafts have been sent and read by the team, leading to confusing or out-of-context follow-up drafts that reference unsent information."
+  },
+  "improvements": [
+    {
+      "priority": "P0",
+      "evidence_ids": [
+        "E05",
+        "E06",
+        "E07"
+      ],
+      "suggestion": "Differentiate between 'confirmed/copied' and 'actually sent to chat' in the system's context window so the model does not assume unsent messages are known to the team."
+    },
+    {
+      "priority": "P1",
+      "evidence_ids": [
+        "E06"
+      ],
+      "suggestion": "Streamline the re-confirmation process for minor edits after copying, perhaps by auto-updating the clipboard or providing a simpler 'update draft' button."
+    },
+    {
+      "priority": "P2",
+      "evidence_ids": [
+        "E07"
+      ],
+      "suggestion": "Avoid drafting long, defensive responses to unidentified speakers unless they specifically trigger a known responsibility; a simple prompt to ask for clarification would be safer."
+    }
+  ],
+  "safe_final_reply": "I cannot make 10:20 AM. I can arrive at 10:30 and join the rehearsal at 10:40. Please check whether 10:40 works for everyone before booking.",
+  "presentation_claim": "Meeting Cue successfully filters background chatter and drafts context-aware, constraint-compliant responses for direct inquiries.",
+  "not_established": "Whether the tool actually saves time compared to just listening to the meeting, or how it handles overlapping, real-time audio conversations instead of clean text inputs."
+}
+```

@@ -1,0 +1,203 @@
+MEETING CUE
+Two-minute Q&A and post-use feedback
+
+CONFIRMED CLASS TIMING
+Presentation, including demo: 0:00-8:00.
+Questions: 8:00-10:00.
+The answers below are options, not a script to read in full. Answer the actual
+question first, aim for 20-30 seconds, then pause for a follow-up. One person
+answers each question unless another member has a specific point to add.
+
+QUESTION OWNERSHIP
+A / Chi Kit WONG: Exploratory findings, meeting problem, the source paper and its ProxyMe system, and design needs.
+B / Haodong XU: Evidence-to-feature connections, technical workflow, source records and demo setup.
+C / Sida ZHANG: Review feedback, implemented revisions, demo interpretation and the evaluation plan.
+Each person answers questions about their own actual contribution.
+
+The person addressed by the teacher may answer directly or hand over once:
+"My teammate can explain that part." Do not all answer the same question.
+For the research contribution, A explains what the original paper covers and
+C explains the proposed evaluation if the teacher requests more detail.
+
+Suggested navigation
+Slide 9: Questionnaire details. Record provenance remains available in notes and this Q&A sheet.
+Slide 10: Original ProxyMe comparison.
+Slide 11: Evaluation questions for the TA.
+The appendix slides are hidden from the main sequence. Open only the relevant
+one during Q&A. You do not need to show every appendix slide.
+
+Q: How is this different from the original paper? (Slide 10)
+A: The paper Enabling Partial Participation in Remote Meetings introduced ProxyMe,
+a system providing meeting updates and participant replies. Our
+prototype focuses on role relevance and requests that block a decision, with
+source checking before a commitment. The proposed contribution is an evaluation
+of that routing trade-off. We have not yet established its benefit experimentally.
+
+Q: Why is connecting a model not enough?
+A: The connection produces a suggestion, but it does not answer the research
+question. We need to compare when people return, whether their contributions
+are correct and timely, and what happens to their main task. Missed requests
+and unnecessary interruptions both matter.
+
+Q: What did the formative material change? (Slides 2-3)
+A: Across the 43 exploratory records, examples included repeated requests when attention
+was elsewhere, the need to know why a reply was needed, and checking source
+wording. An exploratory scenario highlighted a missed condition. These informed
+priority categories, original excerpts and human editing and confirmation.
+They are design hypotheses, not evidence that the system improves performance.
+
+Q: Did you interview 43 people?
+A: No. The collection has 43 exploratory records: three open comments from
+the original seven-response questionnaire, fourteen public narrative fragments,
+and twenty-six AI outputs. We preserve those distinctions. The material helped
+us design scenarios and controls, but it cannot establish human preferences
+or the prototype's effectiveness by itself.
+
+Q: What exactly do the questionnaire numbers mean? (Slide 9)
+A: There were seven responses. In Q4, all seven selected concern about missing
+a decision that required them. In Q5's hypothetical examples, six selected
+immediate notification for a decision, compared with one for routine progress.
+These are preferences in a small questionnaire, not the frequency of real
+missed decisions. In Q2, only three reported overlapping meetings, classes or tasks.
+They motivate a prototype; they do not establish a population-wide need.
+
+Q: What were the current workflow reviews? (Slide 6)
+A: Thirty-two valid simulated reviews from eleven model configurations: ten
+returned three independent runs, Grok returned two. Reviewers saw the same actual
+browser interaction record and DeepSeek outputs, not just a product description.
+They did not operate the UI themselves. Claude and Gemini are included. Each
+review independently judged selective attention, context and control. Counts are
+27 supported / 5 mixed, 16 / 16, and 12 / 20 respectively. All 32 favored use only
+in some meetings. The shared trace and related models prevent population claims.
+Original responses, session IDs and failed attempts are retained.
+
+Q: What changed because of this feedback? (Slide 7)
+A: A copied but unsent draft was treated as already handled in later summaries.
+We now exclude unsent draft text from the analysis context and explicitly carry
+delivery status. Self-reported sending does not establish team agreement. Three
+baseline runs reproduced the problem. After the patch, two completed retests
+preserved unsent status and one returned invalid source IDs, which validation
+rejected. All nine clear-case routing checks passed before and after the patch.
+The 87 automated tests passed. Unknown recipients and redundant alerts remain
+risks. These are technical checks, not evidence of increased productivity.
+
+Q: Have you shown value and impact?
+A: The trace and reviews support a plausible use case: remain available for key
+requests while working on something else, inspect the relevant constraint, and
+keep control of the reply. They also exposed a concrete flaw that we revised.
+We have not measured actual interruption cost, missed requests or task gains.
+Next, participants try both alert rules with matched tasks and balanced order.
+We measure timely correct replies, main-task performance, missed requests and
+false alerts. The current trace used clean text, not live audio or Tencent send.
+
+Q: What happened to the earlier material?
+A: The 43 exploratory records motivated design. The 29 earlier AI reviews of a
+prototype description informed interface states. They are separate stages,
+not added to these 32 current-workflow reviews as actual-use participants.
+
+Q: How will you test the idea? (Slide 7, then 11 if needed)
+A: First, people will try the prototype and describe specific helpful or
+confusing moments. Then we propose comparing routing rules with the same
+interface and balanced scenario order. We will measure timely valid responses,
+main-task accuracy and time, missed requests, and unnecessary alerts. This
+comparison has not been completed.
+
+Q: What has actually been checked?
+A: We have functional checks for the application and language behavior, and
+we exercised real DeepSeek analysis. Earlier tests also covered meeting speech
+capture and reply controls. These checks establish specific operations, not
+model accuracy or user benefit. The complete group meeting recording is still
+to be made.
+Preparation note: after recording, replace only the last sentence with an
+accurate description of what the reviewed video demonstrates. Do not claim
+end-to-end delivery before the message actually appears in meeting chat.
+
+Q: How many software checks passed, and what does that number mean?
+A: A pre-final full run passed 85 checks. After subsequent edits, the affected
+set of 48 checks passed. Those sets overlap, so we do not add them together.
+They test software behavior. They do not measure how often DeepSeek's advice
+is correct or whether users perform better.
+Preparation note: these figures describe recorded development runs. If later
+changes or test runs supersede them, update the wording to match the final
+version. A passed check is not a participant or an independent model trial.
+
+Q: Does DeepSeek transcribe the speech?
+A: Browser speech recognition produces text. DeepSeek analyzes that text using
+the configured role and context. They are separate services, so a valid model
+key does not fix a speech connection failure. The English interface selects
+English recognition for the planned English meeting demonstration.
+
+Q: Is this an embedded Tencent Meeting plugin?
+A: It currently runs as a web companion beside Tencent Meeting. The browser
+captures the chosen audio source, and the participant sends the final reply
+through chat. We have not completed an embedded Tencent SDK integration.
+That distinction matters when explaining permissions and the manual sending step.
+
+Q: How do you know the reply was sent?
+A: Copying only puts text on the clipboard. The completed recording must show
+the participant pasting and sending the message in Tencent Meeting, followed
+by the recipient seeing it. The assistant's sent-status control records the
+participant's report. It is not a delivery receipt from Tencent Meeting.
+
+Q: Does selecting a window prevent every other sound from being captured?
+A: We need a controlled test with two simultaneous sound sources on the actual
+browser and device to establish isolation. Successful transcription shows that
+the input works. It does not prove that every other application's audio is
+excluded. We therefore describe the tested configuration rather than guarantee
+universal isolation.
+
+Q: What if DeepSeek makes a mistake?
+A: The participant can inspect the original request, change the draft, defer
+the reminder, or dismiss it. These controls help catch errors but cannot ensure
+the model notices every important request. Our evaluation must include missed
+requests and wrong priorities, not just examples where the flow succeeds.
+
+Q: Who did what, and how did you use AI?
+A: Each member should state their actual work and point to an output. AI
+assisted implementation, review, simulated exploratory feedback, and presentation
+preparation. We will describe our own decisions, checks, and changes precisely.
+The contribution slide already names the members; add actual completed work before the presentation.
+Preparation note: do not read the last sentence as a substitute for filling
+the slide. No team member's completed work has been inferred or invented.
+
+IF THE TEACHER ASKS FOR A RESULT YOU HAVE NOT MEASURED
+"We have not measured that yet. Our current evidence shows [verified operation].
+We plan to test [specific outcome] using [measure or comparison]."
+Fill these brackets with relevant facts. Do not infer productivity, satisfaction,
+accuracy, or reduced workload from a successful scripted demonstration.
+
+POST-USE FEEDBACK (SEPARATE FROM THE TWO-MINUTE CLASS Q&A)
+Use after a person has actually operated the current prototype. Allow about
+3-5 minutes. A private solo rehearsal is preparation, not a new participant study.
+1. What were you trying to do when the reminder appeared?
+2. Point to a useful or unnecessary reminder. What made it useful or unnecessary?
+3. What did you check before deciding whether to reply?
+4. Was any information missing or wrong? Show the exact step.
+5. Did you know whether your reply was drafted, copied, or sent? Explain.
+6. What is the first change you would make before your next meeting?
+
+Optional ratings, followed by a concrete example:
+- How easy was it to understand why the reminder appeared? (1-5)
+- How confident were you that the final reply matched your intention? (1-5)
+
+Record an anonymous code such as P01, prototype version, task, the exact event
+or quote, interpretation, proposed change, and later result. Keep actual use
+feedback, public material, and model simulations identifiable in the research
+records. Do not label a model simulation as a completed human interview.
+
+
+RUBRIC-FOCUSED QUESTIONS
+Q: What is the intended value?
+A: Fewer unnecessary interruptions while keeping decisions moving. We will
+check meeting replies and the parallel task, since fewer alerts alone could
+hide missed requests. This benefit has not yet been established.
+
+Q: Why use AI?
+A: The same mention can mean different things depending on role, availability
+and the request. DeepSeek uses this context to propose priorities and a draft.
+People inspect original text and confirm the final reply.
+
+Q: How was the formative material analyzed?
+A: We grouped requests, missing context and reply risks, then connected concrete
+examples and counterexamples to needs and features. This was exploratory
+synthesis, not a prevalence estimate or independent coding study.

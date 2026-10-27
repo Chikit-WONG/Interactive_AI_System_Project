@@ -1,0 +1,22 @@
+{
+  "run_id": "cursor__glm-5.2-high__r2",
+  "provider": "cursor",
+  "requested_model": "glm-5.2-high",
+  "reported_models": [],
+  "repeat": 2,
+  "attempt": 1,
+  "sessions": [],
+  "prompt_sha256": "685f987369fbdc5cc55602a2f73ca985628fa9b2e4ecd0a6f7ff33bc0e419259",
+  "started": "2026-10-23T06:13:02.812577+00:00",
+  "seconds": 6.5,
+  "exit_code": 1,
+  "timed_out": false,
+  "tool_event_count": 0,
+  "valid": false,
+  "errors": [
+    "parse:Expecting value: line 1 column 1 (char 0)",
+    "execution",
+    "session_missing"
+  ],
+  "path": "raw\\cursor__glm-5.2-high__r2\\attempt1"
+}

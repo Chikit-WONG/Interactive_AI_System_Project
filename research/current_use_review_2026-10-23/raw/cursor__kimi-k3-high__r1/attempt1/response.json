@@ -1,0 +1,122 @@
+{
+  "source_type": "model_simulation",
+  "exposure": "recorded_current_workflow",
+  "cases": [
+    {
+      "id": "E01",
+      "assessment": "helpful",
+      "reason": "u1 explicitly said no reply was needed and the system produced no suggestion card, only a summary entry. As Alex, this is exactly the behavior I want: no false alarm, no attention stolen from my project materials work. Selective silence on a no-reply update is a small but real win, though a single clean case cannot establish reliability."
+    },
+    {
+      "id": "E02",
+      "assessment": "helpful",
+      "reason": "The cover-color request was directly addressed to Alex and fits his responsibilities, but Sam said the team can proceed without it. The system classified it as Later/defer, matched the stated deadline (six this evening), and produced a draft that correctly avoids committing. The classification matches the conversational facts. Minor concern: the defer draft's wording ('can't confirm a decision yet') is vague, but nothing is wrong."
+    },
+    {
+      "id": "E03",
+      "assessment": "helpful",
+      "reason": "The urgent u3 was flagged Respond now, and the draft correctly used Alex's private constraints: declined 10:20, proposed 10:40, and cited u3 as its source. The reason field explicitly noted the conflict between the request and Alex's availability facts. As Alex, this is the core value: the tool caught a time conflict I might have answered carelessly under pressure while multitasking."
+    },
+    {
+      "id": "E04",
+      "assessment": "helpful",
+      "reason": "The details view exposed the original utterance, rationale, uncertainties, and an editable draft. The uncertainty text honestly flagged that it is unknown whether the rehearsal can move to 10:40 or whether booking has flexibility. Transparency like this lets me verify rather than trust blindly, which matters for a tool drafting commitments in my name."
+    },
+    {
+      "id": "E05",
+      "assessment": "mixed",
+      "reason": "Confirm & copy worked and the state label 'Copied; waiting for you to send or mark sent' is honest that nothing was actually sent, which is good. The edited text preserved the profile constraints. Mixed because the flow relies on me to remember the message is not yet delivered; a busy Alex could walk away believing the reply went out. The label mitigates but does not eliminate this."
+    },
+    {
+      "id": "E06",
+      "assessment": "helpful",
+      "reason": "Editing after copying triggered 'Previous draft copied - edits need confirmation' and disabled 'I sent it in the meeting' until reconfirmation, while the clipboard kept the older confirmed version. This staleness guard prevents a plausible real failure: editing a draft, forgetting to re-copy, and marking the wrong version as sent. This is the strongest safety behavior in the trace."
+    },
+    {
+      "id": "E07",
+      "assessment": "mixed",
+      "reason": "For ambiguous u4 the system did several things well: deferred rather than demanding action, noted the speaker is unidentified and Alex is not named, recognized room booking is outside Alex's responsibilities, and linked to u3 with an updated summary. However, the pending draft is overconfident in tone ('I've already said...') and somewhat long for an ambiguous situation; sending it as-is to an unidentified speaker could be awkward. Classification was right; the draft needs editing."
+    },
+    {
+      "id": "E08",
+      "assessment": "helpful",
+      "reason": "Stop session disabled input and analysis, froze elapsed time, and preserved all records. Clean session boundaries and preserved history support review and accountability. No negative behavior observed here."
+    }
+  ],
+  "value_assessments": {
+    "selective_attention": {
+      "judgment": "supported",
+      "evidence_ids": [
+        "E01",
+        "E02",
+        "E03",
+        "E07"
+      ],
+      "reason": "One no-reply utterance produced no card, one nonblocking request was deferred, one urgent conflict was escalated, and one ambiguous request was deferred rather than over-escalated. All four classifications match the conversational facts in this trace. Supported for these four cases only; no evidence about robustness on noisier input."
+    },
+    "context_for_correct_reply": {
+      "judgment": "supported",
+      "evidence_ids": [
+        "E03",
+        "E04",
+        "E07"
+      ],
+      "reason": "The u3 draft applied Alex's private availability facts correctly and the u4 alert cross-referenced u3 and the role boundary (not responsible for booking rooms). Rationale and uncertainty fields surfaced the relevant context. Limited to clean English text with an explicit profile."
+    },
+    "control_over_commitments": {
+      "judgment": "supported",
+      "evidence_ids": [
+        "E05",
+        "E06",
+        "E08"
+      ],
+      "reason": "Nothing was auto-sent; the UI states 'waiting for you to send or mark sent', post-copy edits require renewed confirmation before 'I sent it' is enabled, and stopping freezes the session while preserving records. The human remains the committing party throughout the trace."
+    }
+  },
+  "would_use": "only_in_some_cases",
+  "best_fit": "Text-based meetings or chat channels where I must stay peripherally available while doing other work, my constraints are pre-loaded in a profile, and I am willing to review every draft before sending.",
+  "poor_fit": "High-stakes or fast live conversations where a wrong defer/now classification or an overconfident draft (as in E07) could cause real harm, or any context where I would be tempted to copy drafts without reading them.",
+  "biggest_benefit": {
+    "evidence_ids": [
+      "E03",
+      "E05",
+      "E06"
+    ],
+    "text": "The tool caught a genuine conflict between an urgent request and my real availability, drafted a correct alternative, and then protected me from sending a stale edited version - the exact multitasking failure mode this kind of tool targets."
+  },
+  "biggest_risk": {
+    "evidence_ids": [
+      "E05",
+      "E07"
+    ],
+    "text": "A false sense of completion: copying feels like replying even though nothing is sent, and the u4 draft's assertive tone shows drafts can overreach in ambiguous situations. Both risks depend on disciplined user review, which this single-operator trace cannot prove will happen."
+  },
+  "improvements": [
+    {
+      "priority": "P0",
+      "evidence_ids": [
+        "E05"
+      ],
+      "suggestion": "Make the unsent state harder to miss: a persistent visible reminder or an explicit un-copied/unsent items list when stopping the session, so a copied-but-unsent reply cannot be silently forgotten."
+    },
+    {
+      "priority": "P1",
+      "evidence_ids": [
+        "E07"
+      ],
+      "suggestion": "For ambiguous or unidentified-speaker cases, default drafts to a shorter, more tentative clarification request instead of a full assertive response, and visually flag the draft as low-confidence."
+    },
+    {
+      "priority": "P2",
+      "evidence_ids": [
+        "E01",
+        "E02",
+        "E03"
+      ],
+      "suggestion": "Persist a lightweight classification-accuracy log (user accept/edit/reject per alert) so future evaluations can measure precision and recall instead of relying on single-session impressions."
+    }
+  ],
+  "safe_final_reply": "Hi Jordan, I cannot make 10:20 AM tomorrow. I can arrive at 10:30 and join the rehearsal at 10:40 AM. Please check whether 10:40 works for everyone before booking the room - I will confirm as soon as I hear back.",
+  "presentation_claim": "In a recorded text-only session, Meeting Cue 0.3.0 correctly triaged four manual utterances (one silent, two deferred, one escalated), generated a draft that respected the user's stated availability constraints, and enforced confirm-before-copy and re-confirmation-after-edit safeguards that keep the human in control of commitments.",
+  "not_established": "The trace does not establish performance with real live audio or transcription errors, classification accuracy beyond four clean English utterances, any productivity or time savings, behavior of real users (only one operator), delivery of any message (nothing was actually sent), comparison against any baseline or alternative, or reliability across repeated sessions, languages, or meeting types."
+}

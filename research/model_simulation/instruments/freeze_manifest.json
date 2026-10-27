@@ -1,0 +1,84 @@
+{
+  "frozen_at": "2026-10-16",
+  "protocol_version": "1.0",
+  "source_type": "model_simulation",
+  "source_files": [
+    {
+      "path": "D:\\Users\\chikitwong\\Desktop\\Class\\AIAA4435(L01)-Interactive_AI_Systems_Design_&_Implementation\\Midterm_Group_Project\\remote meeting.md",
+      "sha256": "f12376fd21ba43336fd090de3854a485460e22141dcea7f14496eb7bec8e5b24"
+    },
+    {
+      "path": "D:\\Users\\chikitwong\\Desktop\\Class\\AIAA4435(L01)-Interactive_AI_Systems_Design_&_Implementation\\lectures\\问卷\\Remote_Meeting_Partial_Participation_Broad_Survey_Bilingual_Revised.docx",
+      "sha256": "7cbbf4f37871f316ca5113bc9a0920629f94894258e64ec6ec463fee39343152"
+    },
+    {
+      "path": "D:\\Users\\chikitwong\\Desktop\\Class\\AIAA4435(L01)-Interactive_AI_Systems_Design_&_Implementation\\Midterm_Group_Project\\research\\unified_questionnaire_zh.md",
+      "sha256": "1d174beef8e5e5ad601a304681314c62e1cf0ab5931636b806d97c50f8fb3311"
+    }
+  ],
+  "counts": {
+    "new_main": 27,
+    "old_main": 14,
+    "new_optional": 7,
+    "output_question_objects": 48
+  },
+  "input_order": [
+    "NEW_MAIN_27",
+    "NEW_OPTIONAL_7",
+    "OLD_MAIN_14"
+  ],
+  "files": {
+    "instruments/new_experience_original_full.md": {
+      "sha256": "f12376fd21ba43336fd090de3854a485460e22141dcea7f14496eb7bec8e5b24",
+      "bytes": 16847
+    },
+    "instruments/new_original.json": {
+      "sha256": "a843a8493675f2ac21f077ced6b7014b88bec6fe1384cf6b4acf15406553d194",
+      "bytes": 17326
+    },
+    "instruments/old_broad_original_full.md": {
+      "sha256": "274980279b0bfb76eb24a3019996e8659c242fd8493b4a3ccfb86f8e755b5260",
+      "bytes": 11717
+    },
+    "instruments/old_original.json": {
+      "sha256": "8941c0bfe306632b7c01eded66ce29256fb3daed93c0970711a41f0f24fdbbe9",
+      "bytes": 13417
+    },
+    "instruments/question_contracts.json": {
+      "sha256": "4876d2e1a0ff6dc8ea95f31f8e4fb130a0d7200db473a0cad9c431cefea861c0",
+      "bytes": 20509
+    },
+    "instruments/response.schema.json": {
+      "sha256": "44fd10227d780517daa28ef0f7bfe33db89fa9762a523447a444ccd63676898d",
+      "bytes": 156172
+    },
+    "instruments/scenarios.json": {
+      "sha256": "22cdfe01098fe86ead6a1dec337408897e8c5b0e9959031077d33ee80d68bc4e",
+      "bytes": 2855
+    },
+    "instruments/skip_rules.json": {
+      "sha256": "cb350903d5b5419fad78b4c2b39ab4af43c1568e121e24528bfe9b09c089118c",
+      "bytes": 2503
+    },
+    "instruments/unified_crosswalk.json": {
+      "sha256": "ca3e2bce1adf68d05cdc39af1984808b11394728c79c6186d4c7664acb689ee7",
+      "bytes": 3276
+    },
+    "instruments/unified_v0_2_reference.md": {
+      "sha256": "1d174beef8e5e5ad601a304681314c62e1cf0ab5931636b806d97c50f8fb3311",
+      "bytes": 11382
+    },
+    "prompts/S1.txt": {
+      "sha256": "aea25b92ab7ad2d18fa53b6de92091805bebee6b29ad3f95b0c4c8ec911536a3",
+      "bytes": 37133
+    },
+    "prompts/S2.txt": {
+      "sha256": "b9752a4bac2ab0da34d52ad620dc177df71f6bbda1241c54adf583c2f1219f1a",
+      "bytes": 37118
+    },
+    "prompts/S3.txt": {
+      "sha256": "381a8fa90b0fcb70dfd4a3f99832c4935b1e1b21ccbc5156b14592abfa3d543e",
+      "bytes": 37127
+    }
+  }
+}

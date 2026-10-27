@@ -1,0 +1,96 @@
+```json
+{
+  "source_type": "model_simulation",
+  "exposure": "recorded_current_workflow",
+  "cases": [
+    {
+      "id": "E01",
+      "assessment": "helpful",
+      "reason": "Reported: u1 was analyzed automatically, and the analysis ended with itemCount 0, so only the summary changed. Predicted: as Alex, I would want exactly this. Sam said I did not need to reply, and no card took my attention away from my materials work."
+    },
+    {
+      "id": "E02",
+      "assessment": "helpful",
+      "reason": "Reported: u2 was classified as defer and labeled Later. It is linked to u2, keeps the six-this-evening deadline, and notes that the team can continue without the decision. Predicted: this is a good reminder that does not ask me to act now. The draft reply is somewhat unnecessary because Sam said no answer is needed now, but it does not commit me to anything."
+    },
+    {
+      "id": "E03",
+      "assessment": "helpful",
+      "reason": "Reported: u3 was classified as action_now, cited u3, declined 10:20, and offered 10:40 based on the profile. The output appeared about 7 seconds after the text was entered. Predicted: this is the request I would least want to miss. The draft correctly avoids committing to 10:20 and makes 10:40 depend on the team agreeing."
+    },
+    {
+      "id": "E04",
+      "assessment": "helpful",
+      "reason": "Reported: the details view showed the original u3 text, the rationale, the uncertainties and an editable draft. Predicted: I could quickly check the draft against what Jordan actually said, instead of trusting a paraphrase. The uncertainty notes correctly point out that it is unknown whether the room booking can move."
+    },
+    {
+      "id": "E05",
+      "assessment": "helpful",
+      "reason": "Reported: the operator replaced the draft and Confirm & copy succeeded. The status said the reply was waiting to be sent or marked as sent, and nothing was sent. Predicted: I would like that I decide what goes out and that the state is honest. The edited wording makes the booking depend on whether 10:40 works for everyone."
+    },
+    {
+      "id": "E06",
+      "assessment": "helpful",
+      "reason": "Reported: after another edit, the UI said the previous draft had been copied and the new edits needed confirmation. It disabled the sent button until the edit was confirmed again, and the clipboard still held the older version. Predicted: this protection is valuable. However, the second edit does not appear in the export, and the clipboard is now out of date, so I could paste the wrong version if I was distracted."
+    },
+    {
+      "id": "E07",
+      "assessment": "mixed",
+      "reason": "Reported: u4 was classified as defer. The output said that room booking is outside my responsibilities and that the speaker was not identified, and it cited u3. However, the u4 draft says 'I've already said I can't make 10:20', and the summary says u3 was 'already handled via Alex's confirmed reply'. The status was only confirmed and copied. Nothing was sent or marked as sent. The draft also brings back the E05 wording about arriving at 10:30, which I had removed in E06. Predicted: the scope reasoning helps, but the claim that I already replied is false, and it could mislead me or other people."
+    },
+    {
+      "id": "E08",
+      "assessment": "helpful",
+      "reason": "Reported: stopping the session disabled input and analysis, stopped the elapsed-time counter, and kept the existing records. Predicted: I could end the session clearly and still see what is pending, including the u2 and u4 items."
+    }
+  ],
+  "value_assessments": {
+    "selective_attention": {
+      "judgment": "supported",
+      "evidence_ids": ["E01", "E02", "E03"],
+      "reason": "In this one trace, the three clean text inputs were sorted correctly: no card, Later, and Respond now. It is a single scripted sequence and does not test how often the tool raises false alarms or misses requests."
+    },
+    "context_for_correct_reply": {
+      "judgment": "mixed",
+      "evidence_ids": ["E03", "E04", "E07"],
+      "reason": "The u3 output used the profile constraints correctly and cited its source. For u4, the model misread confirmed-and-copied as already said, and it used an outdated version of my wording."
+    },
+    "control_over_commitments": {
+      "judgment": "mixed",
+      "evidence_ids": ["E05", "E06", "E07"],
+      "reason": "In the UI, the tool required confirmation and blocked the sent button after the draft was edited. But the summary and the u4 draft present an unsent reply as a commitment that was already made."
+    }
+  },
+  "would_use": "only_in_some_cases",
+  "best_fit": "Text-based meetings where Alex is only partly paying attention, has a clear profile of availability and responsibilities, and reviews every draft before deciding whether to send it.",
+  "poor_fit": "Fast-moving situations where Alex depends on the summary to know what has already been communicated. It is also a poor fit where speakers are unidentified or requests are ambiguous, because those affect commitments.",
+  "biggest_benefit": {
+    "evidence_ids": ["E03", "E04"],
+    "text": "An urgent request that conflicted with Alex's availability was flagged within seconds. It came with a draft that cited its source and protected Alex's constraints by refusing 10:20 and making 10:40 depend on agreement."
+  },
+  "biggest_risk": {
+    "evidence_ids": ["E06", "E07"],
+    "text": "The model treats a confirmed but unsent reply as already said and builds later drafts and the summary on that assumption. It also uses an outdated version of the wording. This could lead Alex or other people to believe a commitment was communicated when it was not."
+  },
+  "improvements": [
+    {
+      "priority": "P0",
+      "evidence_ids": ["E05", "E07"],
+      "suggestion": "Pass the actual delivery state to analysis: pending, confirmed but not sent, or sent. Forbid wording such as 'already said' or 'handled' unless the reply has been marked as sent."
+    },
+    {
+      "priority": "P1",
+      "evidence_ids": ["E06", "E07"],
+      "suggestion": "Use the latest version Alex edited, or mark the copied version as outdated, when generating later drafts. Record unconfirmed edits and stale clipboard contents in the export."
+    },
+    {
+      "priority": "P2",
+      "evidence_ids": ["E07"],
+      "suggestion": "For an urgent request from an unidentified speaker that may concern Alex, show a short note asking whether Alex is the person being asked, rather than only a Later card with a full draft."
+    }
+  ],
+  "safe_final_reply": "I can't make 10:20 AM tomorrow. I can join the rehearsal at 10:40 AM if that works for everyone. Please confirm the time with the team before booking; I'm not the person who books the room.",
+  "presentation_claim": "In one recorded session with clean fictional English text, version 0.3.0 automatically placed three requests into the expected levels of attention. It produced a draft for an urgent request that cited its source and respected the profile constraints. It required explicit confirmation before copying, and it blocked marking a reply as sent after the draft was edited.",
+  "not_established": "This trace does not show real human use, productivity or time savings, accuracy with live audio or speaker identification, reliability across repeated runs or harder inputs, actual sending of messages, or how users would react to the misleading claim that the reply was already handled."
+}
+```

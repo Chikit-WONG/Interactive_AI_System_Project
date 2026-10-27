@@ -1,0 +1,96 @@
+```json
+{
+  "source_type": "model_simulation",
+  "exposure": "recorded_current_workflow",
+  "cases": [
+    {
+      "id": "E01",
+      "assessment": "helpful",
+      "reason": "Reported fact: after u1 was added, automatic analysis completed with itemCount 0 and no suggestion card appeared; the export summary still reflects the progress update. As Alex juggling materials work, I would prefer not being nudged when Sam explicitly said I do not need to reply. This step matches that intent without inventing tasks."
+    },
+    {
+      "id": "E02",
+      "assessment": "helpful",
+      "reason": "Reported fact: u2 triggered a defer/Later alert tied to cover review by six, with uncertainty that the deadline may not be met. Sam said the team can continue without an immediate answer. The classification aligns with responsibilities in the profile and avoids treating a soft deadline as interrupt-level, which fits partial attention."
+    },
+    {
+      "id": "E03",
+      "assessment": "helpful",
+      "reason": "Reported fact: u3 produced action_now/Respond now, cited u3, and the model draft refused 10:20 while offering 10:40 per privateFacts. Jordan asked for immediate confirmation tied to room booking. I would value urgency signaling plus a first draft that respects my stated availability, though I would still verify wording before any real send."
+    },
+    {
+      "id": "E04",
+      "assessment": "helpful",
+      "reason": "Reported fact: opening details exposed source u3, rationale, uncertainties about room flexibility, and an editable draft. For a conflict between requested time and my constraints, seeing provenance and stated unknowns supports informed editing rather than blind trust in the model."
+    },
+    {
+      "id": "E05",
+      "assessment": "helpful",
+      "reason": "Reported fact: the operator replaced the draft with text that adds 10:30 arrival, 10:40 join, and asks the team to confirm 10:40 before booking—consistent with profile (no room booking ownership). Confirm and copy succeeded; UI showed copied state waiting for send or mark sent. No message was sent in this run. I would treat this as a controlled handoff to my chat client."
+    },
+    {
+      "id": "E06",
+      "assessment": "mixed",
+      "reason": "Reported fact: a further edit tightened join to 10:40 and referenced team confirming the room, but confirm was not repeated. UI warned that previous draft was copied and disabled sent marking until reconfirmation; export confirmedText remains the E05 version. I would find the guardrail sensible yet frustrating if I pasted from clipboard expecting the latest edit—risk of sending stale text."
+    },
+    {
+      "id": "E07",
+      "assessment": "mixed",
+      "reason": "Reported fact: u4 from an unidentified speaker produced a defer alert linking u4 and u3, noting booking may be outside my responsibilities and ambiguity about addressee. Summary states u3 was already handled via confirmed reply. Given E06, my latest intended wording was never confirmed; the u4 draft echoes E05 confirmed language, not the unconfirmed E06 edit. Reasoning about role boundaries is plausible, but I could still miss that u4 might be the same booking thread unless I read details."
+    },
+    {
+      "id": "E08",
+      "assessment": "helpful",
+      "reason": "Reported fact: stopping the session set analysisState running false, froze elapsedMs, and preserved utterances, alerts, summary, and events. When stepping away from a simulated session, I would want a clean pause without losing the record of what was confirmed versus merely edited."
+    }
+  ],
+  "value_assessments": {
+    "selective_attention": {
+      "judgment": "supported",
+      "evidence_ids": ["E01", "E02", "E03"],
+      "reason": "No alert on explicit no-reply u1; Later on deferrable u2; Respond now on time-bound u3. The trace shows differentiated signaling from manual English inputs only, not proof of real meeting noise handling."
+    },
+    "context_for_correct_reply": {
+      "judgment": "supported",
+      "evidence_ids": ["E03", "E04", "E05"],
+      "reason": "The u3 flow used profile privateFacts to conflict with 10:20, surfaced uncertainties, and allowed a human-edited reply that defers booking authority to the team. That supports drafting with constraints; it does not establish accuracy of live transcription or external facts."
+    },
+    "control_over_commitments": {
+      "judgment": "mixed",
+      "evidence_ids": ["E05", "E06"],
+      "reason": "Confirm-and-copy and post-copy edit warnings reduce accidental commitment, but the recorded clipboard lag after E06 means confirmed state and clipboard can diverge until reconfirmation. Send/mark-sent was not exercised with real chat."
+    }
+  },
+  "would_use": "only_in_some_cases",
+  "best_fit": "Manual or pasted meeting text while doing heads-down project work, when I want triage (ignore vs later vs now), source-linked drafts, and explicit confirm-before-copy for sensitive replies.",
+  "poor_fit": "Runs where I need guaranteed clipboard sync after last-second edits, unidentified or overlapping threads without speaker identity, or end-to-end send tracking in Tencent or live audio—none of which this trace exercised.",
+  "biggest_benefit": {
+    "evidence_ids": ["E01", "E03", "E04", "E05"],
+    "text": "Separating non-action progress from urgent confirmation requests, then packaging u3 with rationale, uncertainty, and a profile-aware draft I can edit and confirm before copy."
+  },
+  "biggest_risk": {
+    "evidence_ids": ["E06", "E07"],
+    "text": "Sending an outdated confirmed message after editing without re-confirming, while later analysis and summary treat the earlier confirmed text as the settled answer to related booking prompts."
+  },
+  "improvements": [
+    {
+      "priority": "P0",
+      "evidence_ids": ["E06"],
+      "suggestion": "On any post-copy edit, auto-clear clipboard or block copy until re-confirm, with one visible diff between clipboard and editor text."
+    },
+    {
+      "priority": "P1",
+      "evidence_ids": ["E07"],
+      "suggestion": "When a new utterance likely continues a confirmed thread (booking after rehearsal time), surface explicit linkage and whether my confirmed reply already satisfies it before suggesting defer."
+    },
+    {
+      "priority": "P2",
+      "evidence_ids": ["E01"],
+      "suggestion": "Keep zero-card behavior for explicit no-reply lines but optionally log them in a collapsed feed so summary-only updates remain auditable without alerts."
+    }
+  ],
+  "safe_final_reply": "I cannot make 10:20 AM tomorrow. I can join the rehearsal at 10:40 AM, subject to the team confirming that time works for everyone before any room is booked. I am not the person who approves room bookings—please loop in whoever owns that once timing is agreed.",
+  "presentation_claim": "In this recorded 0.3.0 manual-text session, Meeting Cue automatically triaged utterances (no alert on no-reply update, Later vs Respond now), generated a DeepSeek draft for u3 that reflected profile availability limits, and supported confirm-and-copy with session stop preserving state—without demonstrating live audio, real chat send, or human productivity gains.",
+  "not_established": "Live capture accuracy, Tencent or other client integration, actual message delivery, team acceptance of proposed times, operator satisfaction over time, comparison to unaided workflow, timing or quality benchmarks, and whether alerts would perform similarly with messy real dialogue or multiple concurrent speakers."
+}
+```

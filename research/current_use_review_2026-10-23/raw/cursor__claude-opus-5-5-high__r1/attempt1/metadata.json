@@ -1,0 +1,22 @@
+{
+  "run_id": "cursor__claude-opus-5-5-high__r1",
+  "provider": "cursor",
+  "requested_model": "claude-opus-5-5-high",
+  "reported_models": [
+    "Claude Opus 5.5 300K High"
+  ],
+  "repeat": 1,
+  "attempt": 1,
+  "sessions": [
+    "a627ecae-e1ef-4e84-ad6a-b6cf6284181b"
+  ],
+  "prompt_sha256": "685f987369fbdc5cc55602a2f73ca985628fa9b2e4ecd0a6f7ff33bc0e419259",
+  "started": "2026-10-23T06:08:27.981290+00:00",
+  "seconds": 67.0,
+  "exit_code": 0,
+  "timed_out": false,
+  "tool_event_count": 0,
+  "valid": true,
+  "errors": [],
+  "path": "raw\\cursor__claude-opus-5-5-high__r1\\attempt1"
+}

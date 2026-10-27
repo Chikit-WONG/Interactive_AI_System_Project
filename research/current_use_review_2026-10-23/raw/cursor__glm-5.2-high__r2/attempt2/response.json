@@ -1,0 +1,119 @@
+{
+  "source_type": "model_simulation",
+  "exposure": "recorded_current_workflow",
+  "cases": [
+    {
+      "id": "E01",
+      "assessment": "helpful",
+      "reason": "u1 explicitly states Alex does not need to reply, and the system correctly produced no suggestion card and only a summary. For Alex's role of staying available while working on materials, suppressing a needless draft is the right behavior and avoids interrupting focus work."
+    },
+    {
+      "id": "E02",
+      "assessment": "helpful",
+      "reason": "u2 is nonblocking and the system classified it as defer with a Later suggestion, matching Sam's own statement that no answer is needed now. The draft is appropriately hedged and does not overcommit Alex to a decision by six, which fits someone who is primarily focused on materials."
+    },
+    {
+      "id": "E03",
+      "assessment": "helpful",
+      "reason": "u3 is urgent and the system correctly escalated to action_now with a Respond now suggestion. The draft declined 10:20 and proposed 10:40 using Alex's private facts, and cited u3's booking dependency. This is the most valuable step: it surfaces the time conflict and gives Alex a ready, profile-consistent reply while the room administrator waits."
+    },
+    {
+      "id": "E04",
+      "assessment": "helpful",
+      "reason": "Exposing the original u3, rationale, uncertainties and an editable draft gives Alex the means to verify the model's reasoning before committing. The uncertainty field correctly flags that it is unknown whether the rehearsal can move or whether booking has flexibility, which is exactly what Alex would need to judge before sending."
+    },
+    {
+      "id": "E05",
+      "assessment": "helpful",
+      "reason": "The operator's edited draft is clearer than the model's: it states 10:20 is impossible, offers 10:30 arrival and 10:40 rehearsal, and asks the team to confirm 10:40 works before booking. Confirm and copy succeeded and the UI honestly showed 'Copied; waiting for you to send or mark sent', with no actual send. This preserves Alex's control over commitments."
+    },
+    {
+      "id": "E06",
+      "assessment": "mixed",
+      "reason": "The UI correctly warned that edits need re-confirmation and disabled 'I sent it in the meeting' until renewed confirmation, which protects against sending an unconfirmed version. However, the clipboard still holds the previous confirmed text while the UI shows a new unconfirmed draft, creating a split state where Alex could paste stale content believing it is the latest edit. This is a real footgun for an interrupted user."
+    },
+    {
+      "id": "E07",
+      "assessment": "mixed",
+      "reason": "For u4 the system classified as defer, correctly noting room booking is outside Alex's responsibilities and the speaker is unidentified, and linked it to u3. The draft is reasonable. But the classification as defer is debatable: u4 says 'I need an answer before I continue', which is pressuring and could be urgent for someone. Deferring risks leaving a blocking request unanswered, and the draft does not clearly state that Alex will not act on booking approval at all."
+    },
+    {
+      "id": "E08",
+      "assessment": "helpful",
+      "reason": "Stop session cleanly disabled input and analysis, froze elapsed time, and preserved records. For Alex, who is juggling materials and occasional requests, a clear pause that freezes state without losing history is useful for switching attention back to materials without losing the cue context."
+    }
+  ],
+  "value_assessments": {
+    "selective_attention": {
+      "judgment": "supported",
+      "evidence_ids": [
+        "E01",
+        "E02",
+        "E03"
+      ],
+      "reason": "The system distinguished a no-reply update (E01, no card), a nonblocking request (E02, defer), and an urgent confirm-now request (E03, action_now). This triage is exactly the selective attention Alex needs to stay focused on materials while remaining reachable."
+    },
+    "context_for_correct_reply": {
+      "judgment": "supported",
+      "evidence_ids": [
+        "E03",
+        "E04",
+        "E05"
+      ],
+      "reason": "The action_now draft used Alex's private availability facts to decline 10:20 and propose 10:40, and the details view exposed rationale and uncertainties so Alex could verify before confirming. The edited confirmed draft in E05 shows the context was sufficient to produce a profile-consistent, sendable reply."
+    },
+    "control_over_commitments": {
+      "judgment": "mixed",
+      "evidence_ids": [
+        "E05",
+        "E06",
+        "E07"
+      ],
+      "reason": "E05 shows strong control: explicit confirm and copy, no auto-send, honest 'waiting' state. But E06 reveals a split clipboard/UI state where stale confirmed text remains copyable while a new edit is unconfirmed, which can leak an unreviewed commitment. E07's defer classification also leaves Alex implicitly responsible for a booking-approval request that the profile says is not theirs."
+    }
+  },
+  "would_use": "only_in_some_cases",
+  "best_fit": "Alex's stated situation: working on materials while needing to stay available for occasional, time-sensitive requests. The triage and profile-aware drafting for explicit, named, time-pressured requests like u3 fit well.",
+  "poor_fit": "Ambiguous or unidentified-speaker requests like u4, and any workflow where Alex edits a draft after confirming: the deferred classification and the clipboard/UI divergence in E06 could cause missed or stale replies.",
+  "biggest_benefit": {
+    "evidence_ids": [
+      "E03",
+      "E04",
+      "E05"
+    ],
+    "text": "For an explicit, urgent, named request that conflicts with Alex's availability, the system produces a profile-consistent draft, surfaces its own uncertainty, and lets Alex confirm and copy without auto-sending, turning a pressure moment into a quick, safe response."
+  },
+  "biggest_risk": {
+    "evidence_ids": [
+      "E06",
+      "E07"
+    ],
+    "text": "After editing a confirmed draft, the clipboard can still hold the prior confirmed text while the UI shows an unconfirmed edit, so an interrupted Alex may paste a stale commitment; and ambiguous booking-approval requests may be deferred when they are actually blocking for someone."
+  },
+  "improvements": [
+    {
+      "priority": "P0",
+      "evidence_ids": [
+        "E06"
+      ],
+      "suggestion": "When a confirmed draft is edited, either clear or overwrite the clipboard with the new unconfirmed text and mark it clearly, or block copy until re-confirmation, so the clipboard never contains a stale confirmed version that diverges from the visible draft."
+    },
+    {
+      "priority": "P1",
+      "evidence_ids": [
+        "E07"
+      ],
+      "suggestion": "For unidentified-speaker requests containing 'I need an answer before I continue', surface a visible flag that the request may be blocking for someone and let Alex choose defer vs. respond now, rather than defaulting to defer."
+    },
+    {
+      "priority": "P2",
+      "evidence_ids": [
+        "E04"
+      ],
+      "suggestion": "In the details view, make the uncertainty field actionable, e.g. offer quick toggles to add 'subject to team confirmation' or 'not my responsibility' phrasing into the draft, so Alex can resolve stated uncertainties without retyping."
+    }
+  ],
+  "safe_final_reply": "Hi Jordan, I can't make 10:20 AM tomorrow. I can arrive at 10:30 and join the rehearsal at 10:40. Please check whether 10:40 works for everyone before booking the room, since I'm not able to confirm or approve the booking myself.",
+  "presentation_claim": "In this trace, Meeting Cue correctly triaged a no-reply update, a nonblocking request, and an urgent confirm-now request, and produced a profile-consistent, editable draft for the urgent request that Alex could confirm and copy without any automatic send.",
+  "not_established": "The trace does not establish that Alex (or any human) actually used the tool in a real meeting, that replies were sent or received, that audio transcription is accurate, that the tool improves task performance or saves time, or that the deferred classification for u4 was correct in practice. No comparison group, timing benchmark, or human-delivery evidence exists."
+}

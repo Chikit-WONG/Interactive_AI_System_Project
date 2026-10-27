@@ -1,0 +1,125 @@
+{
+  "source_type": "model_simulation",
+  "exposure": "recorded_current_workflow",
+  "cases": [
+    {
+      "id": "E01",
+      "assessment": "helpful",
+      "reason": "Recorded fact: utterance u1 was analyzed in roughly 1.2 seconds with itemCount 0, producing no alert card and only updating the running summary. Predicted experience as Alex: while focusing on project materials, I would appreciate that a routine file upload explicitly marked as needing no reply does not trigger a visual alert card, keeping my workspace quiet while still logging the progress in the background summary."
+    },
+    {
+      "id": "E02",
+      "assessment": "helpful",
+      "reason": "Recorded fact: utterance u2 triggered a defer alert with deadline 'six this evening', citing u2 and noting that review of cover color fits Alex's presentation materials responsibility but is non-blocking. Predicted experience as Alex: having this categorized as 'Later' rather than an urgent interruption would let me continue my current task without losing track of Sam's 6 PM deadline, though I probably would not need to send the suggested placeholder draft immediately."
+    },
+    {
+      "id": "E03",
+      "assessment": "helpful",
+      "reason": "Recorded fact: utterance u3 generated an action_now alert citing u3, identifying the conflict between Jordan's 10:20 AM request and Alex's profile constraints, and drafting a reply declining 10:20 AM and proposing 10:40 AM. Predicted experience as Alex: this immediate cue would effectively catch my attention when someone is actively waiting to book a room, and pre-populating my 10:40 AM availability would save me time formulating a refusal, even though it omitted my 10:30 AM arrival detail."
+    },
+    {
+      "id": "E04",
+      "assessment": "helpful",
+      "reason": "Recorded fact: expanding the alert displayed the source utterance u3, the rationale linking the room administrator's wait to Alex's schedule conflict, an uncertainty note about room flexibility, and an editable draft field. Predicted experience as Alex: seeing the exact source quote alongside explicit uncertainties would help me quickly verify the context before replying, rather than blindly trusting an automated summary when a schedule commitment is at stake."
+    },
+    {
+      "id": "E05",
+      "assessment": "mixed",
+      "reason": "Recorded fact: the operator edited the draft to include arriving at 10:30 AM and checking if 10:40 AM works before booking, then clicked Confirm & copy; the UI showed 'Copied; waiting for you to send or mark sent', no chat message was sent, and the export saved status as 'confirmed' with confirmedText. Predicted experience as Alex: manual copy-and-send preserves my control, but recording the alert status as 'confirmed' before I mark it sent creates a hazardous state mismatch."
+    },
+    {
+      "id": "E06",
+      "assessment": "mixed",
+      "reason": "Recorded fact: when the operator modified the text again after copying, the UI warned 'Previous draft copied - edits need confirmation' and disabled 'I sent it in the meeting', while the clipboard and exported confirmedText retained the E05 wording and dropped the unconfirmed E06 edit. Predicted experience as Alex: blocking the 'sent' button protects me from logging an unconfirmed edit, yet having different text in the editor, clipboard, and saved record could confuse me during a fast-moving meeting."
+    },
+    {
+      "id": "E07",
+      "assessment": "unhelpful",
+      "reason": "Recorded fact: for utterance u4 from an unidentified speaker, the system created a defer alert and updated the summary, stating the 10:20 AM request 'was already handled via Alex's confirmed reply' and drafting 'I've already said I can't make 10:20 tomorrow'. Predicted experience as Alex: although it rightly noted I do not approve room bookings, treating my unsent E05 clipboard draft as already spoken in the meeting corrupts the summary, misrepresents what teammates heard, and downgrades a live blocker to 'Later'."
+    },
+    {
+      "id": "E08",
+      "assessment": "helpful",
+      "reason": "Recorded fact: stopping the session set session.status to 'stopped', analysisState.running to false, froze elapsedMs at 407688.2451, and preserved the event log, utterances, and confirmed alerts (excluding the unconfirmed E06 text edit). Predicted experience as Alex: having a clean stop control that halts background LLM calls and preserves a structured record of utterances and confirmed responses would help me review what happened after the meeting."
+    }
+  ],
+  "value_assessments": {
+    "selective_attention": {
+      "judgment": "mixed",
+      "evidence_ids": [
+        "E01",
+        "E02",
+        "E03",
+        "E07"
+      ],
+      "reason": "The system appropriately separated a no-reply update (E01), a deferrable task (E02), and an urgent scheduling request (E03). However, in E07 it downgraded a blocking room-approval question to 'defer' partly because it falsely assumed the copied-but-unsent E05 response had already been delivered to the room."
+    },
+    "context_for_correct_reply": {
+      "judgment": "mixed",
+      "evidence_ids": [
+        "E03",
+        "E04",
+        "E07"
+      ],
+      "reason": "In E03 and E04, the tool grounded its alert in utterance u3, surfaced relevant uncertainties, and applied Alex's profile constraints (10:40 AM rehearsal availability and non-ownership of room booking in E07). In E07, however, it polluted the context by treating an unsent clipboard draft as an established meeting statement."
+    },
+    "control_over_commitments": {
+      "judgment": "mixed",
+      "evidence_ids": [
+        "E05",
+        "E06",
+        "E07"
+      ],
+      "reason": "The workflow never auto-sends messages and disables 'I sent it in the meeting' when post-copy edits are unconfirmed (E05, E06). Yet internal state control is flawed: clicking Confirm & copy immediately commits confirmedText into subsequent LLM prompts as if it were already sent (E07), and unconfirmed edits in E06 are not preserved in the export."
+    }
+  },
+  "would_use": "only_in_some_cases",
+  "best_fit": "Low-to-moderate traffic meetings with clean text transcripts where a multitasking participant has clear role boundaries and wants a triage queue for direct mentions.",
+  "poor_fit": "Fast-paced live audio meetings where speaker attribution is missing or where copying a draft without immediately sending it could mislead subsequent automated analysis.",
+  "biggest_benefit": {
+    "evidence_ids": [
+      "E01",
+      "E02",
+      "E03",
+      "E04"
+    ],
+    "text": "Triaging clean text utterances by urgency against explicit profile constraints and responsibilities, while exposing source quotes and uncertainties alongside editable reply drafts."
+  },
+  "biggest_risk": {
+    "evidence_ids": [
+      "E05",
+      "E06",
+      "E07"
+    ],
+    "text": "Conflating 'confirmed and copied to clipboard' with 'actually sent in the meeting', causing downstream summaries and alerts to assume teammates have already heard an unsent reply and to misclassify follow-up questions."
+  },
+  "improvements": [
+    {
+      "priority": "P0",
+      "evidence_ids": [
+        "E05",
+        "E06",
+        "E07"
+      ],
+      "suggestion": "Separate 'copied_pending_send' from 'sent_in_meeting' in the data model and LLM prompt context so subsequent analysis never claims a reply was already delivered or says 'I've already said' until the user explicitly clicks 'I sent it in the meeting'."
+    },
+    {
+      "priority": "P1",
+      "evidence_ids": [
+        "E06",
+        "E08"
+      ],
+      "suggestion": "Persist unconfirmed in-progress draft edits in a separate 'workingDraftText' field and log draft-edit events so post-copy edits are not lost on export and the divergence between clipboard text and editor text is explicit."
+    },
+    {
+      "priority": "P2",
+      "evidence_ids": [
+        "E07"
+      ],
+      "suggestion": "When a speaker is unidentified and asks an urgent blocking question connected to an unsent pending alert, keep the alert linked to the unresolved action_now item rather than downgrading it to defer."
+    }
+  ],
+  "safe_final_reply": "I cannot make 10:20 AM tomorrow because I cannot arrive before 10:30 AM. I can join the rehearsal at 10:40 AM, subject to the team confirming that 10:40 AM works and someone responsible for room bookings approving the room.",
+  "presentation_claim": "In a recorded session using clean manual English utterances and DeepSeek analysis, Meeting Cue v0.3.0 distinguished a no-reply update, a deferrable request, and an urgent scheduling conflict using profile rules, while exposing a state-handling bug where copied-but-unsent drafts are treated as delivered replies in later analysis.",
+  "not_established": "This trace does not establish live speech-to-text accuracy, real Tencent Meeting integration, human multitasking productivity gains, response-time improvements, or user satisfaction in real meetings."
+}

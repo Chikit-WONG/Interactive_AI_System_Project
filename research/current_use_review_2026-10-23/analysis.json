@@ -1,0 +1,87 @@
+{
+  "n": 32,
+  "unit": "independent simulated review run of one recorded workflow, not a human participant",
+  "model_counts": {
+    "codex: gpt-5.6-luna": 3,
+    "codex: gpt-5.6-sol": 3,
+    "cursor: claude-opus-5-5-high": 3,
+    "cursor: claude-sonnet-5-5-high": 3,
+    "cursor: composer-2.5": 3,
+    "cursor: gemini-3.1-pro": 3,
+    "cursor: gemini-4-argon-high": 3,
+    "cursor: glm-5.2-high": 3,
+    "cursor: grok-4.7-high": 2,
+    "cursor: kimi-k3-high": 3,
+    "cursor: muse-spark-1.3-high": 3
+  },
+  "value_judgments": {
+    "selective_attention": {
+      "supported": 27,
+      "mixed": 5
+    },
+    "context_for_correct_reply": {
+      "supported": 16,
+      "mixed": 16
+    },
+    "control_over_commitments": {
+      "mixed": 20,
+      "supported": 12
+    }
+  },
+  "case_judgments": {
+    "E01": {
+      "helpful": 32
+    },
+    "E02": {
+      "mixed": 10,
+      "helpful": 22
+    },
+    "E03": {
+      "helpful": 32
+    },
+    "E04": {
+      "helpful": 32
+    },
+    "E05": {
+      "helpful": 25,
+      "mixed": 7
+    },
+    "E06": {
+      "mixed": 22,
+      "helpful": 10
+    },
+    "E07": {
+      "mixed": 24,
+      "unhelpful": 6,
+      "helpful": 2
+    },
+    "E08": {
+      "helpful": 31,
+      "mixed": 1
+    }
+  },
+  "would_use": {
+    "only_in_some_cases": 32
+  },
+  "audit": {
+    "unique_run_ids": 32,
+    "unique_sessions": 32,
+    "unique_response_jsons": 32,
+    "prompt_sha256_bytes_CRLF": "685f987369fbdc5cc55602a2f73ca985628fa9b2e4ecd0a6f7ff33bc0e419259",
+    "prompt_sha256_normalized_LF": "2b5793db3cd2931eb16b4f81b3b7b5ca7aef99f2a876eabcb3e418977f6e43b3",
+    "all_inputs_identical": true,
+    "all_evidence_ids_valid": true,
+    "no_tool_events": true
+  },
+  "missing": "Grok repeat 3 failed after two attempts. Two initially requested Codex GPT-6 configurations unsupported by installed CLI; replaced with GPT-5.6 Sol and Luna, three independent runs each. Failed runs retained, never imputed.",
+  "interpretation": "Descriptive counts of review judgments only. Shared trace, related models and repeated prompts are not independent people or a population sample. No inferential tests, satisfaction averages, accuracy or productivity estimates.",
+  "revision": "After this cohort: keep unsent confirmedText out of DeepSeek meeting context; carry explicit delivery_status and distinguish self-reported sending from group agreement. Reviewers did not evaluate the patch.",
+  "technical_checks": {
+    "unit_tests": "87 passed, 0 failed",
+    "clear_cases_before": "3 cases x 3 repetitions met routing expectations",
+    "clear_cases_after": "3 cases x 3 repetitions met routing expectations",
+    "ambiguous_after": "2 completed responses preserved unsent status; 1 attempt rejected INVALID_SOURCES. Unknown recipient and redundant alerts remain risks.",
+    "baseline_delivery_issue": "all 3 ambiguous-case outputs described the earlier local reply as handled/shared; see functional_runs.json"
+  },
+  "impact_status": "Promising fit for partial attention and inspectable replies. No measured reduction in interruptions, missed requests, task time or errors; actual voice capture and Tencent send not exercised in this trace."
+}

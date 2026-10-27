@@ -1,0 +1,9 @@
+评分要求对应（当前版）
+
+Slide Quality & AI Integration：保留视觉风格，第二页固定文本避免表格扩张；第四页说明语音识别、DeepSeek 和人工确认。
+Project Background & Context：第二页解释原论文与43条探索材料中的具体例子。
+Problem Definition & Formulation：什么时候需要返回会议、需要什么上下文才能正确回答。
+Technical Approach & Methodology：第三页需求到功能，第四页技术流程，第六页32次独立模型模拟评价，第七页实际错误到修复与复测。
+Project Value & Impact：第六页显示最支持选择性提醒、上下文与控制仍有保留；第七页区分预期影响和待验证收益，保留比较方法与指标。
+
+未宣称模拟评价等于真人使用实验，未宣称已提高生产率或准确率。当前整段真人会议录像仍待录制。

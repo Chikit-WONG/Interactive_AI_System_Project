@@ -1,0 +1,22 @@
+{
+  "run_id": "cursor__gemini-4-argon-high__r3",
+  "provider": "cursor",
+  "requested_model": "gemini-4-argon-high",
+  "reported_models": [
+    "Gemini 4 Argon High"
+  ],
+  "repeat": 3,
+  "attempt": 1,
+  "sessions": [
+    "06ce5da5-5d80-4808-a08f-061208095e65"
+  ],
+  "prompt_sha256": "685f987369fbdc5cc55602a2f73ca985628fa9b2e4ecd0a6f7ff33bc0e419259",
+  "started": "2026-10-23T06:14:07.411386+00:00",
+  "seconds": 83.4,
+  "exit_code": 0,
+  "timed_out": false,
+  "tool_event_count": 0,
+  "valid": true,
+  "errors": [],
+  "path": "raw\\cursor__gemini-4-argon-high__r3\\attempt1"
+}

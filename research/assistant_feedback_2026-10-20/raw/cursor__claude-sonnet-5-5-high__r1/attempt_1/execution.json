@@ -1,0 +1,9 @@
+{
+  "attempt": 1,
+  "started_at": "2026-10-20T15:26:03.942843+00:00",
+  "timeout_seconds": 180,
+  "timed_out": false,
+  "exit_code": 0,
+  "process_id": 19604,
+  "ended_at": "2026-10-20T15:26:38.373258+00:00"
+}

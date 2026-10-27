@@ -1,0 +1,605 @@
+{
+  "schema_version": "1.0",
+  "source_type": "model_simulation",
+  "scenario_id": "S1",
+  "fictional_persona": true,
+  "experience_status": "all_experiences_are_hypothetical",
+  "scenario_induced": true,
+  "assumption_registry": {
+    "A1": "过去四周总会议次数约1-4次，情境只规定其中一次远程讨论",
+    "A2": "过去半年任务冲突频率为偶尔",
+    "A3": "未实际使用过AI处理会议事务",
+    "A4": "漏掉的信息会后通过聊天记录补足，未造成明显困难",
+    "A5": "会后补足遗漏约需半小时"
+  },
+  "questions": {
+    "NEW_Q1": {
+      "status": "answered",
+      "answer": {
+        "selection": "1–4 次"
+      },
+      "basis": [
+        "scenario_fact",
+        "model_assumption"
+      ],
+      "assumptions": [
+        "A1"
+      ]
+    },
+    "NEW_Q2": {
+      "status": "answered",
+      "answer": {
+        "meeting_topics": "课程方案讨论与数据核对",
+        "role": "负责数据核对的小组成员"
+      },
+      "basis": [
+        "scenario_fact"
+      ],
+      "assumptions": []
+    },
+    "NEW_Q3": {
+      "status": "answered",
+      "answer": {
+        "meeting_purpose": "讨论不同方案并确认相关数据",
+        "personal_goal": "提供我负责部分的数据信息",
+        "actual_participation": "间断关注，主要精力放在独立阅读作业"
+      },
+      "basis": [
+        "scenario_fact"
+      ],
+      "assumptions": []
+    },
+    "NEW_Q4": {
+      "status": "answered",
+      "answer": {
+        "before": "查看了自己负责的数据",
+        "during": "被需要时回应，其余时间做阅读作业",
+        "after": "通过聊天记录和询问组员补足遗漏"
+      },
+      "basis": [
+        "scenario_fact",
+        "model_assumption"
+      ],
+      "assumptions": [
+        "A4"
+      ]
+    },
+    "NEW_Q5": {
+      "status": "answered",
+      "answer": {
+        "selection": "有",
+        "episode": "讨论到需要我数据时我未及时注意，会后才知道"
+      },
+      "basis": [
+        "scenario_inference",
+        "model_assumption"
+      ],
+      "assumptions": [
+        "A4"
+      ]
+    },
+    "NEW_Q6": {
+      "status": "answered",
+      "answer": {
+        "selection": "1 次"
+      },
+      "basis": [
+        "scenario_inference"
+      ],
+      "assumptions": []
+    },
+    "NEW_Q7": {
+      "status": "answered",
+      "answer": {
+        "selection": "1",
+        "impact_detail": "影响较小，会后通过聊天记录补足"
+      },
+      "basis": [
+        "scenario_inference",
+        "model_assumption"
+      ],
+      "assumptions": [
+        "A4"
+      ]
+    },
+    "NEW_Q8": {
+      "status": "answered",
+      "answer": {
+        "actual_method": "会后查看聊天记录并询问组员",
+        "reason": "当时在做有提交时限的阅读作业，不便全程跟进"
+      },
+      "basis": [
+        "scenario_fact",
+        "scenario_inference"
+      ],
+      "assumptions": []
+    },
+    "NEW_Q9": {
+      "status": "answered",
+      "answer": {
+        "Q9a": "3",
+        "Q9b": "1",
+        "extra_time": "约半小时"
+      },
+      "basis": [
+        "scenario_inference",
+        "model_assumption"
+      ],
+      "assumptions": [
+        "A5"
+      ]
+    },
+    "NEW_Q10": {
+      "status": "answered",
+      "answer": {
+        "unmet_need": "基本满足",
+        "possible_cause": "并行任务导致注意力分散"
+      },
+      "basis": [
+        "scenario_inference"
+      ],
+      "assumptions": []
+    },
+    "NEW_Q11": {
+      "status": "answered",
+      "answer": {
+        "selection": "1 次"
+      },
+      "basis": [
+        "scenario_fact"
+      ],
+      "assumptions": []
+    },
+    "NEW_Q12": {
+      "status": "answered",
+      "answer": {
+        "desired_participation": "被需要时及时提醒并参与",
+        "actual_participation": "间断关注，主要做阅读作业",
+        "reason": "阅读作业有提交时限"
+      },
+      "basis": [
+        "scenario_fact"
+      ],
+      "assumptions": []
+    },
+    "NEW_Q13": {
+      "status": "answered",
+      "answer": {
+        "selection": "有些妨碍",
+        "evidence": "漏掉了需要我回应的时刻"
+      },
+      "basis": [
+        "scenario_inference"
+      ],
+      "assumptions": []
+    },
+    "NEW_Q14": {
+      "status": "answered",
+      "answer": {
+        "items": [
+          "当会议讨论到我负责的内容时，希望能够被及时提醒，这样我就能在并行任务时仍及时贡献"
+        ],
+        "none_status": ""
+      },
+      "basis": [
+        "hypothetical_preference",
+        "scenario_inference"
+      ],
+      "assumptions": []
+    },
+    "NEW_Q15": {
+      "status": "answered",
+      "answer": {
+        "text": "有聊天记录可会后补足，组员可询问"
+      },
+      "basis": [
+        "scenario_fact"
+      ],
+      "assumptions": []
+    },
+    "NEW_Q16": {
+      "status": "answered",
+      "answer": {
+        "selection": "没有使用过",
+        "task_example": "",
+        "result_example": ""
+      },
+      "basis": [
+        "model_assumption"
+      ],
+      "assumptions": [
+        "A3"
+      ]
+    },
+    "NEW_Q17": {
+      "status": "answered",
+      "answer": {
+        "willing_status": "has_task",
+        "willing_tasks": [
+          "在被需要时提醒我并提供相关上下文"
+        ],
+        "unsuitable_tasks": [
+          "替我做需要本人判断的决定"
+        ]
+      },
+      "basis": [
+        "hypothetical_preference",
+        "scenario_inference"
+      ],
+      "assumptions": []
+    },
+    "NEW_Q18": {
+      "status": "answered",
+      "answer": {
+        "trigger": "会议讨论涉及我负责的数据时",
+        "ai_action": "提醒我并简要说明相关上下文",
+        "result_and_recipient": "提醒信息给我本人",
+        "success_criterion": "我能在被需要时及时回应"
+      },
+      "basis": [
+        "hypothetical_preference"
+      ],
+      "assumptions": []
+    },
+    "NEW_Q19": {
+      "status": "answered",
+      "answer": {
+        "selection": "4",
+        "reason": "能减少漏掉关键信息的风险"
+      },
+      "basis": [
+        "hypothetical_preference"
+      ],
+      "assumptions": []
+    },
+    "NEW_Q20": {
+      "status": "answered",
+      "answer": {
+        "autonomous": "监测关键词和议题",
+        "requires_confirmation": "涉及判断或决定的内容",
+        "human_only": "我本人负责的数据确认"
+      },
+      "basis": [
+        "hypothetical_preference"
+      ],
+      "assumptions": []
+    },
+    "NEW_Q21": {
+      "status": "answered",
+      "answer": {
+        "text": "只在涉及我负责内容时简短提醒，其余不打扰"
+      },
+      "basis": [
+        "hypothetical_preference"
+      ],
+      "assumptions": []
+    },
+    "NEW_Q22": {
+      "status": "answered",
+      "answer": {
+        "evidence_needed": "对照聊天记录可核实",
+        "failure_response": "会后向组员确认"
+      },
+      "basis": [
+        "hypothetical_preference"
+      ],
+      "assumptions": []
+    },
+    "NEW_Q23": {
+      "status": "answered",
+      "answer": {
+        "text": "只使用与会议内容相关的信息，不使用个人隐私"
+      },
+      "basis": [
+        "hypothetical_preference"
+      ],
+      "assumptions": []
+    },
+    "NEW_Q24": {
+      "status": "answered",
+      "answer": {
+        "text": "只要不影响我和其他人的参与，没有特别意见"
+      },
+      "basis": [
+        "hypothetical_preference"
+      ],
+      "assumptions": []
+    },
+    "NEW_Q25": {
+      "status": "answered",
+      "answer": {
+        "stop_conditions": "输出不可靠或频繁误提醒",
+        "alternative": "维持现有聊天记录方式"
+      },
+      "basis": [
+        "hypothetical_preference"
+      ],
+      "assumptions": []
+    },
+    "NEW_Q26": {
+      "status": "answered",
+      "answer": {
+        "priority_and_reason": "优先处理及时提醒，因为这是当前最影响贡献的问题"
+      },
+      "basis": [
+        "hypothetical_preference",
+        "scenario_inference"
+      ],
+      "assumptions": []
+    },
+    "NEW_Q27": {
+      "status": "answered",
+      "answer": {
+        "text": ""
+      },
+      "basis": [
+        "not_applicable"
+      ],
+      "assumptions": []
+    },
+    "OLD_Q1": {
+      "status": "answered",
+      "answer": {
+        "selection": "每周约一次"
+      },
+      "basis": [
+        "model_assumption"
+      ],
+      "assumptions": [
+        "A1"
+      ]
+    },
+    "OLD_Q2": {
+      "status": "answered",
+      "answer": {
+        "selection": "偶尔"
+      },
+      "basis": [
+        "model_assumption"
+      ],
+      "assumptions": [
+        "A2"
+      ]
+    },
+    "OLD_Q3": {
+      "status": "answered",
+      "answer": {
+        "selected": [
+          "请同学/同事会后转述",
+          "查看录屏或会议纪要"
+        ],
+        "other_text": ""
+      },
+      "basis": [
+        "scenario_fact",
+        "scenario_inference"
+      ],
+      "assumptions": []
+    },
+    "OLD_Q4": {
+      "status": "answered",
+      "answer": {
+        "selected": [
+          "担心错过与自己有关的信息",
+          "频繁切换注意力，影响主要任务",
+          "不知道什么时候值得重新加入"
+        ],
+        "other_text": ""
+      },
+      "basis": [
+        "scenario_inference",
+        "hypothetical_preference"
+      ],
+      "assumptions": []
+    },
+    "OLD_Q5": {
+      "status": "answered",
+      "answer": {
+        "r1": "立即提醒",
+        "r2": "立即提醒",
+        "r3": "立即提醒",
+        "r4": "立即提醒",
+        "r5": "立即提醒",
+        "r6": "稍后批量",
+        "r7": "会后汇总",
+        "r8": "无需提醒"
+      },
+      "basis": [
+        "hypothetical_preference"
+      ],
+      "assumptions": []
+    },
+    "OLD_Q6": {
+      "status": "answered",
+      "answer": {
+        "selected": [
+          "是否直接提到我",
+          "是否需要我的决定",
+          "是否影响我的任务或责任",
+          "事件紧急程度"
+        ],
+        "other_text": ""
+      },
+      "basis": [
+        "hypothetical_preference"
+      ],
+      "assumptions": []
+    },
+    "OLD_Q7": {
+      "status": "answered",
+      "answer": {
+        "selection": "取决于会议类型或当前任务"
+      },
+      "basis": [
+        "hypothetical_preference"
+      ],
+      "assumptions": []
+    },
+    "OLD_Q8": {
+      "status": "answered",
+      "answer": {
+        "r1": 3,
+        "r2": 4,
+        "r3": 4,
+        "r4": 3,
+        "r5": 4
+      },
+      "basis": [
+        "hypothetical_preference"
+      ],
+      "assumptions": []
+    },
+    "OLD_Q9": {
+      "status": "answered",
+      "answer": {
+        "r1": "AI候选答案",
+        "r2": "自己输入",
+        "r3": "自己输入",
+        "r4": "临时加入会议"
+      },
+      "basis": [
+        "hypothetical_preference"
+      ],
+      "assumptions": []
+    },
+    "OLD_Q10": {
+      "status": "answered",
+      "answer": {
+        "selection": "看场景"
+      },
+      "basis": [
+        "hypothetical_preference"
+      ],
+      "assumptions": []
+    },
+    "OLD_Q11": {
+      "status": "answered",
+      "answer": {
+        "selected": [
+          "需要解释复杂背景",
+          "出现分歧或争论",
+          "决定影响较大",
+          "我对 AI 摘要缺乏信心"
+        ],
+        "other_text": ""
+      },
+      "basis": [
+        "hypothetical_preference"
+      ],
+      "assumptions": []
+    },
+    "OLD_Q12": {
+      "status": "answered",
+      "answer": {
+        "r1": 4,
+        "r2": 4,
+        "r3": 5,
+        "r4": 3,
+        "r5": 4
+      },
+      "basis": [
+        "hypothetical_preference"
+      ],
+      "assumptions": []
+    },
+    "OLD_Q13": {
+      "status": "answered",
+      "answer": {
+        "selected": [
+          "设置优先级/关键词",
+          "调整更新频率",
+          "查看最近 1–3 分钟发生了什么",
+          "一键临时加入会议"
+        ],
+        "other_text": ""
+      },
+      "basis": [
+        "hypothetical_preference"
+      ],
+      "assumptions": []
+    },
+    "OLD_Q14": {
+      "status": "answered",
+      "answer": {
+        "text": "能在被需要时及时提醒并提供必要上下文，让我在并行任务时仍能贡献意见"
+      },
+      "basis": [
+        "hypothetical_preference",
+        "scenario_inference"
+      ],
+      "assumptions": []
+    },
+    "NEW_M1": {
+      "status": "answered",
+      "answer": {
+        "text": "依靠聊天记录和组员转述判断是否理解，基本足够"
+      },
+      "basis": [
+        "scenario_fact",
+        "scenario_inference"
+      ],
+      "assumptions": []
+    },
+    "NEW_M2": {
+      "status": "answered",
+      "answer": {
+        "text": "在聊天框或口头表达，会后通过结果得知，基本符合需要"
+      },
+      "basis": [
+        "scenario_inference"
+      ],
+      "assumptions": []
+    },
+    "NEW_M3": {
+      "status": "answered",
+      "answer": {
+        "text": "没有明显影响"
+      },
+      "basis": [
+        "model_assumption"
+      ],
+      "assumptions": []
+    },
+    "NEW_M4": {
+      "status": "answered",
+      "answer": {
+        "text": "被需要时立即看到简短提醒，会后可看较完整摘要；偏好由我设定"
+      },
+      "basis": [
+        "hypothetical_preference"
+      ],
+      "assumptions": []
+    },
+    "NEW_M5": {
+      "status": "answered",
+      "answer": {
+        "text": "实际由我根据任务安排决定是否参加；引入AI后希望仍由我决定"
+      },
+      "basis": [
+        "scenario_fact",
+        "hypothetical_preference"
+      ],
+      "assumptions": []
+    },
+    "NEW_M6": {
+      "status": "answered",
+      "answer": {
+        "text": "希望相关人员知道信息来源是AI辅助；分歧时以本人确认为准"
+      },
+      "basis": [
+        "hypothetical_preference"
+      ],
+      "assumptions": []
+    },
+    "NEW_M7": {
+      "status": "answered",
+      "answer": {
+        "text": "需与现有聊天工具配合；尝试前需了解提醒准确率"
+      },
+      "basis": [
+        "hypothetical_preference"
+      ],
+      "assumptions": []
+    }
+  }
+}

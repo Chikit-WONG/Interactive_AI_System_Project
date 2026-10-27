@@ -1,0 +1,69 @@
+{
+  "all_passed": true,
+  "cases": [
+    {
+      "case": "unmodified_completed_response",
+      "expected_valid": true,
+      "actual_valid": true,
+      "passed": true
+    },
+    {
+      "case": "missing_NEW_Q9b",
+      "expected_valid": false,
+      "actual_valid": false,
+      "passed": true,
+      "detected_errors": [
+        "$.questions.NEW_Q9:oneOf_failure",
+        "$.questions.NEW_Q9.answer.Q9b:missing_required",
+        "NEW_Q9:missing_subfields:Q9b"
+      ]
+    },
+    {
+      "case": "missing_OLD_Q5_matrix_row",
+      "expected_valid": false,
+      "actual_valid": false,
+      "passed": true,
+      "detected_errors": [
+        "$.questions.OLD_Q5:oneOf_failure",
+        "$.questions.OLD_Q5.answer.r8:missing_required",
+        "OLD_Q5:missing_subfields:r8"
+      ]
+    },
+    {
+      "case": "required_skip_disobeyed",
+      "expected_valid": false,
+      "actual_valid": false,
+      "passed": true,
+      "detected_errors": [
+        "NEW_Q6:required_skip_not_followed:R2",
+        "NEW_Q7:required_skip_not_followed:R2",
+        "NEW_Q8:required_skip_not_followed:R2",
+        "NEW_Q9:required_skip_not_followed:R2",
+        "NEW_Q10:required_skip_not_followed:R2"
+      ]
+    },
+    {
+      "case": "unresolved_assumption_reference",
+      "expected_valid": false,
+      "actual_valid": false,
+      "passed": true,
+      "detected_errors": [
+        "NEW_Q1:unresolved_assumption:NONEXISTENT_ID"
+      ]
+    },
+    {
+      "case": "malformed_skip_reason_type",
+      "expected_valid": false,
+      "actual_valid": false,
+      "passed": true,
+      "detected_errors": [
+        "$.questions.NEW_Q6:oneOf_failure",
+        "$.questions.NEW_Q6.skip_reason:expected_string",
+        "NEW_Q6:unauthorized_main_question_skip",
+        "NEW_Q6:empty_skip_reason"
+      ]
+    }
+  ],
+  "raw_outputs_modified": false,
+  "source_response": "raw/claude-opus-5-5-high__S1__r1/attempt_1/response.json"
+}

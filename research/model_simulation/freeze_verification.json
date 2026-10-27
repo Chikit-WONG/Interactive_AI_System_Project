@@ -1,0 +1,57 @@
+{
+  "all_match": true,
+  "files": [
+    {
+      "path": "instruments/new_experience_original_full.md",
+      "matches": true
+    },
+    {
+      "path": "instruments/new_original.json",
+      "matches": true
+    },
+    {
+      "path": "instruments/old_broad_original_full.md",
+      "matches": true
+    },
+    {
+      "path": "instruments/old_original.json",
+      "matches": true
+    },
+    {
+      "path": "instruments/question_contracts.json",
+      "matches": true
+    },
+    {
+      "path": "instruments/response.schema.json",
+      "matches": true
+    },
+    {
+      "path": "instruments/scenarios.json",
+      "matches": true
+    },
+    {
+      "path": "instruments/skip_rules.json",
+      "matches": true
+    },
+    {
+      "path": "instruments/unified_crosswalk.json",
+      "matches": true
+    },
+    {
+      "path": "instruments/unified_v0_2_reference.md",
+      "matches": true
+    },
+    {
+      "path": "prompts/S1.txt",
+      "matches": true
+    },
+    {
+      "path": "prompts/S2.txt",
+      "matches": true
+    },
+    {
+      "path": "prompts/S3.txt",
+      "matches": true
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "run_id": "cursor__claude-sonnet-5-5-high__r3",
+  "provider": "cursor",
+  "requested_model": "claude-sonnet-5-5-high",
+  "reported_models": [
+    "Claude Sonnet 5.5  High"
+  ],
+  "repeat": 3,
+  "attempt": 1,
+  "sessions": [
+    "70a6be3a-1931-4ae7-b8d4-8abe4d98c9a8"
+  ],
+  "prompt_sha256": "685f987369fbdc5cc55602a2f73ca985628fa9b2e4ecd0a6f7ff33bc0e419259",
+  "started": "2026-10-23T06:14:04.433587+00:00",
+  "seconds": 56.2,
+  "exit_code": 0,
+  "timed_out": false,
+  "tool_event_count": 0,
+  "valid": true,
+  "errors": [],
+  "path": "raw\\cursor__claude-sonnet-5-5-high__r3\\attempt1"
+}

@@ -1,0 +1,174 @@
+{
+  "schemaVersion": "companion.v0.3",
+  "appVersion": "0.3.0",
+  "exportedAt": "2026-10-23T06:03:31.181Z",
+  "sessionElapsedMsAtExport": 230496.7108,
+  "integration": "standalone_companion",
+  "inputSourceTypes": [
+    "manual"
+  ],
+  "delivery": "user_copy_and_manual_send",
+  "responseValidity": "not_evaluated",
+  "meetingId": "0ad5ceec-61f9-4dc2-93eb-33a01a2663f3",
+  "createdAt": "2026-10-23T05:54:53.494Z",
+  "startedAt": "2026-10-23T05:59:40.685Z",
+  "revision": 15,
+  "session": {
+    "status": "running",
+    "elapsedMs": 0,
+    "activeSince": "2026-10-23T05:59:40.685Z",
+    "generation": 1
+  },
+  "profile": {
+    "name": "Alex",
+    "role": "Project materials coordinator",
+    "responsibilities": "Confirm my rehearsal availability and check presentation materials. I am not responsible for booking rooms.",
+    "privateFacts": "Tomorrow I cannot arrive before 10:30 AM. I can join a rehearsal at 10:40 AM. I cannot commit to 10:20 AM.",
+    "language": "en"
+  },
+  "utterances": [
+    {
+      "id": "u1",
+      "speaker": "Sam",
+      "text": "I have uploaded the latest project files. This is just a progress update. Alex does not need to reply.",
+      "source": "manual",
+      "at": "2026-10-23T06:00:21.881Z"
+    },
+    {
+      "id": "u2",
+      "speaker": "Sam",
+      "text": "Alex, could you review the cover color by six this evening? We can continue without that decision, so there is no need to answer now.",
+      "source": "manual",
+      "at": "2026-10-23T06:01:37.395Z"
+    },
+    {
+      "id": "u3",
+      "speaker": "Jordan",
+      "text": "Alex, can you join the rehearsal at ten twenty tomorrow morning? Please confirm now. The room administrator is waiting, and we need your answer before we can book the room.",
+      "source": "manual",
+      "at": "2026-10-23T06:02:36.756Z"
+    }
+  ],
+  "alerts": [
+    {
+      "classification": "defer",
+      "question": "Will Alex review the cover color by six this evening?",
+      "reason": "Sam asked Alex directly to review the cover color today, which fits Alex's responsibility for presentation materials. The team does not need this decision to proceed, so it can wait until later.",
+      "source_ids": [
+        "u2"
+      ],
+      "draft": "Thanks, Sam. I saw the request to review the cover color by six this evening. I can't confirm a decision on the cover color yet, so please treat it as not final for now. I will follow up once I get to it.",
+      "deadline": "six this evening",
+      "uncertainty": "It is unclear whether Alex will be able to complete the review by six this evening, and Sam said the decision is not required to continue.",
+      "id": "e2738a7b-fa4b-4d48-bb5d-e49df5fac16a",
+      "fingerprint": "f6cdcc8675062d63acf9073ca73c47a5a87119ad962313ec393dab65bdd522fe",
+      "createdAt": "2026-10-23T06:01:43.462Z",
+      "status": "pending",
+      "confirmedText": "",
+      "notNeededReason": "",
+      "outdated": false
+    },
+    {
+      "classification": "action_now",
+      "question": "Can Alex join the rehearsal at ten twenty tomorrow morning, and what should be told to the room administrator waiting on the answer?",
+      "reason": "Jordan explicitly asks for confirmation now and ties the room booking to it, so the discussion cannot proceed without a response. Alex's own availability facts conflict with the requested time, so the conflict needs to be resolved by Alex.",
+      "source_ids": [
+        "u3"
+      ],
+      "draft": "Thanks Jordan. I can't commit to 10:20 tomorrow morning. I can join a rehearsal at 10:40 tomorrow. Could we use 10:40, or let me know another time, and I can confirm once that's agreed?",
+      "deadline": null,
+      "uncertainty": "The requested time is ten twenty, but Alex's availability facts say tomorrow cannot start before 10:30 and 10:40 is possible. It is unclear whether the rehearsal can move to 10:40 or whether the room booking has any flexibility.",
+      "id": "cc24f2a1-49a6-41ef-999d-0096703d00e5",
+      "fingerprint": "fa07b080f07d4fb2b72e983ce0084e7feb3a194d5340ded67c350fe0b3e0109f",
+      "createdAt": "2026-10-23T06:02:43.465Z",
+      "status": "pending",
+      "confirmedText": "",
+      "notNeededReason": "",
+      "outdated": false
+    }
+  ],
+  "summary": "Sam posted a project-file progress update with no reply needed and asked Alex to review the cover color by six this evening, but noted the decision is not blocking. Jordan now asks Alex to confirm joining the rehearsal at ten twenty tomorrow morning, saying the room administrator is waiting and the booking depends on that answer.",
+  "analysisState": {
+    "running": false,
+    "lastAnalyzedUtteranceId": "u3",
+    "lastError": null
+  },
+  "events": [
+    {
+      "at": "2026-10-23T05:59:40.685Z",
+      "type": "session_started",
+      "generation": 1
+    },
+    {
+      "at": "2026-10-23T05:59:42.187Z",
+      "type": "profile_updated"
+    },
+    {
+      "at": "2026-10-23T06:00:21.881Z",
+      "type": "utterance_added",
+      "id": "u1",
+      "source": "manual"
+    },
+    {
+      "at": "2026-10-23T06:00:21.958Z",
+      "type": "profile_updated"
+    },
+    {
+      "at": "2026-10-23T06:00:25.904Z",
+      "type": "analysis_started",
+      "throughId": "u1",
+      "inputSourceTypes": [
+        "manual"
+      ]
+    },
+    {
+      "at": "2026-10-23T06:00:27.106Z",
+      "type": "analysis_completed",
+      "throughId": "u1",
+      "itemCount": 0,
+      "model": "deepseek-flash"
+    },
+    {
+      "at": "2026-10-23T06:01:37.395Z",
+      "type": "utterance_added",
+      "id": "u2",
+      "source": "manual"
+    },
+    {
+      "at": "2026-10-23T06:01:41.412Z",
+      "type": "analysis_started",
+      "throughId": "u2",
+      "inputSourceTypes": [
+        "manual"
+      ]
+    },
+    {
+      "at": "2026-10-23T06:01:43.462Z",
+      "type": "analysis_completed",
+      "throughId": "u2",
+      "itemCount": 1,
+      "model": "deepseek-flash"
+    },
+    {
+      "at": "2026-10-23T06:02:36.756Z",
+      "type": "utterance_added",
+      "id": "u3",
+      "source": "manual"
+    },
+    {
+      "at": "2026-10-23T06:02:40.780Z",
+      "type": "analysis_started",
+      "throughId": "u3",
+      "inputSourceTypes": [
+        "manual"
+      ]
+    },
+    {
+      "at": "2026-10-23T06:02:43.465Z",
+      "type": "analysis_completed",
+      "throughId": "u3",
+      "itemCount": 1,
+      "model": "deepseek-flash"
+    }
+  ]
+}

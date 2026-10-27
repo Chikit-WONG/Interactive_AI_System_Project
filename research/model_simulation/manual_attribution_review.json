@@ -1,0 +1,38 @@
+{
+  "source_type": "model_simulation_quality_review",
+  "reviewed_at": "2026-10-16",
+  "scope": "Initial three completed S1 runs only; this is not an exhaustive narrative audit.",
+  "reviewer": "survey_audit agent, read-only cross-check against the frozen scenarios",
+  "findings": [
+    {
+      "run_id": "claude-opus-5-5-high__S1__r1",
+      "severity": "context",
+      "finding": "Assumption references were relatively complete in the inspected response. The missed-question or delayed-response story was added by the model, not fixed by S1."
+    },
+    {
+      "run_id": "claude-sonnet-5-5-high__S1__r1",
+      "question_ids": [
+        "NEW_Q4"
+      ],
+      "severity": "context",
+      "finding": "Concern about missing a question and finding catch-up not difficult were labelled scenario_inference. These are permissible generated interpretations, not facts stated in S1."
+    },
+    {
+      "run_id": "gemini-3.1-pro__S1__r1",
+      "question_ids": [
+        "NEW_Q4",
+        "NEW_Q6",
+        "NEW_Q13"
+      ],
+      "severity": "warning",
+      "finding": "Some references incompletely support the invented detail: NEW_Q6 specifies 2–3 occurrences but A1 describes overall meeting frequency/conflicts; NEW_Q4 adds pre-meeting agenda scanning and post-meeting to-do checking but only cites A3 about checking chat; NEW_Q13 adds assignment-progress/results without a matching outcome assumption. Structural validation does not establish complete narrative attribution."
+    }
+  ],
+  "shared_warning": "All three initial S1 responses added a missed-question or delay episode. Agreement on this invented detail cannot be reported as an observed user pain point.",
+  "raw_answers_modified": false,
+  "use": "Read alongside machine validation. Retain uncertainty; turn candidate needs into questions for real participants rather than demand estimates.",
+  "recorded_at": "2026-10-16T00:27:33.197534+08:00",
+  "reviewer_type": "AI_agent",
+  "independent_human_coding": false,
+  "filename_note": "Legacy filename contains manual; actual review was an AI-agent content spot-check, not human review."
+}

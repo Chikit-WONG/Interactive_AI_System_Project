@@ -1,0 +1,42 @@
+{
+  "run_id": "cursor__gemini-4-argon-high__r1",
+  "provider": "cursor",
+  "requested_model": "gemini-4-argon-high",
+  "replicate": 1,
+  "valid": true,
+  "status": "valid",
+  "accepted_attempt": 1,
+  "attempts": [
+    {
+      "attempt": 1,
+      "started_at": "2026-10-20T15:24:58.633085+00:00",
+      "timeout_seconds": 180,
+      "timed_out": false,
+      "exit_code": 0,
+      "process_id": 56448,
+      "ended_at": "2026-10-20T15:26:03.919705+00:00",
+      "provider": "cursor",
+      "requested_model": "gemini-4-argon-high",
+      "requested_reasoning_effort": "model_id",
+      "returned_models": [
+        "Gemini 4 Argon High"
+      ],
+      "model_identity_status": "verified",
+      "session_ids": [
+        "2680cfd5-67c1-45b6-ab34-8ceb3aeaefd1"
+      ],
+      "input_sha256": "7486863387d749425546f9bd81d5480b40f8972eed1ce2169d17a6d8a18ece75",
+      "prompt_echo_matches": true,
+      "prompt_transport_note": "Exact text equality checked against user stream event.",
+      "tool_event_count": 0,
+      "tool_events": [],
+      "malformed_stream_line_numbers": [],
+      "extracted_markdown_fence": false,
+      "structure_errors": [],
+      "quota_or_rate_limit": false,
+      "valid": true,
+      "errors": [],
+      "raw_directory": "raw\\cursor__gemini-4-argon-high__r1\\attempt_1"
+    }
+  ]
+}

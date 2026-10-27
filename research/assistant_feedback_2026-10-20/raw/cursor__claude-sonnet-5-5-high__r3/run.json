@@ -1,0 +1,42 @@
+{
+  "run_id": "cursor__claude-sonnet-5-5-high__r3",
+  "provider": "cursor",
+  "requested_model": "claude-sonnet-5-5-high",
+  "replicate": 3,
+  "valid": true,
+  "status": "valid",
+  "accepted_attempt": 1,
+  "attempts": [
+    {
+      "attempt": 1,
+      "started_at": "2026-10-20T15:35:05.298676+00:00",
+      "timeout_seconds": 180,
+      "timed_out": false,
+      "exit_code": 0,
+      "process_id": 80028,
+      "ended_at": "2026-10-20T15:35:48.562131+00:00",
+      "provider": "cursor",
+      "requested_model": "claude-sonnet-5-5-high",
+      "requested_reasoning_effort": "model_id",
+      "returned_models": [
+        "Claude Sonnet 5.5  High"
+      ],
+      "model_identity_status": "verified",
+      "session_ids": [
+        "064ec186-8ad3-4573-b2c2-84ee6ac17d27"
+      ],
+      "input_sha256": "7486863387d749425546f9bd81d5480b40f8972eed1ce2169d17a6d8a18ece75",
+      "prompt_echo_matches": true,
+      "prompt_transport_note": "Exact text equality checked against user stream event.",
+      "tool_event_count": 0,
+      "tool_events": [],
+      "malformed_stream_line_numbers": [],
+      "extracted_markdown_fence": false,
+      "structure_errors": [],
+      "quota_or_rate_limit": false,
+      "valid": true,
+      "errors": [],
+      "raw_directory": "raw\\cursor__claude-sonnet-5-5-high__r3\\attempt_1"
+    }
+  ]
+}

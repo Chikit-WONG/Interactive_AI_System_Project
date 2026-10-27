@@ -1,0 +1,21 @@
+0:00:00.00 - 0:00:13.00
+Early scripted prototype: a data lead reads while following a meeting.
+Every directed question triggers an alert.
+
+0:00:13.00 - 0:00:26.00
+A cover-color question is outside the data lead's role.
+Mark it as no response needed; it can be reopened.
+
+0:00:26.00 - 0:00:38.00
+Open the recent discussion to recover context.
+Only statements that have already occurred appear.
+
+0:00:38.00 - 0:00:51.00
+Check the original request and the seven-sample limit.
+Edit a preset draft and confirm; the reply stays local.
+
+0:00:51.00 - 0:01:04.36
+Return to reading and export the interaction log.
+This clip shows interaction design, not live AI or meeting delivery.
+
+Original Chinese UI preserved. The English banner translates the key interaction. No voice-over, timing edits, simulated AI output or fabricated chat delivery were added.

@@ -1,0 +1,23 @@
+{
+  "run_id": "codex__gpt-6-astra__r2",
+  "provider": "codex",
+  "requested_model": "gpt-6-astra",
+  "reported_models": [],
+  "repeat": 2,
+  "attempt": 2,
+  "sessions": [
+    "01a16765-05ce-7be3-a1e1-a3023214a59e"
+  ],
+  "prompt_sha256": "685f987369fbdc5cc55602a2f73ca985628fa9b2e4ecd0a6f7ff33bc0e419259",
+  "started": "2026-10-23T06:13:53.264512+00:00",
+  "seconds": 14.1,
+  "exit_code": 1,
+  "timed_out": false,
+  "tool_event_count": 0,
+  "valid": false,
+  "errors": [
+    "parse:Expecting value: line 1 column 1 (char 0)",
+    "execution"
+  ],
+  "path": "raw\\codex__gpt-6-astra__r2\\attempt2"
+}

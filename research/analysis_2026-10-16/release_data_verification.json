@@ -1,0 +1,23 @@
+{
+  "pass": true,
+  "audited_logical_runs": 36,
+  "audited_attempts": 55,
+  "eligible_responses": 26,
+  "original_question_objects": 48,
+  "public_fragments": 14,
+  "public_source_clusters": 8,
+  "new_recruited_humans": 0,
+  "checks": [
+    "unique logical runs",
+    "fixed 30+3+3 design",
+    "unique accepted session IDs",
+    "every saved input and stdout hash",
+    "at most two attempts",
+    "no resume",
+    "successful process and zero tools for accepted records",
+    "48 objects per accepted response",
+    "synthetic source labels",
+    "public case provenance and missingness",
+    "original questionnaire evidence is not a fabricated response"
+  ]
+}

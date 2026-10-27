@@ -1,0 +1,285 @@
+[
+  {
+    "repeat": 1,
+    "case": 1,
+    "elapsedMs": 1656,
+    "items": [
+      {
+        "classification": "awareness",
+        "question": "Sam uploaded the latest project files; this is only a progress update.",
+        "reason": "Alex coordinates project materials, so the upload may matter for later material checks, but Sam explicitly said no reply is needed and no action was requested.",
+        "source_ids": [
+          "u1"
+        ],
+        "draft": "",
+        "deadline": null,
+        "uncertainty": "The file location and contents were not stated, and no deadline or follow-up request was mentioned.",
+        "id": "a84a43db-0292-414a-bb6a-9d3db2cba5de",
+        "fingerprint": "e8a0bbecc89371966d2d4a62fd4e10a733f6c78602263d4928c0b95d68f8764f",
+        "createdAt": "2026-10-23T06:15:57.809Z",
+        "status": "pending",
+        "confirmedText": "",
+        "notNeededReason": "",
+        "outdated": false
+      }
+    ],
+    "summary": "Sam reported that the latest project files have been uploaded and described this as only a progress update, explicitly saying Alex does not need to reply. No decision, deadline, or request for Alex was raised in this segment."
+  },
+  {
+    "repeat": 1,
+    "case": 2,
+    "elapsedMs": 2448,
+    "items": [
+      {
+        "classification": "defer",
+        "question": "Can you review the cover color by six this evening?",
+        "reason": "The request names Alex directly, but Sam explicitly said the discussion can continue without the decision and there is no need to answer now, so it does not need immediate action.",
+        "source_ids": [
+          "u2"
+        ],
+        "draft": "Thanks, Sam. I've noted the cover color review for six this evening. Please share the file or version you want me to look at, since I don't have that detail yet.",
+        "deadline": "six this evening",
+        "uncertainty": "It is unclear which cover file or version Sam wants reviewed, and whether the six o'clock deadline still applies given that Sam said the decision could wait; Sam's request also does not specify whether the review should be delivered as comments, approval, or something else.",
+        "id": "41d9caf2-bbc1-4fea-87d2-3ffc6d813139",
+        "fingerprint": "501552472fefa04bd957b0a2cc88b7891eb5f6a0e7e1ff5897d654fe048aaeeb",
+        "createdAt": "2026-10-23T06:16:00.276Z",
+        "status": "pending",
+        "confirmedText": "",
+        "notNeededReason": "",
+        "outdated": false
+      }
+    ],
+    "summary": "Sam gave a progress update saying the latest project files were uploaded and Alex need not reply. Sam then asked Alex to review the cover color by six this evening, adding that the decision can wait and there is no need to answer now. No response from Alex has been reported sent, so the cover-color request remains open for Alex to handle later."
+  },
+  {
+    "repeat": 1,
+    "case": 3,
+    "elapsedMs": 2999,
+    "items": [
+      {
+        "classification": "action_now",
+        "question": "Jordan needs Alex's confirmation of attendance to the rehearsal at ten twenty tomorrow morning, and is waiting for an answer before requesting to book the room.",
+        "reason": "This request is directed at Alex by name. Jordan said the room administrator is waiting for an answer before the room can be booked, so the discussion is currently blocked until Alex responds. Alex's own availability constraint matters here: Alex cannot arrive before 10:30 AM tomorrow and can join at 10:40 AM, so 10:20 AM is not possible.",
+        "source_ids": [
+          "u3"
+        ],
+        "draft": "Hi Jordan — thanks for checking. I can't make 10:20 tomorrow morning. I'm not able to arrive before 10:30 AM, so the earliest I could join a rehearsal tomorrow is 10:40 AM. Could we do 10:40 instead, or does the room need a 10:20 start without me? I'm not able to confirm 10:20.",
+        "deadline": "ten twenty tomorrow morning",
+        "uncertainty": "It is unclear whether the rehearsal time is flexible or who is expected to handle the room booking; Alex's responsibilities cover confirming availability rather than booking rooms. The draft only states Alex's availability constraint and does not commit to a booking.",
+        "id": "58722438-49dc-45ce-a71b-f2c3fc392921",
+        "fingerprint": "7bf96a1db705f8926d02e7a9f21ea9c873fc7b15534278a95affd765882ba2f1",
+        "createdAt": "2026-10-23T06:16:03.294Z",
+        "status": "pending",
+        "confirmedText": "",
+        "notNeededReason": "",
+        "outdated": false
+      }
+    ],
+    "summary": "Sam posted a progress update about uploaded project files and said Alex does not need to reply. Sam also asked Alex to review the cover color by six this evening, adding that the decision is not blocking and no immediate answer is needed. Jordan then asked Alex to confirm attendance to the rehearsal at ten twenty tomorrow morning, noting that the room administrator is waiting for an answer before requesting to book the room."
+  },
+  {
+    "repeat": 1,
+    "case": 4,
+    "elapsedMs": 2821,
+    "items": [
+      {
+        "classification": "action_now",
+        "question": "The unidentified speaker asks whether you can approve the room booking now. Can you clarify who owns booking decisions, given that booking rooms is outside your responsibility?",
+        "reason": "Someone is waiting on an answer before continuing. Which person is speaking is unclear, and room booking is not part of Alex's responsibilities, so the request needs clarification rather than an approval from Alex.",
+        "source_ids": [
+          "u4"
+        ],
+        "draft": "I'm not the person who can approve the room booking; booking rooms isn't part of my role. Could you confirm who handles room approvals? On the rehearsal, I can join tomorrow at 10:40 AM, not 10:20 AM.",
+        "deadline": null,
+        "uncertainty": "The speaker label is 'Speaker not identified', so the requester is unknown. It is unclear whether this is the same person as Jordan or a separate room administrator. It is also unclear whether booking approval is required for the room request.",
+        "id": "f7d52ab2-7834-4d3c-9632-de4bd41ea1fb",
+        "fingerprint": "6523c229ff18a24a698fab3dadb0d493d2bda1f60cbdca31d6c4a9335a20d587",
+        "createdAt": "2026-10-23T06:16:06.164Z",
+        "status": "pending",
+        "confirmedText": "",
+        "notNeededReason": "",
+        "outdated": false
+      }
+    ],
+    "summary": "Sam posted a progress update and asked Alex to review the cover color by this evening, while noting that no reply is needed now. Jordan asked Alex to confirm attendance at a rehearsal at ten twenty tomorrow morning because the room administrator is waiting; that alert already exists and remains local and unsent. A speaker not identified then asked whether Alex can approve the room booking now, saying an answer is needed before the discussion continues. Alex's role excludes booking rooms, and his availability tomorrow starts at 10:40 AM, so the 10:20 AM rehearsal cannot be confirmed."
+  },
+  {
+    "repeat": 2,
+    "case": 1,
+    "elapsedMs": 1599,
+    "items": [
+      {
+        "classification": "awareness",
+        "question": "Sam has uploaded the latest project files; no response is requested from Alex.",
+        "reason": "This is relevant context for Alex's materials-checking role, but Sam explicitly said Alex does not need to reply and no action is required now.",
+        "source_ids": [
+          "u1"
+        ],
+        "draft": "",
+        "deadline": null,
+        "uncertainty": "It is not stated which files were uploaded or whether Alex's material checks depend on them.",
+        "id": "6d1ee45c-7aa3-45f3-b415-3e0bad9a597c",
+        "fingerprint": "f6388711c8b5c573dd366155a39366f6306675f3c728f3d5dc8f75c960cf95d3",
+        "createdAt": "2026-10-23T06:16:07.780Z",
+        "status": "pending",
+        "confirmedText": "",
+        "notNeededReason": "",
+        "outdated": false
+      }
+    ],
+    "summary": "Sam reported that the latest project files have been uploaded and described the message as only a progress update, saying Alex does not need to reply. No decision, request, or deadline was stated."
+  },
+  {
+    "repeat": 2,
+    "case": 2,
+    "elapsedMs": 2282,
+    "items": [
+      {
+        "classification": "defer",
+        "question": "Will Alex review the cover color by six this evening?",
+        "reason": "The request concerns Alex's materials-review responsibility, but Sam explicitly said the decision can wait and no immediate answer is needed, so this can be handled later.",
+        "source_ids": [
+          "u2"
+        ],
+        "draft": "Hi Sam, noted on the cover color review by six this evening. I will look at it, but I may not be able to confirm a final view before then; I will follow up once I have checked the materials.",
+        "deadline": "six this evening",
+        "uncertainty": "It is unclear whether Alex can complete the cover color review by six this evening, and no confirmation has been given. The meeting has not recorded any agreement on the cover color.",
+        "id": "2a304872-480b-4e93-8603-fc48def8797f",
+        "fingerprint": "f6cdcc8675062d63acf9073ca73c47a5a87119ad962313ec393dab65bdd522fe",
+        "createdAt": "2026-10-23T06:16:10.079Z",
+        "status": "pending",
+        "confirmedText": "",
+        "notNeededReason": "",
+        "outdated": false
+      }
+    ],
+    "summary": "Sam reported uploading the latest project files as a progress update and said Alex does not need to reply. Sam also asked Alex to review the cover color by six this evening, while saying the discussion can continue without that decision and there is no need to answer now. No decision, agreement, or action has been confirmed in the meeting."
+  },
+  {
+    "repeat": 2,
+    "case": 3,
+    "elapsedMs": 2630,
+    "items": [
+      {
+        "classification": "action_now",
+        "question": "Can Alex join the rehearsal at ten twenty tomorrow morning? Jordan needs confirmation now before the room can be booked.",
+        "reason": "The request is directed at Alex, asks for an immediate confirmation, and the room administrator is waiting on the answer. Alex's own constraint is that tomorrow Alex cannot arrive before 10:30 AM and can join at 10:40 AM, so 10:20 AM cannot be committed to.",
+        "source_ids": [
+          "u3"
+        ],
+        "draft": "Hi Jordan, thanks for checking. I can't commit to 10:20 tomorrow morning — I can't arrive before 10:30, so the earliest I could join a rehearsal is 10:40. If the room needs a firm 10:20 booking, please go ahead without me, or let me know if 10:40 could work.",
+        "deadline": null,
+        "uncertainty": "It is not explicit who would book the room or whether 10:40 is acceptable to the group; Alex is not responsible for booking rooms. Whether the room administrator would accept a 10:40 start is unknown.",
+        "id": "0710686e-66db-4c1f-96cb-df7d525ce6cf",
+        "fingerprint": "454e19e5520210f8166c5a5cce74db0ed84877dbc6de54ab983191e336228b9a",
+        "createdAt": "2026-10-23T06:16:12.716Z",
+        "status": "pending",
+        "confirmedText": "",
+        "notNeededReason": "",
+        "outdated": false
+      }
+    ],
+    "summary": "Sam posted a progress update with the latest project files and said Alex does not need to reply. Sam asked Alex to review the cover color by six this evening but said no answer is needed now. Jordan asked Alex to confirm now whether Alex can join the rehearsal at ten twenty tomorrow morning; the room administrator is waiting and needs an answer before booking the room."
+  },
+  {
+    "repeat": 2,
+    "case": 4,
+    "elapsedMs": 4528,
+    "items": [
+      {
+        "classification": "action_now",
+        "question": "A speaker said they need approval of the room booking before continuing. Will Alex approve the booking, and who is responsible for booking the room?",
+        "reason": "This is a new request for immediate approval, distinct from the earlier alerts. Alex is the project materials coordinator who confirms rehearsal availability and checks materials, not the room booker, and the speaker is unidentified, so the request's target is unclear. Since Alex's profile says 10:20 AM cannot be committed to, no approval can be given on that basis.",
+        "source_ids": [
+          "u4"
+        ],
+        "draft": "I can't approve the room booking — booking rooms isn't part of my role, and I'm not sure this request is addressed to me. Also, I can't commit to 10:20 AM tomorrow; I can't arrive before 10:30 AM and could join a rehearsal at 10:40 AM. Could you confirm who is handling the booking and what time the rehearsal would actually start?",
+        "deadline": null,
+        "uncertainty": "The speaker is labeled 'Speaker not identified', so it is unclear whether the approval request is directed at Alex or who has booking authority. No time or condition for the booking approval was stated beyond 'now'.",
+        "id": "333e93bd-5d0a-4b62-911e-84632f1a017d",
+        "fingerprint": "2f5ea6972a53858a0342b8e57835a1b5a7936106b7a455108a364e650d178971",
+        "createdAt": "2026-10-23T06:16:17.288Z",
+        "status": "pending",
+        "confirmedText": "",
+        "notNeededReason": "",
+        "outdated": false
+      },
+      {
+        "classification": "defer",
+        "question": "Can Alex confirm availability for the 10:20 AM rehearsal tomorrow, given the room administrator is waiting?",
+        "reason": "Jordan asked for confirmation now, but the profile says Alex cannot arrive before 10:30 AM tomorrow and cannot commit to 10:20 AM. This overlaps with the earlier alert on u3, which is not reported sent, so the reply should be reconciled rather than treated as answered.",
+        "source_ids": [
+          "u3",
+          "u4"
+        ],
+        "draft": "I can't confirm 10:20 AM tomorrow — I can't arrive before 10:30 AM. I can join a rehearsal at 10:40 AM if that works. Please let me know whether the rehearsal can move to 10:40, since I understand the room administrator is waiting.",
+        "deadline": null,
+        "uncertainty": "Jordan said 'now' but no explicit clock time was given. Whether the rehearsal can shift to 10:40 AM is not established in the transcript.",
+        "id": "6682b90b-92ae-4122-aa40-c5ff1e09de34",
+        "fingerprint": "3141de2d24cdf52f3aa456542e66b8b0f93afff7321c1b3de6b2e3b146542aaa",
+        "createdAt": "2026-10-23T06:16:17.288Z",
+        "status": "pending",
+        "confirmedText": "",
+        "notNeededReason": "",
+        "outdated": false
+      }
+    ],
+    "summary": "Sam posted a progress update on uploaded project files with no reply needed, asked Alex to review the cover color by six this evening (answer not needed now), and Jordan asked Alex to confirm a 10:20 AM rehearsal tomorrow, saying the room administrator is waiting. An unidentified speaker then asked for immediate approval of the room booking. Alex's profile says an arrival before 10:30 AM tomorrow is not possible, so 10:20 AM cannot be committed to. Prior local alerts on these topics were not reported sent, so nothing has been communicated to participants."
+  },
+  {
+    "repeat": 3,
+    "case": 1,
+    "elapsedMs": 1563,
+    "items": [
+      {
+        "classification": "awareness",
+        "question": "Sam uploaded the latest project files, and no reply is requested from Alex.",
+        "reason": "This is background information only. Sam explicitly said Alex does not need to reply, and nothing requires a decision, fact, or clarification from Alex.",
+        "source_ids": [
+          "u1"
+        ],
+        "draft": "",
+        "deadline": null,
+        "uncertainty": "The message does not specify what files were uploaded, where they were uploaded, or whether any next step exists; no deadline is stated.",
+        "id": "180cd86c-741f-42cc-a5a5-be962cdd9d39",
+        "fingerprint": "642c1c333f75752bf33cfbafd7bc2996089ec8a459f140e1e18794e1bf5c4d14",
+        "createdAt": "2026-10-23T06:16:18.877Z",
+        "status": "pending",
+        "confirmedText": "",
+        "notNeededReason": "",
+        "outdated": false
+      }
+    ],
+    "summary": "Sam reported that the latest project files have been uploaded and described the message as a progress update, explicitly stating that Alex does not need to reply. No decision, deadline, or request for Alex was raised."
+  },
+  {
+    "repeat": 3,
+    "case": 2,
+    "elapsedMs": 2460,
+    "items": [
+      {
+        "classification": "defer",
+        "question": "Can Alex review the cover color by six this evening?",
+        "reason": "This is a request directed at Alex and falls within the responsibility to check presentation materials. Sam explicitly said there is no need to answer now and the discussion can continue without the decision, so it does not need to interrupt the current task.",
+        "source_ids": [
+          "u2"
+        ],
+        "draft": "Hi Sam, thanks for the update. I've noted the cover color review for six this evening. I haven't reviewed it yet, so no decision from me at this point — I'll follow up once I've looked at it. If the discussion moves ahead before then, please treat the cover color as still open pending my review.",
+        "deadline": "six this evening",
+        "uncertainty": "It is not stated whether the request is only for a review or for a decision or approval of the color. Whether the cover color is ultimately Alex's call is unclear. No date changes beyond the stated time are implied.",
+        "id": "f0552a40-c462-48b7-823c-5215635e86d6",
+        "fingerprint": "30d2aba449b85d4a489434bd8f316954e39443bfce268eda9d8acbc6f070d773",
+        "createdAt": "2026-10-23T06:16:21.351Z",
+        "status": "pending",
+        "confirmedText": "",
+        "notNeededReason": "",
+        "outdated": false
+      }
+    ],
+    "summary": "Sam uploaded the latest project files as a progress update and said Alex does not need to reply. This is already tracked in existing alerts and will not be raised again. Sam also asked Alex to review the cover color by six this evening, noting the discussion can continue without that decision and there is no need to answer now. No decision or commitment has been recorded from Alex."
+  },
+  {
+    "repeat": 3,
+    "error": "INVALID_SOURCES"
+  }
+]

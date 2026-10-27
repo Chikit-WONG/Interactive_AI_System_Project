@@ -1,0 +1,42 @@
+Browser tab: 3, Title: "Meeting Cue · Meeting companion", URL: "http://127.0.0.1:8876/".
+The following is a diff from the previous accessibility tree with ~ and + representing changed and added elements, respectively. Removed elements are summarized by ID range.
+Removed element IDs: 143, 145-166
+~			124 text Session stopped
+~			126 text Records preserved; the timer and capture have stopped. Resume the session, then re-enable the input and analysis you need.
+~			20 button Resume session, ID: start-session
+~			21 button (disabled) Stop session, ID: stop-session
+~				129 text Latest text: 48s ago · u4 · Text input
+~				130 text Analysis stopped · resume the session to enable it
+~				63 button (disabled) Add to transcript, ID: add-transcript
+~				79 checkbox (disabled, settable, integer) Description: Analyze new utterances automatically Enable once; new content will be analyzed as it arrives, Value: 0, ID: auto-analyze
+~			140 text Off
+~			141 text The session is stopped. Resume it first. 4 utterance(s) received.
++			142 button Resume session, ID: analysis-next-step
+~			84 button (disabled) Analyze now, ID: analyze-button
++			143 text Session stopped; records are preserved. Capture and automatic analysis are off.
+~				144 text Sam posted a no-reply progress update on uploaded project files and asked Alex to review the cover color by six this evening, noting no immediate answer is needed. Jordan asked Alex to confirm a 10:20 AM rehearsal tomorrow so the room could be booked; this was already handled via Alex's confirmed reply that 10:20 does not work and 10:40 might. An unidentified speaker then asked for approval of the room booking, which relates to the rehearsal timing already addressed but does not name Alex or establish who is being asked.
++				145 text Analyzed through u4
++					146 text 3
++					147 text 1
++					148 text 2
++					149 text 0
++				150 container
++					151 text Later Needs review
++					152 heading Will Alex review the cover color by six this evening?, Value: 3
++						153 text Will Alex review the cover color by six this evening?
++					154 text Sam asked Alex directly to review the cover color today, which fits Alex's responsibility for presentation materials. The team does not need this decision to proceed, so it can wait until later. Sources u2
++					155 button Review & respond
++				156 container
++					157 text Respond now Previous draft copied · edits need confirmation
++					158 heading Value: 3, Can Alex join the rehearsal at ten twenty tomorrow morning, and what should be told to the room administrator waiting on the answer?
++						159 text Can Alex join the rehearsal at ten twenty tomorrow morning, and what should be told to the room administrator waiting on the answer?
++					160 text Jordan explicitly asks for confirmation now and ties the room booking to it, so the discussion cannot proceed without a response. Alex's own availability facts conflict with the requested time, so the conflict needs to be resolved by Alex. Sources u3
++					161 button Review & respond
++				162 container
++					163 text Later Needs review
++					164 heading Value: 3, An unidentified speaker asks for approval of the room booking before continuing. Is this directed at Alex, and if so, does the confirmed 10:40 rehearsal start resolve it?
++						165 text An unidentified speaker asks for approval of the room booking before continuing. Is this directed at Alex, and if so, does the confirmed 10:40 rehearsal start resolve it?
++					166 text Room booking is outside Alex's stated responsibilities, which cover confirming rehearsal availability and checking presentation materials, not booking rooms. The request is also from an unidentified speaker and does not name Alex. Alex's confirmed position (10:20 not possible, 10:40 possible) may already be what the booking depends on, so a brief check is enough rather than an immediate response. Sources u4 · u3
++					167 button Review & respond
++	168 text Session stopped. Records preserved.
+The focused UI element is 0 AXWebArea Meeting Cue · Meeting companion, URL: 127.0.0.1:8876/

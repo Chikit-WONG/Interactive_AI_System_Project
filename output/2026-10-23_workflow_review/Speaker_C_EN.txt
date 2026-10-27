@@ -1,0 +1,92 @@
+MEETING CUE / GROUP 3
+SPEAKER C / Sida ZHANG: ENGLISH READING COPY
+Use with Meeting_Cue_Midterm_EN_WorkflowReview.pptx.
+
+Read only standalone [SPOKEN] blocks. Stage cues and timing are not spoken.
+Your part: video debrief and slides 6-8, 5:50-7:50.
+Begin after the video, with no extra handoff. End with the contribution sentence only.
+Your count: 154 words. At the measured rehearsal pace of 92.65 words/minute,
+this predicts 99.7 seconds of speech. Your slot is 120 seconds.
+This estimate is not a guarantee; time your own rehearsal with slide changes.
+No one speaks over the 120-second video. Demo claims require verified footage.
+
+SLIDE 5 / DEMO: THE REHEARSAL DECISION
+Clock: 3:40-6:15. Total slide slot: 155 seconds.
+
+B introduces 3:40-3:50; video 3:50-5:50; C debriefs 5:50-6:15.
+The complete recording is pending. Use the intro and debrief only after reviewed
+footage supports these actions. Nobody speaks over the actual meeting audio.
+
+Speaker C / Sida ZHANG / 5:50-6:15
+
+[SPOKEN]
+Alex checked the original request and changed the time to match availability. Alex then sent the message. This demonstrates our three design needs: a timely cue, supporting context, and control over the final commitment.
+[/SPOKEN]
+
+SLIDE 6 / WORKFLOW REVIEW: VALUE AND LIMITS
+Clock: 6:15-6:50. Total slide slot: 35 seconds.
+
+Speaker C / Sida ZHANG / 6:15-6:50
+
+[SPOKEN]
+We collected thirty-two simulated reviews of the recorded workflow. Twenty-seven supported selective attention, while views on context and control were mixed. All favored use only in some meetings. The strongest fit is working on another task while remaining available for key decisions.
+[/SPOKEN]
+
+SLIDE 7 / FEEDBACK LED TO A CONCRETE REVISION
+Clock: 6:50-7:45. Total slide slot: 55 seconds.
+
+Speaker C / Sida ZHANG / 6:50-7:45
+
+[SPOKEN]
+Feedback exposed a real risk: a copied reply could appear already communicated in later summaries. We now keep unsent drafts out of meeting facts and track delivery separately. Two completed retests preserved that distinction; one rejected invalid sources. Our intended impact is fewer interruptions and safer replies. Next, each person will try both alert rules with matched cases and balanced order. We will measure timely correct replies, task performance, missed requests, and false alerts.
+[/SPOKEN]
+
+SLIDE 8 / TEAM CONTRIBUTIONS
+Clock: 7:45-7:50. Total slide slot: 5 seconds.
+
+C says the sentence only. Do not read individual contribution rows.
+Update planned demo/review tasks only after completion.
+
+Speaker C / Sida ZHANG / 7:45-7:50
+
+[SPOKEN]
+Here is our contribution.
+[/SPOKEN]
+
+[STAGE CUE: Keep the contribution table displayed and pause for questions.
+Finish by 7:50; preserve 10 seconds spare and Q&A from 8:00 to 10:00.]
+
+Q&A OWNERSHIP
+Review feedback, implemented revisions, demo interpretation and the evaluation plan.
+Explain your own actual contribution if asked. Aim for 20-30 seconds per answer.
+
+IF THE ACTUAL VIDEO IS 2:30
+Omit about 10 seconds per presenter. Keep the full 2-minute Q&A.
+A, slide 2: omit this sentence (16 words):
+"Some records also suggest that existing notes or chat already meet the need, without another tool."
+B, slide 3: omit this sentence (14 words):
+"A scenario illustrated how a missed condition could make an otherwise plausible reply unsuitable."
+C, slide 7: omit this sentence (14 words):
+"Next, each person will try both alert rules with matched cases and balanced order."
+The visible slides retain these points; do not read them again.
+
+Revised speaking budgets: A 105 seconds / 146 words;
+B 105 seconds / 146 words; C 110 seconds / 140 words.
+Total 432 words, 320 seconds speech + 150 video + 10 buffer = 480 seconds.
+At the rehearsal pace, predicted speech is 94.6, 94.6, 90.7 seconds respectively.
+
+Revised clock:
+Slide 1: A 0:00-0:25.
+Slide 2: A 0:25-1:20.
+Slide 3: A 1:20-1:45, then B 1:45-2:30.
+Slide 4: B 2:30-3:20.
+Slide 5: B intro 3:20-3:30; video 3:30-6:00; C debrief 6:00-6:25.
+Slide 6: C 6:25-7:00.
+Slide 7: C 7:00-7:45.
+Slide 8: C 7:45-7:50.
+Buffer 7:50-8:00; Q&A 8:00-10:00.
+
+If the video is 1:45, keep the main script and retain the extra 15 seconds as
+buffer. If it exceeds 2:30, revise the content and rehearse again rather than
+borrowing Q&A time or speaking faster. Preserve the continuous original;
+label any shortened waiting periods in the presentation cut.

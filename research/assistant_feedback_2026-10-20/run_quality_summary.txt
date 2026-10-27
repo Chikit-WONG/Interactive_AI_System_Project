@@ -1,0 +1,30 @@
+2026-10-20 模型文字走查：运行质量摘要
+来源为 model_simulation，新增真人参与者 0；仅评价固定文字说明，没有实际试用产品。
+逻辑运行：计划 30，完成 30，有效 29，最终失败 1。
+总尝试 35；失败尝试 6（包含重试前的失败，不另计逻辑运行）。
+有效会话 29 个；全部已报告会话 32 个，无重复；未产生会话的尝试 3 个。
+全部尝试的工具事件合计 0。
+逐文件核对 35 个 input.txt，SHA256 全部一致：7486863387d749425546f9bd81d5480b40f8972eed1ce2169d17a6d8a18ece75
+Cursor 返回的模型标签已核对；Codex 的 3 条有效输出没有返回模型标识，requested gpt-5.6-sol high 与 returned null 分别保留。
+
+各版本有效重复数（分母均为 3）：
+cursor / claude-opus-5-5-high: 3/3；尝试 3
+cursor / gemini-4-argon-high: 3/3；尝试 3
+cursor / grok-4.7-high: 3/3；尝试 3
+cursor / claude-sonnet-5-5-high: 2/3；尝试 4
+cursor / gemini-3.1-pro: 3/3；尝试 3
+cursor / composer-2.5: 3/3；尝试 3
+cursor / kimi-k3-high: 3/3；尝试 4
+cursor / glm-5.2-high: 3/3；尝试 3
+cursor / muse-spark-1.3-high: 3/3；尝试 3
+codex / gpt-5.6-sol: 3/3；尝试 6
+
+失败尝试明细：
+raw\cursor__claude-sonnet-5-5-high__r1\attempt_1: 模型输出 JSON 语法或字段结构不符合固定 schema。 answers must contain exactly Q1-Q8; usageStage must be concept_only; rating must be null; feedback topic invalid; feedback message missing; feedback expected missing
+raw\cursor__claude-sonnet-5-5-high__r1\attempt_2: 模型输出 JSON 语法或字段结构不符合固定 schema。 JSON parse failed: Expecting ',' delimiter: line 1 column 1903 (char 1902)
+raw\cursor__kimi-k3-high__r1\attempt_1: 模型输出 JSON 语法或字段结构不符合固定 schema。 JSON parse failed: Expecting ',' delimiter: line 9 column 42 (char 378)
+raw\codex-gpt-5.6-sol__r1: CLI 配置解析失败：windows.sandbox=mxc 不被此 CLI 接受；尚未创建模型会话。 invalid_json; no_session_id; process_failed_or_timed_out
+raw\codex-gpt-5.6-sol__r2: CLI 配置解析失败：windows.sandbox=mxc 不被此 CLI 接受；尚未创建模型会话。 invalid_json; no_session_id; process_failed_or_timed_out
+raw\codex-gpt-5.6-sol__r3: CLI 配置解析失败：windows.sandbox=mxc 不被此 CLI 接受；尚未创建模型会话。 invalid_json; no_session_id; process_failed_or_timed_out
+
+通过结构检查只表示答复可解析且符合来源约束，不表示建议正确；三次重复不足以证明稳定性或真实用户效果。

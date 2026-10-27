@@ -1,0 +1,455 @@
+{
+  "attempt": 2,
+  "started_at": "2026-10-16T00:28:39.158347+08:00",
+  "finished_at": "2026-10-16T00:30:26.646344+08:00",
+  "duration_seconds": 107.484,
+  "exit_code": 0,
+  "timed_out": false,
+  "timeout_seconds": 240,
+  "exception": null,
+  "owned_process_id": 57596,
+  "cli_path": "C:\\Users\\chikitwong\\AppData\\Local\\cursor-agent\\agent.ps1",
+  "command_arguments": [
+    "C:\\Program Files\\PowerShell\\7\\pwsh.exe",
+    "-NoLogo",
+    "-NoProfile",
+    "-File",
+    "D:\\Users\\chikitwong\\Desktop\\Class\\AIAA4435(L01)-Interactive_AI_Systems_Design_&_Implementation\\Midterm_Group_Project\\research\\model_simulation\\run_one.ps1",
+    "-ModelId",
+    "muse-spark-1.3-high",
+    "-PromptPath",
+    "D:\\Users\\chikitwong\\Desktop\\Class\\AIAA4435(L01)-Interactive_AI_Systems_Design_&_Implementation\\Midterm_Group_Project\\research\\model_simulation\\raw\\muse-spark-1.3-high__S1__r1\\attempt_2\\input.txt",
+    "-WorkspacePath",
+    "D:\\Users\\chikitwong\\Desktop\\Class\\AIAA4435(L01)-Interactive_AI_Systems_Design_&_Implementation\\Midterm_Group_Project\\research\\model_simulation\\neutral_workspaces\\muse-spark-1.3-high__S1__r1\\attempt_2"
+  ],
+  "cli_mode": "ask",
+  "output_format": "stream-json",
+  "used_resume": false,
+  "fresh_session_requested": true,
+  "fresh_empty_workspace": "D:\\Users\\chikitwong\\Desktop\\Class\\AIAA4435(L01)-Interactive_AI_Systems_Design_&_Implementation\\Midterm_Group_Project\\research\\model_simulation\\neutral_workspaces\\muse-spark-1.3-high__S1__r1\\attempt_2",
+  "tool_restriction": "Prompt prohibits all tools; ask mode is read-only; tool events audited. No hard tools-disable flag is exposed by this CLI.",
+  "proxy_mode": "process_scope_HTTP_PROXY_only",
+  "proxy_url": "http://127.0.0.1:7897",
+  "global_config_changed": false,
+  "temperature_and_seed": "CLI does not expose controls; provider defaults are unknown",
+  "prompt_source_path": "prompts/S1.txt",
+  "prompt_sha256": "aea25b92ab7ad2d18fa53b6de92091805bebee6b29ad3f95b0c4c8ec911536a3",
+  "run_id": "muse-spark-1.3-high__S1__r1",
+  "model_id": "muse-spark-1.3-high",
+  "scenario": "S1",
+  "replicate": 1,
+  "purpose": "fixed_input_repetition",
+  "source_type": "model_simulation",
+  "fictional_persona": true,
+  "reported_model": "Muse Spark 1.3 300K High",
+  "session_id": "a9e38fc9-56c5-4e80-b3f0-03cccdb82f1a",
+  "conditions": {
+    "exit_code_zero": true,
+    "not_timed_out": true,
+    "successful_result": true,
+    "single_user_message": true,
+    "prompt_exact_match": true,
+    "nominal_model_match": true,
+    "session_id_present": true,
+    "zero_tool_events": true,
+    "zero_malformed_event_lines": true,
+    "zero_replacement_characters": true,
+    "response_validation_passed": true
+  },
+  "tool_event_count": 0,
+  "malformed_event_line_numbers": [],
+  "replacement_character_count": 0,
+  "stdout_sha256": "73f46e632261a412c3cc82283cefe1257d9c308ae5e3883fa7460794cb70f89c",
+  "answer_characters": 7778,
+  "usage": {
+    "inputTokens": 15587,
+    "outputTokens": 7558,
+    "cacheReadTokens": 2929,
+    "cacheWriteTokens": 0
+  },
+  "validation": {
+    "valid": true,
+    "schema_valid": true,
+    "validator": "Restricted validator covering every keyword present in frozen response.schema.json plus explicit semantic and routing checks",
+    "expected_question_count": 48,
+    "observed_question_count": 48,
+    "counts": {
+      "answered": 36,
+      "skipped": 12,
+      "missing": 0,
+      "model_assumption_questions": 13,
+      "instrument_constraint_questions": 2
+    },
+    "errors": [],
+    "warnings": [],
+    "per_question": {
+      "NEW_Q1": {
+        "present": true,
+        "status": "answered",
+        "expected_skip_rules": [],
+        "assumption_reference_count": 1,
+        "errors": []
+      },
+      "NEW_Q2": {
+        "present": true,
+        "status": "answered",
+        "expected_skip_rules": [],
+        "assumption_reference_count": 1,
+        "errors": []
+      },
+      "NEW_Q3": {
+        "present": true,
+        "status": "answered",
+        "expected_skip_rules": [],
+        "assumption_reference_count": 0,
+        "errors": []
+      },
+      "NEW_Q4": {
+        "present": true,
+        "status": "answered",
+        "expected_skip_rules": [],
+        "assumption_reference_count": 0,
+        "errors": []
+      },
+      "NEW_Q5": {
+        "present": true,
+        "status": "answered",
+        "expected_skip_rules": [],
+        "assumption_reference_count": 1,
+        "errors": []
+      },
+      "NEW_Q6": {
+        "present": true,
+        "status": "skipped",
+        "expected_skip_rules": [
+          "R2"
+        ],
+        "assumption_reference_count": 0,
+        "errors": []
+      },
+      "NEW_Q7": {
+        "present": true,
+        "status": "skipped",
+        "expected_skip_rules": [
+          "R2"
+        ],
+        "assumption_reference_count": 0,
+        "errors": []
+      },
+      "NEW_Q8": {
+        "present": true,
+        "status": "skipped",
+        "expected_skip_rules": [
+          "R2"
+        ],
+        "assumption_reference_count": 0,
+        "errors": []
+      },
+      "NEW_Q9": {
+        "present": true,
+        "status": "skipped",
+        "expected_skip_rules": [
+          "R2"
+        ],
+        "assumption_reference_count": 0,
+        "errors": []
+      },
+      "NEW_Q10": {
+        "present": true,
+        "status": "skipped",
+        "expected_skip_rules": [
+          "R2"
+        ],
+        "assumption_reference_count": 0,
+        "errors": []
+      },
+      "NEW_Q11": {
+        "present": true,
+        "status": "answered",
+        "expected_skip_rules": [],
+        "assumption_reference_count": 1,
+        "errors": []
+      },
+      "NEW_Q12": {
+        "present": true,
+        "status": "answered",
+        "expected_skip_rules": [],
+        "assumption_reference_count": 0,
+        "errors": []
+      },
+      "NEW_Q13": {
+        "present": true,
+        "status": "answered",
+        "expected_skip_rules": [],
+        "assumption_reference_count": 1,
+        "errors": []
+      },
+      "NEW_Q14": {
+        "present": true,
+        "status": "answered",
+        "expected_skip_rules": [],
+        "assumption_reference_count": 1,
+        "errors": []
+      },
+      "NEW_Q15": {
+        "present": true,
+        "status": "answered",
+        "expected_skip_rules": [],
+        "assumption_reference_count": 0,
+        "errors": []
+      },
+      "NEW_Q16": {
+        "present": true,
+        "status": "answered",
+        "expected_skip_rules": [],
+        "assumption_reference_count": 1,
+        "errors": []
+      },
+      "NEW_Q17": {
+        "present": true,
+        "status": "answered",
+        "expected_skip_rules": [],
+        "assumption_reference_count": 0,
+        "errors": []
+      },
+      "NEW_Q18": {
+        "present": true,
+        "status": "skipped",
+        "expected_skip_rules": [
+          "R4"
+        ],
+        "assumption_reference_count": 0,
+        "errors": []
+      },
+      "NEW_Q19": {
+        "present": true,
+        "status": "skipped",
+        "expected_skip_rules": [
+          "R4"
+        ],
+        "assumption_reference_count": 0,
+        "errors": []
+      },
+      "NEW_Q20": {
+        "present": true,
+        "status": "skipped",
+        "expected_skip_rules": [
+          "R4"
+        ],
+        "assumption_reference_count": 0,
+        "errors": []
+      },
+      "NEW_Q21": {
+        "present": true,
+        "status": "skipped",
+        "expected_skip_rules": [
+          "R4"
+        ],
+        "assumption_reference_count": 0,
+        "errors": []
+      },
+      "NEW_Q22": {
+        "present": true,
+        "status": "skipped",
+        "expected_skip_rules": [
+          "R4"
+        ],
+        "assumption_reference_count": 0,
+        "errors": []
+      },
+      "NEW_Q23": {
+        "present": true,
+        "status": "answered",
+        "expected_skip_rules": [],
+        "assumption_reference_count": 0,
+        "errors": []
+      },
+      "NEW_Q24": {
+        "present": true,
+        "status": "answered",
+        "expected_skip_rules": [],
+        "assumption_reference_count": 0,
+        "errors": []
+      },
+      "NEW_Q25": {
+        "present": true,
+        "status": "answered",
+        "expected_skip_rules": [],
+        "assumption_reference_count": 0,
+        "errors": []
+      },
+      "NEW_Q26": {
+        "present": true,
+        "status": "answered",
+        "expected_skip_rules": [],
+        "assumption_reference_count": 1,
+        "errors": []
+      },
+      "NEW_Q27": {
+        "present": true,
+        "status": "answered",
+        "expected_skip_rules": [],
+        "assumption_reference_count": 0,
+        "errors": []
+      },
+      "OLD_Q1": {
+        "present": true,
+        "status": "answered",
+        "expected_skip_rules": [],
+        "assumption_reference_count": 1,
+        "errors": []
+      },
+      "OLD_Q2": {
+        "present": true,
+        "status": "answered",
+        "expected_skip_rules": [],
+        "assumption_reference_count": 1,
+        "errors": []
+      },
+      "OLD_Q3": {
+        "present": true,
+        "status": "answered",
+        "expected_skip_rules": [],
+        "assumption_reference_count": 1,
+        "errors": []
+      },
+      "OLD_Q4": {
+        "present": true,
+        "status": "answered",
+        "expected_skip_rules": [],
+        "assumption_reference_count": 2,
+        "errors": []
+      },
+      "OLD_Q5": {
+        "present": true,
+        "status": "answered",
+        "expected_skip_rules": [],
+        "assumption_reference_count": 0,
+        "errors": []
+      },
+      "OLD_Q6": {
+        "present": true,
+        "status": "answered",
+        "expected_skip_rules": [],
+        "assumption_reference_count": 0,
+        "errors": []
+      },
+      "OLD_Q7": {
+        "present": true,
+        "status": "answered",
+        "expected_skip_rules": [],
+        "assumption_reference_count": 0,
+        "errors": []
+      },
+      "OLD_Q8": {
+        "present": true,
+        "status": "answered",
+        "expected_skip_rules": [],
+        "assumption_reference_count": 0,
+        "errors": []
+      },
+      "OLD_Q9": {
+        "present": true,
+        "status": "answered",
+        "expected_skip_rules": [],
+        "assumption_reference_count": 0,
+        "errors": []
+      },
+      "OLD_Q10": {
+        "present": true,
+        "status": "answered",
+        "expected_skip_rules": [],
+        "assumption_reference_count": 0,
+        "errors": []
+      },
+      "OLD_Q11": {
+        "present": true,
+        "status": "answered",
+        "expected_skip_rules": [],
+        "assumption_reference_count": 0,
+        "errors": []
+      },
+      "OLD_Q12": {
+        "present": true,
+        "status": "answered",
+        "expected_skip_rules": [],
+        "assumption_reference_count": 0,
+        "errors": []
+      },
+      "OLD_Q13": {
+        "present": true,
+        "status": "answered",
+        "expected_skip_rules": [],
+        "assumption_reference_count": 0,
+        "errors": []
+      },
+      "OLD_Q14": {
+        "present": true,
+        "status": "answered",
+        "expected_skip_rules": [],
+        "assumption_reference_count": 0,
+        "errors": []
+      },
+      "NEW_M1": {
+        "present": true,
+        "status": "answered",
+        "expected_skip_rules": [],
+        "assumption_reference_count": 0,
+        "errors": []
+      },
+      "NEW_M2": {
+        "present": true,
+        "status": "answered",
+        "expected_skip_rules": [],
+        "assumption_reference_count": 0,
+        "errors": []
+      },
+      "NEW_M3": {
+        "present": true,
+        "status": "answered",
+        "expected_skip_rules": [],
+        "assumption_reference_count": 1,
+        "errors": []
+      },
+      "NEW_M4": {
+        "present": true,
+        "status": "skipped",
+        "expected_skip_rules": [
+          "M4"
+        ],
+        "assumption_reference_count": 0,
+        "errors": []
+      },
+      "NEW_M5": {
+        "present": true,
+        "status": "answered",
+        "expected_skip_rules": [],
+        "assumption_reference_count": 0,
+        "errors": []
+      },
+      "NEW_M6": {
+        "present": true,
+        "status": "answered",
+        "expected_skip_rules": [],
+        "assumption_reference_count": 0,
+        "errors": []
+      },
+      "NEW_M7": {
+        "present": true,
+        "status": "skipped",
+        "expected_skip_rules": [
+          "M4"
+        ],
+        "assumption_reference_count": 0,
+        "errors": []
+      }
+    },
+    "required_skip_question_count": 12,
+    "semantic_limit": "Machine checks cannot establish realism or truthful attribution of every narrative claim; flagged source attribution and substantive content require human review."
+  },
+  "errors": [],
+  "status": "completed_valid_simulation",
+  "raw_directory": "raw/muse-spark-1.3-high__S1__r1/attempt_2",
+  "json_fence_removed_for_parsing": false,
+  "retry_is_independent_sample": false
+}

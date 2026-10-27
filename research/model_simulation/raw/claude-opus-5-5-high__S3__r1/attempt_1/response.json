@@ -1,0 +1,630 @@
+{
+  "schema_version": "1.0",
+  "source_type": "model_simulation",
+  "scenario_id": "S3",
+  "fictional_persona": true,
+  "experience_status": "all_experiences_are_hypothetical",
+  "scenario_induced": true,
+  "assumption_registry": {
+    "A1": "过去四周约参加8次远程会议，约每周两次，多为团队方案讨论。",
+    "A2": "过去四周其他会议均全程参与，没有部分参与、间断关注或缺席。",
+    "A3": "过去四周本人未使用AI处理任何会议相关事务。",
+    "A4": "团队目前由一名成员在共享文档手动记录修改点，会后各自核对。",
+    "A5": "使用中文、笔记本电脑在安静室内参会，网络稳定。",
+    "A6": "过去半年只有一两次时间冲突，均在四周之前，事后靠同事转述或纪要补上。",
+    "A7": "最近一次会议结束时修改点已当场确认，会后没有遗留问题，总体满意。",
+    "A8": "会前自己准备了方案说明要点，团队提前共享了方案草稿。"
+  },
+  "questions": {
+    "NEW_Q1": {
+      "status": "answered",
+      "answer": {
+        "selection": "5–10 次"
+      },
+      "basis": [
+        "model_assumption"
+      ],
+      "assumptions": [
+        "A1"
+      ]
+    },
+    "NEW_Q2": {
+      "status": "answered",
+      "answer": {
+        "meeting_topics": "设计方案的讨论、评审和共同修改",
+        "role": "提出并解释自己的方案，回应追问并修改"
+      },
+      "basis": [
+        "scenario_fact",
+        "model_assumption"
+      ],
+      "assumptions": [
+        "A1"
+      ]
+    },
+    "NEW_Q3": {
+      "status": "answered",
+      "answer": {
+        "meeting_purpose": "团队共同讨论并修改一个设计方案",
+        "personal_goal": "讲清我的方案思路，并根据反馈改进方案",
+        "actual_participation": "全程在线参与，边听追问边回应并修改意见"
+      },
+      "basis": [
+        "scenario_fact"
+      ],
+      "assumptions": []
+    },
+    "NEW_Q4": {
+      "status": "answered",
+      "answer": {
+        "before": "准备了方案说明要点，提前看过共享草稿",
+        "during": "大家接着我的话追问，我当场调整意见，节奏顺畅",
+        "after": "修改点已当场确认，没有特别感受"
+      },
+      "basis": [
+        "scenario_fact",
+        "model_assumption"
+      ],
+      "assumptions": [
+        "A7",
+        "A8"
+      ]
+    },
+    "NEW_Q5": {
+      "status": "answered",
+      "answer": {
+        "selection": "没有",
+        "episode": ""
+      },
+      "basis": [
+        "scenario_inference",
+        "model_assumption"
+      ],
+      "assumptions": [
+        "A2",
+        "A7"
+      ]
+    },
+    "NEW_Q6": {
+      "status": "skipped",
+      "answer": null,
+      "basis": [
+        "not_applicable"
+      ],
+      "assumptions": [],
+      "skip_reason": "R2：NEW_Q5选择“没有”"
+    },
+    "NEW_Q7": {
+      "status": "skipped",
+      "answer": null,
+      "basis": [
+        "not_applicable"
+      ],
+      "assumptions": [],
+      "skip_reason": "R2：NEW_Q5选择“没有”"
+    },
+    "NEW_Q8": {
+      "status": "skipped",
+      "answer": null,
+      "basis": [
+        "not_applicable"
+      ],
+      "assumptions": [],
+      "skip_reason": "R2：NEW_Q5选择“没有”"
+    },
+    "NEW_Q9": {
+      "status": "skipped",
+      "answer": null,
+      "basis": [
+        "not_applicable"
+      ],
+      "assumptions": [],
+      "skip_reason": "R2：NEW_Q5选择“没有”"
+    },
+    "NEW_Q10": {
+      "status": "skipped",
+      "answer": null,
+      "basis": [
+        "not_applicable"
+      ],
+      "assumptions": [],
+      "skip_reason": "R2：NEW_Q5选择“没有”"
+    },
+    "NEW_Q11": {
+      "status": "answered",
+      "answer": {
+        "selection": "没有"
+      },
+      "basis": [
+        "scenario_fact",
+        "model_assumption"
+      ],
+      "assumptions": [
+        "A2"
+      ]
+    },
+    "NEW_Q12": {
+      "status": "skipped",
+      "answer": null,
+      "basis": [
+        "not_applicable"
+      ],
+      "assumptions": [],
+      "skip_reason": "R3：NEW_Q11选择“没有”"
+    },
+    "NEW_Q13": {
+      "status": "skipped",
+      "answer": null,
+      "basis": [
+        "not_applicable"
+      ],
+      "assumptions": [],
+      "skip_reason": "R3：NEW_Q11选择“没有”"
+    },
+    "NEW_Q14": {
+      "status": "answered",
+      "answer": {
+        "items": [],
+        "none_status": "目前没有希望改变的事情"
+      },
+      "basis": [
+        "hypothetical_preference",
+        "model_assumption"
+      ],
+      "assumptions": [
+        "A7"
+      ]
+    },
+    "NEW_Q15": {
+      "status": "answered",
+      "answer": {
+        "text": "实时互相追问、当场修改方案并确认修改点的方式"
+      },
+      "basis": [
+        "scenario_fact",
+        "hypothetical_preference"
+      ],
+      "assumptions": [
+        "A7"
+      ]
+    },
+    "NEW_Q16": {
+      "status": "answered",
+      "answer": {
+        "selection": "没有使用过",
+        "task_example": "",
+        "result_example": ""
+      },
+      "basis": [
+        "model_assumption"
+      ],
+      "assumptions": [
+        "A3"
+      ]
+    },
+    "NEW_Q17": {
+      "status": "answered",
+      "answer": {
+        "willing_status": "has_task",
+        "willing_tasks": [
+          "会后整理方案修改点清单供我核对：可减少手动记录"
+        ],
+        "unsuitable_tasks": [
+          "代我回应追问或解释方案：需要我本人的思路",
+          "决定是否采纳修改：属于团队判断"
+        ]
+      },
+      "basis": [
+        "hypothetical_preference",
+        "model_assumption"
+      ],
+      "assumptions": [
+        "A4"
+      ]
+    },
+    "NEW_Q18": {
+      "status": "answered",
+      "answer": {
+        "trigger": "共同修改方案的讨论结束时",
+        "ai_action": "按议题列出修改点、提出人及未决事项",
+        "result_and_recipient": "修改清单草稿，先交我和记录人核对再发团队",
+        "success_criterion": "清单与共享文档记录一致，无遗漏或误记"
+      },
+      "basis": [
+        "hypothetical_preference",
+        "model_assumption"
+      ],
+      "assumptions": [
+        "A4"
+      ]
+    },
+    "NEW_Q19": {
+      "status": "answered",
+      "answer": {
+        "selection": "3",
+        "reason": "现有手动记录够用，需试用后才能比较"
+      },
+      "basis": [
+        "hypothetical_preference",
+        "model_assumption"
+      ],
+      "assumptions": [
+        "A4",
+        "A7"
+      ]
+    },
+    "NEW_Q20": {
+      "status": "answered",
+      "answer": {
+        "autonomous": "整理修改点、标注提出人和时间点",
+        "requires_confirmation": "发给团队之前，以及涉及我方案的结论表述",
+        "human_only": "解释方案理由、回应追问、决定是否修改"
+      },
+      "basis": [
+        "hypothetical_preference"
+      ],
+      "assumptions": []
+    },
+    "NEW_Q21": {
+      "status": "answered",
+      "answer": {
+        "text": "会中不要联系我；会后一次性给草稿，我在文档里批注修改"
+      },
+      "basis": [
+        "hypothetical_preference"
+      ],
+      "assumptions": []
+    },
+    "NEW_Q22": {
+      "status": "answered",
+      "answer": {
+        "evidence_needed": "每条修改点附对应发言时间点或原话，可回查",
+        "failure_response": "以人工记录和成员确认为准，标出错误后更正"
+      },
+      "basis": [
+        "hypothetical_preference",
+        "model_assumption"
+      ],
+      "assumptions": [
+        "A4"
+      ]
+    },
+    "NEW_Q23": {
+      "status": "answered",
+      "answer": {
+        "text": "仅用于本次会议内容，经全员同意；不外传，不用于评价个人"
+      },
+      "basis": [
+        "hypothetical_preference"
+      ],
+      "assumptions": []
+    },
+    "NEW_Q24": {
+      "status": "answered",
+      "answer": {
+        "text": "事先告知且只做记录可接受；代人发言或未告知录音不接受"
+      },
+      "basis": [
+        "hypothetical_preference"
+      ],
+      "assumptions": []
+    },
+    "NEW_Q25": {
+      "status": "answered",
+      "answer": {
+        "stop_conditions": "多次误记修改点，或团队有人不同意使用",
+        "alternative": "维持现有手动记录和会后核对"
+      },
+      "basis": [
+        "hypothetical_preference",
+        "model_assumption"
+      ],
+      "assumptions": [
+        "A4"
+      ]
+    },
+    "NEW_Q26": {
+      "status": "answered",
+      "answer": {
+        "priority_and_reason": "目前都不需要优先处理，现有讨论方式能满足需要"
+      },
+      "basis": [
+        "hypothetical_preference",
+        "model_assumption"
+      ],
+      "assumptions": [
+        "A7"
+      ]
+    },
+    "NEW_Q27": {
+      "status": "answered",
+      "answer": {
+        "text": "暂无其他补充"
+      },
+      "basis": [
+        "hypothetical_preference"
+      ],
+      "assumptions": []
+    },
+    "OLD_Q1": {
+      "status": "answered",
+      "answer": {
+        "selection": "每周数次"
+      },
+      "basis": [
+        "model_assumption"
+      ],
+      "assumptions": [
+        "A1"
+      ]
+    },
+    "OLD_Q2": {
+      "status": "answered",
+      "answer": {
+        "selection": "很少"
+      },
+      "basis": [
+        "model_assumption"
+      ],
+      "assumptions": [
+        "A6"
+      ]
+    },
+    "OLD_Q3": {
+      "status": "answered",
+      "answer": {
+        "selected": [
+          "请同学/同事会后转述",
+          "查看录屏或会议纪要"
+        ],
+        "other_text": ""
+      },
+      "basis": [
+        "model_assumption"
+      ],
+      "assumptions": [
+        "A6"
+      ]
+    },
+    "OLD_Q4": {
+      "status": "answered",
+      "answer": {
+        "selected": [
+          "不知道讨论到了哪里",
+          "担心错过与自己有关的信息",
+          "担心错过需要我做决定的时刻"
+        ],
+        "other_text": ""
+      },
+      "basis": [
+        "hypothetical_preference",
+        "model_assumption"
+      ],
+      "assumptions": [
+        "A6"
+      ]
+    },
+    "OLD_Q5": {
+      "status": "answered",
+      "answer": {
+        "r1": "立即提醒",
+        "r2": "立即提醒",
+        "r3": "稍后批量",
+        "r4": "立即提醒",
+        "r5": "稍后批量",
+        "r6": "稍后批量",
+        "r7": "会后汇总",
+        "r8": "无需提醒"
+      },
+      "basis": [
+        "hypothetical_preference"
+      ],
+      "assumptions": []
+    },
+    "OLD_Q6": {
+      "status": "answered",
+      "answer": {
+        "selected": [
+          "是否直接提到我",
+          "是否需要我的决定",
+          "是否影响我的任务或责任",
+          "事件紧急程度"
+        ],
+        "other_text": ""
+      },
+      "basis": [
+        "hypothetical_preference"
+      ],
+      "assumptions": []
+    },
+    "OLD_Q7": {
+      "status": "answered",
+      "answer": {
+        "selection": "取决于会议类型或当前任务"
+      },
+      "basis": [
+        "hypothetical_preference"
+      ],
+      "assumptions": []
+    },
+    "OLD_Q8": {
+      "status": "answered",
+      "answer": {
+        "r1": 3,
+        "r2": 4,
+        "r3": 4,
+        "r4": 3,
+        "r5": 3
+      },
+      "basis": [
+        "hypothetical_preference"
+      ],
+      "assumptions": []
+    },
+    "OLD_Q9": {
+      "status": "answered",
+      "answer": {
+        "r1": "自己输入",
+        "r2": "自己输入",
+        "r3": "临时加入会议",
+        "r4": "临时加入会议"
+      },
+      "basis": [
+        "hypothetical_preference"
+      ],
+      "assumptions": []
+    },
+    "OLD_Q10": {
+      "status": "answered",
+      "answer": {
+        "selection": "看场景"
+      },
+      "basis": [
+        "hypothetical_preference"
+      ],
+      "assumptions": []
+    },
+    "OLD_Q11": {
+      "status": "answered",
+      "answer": {
+        "selected": [
+          "需要解释复杂背景",
+          "出现分歧或争论",
+          "决定影响较大",
+          "对方需要进一步追问"
+        ],
+        "other_text": ""
+      },
+      "basis": [
+        "hypothetical_preference",
+        "scenario_inference"
+      ],
+      "assumptions": []
+    },
+    "OLD_Q12": {
+      "status": "answered",
+      "answer": {
+        "r1": 4,
+        "r2": 3,
+        "r3": 4,
+        "r4": 4,
+        "r5": 3
+      },
+      "basis": [
+        "hypothetical_preference"
+      ],
+      "assumptions": []
+    },
+    "OLD_Q13": {
+      "status": "answered",
+      "answer": {
+        "selected": [
+          "设置优先级/关键词",
+          "查看最近 1–3 分钟发生了什么",
+          "一键临时加入会议",
+          "暂停所有更新"
+        ],
+        "other_text": ""
+      },
+      "basis": [
+        "hypothetical_preference"
+      ],
+      "assumptions": []
+    },
+    "OLD_Q14": {
+      "status": "answered",
+      "answer": {
+        "text": "共同讨论我会全程参加；偶有冲突时，希望追问涉及我方案时能快速回到会议，并看到前几分钟的要点"
+      },
+      "basis": [
+        "hypothetical_preference",
+        "scenario_inference",
+        "model_assumption"
+      ],
+      "assumptions": [
+        "A6"
+      ]
+    },
+    "NEW_M1": {
+      "status": "answered",
+      "answer": {
+        "text": "靠追问是否得到回应、屏幕上修改后的方案来判断；最近一次足够"
+      },
+      "basis": [
+        "scenario_fact",
+        "scenario_inference",
+        "model_assumption"
+      ],
+      "assumptions": [
+        "A7"
+      ]
+    },
+    "NEW_M2": {
+      "status": "answered",
+      "answer": {
+        "text": "当场口头说明，对方追问后直接改方案，即时看到处理结果，符合需要"
+      },
+      "basis": [
+        "scenario_fact",
+        "scenario_inference"
+      ],
+      "assumptions": []
+    },
+    "NEW_M3": {
+      "status": "answered",
+      "answer": {
+        "text": "没有影响，语言、设备和环境都正常"
+      },
+      "basis": [
+        "model_assumption"
+      ],
+      "assumptions": [
+        "A5"
+      ]
+    },
+    "NEW_M4": {
+      "status": "answered",
+      "answer": {
+        "text": "会后一次看完整清单，按议题分条；由我和团队决定；会议很长时可分段"
+      },
+      "basis": [
+        "hypothetical_preference"
+      ],
+      "assumptions": []
+    },
+    "NEW_M5": {
+      "status": "answered",
+      "answer": {
+        "text": "实际：团队约定时间，我全程参与并即时回应追问。设想：引入AI后也应保持不变"
+      },
+      "basis": [
+        "scenario_fact",
+        "hypothetical_preference"
+      ],
+      "assumptions": []
+    },
+    "NEW_M6": {
+      "status": "answered",
+      "answer": {
+        "text": "应标明由AI生成、是否经人确认；出现分歧时以成员讨论和原始记录为准"
+      },
+      "basis": [
+        "hypothetical_preference"
+      ],
+      "assumptions": []
+    },
+    "NEW_M7": {
+      "status": "answered",
+      "answer": {
+        "text": "输出到团队共享文档，配合记录人核对；需先了解准确率、数据存储方式，并获得团队同意"
+      },
+      "basis": [
+        "hypothetical_preference",
+        "model_assumption"
+      ],
+      "assumptions": [
+        "A4"
+      ]
+    }
+  }
+}

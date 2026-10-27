@@ -1,0 +1,8 @@
+Browser tab: 3, Title: "Meeting Cue · Meeting companion", URL: "http://127.0.0.1:8876/".
+The following is a diff from the previous accessibility tree with ~ and + representing changed and added elements, respectively. Removed elements are summarized by ID range.
+Removed element IDs: 46
+~		39 text Previous draft copied · edits need confirmation
+~			21 text entry area (settable) Review and edit the reply draft, Value: I cannot make 10:20 AM. I can join at 10:40 AM, subject to the team confirming the room., ID: reply-draft
+~			45 text A previous version was copied. Your edits have not been confirmed or copied. Confirm and copy again before sending.
+~			24 button (disabled) I sent it in the meeting, ID: mark-sent
+The focused UI element is 21 text entry area (settable) Review and edit the reply draft, Value: I cannot make 10:20 AM. I can join at 10:40 AM, subject to the team confirming the room., ID: reply-draft

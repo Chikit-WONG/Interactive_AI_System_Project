@@ -1,0 +1,308 @@
+{
+  "title": "调研材料与项目启发：来源对应",
+  "compiled_on": "2026-10-16",
+  "record_unit": "material_record_not_interviewee",
+  "rows": [
+    {
+      "material_id": "R01",
+      "source_type": "human_survey_open_response",
+      "source_record_id": "HUM_OPEN_001",
+      "summary_zh": "这条问卷开放回答希望在很重要的信息出现时获得提醒，但没有说明哪些信息算重要、当时的会议情境或已有处理方式，不能据此还原一次实际经历。",
+      "implication_zh": "可把重要信息的判定作为后续访谈问题，结合具体事件确认重要性来自职责、决策需要还是时间要求，暂不固定提醒规则。"
+    },
+    {
+      "material_id": "R02",
+      "source_type": "human_survey_open_response",
+      "source_record_id": "HUM_OPEN_002",
+      "summary_zh": "这条问卷开放回答希望获得阶段性汇总，没有进一步说明汇总间隔、内容范围或使用场景。因此只能记录为一种信息更新偏好，不能据此推定有过漏听或补看困难。",
+      "implication_zh": "可将阶段摘要作为候选支持方式，进一步询问用户要补回哪些信息、什么时候需要，以及现有纪要能否已经满足需要。"
+    },
+    {
+      "material_id": "R03",
+      "source_type": "human_survey_open_response",
+      "source_record_id": "HUM_OPEN_003",
+      "summary_zh": "回答希望结合忙碌程度与内容重要性调整提醒；被点名、需作决定或职责相关变化时立即提醒，其余摘要。重新加入前需背景、参与原因和待答问题，并保留确认回复权。",
+      "implication_zh": "可分别测试提醒时机、上下文内容和回复确认，避免一次同时改变多个因素；这些是表达的方案偏好，仍需结合实际任务检验。"
+    },
+    {
+      "material_id": "R04",
+      "source_type": "public_user_narrative_unverified",
+      "source_record_id": "PU01",
+      "summary_zh": "一位公开回复者表示自己不回看完整会议录屏，而用可搜索的转写定位短片段；遇到技术术语转错时，会听对应音频核查。该叙述没有提供节省时间或回应成功的数据。",
+      "implication_zh": "可尝试让补看内容连接到来源片段，观察用户能否找到所需信息并完成核查；不预设文字一定比录音好，也不直接认定更省时。"
+    },
+    {
+      "material_id": "R05",
+      "source_type": "public_user_narrative_unverified",
+      "source_record_id": "PU02",
+      "summary_zh": "同一讨论串的首帖作者补充说，自己团队的转写常常不准确，但没有给出具体错误或错误比例，也未在这条回复中明确远程会议方式。这是一项主观使用反馈。",
+      "implication_zh": "可保留查看原始发言与纠正内容的入口，并测试错误信息是否影响判断；不能把这条反馈当成某类用户或工具的准确率结论。"
+    },
+    {
+      "material_id": "R06",
+      "source_type": "public_user_narrative_unverified",
+      "source_record_id": "PU03",
+      "summary_zh": "一位远程工作发帖者描述会议约定缺乏记录与分享，也缺少准备和后续跟进；正在尝试转写与摘要，认为有些帮助但改善有限。叙述没有还原某次会议的完整过程。",
+      "implication_zh": "后续可追问真正未满足的是决策记录、行动安排还是参与责任，再决定支持内容；不能假定增加摘要就能解决会议组织问题。"
+    },
+    {
+      "material_id": "R07",
+      "source_type": "public_user_narrative_unverified",
+      "source_record_id": "PU04",
+      "summary_zh": "远程会议讨论串中的回复者说，团队已使用会议摘要工具，同时要求议程、纪要和组织者负责等规范，认为这些做法有益；原文无法分离工具与流程变化各自的作用。",
+      "implication_zh": "可把现有工具加组织规范作为比较基线，检验新原型是否还有额外价值；也应保留现有办法已经足够、不需要新助手的可能。"
+    },
+    {
+      "material_id": "R08",
+      "source_type": "public_user_narrative_unverified",
+      "source_record_id": "PU05",
+      "summary_zh": "一位发帖者在与自己工作联系有限的议题上保持安静，约四十五分钟后被要求发言，随后说明知识边界并分享自己的更新。原帖未确认远程方式，也没有使用智能提醒的记录。",
+      "implication_zh": "可探索让用户说明无需回应、请求澄清或转交的入口，并验证是否造成漏答；本例只是职责相关的邻近线索，不能称为系统误报。"
+    },
+    {
+      "material_id": "R09",
+      "source_type": "public_user_narrative_unverified",
+      "source_record_id": "PU06",
+      "summary_zh": "一位完全远程工作的发帖者觉得，尚未形成固定会议安排时更有生产力，同时询问怎样应对挤占工作时间的线上会议。这是个人感受，没有客观产出或具体打断记录。",
+      "implication_zh": "试用可同时观察会议侧结果与另一任务的完成情况，检查新增提醒的代价；还需比较减少或调整会议安排是否更符合实际需要。"
+    },
+    {
+      "material_id": "R10",
+      "source_type": "public_user_narrative_unverified",
+      "source_record_id": "PU07",
+      "summary_zh": "远程工作讨论串中的回复者表示，把会议集中在几个时段对自己有帮助：连续开会会累，但能留下其余时间做实际工作。该叙述没有提供调整前后的对照数据。",
+      "implication_zh": "可把集中排会作为已有应对方式纳入访谈与比较，判断问题能否通过安排解决；不应预设所有注意力冲突都需要新增提醒工具。"
+    },
+    {
+      "material_id": "R11",
+      "source_type": "public_user_narrative_unverified",
+      "source_record_id": "PU08",
+      "summary_zh": "一位工程师回顾初创团队经历：销售通话由工具转写和总结，自己通常不必参加，事后阅读摘要已有帮助，一些产品功能来自相关行动项。这是回顾性公开自述。",
+      "implication_zh": "可区分只需了解背景与必须当场贡献的角色，测试异步摘要何时已经足够；不要把即时加入或回应设成所有任务的成功标准。"
+    },
+    {
+      "material_id": "R12",
+      "source_type": "public_user_narrative_unverified",
+      "source_record_id": "PU09",
+      "summary_zh": "另一公开回复者觉得会议摘要有时只概括讨论主题，缺少自己真正关心的细节；更愿意记个人要点并检查后续事项，通常不长期保存，也没有需要去年笔记的经历。",
+      "implication_zh": "可测试用户关注点与具体待办是否比通用话题摘要更有用，并保留个人笔记作为基线；长期保存全部记录不应被当作默认需求。"
+    },
+    {
+      "material_id": "R13",
+      "source_type": "public_user_narrative_unverified",
+      "source_record_id": "PU10",
+      "summary_zh": "一名管理者公开描述，远程成员在视频会议中因家庭照护事务分心，面向她的问题或反馈请求有时需要重复。这是管理者的亲历观察，材料没有该成员本人的解释。",
+      "implication_zh": "可研究重述参与请求与补回上下文是否有帮助，并向实际被打断者核实需要；不能仅凭观察者叙述就确定原因或替其判断需求。"
+    },
+    {
+      "material_id": "R14",
+      "source_type": "public_user_narrative_unverified",
+      "source_record_id": "PU11",
+      "summary_zh": "一位回答者描述客户团队的做法：开发人员参加项目状态会时留在工位或远程连接，戴耳机继续开发并听取可能需要回答的问题。原文没有报告漏答率或任务绩效。",
+      "implication_zh": "可把耳机旁听作为现有部分参与方式，与新原型比较理解、有效回应和主任务代价；不能只凭实现了间断参与就认定具有改进。"
+    },
+    {
+      "material_id": "R15",
+      "source_type": "public_user_narrative_unverified",
+      "source_record_id": "PU12",
+      "summary_zh": "一篇实践文章的作者回忆，自己曾在远程通话中待了半小时却没有贡献，因为不了解会议为何召开、希望达到什么。这是个人亲历叙述，没有对信息支持方式做比较。",
+      "implication_zh": "可测试当前目标、待决事项和角色约束是否帮助形成有依据的回应，而非只显示讨论主题；仍需检查是否增加阅读负担或无实际帮助。"
+    },
+    {
+      "material_id": "R16",
+      "source_type": "public_user_narrative_unverified",
+      "source_record_id": "PU13",
+      "summary_zh": "同一实践文章作者说，在远程协作聊天中组织较长、复杂的提问时，有几次还没写完，话题已经转向别处。原文讲的是聊天表达，并非明确的会议音频回应。",
+      "implication_zh": "可把形成回复所需时间与讨论进度作为待验证问题，观察长回复何时失去作用；需要在会议场景另行验证，不能直接推定回应期限。"
+    },
+    {
+      "material_id": "R17",
+      "source_type": "public_user_narrative_unverified",
+      "source_record_id": "PU14",
+      "summary_zh": "一位公开回复者表示，参与讨论不深且理解负担可承受时能记笔记；会后发布记录并请他人补充遗漏，通常已经够用。该条没有明确会议方式，也没有客观成效测量。",
+      "implication_zh": "可把团队协作补记作为比较基线，追问它什么时候仍有信息缺口；不能把笔记不完整自动解释为需要助手，或忽略既有办法的价值。"
+    },
+    {
+      "material_id": "R18",
+      "source_type": "model_simulation",
+      "source_record_id": "claude-opus-5-5-high__S1__r1",
+      "summary_zh": "设想赶作业时较晚看到数据提问，使小组判断暂缓；通过聊天补答和私信确认后解决问题，仍希望及时获知相关提问并快速补齐上下文，不愿由助手代答。",
+      "implication_zh": "可检验附提问原文的私密提醒能否缩短回应延迟，并与现有聊天补答比较；发送数据和作出判断仍由本人确认。"
+    },
+    {
+      "material_id": "R19",
+      "source_type": "model_simulation",
+      "source_record_id": "claude-sonnet-5-5-high__S1__r1",
+      "summary_zh": "设想漏看提问后晚了几分钟回复，讨论略有停顿但判断未受影响；翻聊天并向组员确认已满足需要，仍愿尝试针对负责数据的提醒及简短背景摘要。",
+      "implication_zh": "应区分现有办法已能完成任务与及时性仍可改善；比较提醒的额外收益和打断成本，避免把尝试意愿当成强烈需求。"
+    },
+    {
+      "material_id": "R20",
+      "source_type": "model_simulation",
+      "source_record_id": "gemini-4-argon-high__S1__r1",
+      "summary_zh": "设想写限时作业时晚看到数据提问，切屏也打断思路；聊天记录和询问能补齐信息，仍希望只在职责相关或被点名时提醒，并让组员知道其部分参与状态。",
+      "implication_zh": "可同时观察漏回应和主任务中断，并考察职责提醒及参与状态是否有帮助；不能只凭少发通知就判断设计有效。"
+    },
+    {
+      "material_id": "R21",
+      "source_type": "model_simulation",
+      "source_record_id": "gemini-3.1-pro__S1__r1",
+      "summary_zh": "设想漏听提问后由组员点名才切回会议，扫聊天后开麦补答；希望话题接近负责部分时提前预警并提供背景，复杂数据解释仍由本人完成。",
+      "implication_zh": "可检验提前提示是否真的增加准备时间，并记录话题预测错误造成的打断；提示内容应帮助接话，而不代替复杂解释。"
+    },
+    {
+      "material_id": "R22",
+      "source_type": "model_simulation",
+      "source_record_id": "grok-4.7-high__S1__r1",
+      "summary_zh": "设想间断参会并未造成目标与实际的落差，也没有希望改变的事项；目前不愿交给助手新任务，仍倾向查看记录、会后问组员，数据结论和表态保留本人负责。",
+      "implication_zh": "应保留不需要工具的反例，先核实现有办法是否已经足够；不能仅凭间断参会就假定必须增加提醒或自动回复。"
+    },
+    {
+      "material_id": "R23",
+      "source_type": "model_simulation",
+      "source_record_id": "kimi-k3-high__S1__r1",
+      "summary_zh": "设想漏听方案比较后险些错过回应，会后补看记录和询问又占用作业时间；希望在相关内容出现时获知，并能定位遗漏片段，但不接受助手代作方案判断。",
+      "implication_zh": "可把会后补信息所需时间与会中回应时效一起观察，比较相关片段定位和现有记录；方案判断仍需本人核对数据。"
+    },
+    {
+      "material_id": "R24",
+      "source_type": "model_simulation",
+      "source_record_id": "gpt-5.6-sol-high__S1__r1",
+      "summary_zh": "设想较晚看到信息请求，查看聊天并向组员确认后已经解决问题；仍希望得到简短提示和可核对的上下文，以便自行回应，不接受未经确认的代答。",
+      "implication_zh": "可检验带来源的简短提醒是否减少补问，而不损害回应准确性；保留本人确认，并避免把已解决的小问题夸大。"
+    },
+    {
+      "material_id": "R25",
+      "source_type": "model_simulation",
+      "source_record_id": "muse-spark-1.3-high__S1__r1",
+      "summary_zh": "设想间断参与没有带来明显落差，也没有希望改变之处；目前没有愿交给助手的任务，方案判断仍需成员共同讨论，需要核对时直接查记录并询问组员。",
+      "implication_zh": "可将无需新增助手作为有效结果，核实记录和成员沟通何时已经够用；复杂判断不宜因追求自动化而脱离讨论。"
+    },
+    {
+      "material_id": "R26",
+      "source_type": "model_simulation",
+      "source_record_id": "claude-opus-5-5-high__S1__r2",
+      "summary_zh": "设想数据回应稍晚，让讨论短暂停顿但未影响最终判断；聊天补发和会后确认已解决问题，仍希望被需要时及时收到原文提示，并获得简短相关结论。",
+      "implication_zh": "可同时比较会中提示与会后相关结论的价值，并追问提前准备数据能否解决同一问题，避免直接把需求等同于新功能。"
+    },
+    {
+      "material_id": "R27",
+      "source_type": "model_simulation",
+      "source_record_id": "claude-sonnet-5-5-high__S1__r2",
+      "summary_zh": "设想约十分钟后才看到提问，通过补数据和确认结论基本解决；仍希望在负责内容被提及时尽快获知，并在会后快速找到相关部分，不由助手替其表态。",
+      "implication_zh": "可检验摘出问题及原文是否比翻整段聊天更省时，并分别观察会中回应和会后查找，避免把两种需求混为一项。"
+    },
+    {
+      "material_id": "R28",
+      "source_type": "model_simulation",
+      "source_record_id": "gemini-4-argon-high__S1__r2",
+      "summary_zh": "设想回应略晚但结果未受影响，聊天与会后询问能补齐信息；主要负担是赶作业时仍担心漏问而持续留意会议，希望轻量提醒和返回时的短摘要。",
+      "implication_zh": "可观察减少盯屏是否帮助保持主任务节奏，同时检查提醒后的理解与回应；没有并行任务时，也应允许回到常规参会。"
+    },
+    {
+      "material_id": "R29",
+      "source_type": "model_simulation",
+      "source_record_id": "gemini-3.1-pro__S1__r2",
+      "summary_zh": "设想赶作业时错过提问，只能会后翻聊天并补发数据；希望遇到名字或相关关键词时获得强提醒及原话，以便马上切回，但频繁误报会使其停用。",
+      "implication_zh": "可把强提醒作为待检验条件，比较及时回应的收益与误报打断代价；需核实关键词命中是否真的代表此刻需要参与。"
+    },
+    {
+      "material_id": "R30",
+      "source_type": "model_simulation",
+      "source_record_id": "composer-2.5__S1__r2",
+      "summary_zh": "设想漏听提问后需会后查记录、私信补答，仍希望被点名时立即知情；愿让助手整理问题和已讨论方案，必要时提供供本人核对的数据草稿。",
+      "implication_zh": "可分别检验提醒、背景整理和候选草稿的作用，观察能否帮助核对后及时答复；不能把草稿生成直接当作正确贡献。"
+    },
+    {
+      "material_id": "R31",
+      "source_type": "model_simulation",
+      "source_record_id": "kimi-k3-high__S1__r2",
+      "summary_zh": "设想错过需要提供数据的判断点，使判断推迟到会后；现有记录和组员询问成本较低且能核对准确，但仍希望在被需要时收到简短上下文提示。",
+      "implication_zh": "可比较低成本的会后补救与会中提示在不同时间要求下的价值；应追问延后回应何时影响任务，而非默认必须即时。"
+    },
+    {
+      "material_id": "R32",
+      "source_type": "model_simulation",
+      "source_record_id": "gpt-5.6-sol-high__S1__r2",
+      "summary_zh": "设想约十五分钟后才看到询问，最后判断未受影响，现有渠道也能解决；仍希望及时获得关键背景并减少低优先级打断，由本人决定如何回应。",
+      "implication_zh": "可同时记录必要提示的及时性和无关提示的干扰，核实选择性提醒是否有净收益；信息用途和摘要准确性也需可检查。"
+    },
+    {
+      "material_id": "R33",
+      "source_type": "model_simulation",
+      "source_record_id": "claude-opus-5-5-high__S1__r3",
+      "summary_zh": "设想回复时讨论已转向别处，最终会后通过记录、私信和核对表确认；希望会前知道所需数据，并在间断关注时及时察觉点名，核对责任仍由本人承担。",
+      "implication_zh": "可把会前准备与会中提醒一起考察，区分准备不足和注意力切换的影响；评价回应是否赶上议题，而不仅是有没有发送。"
+    },
+    {
+      "material_id": "R34",
+      "source_type": "model_simulation",
+      "source_record_id": "claude-sonnet-5-5-high__S1__r3",
+      "summary_zh": "设想延迟补答让组员等待或猜测，事后查聊天仍不能解决当场知情问题；希望相关提醒、当前讨论背景及会后待回应清单，所有答复和决定都由本人作出。",
+      "implication_zh": "可区分即时回应、重新接上讨论和会后遗漏三类任务，分别观察信息是否足够；避免把摘要覆盖率当作参与质量。"
+    },
+    {
+      "material_id": "R35",
+      "source_type": "model_simulation",
+      "source_record_id": "gemini-4-argon-high__S1__r3",
+      "summary_zh": "设想晚几分钟补发数据未影响判断，但切换注意力打断作业；记录和询问可补救，仍希望职责相关的提示及短背景，没并行任务时愿恢复常规参与。",
+      "implication_zh": "可检验提示是否减少持续监听负担，并同时检查回复准确性；把无任务冲突时不使用助手作为适用边界进行验证。"
+    },
+    {
+      "material_id": "R36",
+      "source_type": "model_simulation",
+      "source_record_id": "gemini-3.1-pro__S1__r3",
+      "summary_zh": "设想漏听讨论前提后给出的数据不符合当时需要，会后重新询问并核对才解决；希望被点名时获得问题的假设前提和争议摘要，不接受助手直接发送数据。",
+      "implication_zh": "应检验上下文能否保留影响数据判断的前提，而非只测摘要长短；可观察回应是否切题，以及错误前提是否造成返工。"
+    },
+    {
+      "material_id": "R37",
+      "source_type": "model_simulation",
+      "source_record_id": "kimi-k3-high__S1__r3",
+      "summary_zh": "设想没能及时提供数据，使方案判断延后，会后补资料另花时间；希望负责内容出现时及时提醒，并快速定位相关讨论，所有表态仍交本人核对。",
+      "implication_zh": "可观察提醒是否赶上实际判断窗口，并追问组员不了解参与状态是否也造成等待；减少补资料时间不能替代贡献质量。"
+    },
+    {
+      "material_id": "R38",
+      "source_type": "model_simulation",
+      "source_record_id": "gpt-5.6-sol-high__S1__r3",
+      "summary_zh": "设想较晚回应让讨论短暂等待，但未导致错误决定；查聊天和询问已满足结果需求，仍希望更早发现询问并看到原记录位置，由本人判断和答复。",
+      "implication_zh": "可检验原记录定位是否帮助核对关键背景，并把最终决策影响与短暂等待分开衡量；不应直接把延迟等同于严重失败。"
+    },
+    {
+      "material_id": "R39",
+      "source_type": "model_simulation",
+      "source_record_id": "muse-spark-1.3-high__S1__r3",
+      "summary_zh": "设想回复稍晚，但看聊天、询问并补发数据后小组能够继续讨论，现有方法已满足需要；没有希望改变的事项，也不愿把本人负责的数据判断交给助手。",
+      "implication_zh": "应保留有落差却不需要新工具的反例，追问延迟的实际后果及替代办法成本；不能把任何不顺畅都转化为助手需求。"
+    },
+    {
+      "material_id": "R40",
+      "source_type": "model_simulation",
+      "source_record_id": "gemini-4-argon-high__S2__r1",
+      "summary_zh": "设想只需了解最终工作安排，不必当场表态，会后人工纪要已提供所需信息；没有明显落差或改变意愿，也不愿由助手替其确认排期和作出工作决定。",
+      "implication_zh": "可把清晰且足够的会后纪要作为对照，核实何时没有即时参与需求；额外提醒若只增加打扰，应允许继续使用现有办法。"
+    },
+    {
+      "material_id": "R41",
+      "source_type": "model_simulation",
+      "source_record_id": "grok-4.7-high__S2__r1",
+      "summary_zh": "设想没有加入通话，但会后阅读人工纪要即可完成后续工作；未提出目标落差或需要改变的事项，也没有愿委托助手的任务，因此选择继续使用现有纪要。",
+      "implication_zh": "可把不启动工具作为合理选择，检验充分的异步信息何时已能支持工作；不要把未参会直接解释为需要实时会议感知。"
+    },
+    {
+      "material_id": "R42",
+      "source_type": "model_simulation",
+      "source_record_id": "claude-opus-5-5-high__S3__r1",
+      "summary_zh": "设想共同修改方案时持续参与，未遇到目标落差，也无需助手代接追问；愿在会后用修改清单草稿减少手动整理，并由本人和记录人核对后再发给团队。",
+      "implication_zh": "可将实时共同讨论与会后整理分开考察，验证修改清单是否准确省时；保留人的解释、取舍和发布前核对职责。"
+    },
+    {
+      "material_id": "R43",
+      "source_type": "model_simulation",
+      "source_record_id": "gemini-4-argon-high__S3__r1",
+      "summary_zh": "设想持续参与方案讨论没有明显落差，但多轮追问后仍希望快速整理修改点及原因；愿会后接收结构化清单供本人核对，不让助手代答或决定方案取舍。",
+      "implication_zh": "可检验整理结果能否保留追问背景、修改理由与最终共识，并比较核对耗时；若比手写更费力，就没有使用优势。"
+    }
+  ]
+}

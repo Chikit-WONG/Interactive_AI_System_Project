@@ -1,0 +1,18 @@
+{
+  "pass": true,
+  "source_index_entries": 41,
+  "human_reported_n": 7,
+  "human_complete_individual_records": 0,
+  "human_open_answers": 3,
+  "public_fragments": 14,
+  "model_responses": 26,
+  "model_question_objects": 1248,
+  "all_original_source_hashes_unchanged": true,
+  "index_append_count_check": "passed",
+  "formula_counts": [
+    1,
+    14,
+    26
+  ],
+  "xlsx": "D:\\Users\\chikitwong\\Desktop\\Class\\AIAA4435(L01)-Interactive_AI_Systems_Design_&_Implementation\\Midterm_Group_Project\\output\\2026-10-16_progress\\Project_Research_Master_2026-10-16.xlsx"
+}

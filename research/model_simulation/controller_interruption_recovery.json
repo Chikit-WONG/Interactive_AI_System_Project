@@ -1,0 +1,41 @@
+{
+  "recorded_at": "2026-10-16T00:49:57.577447+08:00",
+  "raw_files_modified": false,
+  "recovered_attempts": [
+    {
+      "run_id": "glm-5.2-high__S1__r2",
+      "attempt": 1,
+      "status": "failed_validation_or_execution",
+      "answer_received": false,
+      "errors": [
+        "invalid_answer_json:Expecting value: line 1 column 1 (char 0)",
+        "answer_not_object",
+        "exit_code_zero",
+        "successful_result",
+        "response_validation_passed"
+      ]
+    },
+    {
+      "run_id": "grok-4.7-high__S1__r2",
+      "attempt": 1,
+      "status": "failed_validation_or_execution",
+      "answer_received": false,
+      "errors": [
+        "invalid_answer_json:Expecting value: line 1 column 1 (char 0)",
+        "answer_not_object",
+        "exit_code_zero",
+        "successful_result",
+        "response_validation_passed"
+      ]
+    },
+    {
+      "run_id": "kimi-k3-high__S1__r2",
+      "attempt": 1,
+      "status": "failed_validation_or_execution",
+      "answer_received": true,
+      "errors": [
+        "exit_code_zero"
+      ]
+    }
+  ]
+}

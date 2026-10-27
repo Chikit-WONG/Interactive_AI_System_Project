@@ -1,0 +1,25 @@
+MEETING CUE / CURRENT WORKFLOW REVIEW EDITION
+Use Meeting_Cue_Midterm_EN_WorkflowReview.pptx with the matching reading copies.
+Eight main slides, three hidden appendices. Slide 2 spacing and the user's saved
+cover edits are preserved. Slide 5 still reserves space for the real demo video.
+
+Slides 6-7 now report 32 independent simulated reviews of the recorded workflow,
+what they support, a concrete reply-status failure, the code revision and retests.
+Full collection: research/current_use_review_2026-10-23/.
+These reviews do not establish gains for real participants. Raw evidence and
+provenance are retained; no invented satisfaction score or productivity claim.
+
+A Chi Kit WONG: 162 tokens (two pause markers included), 115-second slot.
+B Haodong XU: 160 words, 115-second slot.
+C Sida ZHANG: 154 words, 120-second slot.
+120-second video + 350-second speaker slots + 10-second buffer = 8 minutes.
+Q&A: separate 2 minutes. Read only the [SPOKEN] blocks. Keep the contribution
+sentence short. The video remains pending; verify its intro/debrief against the
+real recording before presenting. See the matching timing and recording files.
+
+The backend reply-status repair takes effect after a normal assistant restart.
+Keep any meeting record you need before restarting. The patch does not send
+messages automatically. Tencent replies still need manual paste/send.
+
+Review_Findings_ZH.txt explains the results and limits for preparation.
+Questions_and_Feedback_EN.txt contains source-aware answers for Q&A.

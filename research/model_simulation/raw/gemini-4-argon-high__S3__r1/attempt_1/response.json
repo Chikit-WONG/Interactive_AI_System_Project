@@ -1,0 +1,648 @@
+{
+  "schema_version": "1.0",
+  "source_type": "model_simulation",
+  "scenario_id": "S3",
+  "fictional_persona": true,
+  "experience_status": "all_experiences_are_hypothetical",
+  "scenario_induced": true,
+  "assumption_registry": {
+    "A1": "过去四周每周参加1–2次远程会议（共5–10次），均围绕设计方案评审与修改展开。",
+    "A2": "最近一次及过去四周的会议互动顺畅，会前备稿、会后手动整理纪要已满足需要，无希望结果不同的问题事件。",
+    "A3": "过去四周所有会议均全程持续参与，过去六个月内也从未遇到会议或任务时间冲突而部分参会的情况。",
+    "A4": "过去四周本人未实际使用过AI工具处理远程会议相关事务。",
+    "A5": "虽无紧迫痛点，但愿意考虑由AI在会后辅助整理多轮讨论的方案修改记录，不接受AI介入会中实时问答与决策。",
+    "A6": "日常在安静室内使用个人电脑以母语参会，现有设计文档与会议软件配合顺畅，无语言或设备障碍。",
+    "A7": "旧问卷部分题目预设受访者处于场外部分参会状态，缺少“全程在会直接交流”选项，故选择最接近的直接参与项。"
+  },
+  "questions": {
+    "NEW_Q1": {
+      "status": "answered",
+      "answer": {
+        "selection": "5–10 次"
+      },
+      "basis": [
+        "model_assumption"
+      ],
+      "assumptions": [
+        "A1"
+      ]
+    },
+    "NEW_Q2": {
+      "status": "answered",
+      "answer": {
+        "meeting_topics": "团队设计方案的评审、细节推敲与共同修改",
+        "role": "提出和解释自己的设计方案，并根据团队反馈共同修改"
+      },
+      "basis": [
+        "scenario_fact",
+        "model_assumption"
+      ],
+      "assumptions": [
+        "A1"
+      ]
+    },
+    "NEW_Q3": {
+      "status": "answered",
+      "answer": {
+        "meeting_purpose": "团队共同讨论并修改一个设计方案",
+        "personal_goal": "解释自己的方案思路，回应成员追问并明确修改方向",
+        "actual_participation": "全程持续参会，未同时处理其他任务，实时回应追问并调整意见"
+      },
+      "basis": [
+        "scenario_fact",
+        "scenario_inference"
+      ],
+      "assumptions": []
+    },
+    "NEW_Q4": {
+      "status": "answered",
+      "answer": {
+        "before": "准备好待讨论的设计方案草稿与说明要点",
+        "during": "无独立议题时段划分，成员根据我刚说的内容连续追问并互动改稿",
+        "after": "根据个人速记手动梳理讨论达成的修改点并更新方案"
+      },
+      "basis": [
+        "scenario_fact",
+        "model_assumption"
+      ],
+      "assumptions": [
+        "A2"
+      ]
+    },
+    "NEW_Q5": {
+      "status": "answered",
+      "answer": {
+        "selection": "没有",
+        "episode": ""
+      },
+      "basis": [
+        "model_assumption"
+      ],
+      "assumptions": [
+        "A2"
+      ]
+    },
+    "NEW_Q6": {
+      "status": "skipped",
+      "answer": null,
+      "basis": [
+        "not_applicable"
+      ],
+      "assumptions": [],
+      "skip_reason": "R2: NEW_Q5选择“没有”，依原问卷规则跳至NEW_Q11"
+    },
+    "NEW_Q7": {
+      "status": "skipped",
+      "answer": null,
+      "basis": [
+        "not_applicable"
+      ],
+      "assumptions": [],
+      "skip_reason": "R2: NEW_Q5选择“没有”，依原问卷规则跳至NEW_Q11"
+    },
+    "NEW_Q8": {
+      "status": "skipped",
+      "answer": null,
+      "basis": [
+        "not_applicable"
+      ],
+      "assumptions": [],
+      "skip_reason": "R2: NEW_Q5选择“没有”，依原问卷规则跳至NEW_Q11"
+    },
+    "NEW_Q9": {
+      "status": "skipped",
+      "answer": null,
+      "basis": [
+        "not_applicable"
+      ],
+      "assumptions": [],
+      "skip_reason": "R2: NEW_Q5选择“没有”，依原问卷规则跳至NEW_Q11"
+    },
+    "NEW_Q10": {
+      "status": "skipped",
+      "answer": null,
+      "basis": [
+        "not_applicable"
+      ],
+      "assumptions": [],
+      "skip_reason": "R2: NEW_Q5选择“没有”，依原问卷规则跳至NEW_Q11"
+    },
+    "NEW_Q11": {
+      "status": "answered",
+      "answer": {
+        "selection": "没有"
+      },
+      "basis": [
+        "scenario_fact",
+        "model_assumption"
+      ],
+      "assumptions": [
+        "A3"
+      ]
+    },
+    "NEW_Q12": {
+      "status": "skipped",
+      "answer": null,
+      "basis": [
+        "not_applicable"
+      ],
+      "assumptions": [],
+      "skip_reason": "R3: NEW_Q11选择“没有”，依原问卷规则跳至NEW_Q14"
+    },
+    "NEW_Q13": {
+      "status": "skipped",
+      "answer": null,
+      "basis": [
+        "not_applicable"
+      ],
+      "assumptions": [],
+      "skip_reason": "R3: NEW_Q11选择“没有”，依原问卷规则跳至NEW_Q14"
+    },
+    "NEW_Q14": {
+      "status": "answered",
+      "answer": {
+        "items": [
+          "当多轮追问修改方案后，希望能快速汇总确认过的改动点，减少会后核对时间"
+        ],
+        "none_status": ""
+      },
+      "basis": [
+        "model_assumption",
+        "hypothetical_preference"
+      ],
+      "assumptions": [
+        "A5"
+      ]
+    },
+    "NEW_Q15": {
+      "status": "answered",
+      "answer": {
+        "text": "全员持续在线、围绕方案实时追问并当场互动调整的讨论方式，希望继续保留"
+      },
+      "basis": [
+        "scenario_fact",
+        "hypothetical_preference"
+      ],
+      "assumptions": []
+    },
+    "NEW_Q16": {
+      "status": "answered",
+      "answer": {
+        "selection": "没有使用过",
+        "task_example": "",
+        "result_example": ""
+      },
+      "basis": [
+        "model_assumption"
+      ],
+      "assumptions": [
+        "A4"
+      ]
+    },
+    "NEW_Q17": {
+      "status": "answered",
+      "answer": {
+        "willing_status": "has_task",
+        "willing_tasks": [
+          "会后整理多轮讨论中的方案修改点及对应原因，方便核对遗漏"
+        ],
+        "unsuitable_tasks": [
+          "会中代我回应成员追问、解释方案思路或直接决定方案取舍"
+        ]
+      },
+      "basis": [
+        "scenario_inference",
+        "model_assumption",
+        "hypothetical_preference"
+      ],
+      "assumptions": [
+        "A5"
+      ]
+    },
+    "NEW_Q18": {
+      "status": "answered",
+      "answer": {
+        "trigger": "方案共同修改讨论结束、准备整理定稿要点时",
+        "ai_action": "按讨论顺序提取方案修改项、追问背景及最终共识",
+        "result_and_recipient": "生成结构化修改清单草稿，仅先交给我本人核对",
+        "success_criterion": "准确列出每次追问后的方案调整结论，且无张冠李戴"
+      },
+      "basis": [
+        "scenario_inference",
+        "model_assumption",
+        "hypothetical_preference"
+      ],
+      "assumptions": [
+        "A5"
+      ]
+    },
+    "NEW_Q19": {
+      "status": "answered",
+      "answer": {
+        "selection": "4",
+        "reason": "可节省会后手动梳理多轮改稿记录的时间，但仍需人工复核准确性"
+      },
+      "basis": [
+        "model_assumption",
+        "hypothetical_preference"
+      ],
+      "assumptions": [
+        "A2",
+        "A5"
+      ]
+    },
+    "NEW_Q20": {
+      "status": "answered",
+      "answer": {
+        "autonomous": "记录会议发言并初步提取与方案修改相关的讨论片段",
+        "requires_confirmation": "最终确定的方案修改条目及准备发给团队的纪要内容",
+        "human_only": "会中提出与解释设计方案、回应追问及做出修改取舍"
+      },
+      "basis": [
+        "scenario_fact",
+        "scenario_inference",
+        "hypothetical_preference"
+      ],
+      "assumptions": []
+    },
+    "NEW_Q21": {
+      "status": "answered",
+      "answer": {
+        "text": "会中持续讨论时不要打断我；仅在会后生成整理草稿时通知我查看"
+      },
+      "basis": [
+        "scenario_fact",
+        "scenario_inference",
+        "hypothetical_preference"
+      ],
+      "assumptions": []
+    },
+    "NEW_Q22": {
+      "status": "answered",
+      "answer": {
+        "evidence_needed": "修改条目需附带对应讨论原话片段或时间点以便核对",
+        "failure_response": "直接手动修改或弃用AI草稿，改用个人速记并与队友确认"
+      },
+      "basis": [
+        "model_assumption",
+        "hypothetical_preference"
+      ],
+      "assumptions": [
+        "A2",
+        "A5"
+      ]
+    },
+    "NEW_Q23": {
+      "status": "answered",
+      "answer": {
+        "text": "仅限使用当次会议经全员同意的讨论内容，不得外传或用于外部训练"
+      },
+      "basis": [
+        "hypothetical_preference"
+      ],
+      "assumptions": []
+    },
+    "NEW_Q24": {
+      "status": "answered",
+      "answer": {
+        "text": "提前告知且仅作个人记录可接受；若用AI代答或挂机不参与互动则不接受"
+      },
+      "basis": [
+        "scenario_inference",
+        "hypothetical_preference"
+      ],
+      "assumptions": []
+    },
+    "NEW_Q25": {
+      "status": "answered",
+      "answer": {
+        "stop_conditions": "经常曲解设计修改意图、核对耗时超过手写，或干扰会中讨论时停用",
+        "alternative": "维持现有方式，会中边讨论边做简要速记，会后手动整理"
+      },
+      "basis": [
+        "model_assumption",
+        "hypothetical_preference"
+      ],
+      "assumptions": [
+        "A2"
+      ]
+    },
+    "NEW_Q26": {
+      "status": "answered",
+      "answer": {
+        "priority_and_reason": "优先改进会后多轮改稿要点的梳理效率，可在不干扰会中互动的前提下减负"
+      },
+      "basis": [
+        "model_assumption",
+        "hypothetical_preference"
+      ],
+      "assumptions": [
+        "A5"
+      ]
+    },
+    "NEW_Q27": {
+      "status": "answered",
+      "answer": {
+        "text": "共同改稿会议的核心是实时追问与思维碰撞，工具不应削弱直接交流"
+      },
+      "basis": [
+        "scenario_fact",
+        "hypothetical_preference"
+      ],
+      "assumptions": []
+    },
+    "OLD_Q1": {
+      "status": "answered",
+      "answer": {
+        "selection": "每周数次"
+      },
+      "basis": [
+        "model_assumption"
+      ],
+      "assumptions": [
+        "A1"
+      ]
+    },
+    "OLD_Q2": {
+      "status": "answered",
+      "answer": {
+        "selection": "从未"
+      },
+      "basis": [
+        "model_assumption"
+      ],
+      "assumptions": [
+        "A3"
+      ]
+    },
+    "OLD_Q3": {
+      "status": "answered",
+      "answer": {
+        "selected": [
+          "其他"
+        ],
+        "other_text": "未遇到时间冲突，方案讨论均提前协调时间并全程参加"
+      },
+      "basis": [
+        "scenario_fact",
+        "model_assumption"
+      ],
+      "assumptions": [
+        "A3"
+      ]
+    },
+    "OLD_Q4": {
+      "status": "answered",
+      "answer": {
+        "selected": [
+          "其他"
+        ],
+        "other_text": "无次要会议分心经历；我的会议需持续互动，缺席则无法共同改稿"
+      },
+      "basis": [
+        "scenario_fact",
+        "model_assumption"
+      ],
+      "assumptions": [
+        "A3"
+      ]
+    },
+    "OLD_Q5": {
+      "status": "answered",
+      "answer": {
+        "r1": "立即提醒",
+        "r2": "立即提醒",
+        "r3": "会后汇总",
+        "r4": "立即提醒",
+        "r5": "会后汇总",
+        "r6": "会后汇总",
+        "r7": "无需提醒",
+        "r8": "无需提醒"
+      },
+      "basis": [
+        "scenario_inference",
+        "hypothetical_preference"
+      ],
+      "assumptions": []
+    },
+    "OLD_Q6": {
+      "status": "answered",
+      "answer": {
+        "selected": [
+          "是否直接提到我",
+          "是否需要我的决定",
+          "是否影响我的任务或责任"
+        ],
+        "other_text": ""
+      },
+      "basis": [
+        "scenario_inference",
+        "hypothetical_preference"
+      ],
+      "assumptions": []
+    },
+    "OLD_Q7": {
+      "status": "answered",
+      "answer": {
+        "selection": "低频详细摘要"
+      },
+      "basis": [
+        "model_assumption",
+        "hypothetical_preference"
+      ],
+      "assumptions": [
+        "A5"
+      ]
+    },
+    "OLD_Q8": {
+      "status": "answered",
+      "answer": {
+        "r1": 2,
+        "r2": 4,
+        "r3": 4,
+        "r4": 3,
+        "r5": 3
+      },
+      "basis": [
+        "scenario_inference",
+        "hypothetical_preference"
+      ],
+      "assumptions": []
+    },
+    "OLD_Q9": {
+      "status": "answered",
+      "answer": {
+        "r1": "自己输入",
+        "r2": "临时加入会议",
+        "r3": "临时加入会议",
+        "r4": "临时加入会议"
+      },
+      "basis": [
+        "scenario_inference",
+        "hypothetical_preference",
+        "instrument_constraint"
+      ],
+      "assumptions": [
+        "A7"
+      ]
+    },
+    "OLD_Q10": {
+      "status": "answered",
+      "answer": {
+        "selection": "不太愿意"
+      },
+      "basis": [
+        "scenario_inference",
+        "hypothetical_preference"
+      ],
+      "assumptions": []
+    },
+    "OLD_Q11": {
+      "status": "answered",
+      "answer": {
+        "selected": [
+          "需要解释复杂背景",
+          "出现分歧或争论",
+          "对方需要进一步追问"
+        ],
+        "other_text": ""
+      },
+      "basis": [
+        "scenario_fact",
+        "scenario_inference",
+        "hypothetical_preference"
+      ],
+      "assumptions": []
+    },
+    "OLD_Q12": {
+      "status": "answered",
+      "answer": {
+        "r1": 3,
+        "r2": 2,
+        "r3": 4,
+        "r4": 4,
+        "r5": 2
+      },
+      "basis": [
+        "scenario_inference",
+        "hypothetical_preference"
+      ],
+      "assumptions": []
+    },
+    "OLD_Q13": {
+      "status": "answered",
+      "answer": {
+        "selected": [
+          "暂停所有更新",
+          "其他"
+        ],
+        "other_text": "会中需持续互动无需提醒打断，仅希望会后整理方案修改记录"
+      },
+      "basis": [
+        "scenario_fact",
+        "model_assumption",
+        "hypothetical_preference"
+      ],
+      "assumptions": [
+        "A5"
+      ]
+    },
+    "OLD_Q14": {
+      "status": "answered",
+      "answer": {
+        "text": "我的会议需全程互动改稿，无需部分参与工具，更需要会后汇总方案修改要点"
+      },
+      "basis": [
+        "scenario_fact",
+        "model_assumption",
+        "hypothetical_preference"
+      ],
+      "assumptions": [
+        "A5"
+      ]
+    },
+    "NEW_M1": {
+      "status": "answered",
+      "answer": {
+        "text": "靠掌握他人追问理由及方案修改逻辑；最近共同改稿会全程参与，信息足够"
+      },
+      "basis": [
+        "scenario_fact",
+        "scenario_inference"
+      ],
+      "assumptions": []
+    },
+    "NEW_M2": {
+      "status": "answered",
+      "answer": {
+        "text": "会中直接口头解释方案，从同伴当场回应与改稿定论得知处理结果，符合需要"
+      },
+      "basis": [
+        "scenario_fact",
+        "scenario_inference"
+      ],
+      "assumptions": []
+    },
+    "NEW_M3": {
+      "status": "answered",
+      "answer": {
+        "text": "没有影响，日常在安静室内用电脑和母语参会，沟通顺畅"
+      },
+      "basis": [
+        "model_assumption"
+      ],
+      "assumptions": [
+        "A6"
+      ]
+    },
+    "NEW_M4": {
+      "status": "answered",
+      "answer": {
+        "text": "希望会后一次看到完整修改清单，由我本人决定；仅在长会需阶段核对时才调整"
+      },
+      "basis": [
+        "model_assumption",
+        "hypothetical_preference"
+      ],
+      "assumptions": [
+        "A5"
+      ]
+    },
+    "NEW_M5": {
+      "status": "answered",
+      "answer": {
+        "text": "实际与团队约定全程参会并即时回应；设想引入AI后仍保持本人全程实时参与"
+      },
+      "basis": [
+        "scenario_fact",
+        "scenario_inference",
+        "hypothetical_preference"
+      ],
+      "assumptions": []
+    },
+    "NEW_M6": {
+      "status": "answered",
+      "answer": {
+        "text": "需标明AI生成及我是否确认；遇分歧或错误以讨论原话和团队复核为准"
+      },
+      "basis": [
+        "hypothetical_preference"
+      ],
+      "assumptions": []
+    },
+    "NEW_M7": {
+      "status": "answered",
+      "answer": {
+        "text": "需能导出到现有设计文档供审阅；尝试前需确认数据保密且不干扰会中讨论"
+      },
+      "basis": [
+        "model_assumption",
+        "hypothetical_preference"
+      ],
+      "assumptions": [
+        "A5",
+        "A6"
+      ]
+    }
+  }
+}

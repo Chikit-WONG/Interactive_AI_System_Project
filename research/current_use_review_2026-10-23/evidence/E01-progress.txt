@@ -1,0 +1,30 @@
+Browser tab: 3, Title: "Meeting Cue · Meeting companion", URL: "http://127.0.0.1:8876/".
+The following is a diff from the previous accessibility tree with ~ and + representing changed and added elements, respectively. Removed elements are summarized by ID range.
+Removed element IDs: 117-120, 122-140
++			122 text Local service connected
++			123 text Session running
++				124 text 01:55
++			125 text The session timer is running. Turn on audio capture, replay and automatic analysis separately. Stopping preserves the records.
++			126 text 1 utterance(s)
++				127 text Input: Text input · no audio capture
++				128 text Latest text: 1m 14s ago · u1 · Text input
++				129 text Automatic analysis: on · submits after a 4s pause or 12s of input; waits for the previous request
++				130 container
++					131 text u1 Sam Text input 14:00:21 I have uploaded the latest project files. This is just a progress update. Alex does not need to reply.
++			132 text 0 suggestion(s)
++			133 text On
++			134 text Automatic analysis is on. New utterances are submitted without repeated clicks.
++			135 text Analysis updated · through u1. Check the source before acting.
++			136 container summary-box
++				137 text DISCUSSION SUMMARY
++				138 text Sam uploaded the latest project files and characterized the message as a progress update, explicitly saying Alex does not need to reply.
++				139 text Analyzed through u1
++					140 text 0
++					141 text 0
++					142 text 0
++					143 text 0
++				144 text ↗
++				145 heading You make the decision, Value: 3
++					146 text You make the decision
++				147 text AI suggestions include source excerpts. Edit a reply, defer it or mark it as not needed.
+The focused UI element is 0 AXWebArea Meeting Cue · Meeting companion, URL: 127.0.0.1:8876/

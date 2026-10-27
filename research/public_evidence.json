@@ -1,0 +1,110 @@
+{
+  "title": "远程会议部分参与：首版公开证据包",
+  "compiled_on": "2026-10-15",
+  "purpose": "支持2026-10-16课堂初版演示及后续真实用户验证",
+  "evidence_type": "published_research_secondary_analysis",
+  "new_participants_collected": 0,
+  "scope_note": "来自既有研究，不是本项目新增问卷回答。设计建议是基于文献的推断，尚未由本项目用户验证；不能从这些来源计算目标人群的需求比例。",
+  "sources": [
+    {
+      "id": "S1",
+      "title": "Enabling Partial Participation in Remote Meetings",
+      "year": 2026,
+      "url": "https://doi.org/10.1145/3772318.3790744",
+      "verification": "DOI网页访问失败；已核对用户提供的论文全文，缓存为tmp/proposal_review/Remote meetings.txt。",
+      "method_population": "24名19–30岁参与者，多数为大学学生；2×2被试内实验，同时观看教学视频并参与模拟会议，比较更新与回复方式。",
+      "locator": "第5节、第7.2–7.4节、第8节",
+      "limitations": "短时模拟会议、学生为主，不能直接推广到真实工作会议。"
+    },
+    {
+      "id": "S2",
+      "title": "Large Scale Analysis of Multitasking Behavior During Remote Meetings",
+      "year": 2021,
+      "url": "https://www.microsoft.com/en-us/research/publication/large-scale-analysis-of-multitasking-behavior-during-remote-meetings/",
+      "method_population": "2020年2–5月美国微软员工工具日志，并结合715名全球微软员工的日记研究。",
+      "locator": "作者机构页面摘要；论文Introduction",
+      "limitations": "单一公司及疫情时期；日志使用发邮件、编辑文件等代理指标，相关性不能解释因果。"
+    },
+    {
+      "id": "S3",
+      "title": "What did I miss? In-Meeting Review using Multimodal Accelerated Instant Replay (AIR) Conferencing",
+      "year": 2011,
+      "url": "https://www.microsoft.com/en-us/research/wp-content/uploads/2011/05/What-did-I-miss-In-Meeting-Review-using-Multimodal-Accelerated-Instant-Replay-AIR-Conferencing.pdf",
+      "method_population": "此证据包使用研究1：18名软件公司技术人员，三人一组；90秒离场后用不同方式补看；有效记忆成绩为17人。",
+      "locator": "PDF第3–5页，User Study #1，Table 1",
+      "limitations": "小样本、人工中断、简单偏好陈述任务；当时语音识别质量较差，不能直接推断现代LLM摘要效果。"
+    },
+    {
+      "id": "S4",
+      "title": "Oasis: A Framework for Linking Notification Delivery to the Perceptual Structure of Goal-Directed Tasks",
+      "year": 2010,
+      "url": "https://www.microsoft.com/en-us/research/publication/oasis-a-framework-for-linking-notification-delivery-to-the-perceptual-structure-of-goal-directed-tasks/",
+      "full_text_url": "https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/TOCHI-Oasis-final.pdf",
+      "method_population": "系统论文复述既有用户评价：16名本科生和研究生完成编程或图形编辑任务，比较立即通知与任务停顿点通知。",
+      "locator": "全文第4.1–4.2节；PDF第18–20页",
+      "limitations": "非会议通知；停顿点检测存在误差，结果不是对会议回复期限的验证。"
+    },
+    {
+      "id": "S5",
+      "title": "Summaries, Highlights, and Action Items: Design, Implementation and Evaluation of an LLM-powered Meeting Recap System",
+      "year": 2025,
+      "version_note": "2023年初稿；本证据包核对2025-03-20的arXiv v3。",
+      "url": "https://arxiv.org/html/2307.15793v3",
+      "method_population": "7名微软员工，结合各自真实工作会议进行90分钟任务式访谈，比较重点摘要与分层纪要。",
+      "locator": "第4节、第6.3节、第7节",
+      "limitations": "小型同质技术背景样本，主要研究会后回顾；向会中部分参与迁移仍需测试。"
+    }
+  ],
+  "findings": [
+    {
+      "id": "E1", "source_id": "S1", "topic": ["必要信息", "何时需要参与"],
+      "finding": "访谈呈现更新频率的权衡：频繁更新有助保持连接感，也增加注意力切换；长更新间隔可能带来脱离感。",
+      "design_inference": "首版同时展示重要参与请求和可回看的普通进展，让用户评价各自价值。",
+      "validation_question": "最近一次会议中，哪些更新需要当时知道，哪些可以稍后看？"
+    },
+    {
+      "id": "E2", "source_id": "S1", "topic": ["用户确认"],
+      "finding": "参与者有时认为生成的选项不能表达自己的意思，并担忧代理转达与重要决策中的代表性。",
+      "design_inference": "提供可编辑回复、明确的发送确认和已发送内容；这是待验证的设计选择，论文没有单独验证确认按钮的效果。",
+      "validation_question": "系统给出的回复有哪里不符合你的意思？发送前需要检查什么？"
+    },
+    {
+      "id": "E3", "source_id": "S2", "topic": ["必要信息", "何时需要参与"],
+      "finding": "会议规模、时长、时间和类型与多任务行为相关；日记同时记录效率收益与注意力损失。",
+      "design_inference": "按真实会议经历招募，包含有冲突和现有办法足够的人；不能先假定所有多任务都需要AI干预。",
+      "validation_question": "你当时为什么处理其他事情？这样做有什么收益和代价？"
+    },
+    {
+      "id": "E4", "source_id": "S3", "topic": ["补上下文"],
+      "finding": "研究1中完整多模态补看后的记忆表现高于仅看转写和静音补看；与实时听会未发现显著差异，但这不等于证明两者等效。",
+      "design_inference": "让上下文卡可以展开原始片段，试用时分别检查事实和讨论理由是否被理解；不能由此断言AI摘要优于原文。",
+      "validation_question": "仅看卡片能解释当前为什么要作这个决定吗？还需要哪段来源？"
+    },
+    {
+      "id": "E5", "source_id": "S3", "topic": ["补上下文", "必要信息"],
+      "finding": "前访谈中，18人对会中补看的价值回答为10人肯定、7人视情况、1人否定；有人担心补看时继续错过新内容。",
+      "design_inference": "保留不补看或直接回到当前讨论的路径，避免强迫用户阅读完整摘要。",
+      "validation_question": "这次补看是否让你错过了新的内容？有没有更合适的处理方式？"
+    },
+    {
+      "id": "E6", "source_id": "S4", "topic": ["何时需要参与"],
+      "finding": "相较立即通知，在任务停顿点通知可降低挫折感和通知出现后的反应时间，但会付出等待时间；系统也需要限定交付时间窗。",
+      "design_inference": "暂缓、立即查看和时间提示适合作为待测试交互；任务停顿点调度本身已有研究，不能作为本项目新颖性声明。",
+      "validation_question": "这条消息能否等到当前小任务完成？等多久会失去作用？"
+    },
+    {
+      "id": "E7", "source_id": "S5", "topic": ["必要信息", "补上下文"],
+      "finding": "重点摘要与分层纪要在不同工作情境中各有价值，单一固定长度摘要不能覆盖全部回顾需求。",
+      "design_inference": "先呈现简短要点，允许展开详细背景；将展开操作和理解表现一起记录。",
+      "validation_question": "这次回应最少需要哪些信息？哪些背景可以折叠？"
+    },
+    {
+      "id": "E8", "source_id": "S5", "topic": ["用户确认", "必要信息"],
+      "finding": "删除摘要条目的原因并不唯一，可能涉及不相关或表达不清等；单凭删除操作不能认定模型内容错误。",
+      "design_inference": "反馈同时记录行为和原因，例如不相关、看不懂、事实错误、已经知道，避免把操作直接当成需求标签。",
+      "validation_question": "你为什么忽略或删除这条信息？"
+    }
+  ],
+  "presentation_claim": "我们已整理5份原始研究中的8条设计依据与反例，形成待验证原型；尚未据此获得本项目新的真实参与者数据。",
+  "pending_validation": ["目标学生项目组的真实事件", "提醒及上下文是否解决该事件", "用户是否能理解并修正回复", "主任务与会议参与的实际代价"]
+}

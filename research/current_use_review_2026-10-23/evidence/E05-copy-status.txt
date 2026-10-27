@@ -1,0 +1,9 @@
+Browser tab: 3, Title: "Meeting Cue · Meeting companion", URL: "http://127.0.0.1:8876/".
+The following is a diff from the previous accessibility tree with ~ and + representing changed and added elements, respectively. Removed elements are summarized by ID range.
+~		39 text Copied; waiting for you to send or mark sent
+~			21 text entry area (settable) Review and edit the reply draft, ID: reply-draft, Value: I cannot make 10:20 AM. I can arrive at 10:30 and join the rehearsal at 10:40. Please check whether 10:40 works for everyone before booking.
+~			45 text This draft was copied. Send it in the meeting, then mark it sent. Copying does not send it to Tencent Meeting.
+~			24 button I sent it in the meeting, ID: mark-sent
+~			25 button (disabled) Deferred, ID: snooze-alert
++			46 text Copied. Paste it into Tencent Meeting and send it yourself.
+The focused UI element is 0 AXWebArea Meeting Cue · Meeting companion, URL: 127.0.0.1:8876/

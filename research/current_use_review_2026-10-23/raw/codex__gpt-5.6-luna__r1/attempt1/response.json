@@ -1,0 +1,125 @@
+{
+  "source_type": "model_simulation",
+  "exposure": "recorded_current_workflow",
+  "cases": [
+    {
+      "id": "E01",
+      "assessment": "helpful",
+      "reason": "The system correctly produced no suggestion for a progress update that explicitly required no reply. As Alex, I would expect this to reduce distraction, although the trace does not establish whether the absence of a card was noticeable or beneficial in practice."
+    },
+    {
+      "id": "E02",
+      "assessment": "mixed",
+      "reason": "The request was correctly classified as deferrable and the system preserved the six-evening deadline. However, generating a draft for a request that explicitly says no immediate answer is needed could add unnecessary cognitive load. The usefulness would depend on whether Alex wants a later reminder or merely selective attention."
+    },
+    {
+      "id": "E03",
+      "assessment": "helpful",
+      "reason": "The system recognized the immediate coordination need, used Alex's availability constraints, cited the source utterance, and proposed a feasible alternative rather than accepting 10:20. This appears well aligned with Alex's responsibilities, but no actual meeting outcome or delivery was observed."
+    },
+    {
+      "id": "E04",
+      "assessment": "helpful",
+      "reason": "Showing the original request, rationale, uncertainties, and editable draft gives Alex inspectable context before responding. This supports judgment rather than presenting an unexplained answer, although the trace does not show whether the details view was easy to understand."
+    },
+    {
+      "id": "E05",
+      "assessment": "helpful",
+      "reason": "Alex could replace the draft with a more precise reply that separates arrival at 10:30 from joining at 10:40 and asks others to verify the time. Confirmation and copying succeeded, and the interface explicitly stated that the message still needed to be sent or marked sent. No message was actually sent."
+    },
+    {
+      "id": "E06",
+      "assessment": "mixed",
+      "reason": "The system appropriately detected that a post-copy edit required renewed confirmation and disabled the sent-state control. This is an important safeguard. However, retaining the previous text in the clipboard creates a risk that Alex or another workflow could use the older commitment while believing the newer edit is current."
+    },
+    {
+      "id": "E07",
+      "assessment": "mixed",
+      "reason": "The new analysis correctly noticed that the unidentified speaker may not be addressing Alex and that room booking is outside Alex's stated responsibility. It also connected the request to the 10:40 proposal. Yet the export says the earlier response was already handled via a confirmed reply even though it was only copied, not sent, and the later edit required renewed confirmation. The defer classification could also understate the urgency if the room approval request was in fact directed at Alex."
+    },
+    {
+      "id": "E08",
+      "assessment": "helpful",
+      "reason": "Stopping disabled further input and analysis, froze elapsed time, and preserved records. As Alex, I would value this as a clear boundary for ending a review session, though the trace does not establish recovery behavior after reopening."
+    }
+  ],
+  "value_assessments": {
+    "selective_attention": {
+      "judgment": "supported",
+      "evidence_ids": [
+        "E01",
+        "E02",
+        "E03",
+        "E07"
+      ],
+      "reason": "The workflow distinguished no-reply information, deferrable work, urgent coordination, and ambiguous responsibility. This supports prioritization in the recorded cases, but real productivity improvement was not measured."
+    },
+    "context_for_correct_reply": {
+      "judgment": "supported",
+      "evidence_ids": [
+        "E03",
+        "E04",
+        "E07"
+      ],
+      "reason": "The system combined transcript text, Alex's profile, source citations, rationale, and uncertainty to form a context-aware reply. Its handling of copied versus sent state and the later edit shows that context tracking still needs tighter consistency."
+    },
+    "control_over_commitments": {
+      "judgment": "mixed",
+      "evidence_ids": [
+        "E03",
+        "E05",
+        "E06",
+        "E07"
+      ],
+      "reason": "Alex could edit and confirm a reply, and the interface blocked treating a later edit as sent without reconfirmation. However, the export's confirmed status and wording about the earlier reply could still blur the distinction between copied, confirmed, and actually delivered commitments."
+    }
+  },
+  "would_use": "only_in_some_cases",
+  "best_fit": "A personal meeting-text triage and drafting assistant for availability conflicts, deadlines, and requests that require careful attention to role boundaries.",
+  "poor_fit": "A system expected to autonomously communicate, approve room bookings, guarantee delivery, or resolve ambiguous speaker identity without human review.",
+  "biggest_benefit": {
+    "evidence_ids": [
+      "E03",
+      "E04",
+      "E05"
+    ],
+    "text": "It turns an urgent request conflicting with Alex's availability into an editable, source-grounded alternative while preserving Alex's authority over the final wording."
+  },
+  "biggest_risk": {
+    "evidence_ids": [
+      "E05",
+      "E06",
+      "E07"
+    ],
+    "text": "Users may confuse a confirmed or copied draft with a delivered message, especially when a later edit exists and the export still describes the earlier response as handled."
+  },
+  "improvements": [
+    {
+      "priority": "P0",
+      "evidence_ids": [
+        "E05",
+        "E06",
+        "E07"
+      ],
+      "suggestion": "Represent draft, confirmed, copied, and sent as separate persistent states in the UI and export, and explicitly mark which exact text is current and which text remains in the clipboard."
+    },
+    {
+      "priority": "P1",
+      "evidence_ids": [
+        "E02",
+        "E07"
+      ],
+      "suggestion": "Make defer suggestions optional and distinguish 'not needed now' from 'needs a later reminder'; preserve urgency when an ambiguous request could block another person's work."
+    },
+    {
+      "priority": "P1",
+      "evidence_ids": [
+        "E07"
+      ],
+      "suggestion": "Avoid wording that implies Alex communicated a reply unless the system has verified an actual send or explicit sent-state confirmation."
+    }
+  ],
+  "safe_final_reply": "I cannot make 10:20 AM. I can arrive at 10:30 and join the rehearsal at 10:40. Please check whether 10:40 works for everyone before booking.",
+  "presentation_claim": "In this trace, Meeting Cue supported selective attention and human-controlled drafting for a role-and-availability conflict using real model output.",
+  "not_established": "The trace does not establish live-audio accuracy, message delivery, human productivity gains, time savings, reliability across users, or whether Alex would consistently prefer these suggestions."
+}

@@ -1,0 +1,20 @@
+{
+  "run_id": "codex__gpt-5.6-luna__r1",
+  "provider": "codex",
+  "requested_model": "gpt-5.6-luna",
+  "reported_models": [],
+  "repeat": 1,
+  "attempt": 1,
+  "sessions": [
+    "01a16764-22a4-7493-a42d-67465146a6c1"
+  ],
+  "prompt_sha256": "685f987369fbdc5cc55602a2f73ca985628fa9b2e4ecd0a6f7ff33bc0e419259",
+  "started": "2026-10-23T06:12:53.207034+00:00",
+  "seconds": 31.2,
+  "exit_code": 0,
+  "timed_out": false,
+  "tool_event_count": 0,
+  "valid": true,
+  "errors": [],
+  "path": "raw\\codex__gpt-5.6-luna__r1\\attempt1"
+}

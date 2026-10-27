@@ -1,5 +1,7 @@
 # Meeting Cue
 
+[English](README.md) | [简体中文](README.zh-CN.md)
+
 AIAA4435 Interactive AI Systems Design & Implementation course project.
 Meeting Cue supports partial participation in remote meetings: it highlights
 requests that need the participant, shows relevant context, and keeps the

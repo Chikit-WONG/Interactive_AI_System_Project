@@ -1,6 +1,6 @@
 # Meeting Cue
 
-[English](README.md) | [简体中文](README.zh-CN.md)
+[English](README.md)
 
 AIAA4435「交互式人工智能系统设计与实现」课程项目。
 Meeting Cue 支持远程会议中的部分参与：提醒需要本人回应的请求，提供相关上下文，并由本人决定最终回复。
